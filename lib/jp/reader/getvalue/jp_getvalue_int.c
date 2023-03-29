@@ -11,11 +11,12 @@ void jp_getvalue_int(char **str, parsed_data_t *data)
 {
     int nb = my_getnbr(*str);
     double nb_float = my_getnbr_float(*str);
+    int is_float = my_is_a_float(*str);
 
     for (; **str == '.' || **str == '-' ||
         (**str >= '0' && **str <= '9'); *str += 1);
 
-    if (nb_float != nb) {
+    if (is_float == 1) {
         data->type = p_float;
         data->value.p_float = nb_float;
     } else {

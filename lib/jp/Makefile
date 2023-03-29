@@ -46,6 +46,7 @@ SRC += jp_writeint.c
 SRC += jp_writebool.c
 SRC += jp_writetab.c
 SRC += jp_writearray.c
+SRC += my_is_a_float.c
 
 
 INC_DIR := ../../includes

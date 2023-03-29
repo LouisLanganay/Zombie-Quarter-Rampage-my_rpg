@@ -11,7 +11,6 @@
 
 static parsed_data_t *jp_get_arr(parsed_data_t *data, char *name)
 {
-    if (data == NULL) return (NULL);
     int i = 0;
     parsed_data_t *tmp = data->value.p_arr;
 
@@ -33,18 +32,16 @@ static parsed_data_t *jp_get_arr(parsed_data_t *data, char *name)
 
 static parsed_data_t *find_obj(parsed_data_t *tmp, char *tmp_name)
 {
-    while (tmp->next) {
+    while (tmp) {
         if (tmp->name && strcmp(tmp->name, tmp_name) == 0)
             return (tmp);
         tmp = tmp->next;
     }
-    return (NULL);
 }
 
 parsed_data_t *jp_search(parsed_data_t *data, char *name)
 {
     parsed_data_t *tmp = data;
-    if (data == NULL) return (NULL);
     char *tmp_name = get_name(name);
     int is_arr = is_array(name);
     if (is_arr == 1) {
