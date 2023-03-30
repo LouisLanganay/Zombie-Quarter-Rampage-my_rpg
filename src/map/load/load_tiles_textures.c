@@ -54,6 +54,9 @@ sfTexture **load_tiles_textures(map_t *map)
     tilesets_t *tmp = map->tilesets;
     int i = 1;
 
+    for (int x = 0; x < tiles_count(map); x++)
+        textures[x] = NULL;
+
     while (tmp) {
         i = load_tiles_textures_tileset(tmp, map, textures, i);
         tmp = tmp->next;
