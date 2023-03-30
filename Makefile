@@ -12,6 +12,7 @@ CC = gcc
 
 VPATH := src
 VPATH += src/init
+VPATH += src/init/glib
 VPATH += src/map
 VPATH += src/map/load
 VPATH += src/map/draw
