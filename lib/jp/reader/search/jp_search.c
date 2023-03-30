@@ -32,11 +32,12 @@ static parsed_data_t *jp_get_arr(parsed_data_t *data, char *name)
 
 static parsed_data_t *find_obj(parsed_data_t *tmp, char *tmp_name)
 {
-    while (tmp) {
+    while (tmp->next != NULL) {
         if (tmp->name && strcmp(tmp->name, tmp_name) == 0)
             return (tmp);
         tmp = tmp->next;
     }
+    return (NULL);
 }
 
 parsed_data_t *jp_search(parsed_data_t *data, char *name)
