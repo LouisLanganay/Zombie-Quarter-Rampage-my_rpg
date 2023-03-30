@@ -160,6 +160,7 @@ jobs:
           fi
       - name: Run tests
         run: |
+          testsfailed=0
           make -C tests/ run_tests 2> logs.txt
           cat logs.txt | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2};?)?)?[mGK]//g" | while read line
           do
@@ -169,14 +170,15 @@ jobs:
               my_line=$(echo $line | cut -d':' -f2)
               my_message=$(echo $line | cut -d':' -f3 | cut -c2-)
               echo "::error title=Json Parser test failed,file=$my_file,line=$my_line::$my_message"
+              testsfailed=1
             fi
           done
-          if [ -z "$(grep -i "[FAIL]" logs.txt)" ]
-          then
-            echo "::notice title=Json parser tests::All tests passed"
-          else
-            exit 1
-          fi
           rm logs.txt
+          if [ $testsfailed -eq 1 ]
+          then
+            exit 1
+          else
+            echo "::notice title=Json Parser tests::All tests passed"
+          fi
       - name: Make fclean
         run: make -C tests/ fclean
