@@ -19,7 +19,6 @@ void gl_add_child_ddown(dropdown_t *ddowns, int id, dropdown_t *child)
 
     while (tmp) {
         if (tmp->id == id) {
-            printf("Add child %d to %d\n", child->id, tmp->id);
             gl_add_child_in_linked_list(tmp, child);
             return;
         }
