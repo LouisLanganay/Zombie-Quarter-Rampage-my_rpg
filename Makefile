@@ -10,6 +10,7 @@ include Makefile_colors.mk
 NAME = rpg
 CC = gcc
 
+
 VPATH := src
 VPATH += src/init
 VPATH += src/init/glib
