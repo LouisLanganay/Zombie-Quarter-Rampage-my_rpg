@@ -7,7 +7,7 @@
 
 include Makefile_colors.mk
 
-NAME = rpg
+NAME = my_rpg
 CC = gcc
 
 
