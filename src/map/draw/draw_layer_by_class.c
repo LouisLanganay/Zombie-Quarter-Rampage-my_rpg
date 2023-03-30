@@ -5,6 +5,7 @@
 ** draw_layer_by_class
 */
 
+
 #include "rpg.h"
 
 static int count_layers(layer_t *layers)
