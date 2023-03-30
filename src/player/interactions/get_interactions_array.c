@@ -10,8 +10,7 @@
 interactions_t *get_interactions_array(void)
 {
     interactions_t inte_array[] = {
-        { "inte_test", inte_test },
-        { "i_chest", i_chest },
+        { "i_house_door", i_house_door },
         { NULL, NULL }
     };
     interactions_t *inte = malloc(sizeof(interactions_t) *
