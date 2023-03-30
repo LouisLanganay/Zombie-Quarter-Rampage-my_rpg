@@ -16,7 +16,7 @@
     #define SPAWN_INTO_HOUSE_X 20 * 16
     #define SPAWN_INTO_HOUSE_Y 17 * 16
     #define SPAWN_OUT_HOUSE_X 111 * 16
-    #define SPAWN_OUT_HOUSE_Y 39 * 16
+    #define SPAWN_OUT_HOUSE_Y 40 * 16
 
     #define PLAYER_SPRITE_PATH "resources/player/player_sprite.png"
     #define PLAYER_SPRITE_WIDTH 25

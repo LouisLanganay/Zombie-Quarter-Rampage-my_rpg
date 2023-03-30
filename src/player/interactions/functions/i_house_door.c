@@ -20,4 +20,5 @@ void i_house_door(rpg_t *rpg)
             rpg->player->pos.y = SPAWN_INTO_HOUSE_Y;
         }
     }
+    while (sfKeyboard_isKeyPressed(sfKeyE) == sfTrue);
 }
