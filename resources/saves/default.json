@@ -1,0 +1,10 @@
+{
+    "save_file": {
+        "path": "resources/save.json",
+        "format": "json",
+        "name": "save"
+    },
+    "settings": {
+        "game_language": "en"
+    }
+}

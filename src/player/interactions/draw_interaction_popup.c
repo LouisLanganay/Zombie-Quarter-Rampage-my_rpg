@@ -42,7 +42,7 @@ void draw_interaction_popup(
         if (RSG == EN)
             sfSprite_setPosition(RPA->key_sprite[id],
                 (sfVector2f) {pos.x + 75, pos.y - 33});
-        else if (RSG == FR)
+        if (RSG == FR)
             sfSprite_setPosition(RPA->key_sprite[id],
                 (sfVector2f) {pos.x + 99, pos.y - 33});
         sfRenderWindow_drawSprite(RGW->window, RPA->key_sprite[id], NULL);

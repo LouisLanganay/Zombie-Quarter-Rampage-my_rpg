@@ -10,5 +10,5 @@
 void init_settings(rpg_t *rpg)
 {
     rpg->settings = malloc(sizeof(settings_t));
-    rpg->settings->game_language = FR;
+    rpg->settings->game_language = EN;
 }

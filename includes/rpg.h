@@ -26,6 +26,10 @@
     #define RPH rpg->player->hitbox
     #define RSG rpg->settings->game_language
 
+
+    #define GET_SAVE_GAMELANGUAGE my_strcmp(jp_search(data, \
+        "game_language")->value.p_str, "fr") == 0 ? FR : EN;
+
     typedef struct pos_s {
         int x;
         int y;
@@ -104,6 +108,12 @@
         language_type_t game_language;
     } settings_t;
 
+    typedef struct save_s {
+        char *name;
+        char *path;
+        char *format;
+    } save_t;
+
     typedef struct rpg_s {
         int debug;
         char *actual_map;
@@ -112,6 +122,7 @@
         player_t *player;
         languages_t **languages;
         settings_t *settings;
+        save_t *save;
     } rpg_t;
 
     typedef struct keyboard_images_s {
@@ -133,6 +144,8 @@
     /* LANGUAGE */
     char *get_language(rpg_t *rpg, char *name, language_type_t language);
 
+    /* SAVE */
+    int load_save(rpg_t *rpg, char *path);
 
     /* MAP */
     int create_map(rpg_t *rpg, char *json_path);
@@ -195,6 +208,7 @@
     void init_window(rpg_t *rpg);
     void init_settings(rpg_t *rpg);
     void init_language(rpg_t *rpg);
+    void init_save(rpg_t *rpg);
     void init_events(rpg_t *rpg);
     void init_player_assets(player_t *player);
     void init_rpg(rpg_t *rpg, int ac, char **av);
