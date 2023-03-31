@@ -106,6 +106,7 @@ jobs:
         timeout-minutes: 2
       - name: Check warnings
         run: |
+          warningspresent=0
           make re 2> warnings.txt
           cat warnings.txt | while read line
           do
@@ -115,10 +116,10 @@ jobs:
                   my_line=$(echo "$line" | cut -d':' -f2)
                   my_message=$(echo "$line" | cut -d':' -f5 | cut -c2-)
                   echo "::warning title=Compilation warning,file=$my_file,line=$my_line::$my_message"
+                  warningspresent=1
               fi
           done
-          make re 2>&1 | grep "warning:" > warnings.txt
-          if [ ! -s warnings.txt ]
+          if [ $warningspresent -eq 0 ]
           then
               echo "::notice title=Compilation::No compilation warning found"
           fi
