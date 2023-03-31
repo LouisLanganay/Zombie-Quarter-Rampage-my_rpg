@@ -35,12 +35,12 @@ void draw_interaction_popup(
             my_strcat_malloc("Press      to ", str));
 
     sfText_setPosition(gl_get_text(rpg->glib, PLAYER_INTERACT_TEXT),
-        (sfVector2f) {pos.x + 50, pos.y - 30});
+        (sfVector2f) {pos.x + 55, pos.y - 30});
     gl_draw_text(rpg->glib, PLAYER_INTERACT_TEXT);
 
     if (id != -1) {
         sfSprite_setPosition(RPA->key_sprite[id],
-            (sfVector2f) {pos.x + 70, pos.y - 33});
+            (sfVector2f) {pos.x + 75, pos.y - 33});
         sfRenderWindow_drawSprite(RGW->window, RPA->key_sprite[id], NULL);
     }
 }

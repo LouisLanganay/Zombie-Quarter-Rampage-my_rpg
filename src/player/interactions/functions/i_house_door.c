@@ -25,7 +25,12 @@ static void change_map(rpg_t *rpg)
 
 void i_house_door(rpg_t *rpg, sfVector2f pos)
 {
-    draw_interaction_popup(rpg, pos, RPK->interact.key, "enter in the house.");
+    if (my_strcmp(rpg->actual_map, "resources/maps/player_house.json") == 0)
+        draw_interaction_popup(rpg, pos,
+            RPK->interact.key, "leave the house.");
+    else if (my_strcmp(rpg->actual_map, "resources/maps/main_map.json") == 0)
+        draw_interaction_popup(rpg, pos,
+            RPK->interact.key, "enter in the house.");
     if (sfKeyboard_isKeyPressed(RPK->interact.key) == sfTrue)
         change_map(rpg);
     while (sfKeyboard_isKeyPressed(RPK->interact.key) == sfTrue);
