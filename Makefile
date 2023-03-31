@@ -14,6 +14,7 @@ CC = gcc
 VPATH := src
 VPATH += src/init
 VPATH += src/init/glib
+VPATH += src/init/rpg
 VPATH += src/map
 VPATH += src/map/load
 VPATH += src/map/draw
@@ -62,6 +63,9 @@ SRC += init_glib.c
 SRC += init_window.c
 SRC += e_key_released.c
 SRC += e_close.c
+SRC += get_map.c
+SRC += init_rpg.c
+SRC += i_house_door.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

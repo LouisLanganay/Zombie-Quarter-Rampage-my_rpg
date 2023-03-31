@@ -7,7 +7,8 @@
 
 int my_is_a_float(char *str)
 {
-    for (int i = 0; str[i] != ','; i++) {
+    for (int i = 0; str[i] != '\0' && str[i] != ',' &&
+        str[i] != '\n' && str[i] != '}'; i++) {
         if (str[i] == '.')
             return 1;
     }

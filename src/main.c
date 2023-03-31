@@ -16,8 +16,9 @@ void event_window_close(window_t *window)
 int main(int ac, char **av)
 {
     rpg_t *rpg = malloc(sizeof(rpg_t));
-    rpg->debug = (ac == 2 && av[1][0] == '-' && av[1][1] == 'd') ? 1 : 0;
+    init_rpg(rpg, ac, av);
     create_map(rpg, "resources/maps/main_map.json");
+    create_map(rpg, "resources/maps/player_house.json");
     init_glib(rpg);
     init_player(rpg);
 
@@ -26,7 +27,7 @@ int main(int ac, char **av)
         sfRenderWindow_clear(rpg->glib->window->window, sfBlack);
         set_view_on_player(rpg);
         gl_check_events(rpg->glib->window, rpg->glib->events, rpg);
-        draw_map(rpg->maps, "resources/maps/main_map.json", rpg);
+        draw_map(rpg->maps, rpg->actual_map, rpg);
         sfRenderWindow_display(rpg->glib->window->window);
     }
 }

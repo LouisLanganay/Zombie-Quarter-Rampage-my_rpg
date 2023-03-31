@@ -59,6 +59,7 @@
     int my_nbrlen(long int nb);
     double my_getnbr_float(char *str);
     int my_strlen(char const *str);
+    int my_is_a_float(char *str);
     long int my_compute_power_rec(long int nb, int p);
     int my_strcmp(char const *s1, char const *s2);
 

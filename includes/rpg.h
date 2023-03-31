@@ -84,6 +84,7 @@
 
     typedef struct rpg_s {
         int debug;
+        char *actual_map;
         map_t *maps;
         GLib_t *glib;
         player_t *player;
@@ -98,6 +99,8 @@
     char *my_strcat(char *dest, char const *src);
     char *my_strcpy(char *dest, char const *src);
 
+
+    /* MAP */
     int create_map(rpg_t *rpg, char *json_path);
     sfTexture **load_tiles_textures(map_t *map);
     sfSprite **load_layer_sprites(layer_t *layer, map_t *map);
@@ -110,9 +113,12 @@
     void draw_layer(rpg_t *rpg, layer_t *layer);
     void draw_layer_by_class(map_t *map, rpg_t *rpg, char *class);
     void draw_layer_by_order(map_t *map, rpg_t *rpg, int order);
+    map_t *get_map(rpg_t *rpg, char *map_path);
 
+    /* VIEW */
     void set_view_on_player(rpg_t *rpg);
 
+    /* PLAYER */
     void *key_pressed(rpg_t *rpg);
     void draw_player(rpg_t *rpg);
     void change_player_rect(player_t *player);
@@ -126,21 +132,25 @@
     void check_interactions(player_t *player, map_t *map, rpg_t *rpg);
 
 
+    /* CALL ACTIONS */
     void inte_test(rpg_t *rpg);
+    void i_house_door(rpg_t *rpg);
     void i_chest(rpg_t *rpg);
     interactions_t *get_interactions_array(void);
 
+    /* FPS */
     void print_framerate(void);
 
     /* EVENTS */
     void e_key_released(window_t *window, void *main);
     void e_key_pressed(window_t *window, void *main);
     void e_close(window_t *window, void *main);
-    
+
     /* INIT */
     void init_player(rpg_t *rpg);
     void init_glib(rpg_t *rpg);
     void init_window(rpg_t *rpg);
     void init_events(rpg_t *rpg);
+    void init_rpg(rpg_t *rpg, int ac, char **av);
 
 #endif
