@@ -11,7 +11,7 @@ static void draw_objects(tiled_object_t *tmp, rpg_t *rpg, sfRectangleShape *col)
 {
     sfRectangleShape_setPosition(col, (sfVector2f){tmp->pos.x, tmp->pos.y});
     sfRectangleShape_setSize(col, (sfVector2f){tmp->width, tmp->height});
-    sfRectangleShape_setFillColor(col, sfRed);
+    sfRectangleShape_setFillColor(col, (sfColor){0, 0, 255, 100});
     sfRenderWindow_drawRectangleShape(rpg->glib->window->window, col, NULL);
 }
 

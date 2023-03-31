@@ -26,6 +26,9 @@
     #define EVENT_KEY_PRESSED 5465
     #define EVENT_KEY_RELEASED 5466
 
+    #define COLISION_RED (sfColor){255, 0, 0, 50}
+    #define COLISION_GREEN (sfColor){0, 255, 0, 50}
+
     #define UP_CONDITION ((check_colisions(map, (sfVector2f){player->pos.x +   \
     player->rect.width / 2, player->pos.y - 3}, player, rpg) == 0))
 
