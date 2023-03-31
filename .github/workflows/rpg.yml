@@ -15,21 +15,12 @@ on:
       executables:
         description: 'Comma-separated list of executables to check'
         required: true
-        default: 'rpg'
+        default: 'my_rpg'
       run_jp_tests:
         description: 'Run JsonParser tests'
         required: true
         default: false
         type: boolean
-      create_release:
-        description: 'Create a release ?'
-        required: true
-        default: false
-        type: boolean
-      release_version:
-        description: 'Release version'
-        required: false
-        default: 'v1.'
   schedule:
     - cron: '0 0 * * *'
 
