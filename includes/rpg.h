@@ -20,6 +20,11 @@
 
     #define EVENT_WINDOW_CLOSE 1
 
+    #define RPA rpg->player->assets
+    #define RGW rpg->glib->window
+    #define RPK rpg->player->keys
+    #define RPH rpg->player->hitbox
+
     typedef struct pos_s {
         int x;
         int y;

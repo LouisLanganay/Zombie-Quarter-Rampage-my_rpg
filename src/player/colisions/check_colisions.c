@@ -24,7 +24,7 @@ static int check_tile_colisions(
     tiled_object_t *tmp = tile->colisions;
     sfVector2f pos2;
     sfRectangleShape *col = sfRectangleShape_create();
-    sfFloatRect rect1 = sfRectangleShape_getGlobalBounds(rpg->player->hitbox);
+    sfFloatRect rect1 = sfRectangleShape_getGlobalBounds(RPH);
     sfFloatRect rect2;
     while (tmp) {
         pos2.x = (index % map->map_width) * map->tile_width + tmp->pos.x;
@@ -34,7 +34,7 @@ static int check_tile_colisions(
         rect2 = sfRectangleShape_getGlobalBounds(col);
         check_tile_colisions_draw(rpg, col);
         if (sfFloatRect_intersects(&rect1, &rect2, NULL)) {
-            sfRectangleShape_setFillColor(rpg->player->hitbox, COLISION_RED);
+            sfRectangleShape_setFillColor(RPH, (sfColor){255, 0, 0, 50});
             return 1;
         }
         tmp = tmp->next;
@@ -76,7 +76,7 @@ static int check_all_layers(map_t *map, int index, rpg_t *rpg)
 int check_colisions(map_t *map, sfVector2f pos, player_t *player, rpg_t *rpg)
 {
     (void)(rpg);
-    sfRectangleShape_setFillColor(player->hitbox, COLISION_GREEN);
+    sfRectangleShape_setFillColor(player->hitbox, (sfColor){0, 255, 0, 50});
     int x = pos.x / map->tile_width;
     int y = pos.y / map->tile_height;
     int index = x + y * map->map_width;
