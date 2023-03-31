@@ -51,5 +51,6 @@ void init_player(rpg_t *rpg)
     init_player_texture(player);
     init_player_keys(player);
     init_player_hitbox(player);
+    init_player_assets(player);
     rpg->player = player;
 }

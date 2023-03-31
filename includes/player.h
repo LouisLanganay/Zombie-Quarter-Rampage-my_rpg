@@ -10,8 +10,8 @@
 
     #include "rpg.h"
 
-    #define SPAWN_X 1500
-    #define SPAWN_Y 300
+    #define SPAWN_X 111 * 16
+    #define SPAWN_Y 43 * 16
 
     #define SPAWN_INTO_HOUSE_X 20 * 16
     #define SPAWN_INTO_HOUSE_Y 17 * 16
@@ -19,6 +19,8 @@
     #define SPAWN_OUT_HOUSE_Y 40 * 16
 
     #define PLAYER_SPRITE_PATH "resources/player/player_sprite.png"
+    #define PLAYER_KEYBOARD_PATH "resources/assets/keys/keyboard.png"
+    #define PLAYER_INTERACT_TEXT 613255
     #define PLAYER_SPRITE_WIDTH 25
     #define PLAYER_SPRITE_HEIGHT 45
     #define PLAYER_SPEED 1.5
@@ -55,6 +57,11 @@
         moovement_key_t interact;
     } keys_t;
 
+    typedef struct player_assets_s {
+        sfTexture **key_texture;
+        sfSprite **key_sprite;
+    } player_assets_t;
+
     typedef struct player_s {
         sfRectangleShape *hitbox;
         sfVector2f pos;
@@ -63,6 +70,7 @@
         sfSprite *sprite;
         sfIntRect rect;
         keys_t *keys;
+        player_assets_t *assets;
     } player_t;
 
 #endif

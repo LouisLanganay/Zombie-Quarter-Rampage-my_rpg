@@ -16,6 +16,8 @@
 
     #define WINDOW_NAME "RPG"
 
+    #define MINECRAFT_FONT 8888
+
     #define EVENT_WINDOW_CLOSE 1
 
     typedef struct pos_s {
@@ -90,14 +92,21 @@
         player_t *player;
     } rpg_t;
 
+    typedef struct keyboard_images_s {
+        sfKeyCode key;
+        int id;
+    } keyboard_images_t;
+
     typedef struct interactions_s {
         char *name;
-        void (*func)(rpg_t *);
+        void (*func)(rpg_t *, sfVector2f pos);
     } interactions_t;
 
     int my_strcmp(char const *s1, char const *s2);
     char *my_strcat(char *dest, char const *src);
     char *my_strcpy(char *dest, char const *src);
+    char *my_strcat_malloc(char *dest, char const *src);
+    int my_strlen(char const *str);
 
 
     /* MAP */
@@ -130,13 +139,20 @@
         rpg_t *rpg
     );
     void check_interactions(player_t *player, map_t *map, rpg_t *rpg);
+    keyboard_images_t *get_keyboard_array(void);
 
 
     /* CALL ACTIONS */
     void inte_test(rpg_t *rpg);
-    void i_house_door(rpg_t *rpg);
+    void i_house_door(rpg_t *rpg, sfVector2f pos);
     void i_chest(rpg_t *rpg);
     interactions_t *get_interactions_array(void);
+    void draw_interaction_popup(
+        rpg_t *rpg,
+        sfVector2f pos,
+        sfKeyCode key,
+        char *str
+    );
 
     /* FPS */
     void print_framerate(void);
@@ -149,8 +165,11 @@
     /* INIT */
     void init_player(rpg_t *rpg);
     void init_glib(rpg_t *rpg);
+    void init_fonts(rpg_t *rpg);
     void init_window(rpg_t *rpg);
     void init_events(rpg_t *rpg);
+    void init_player_assets(player_t *player);
     void init_rpg(rpg_t *rpg, int ac, char **av);
+    void init_popup_interaction(rpg_t *rpg);
 
 #endif
