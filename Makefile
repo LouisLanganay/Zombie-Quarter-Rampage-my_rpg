@@ -15,6 +15,7 @@ VPATH := src
 VPATH += src/init
 VPATH += src/init/glib
 VPATH += src/init/rpg
+VPATH += src/init/player
 VPATH += src/map
 VPATH += src/map/load
 VPATH += src/map/draw

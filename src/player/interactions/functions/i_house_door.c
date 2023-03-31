@@ -24,7 +24,7 @@ static void change_map(rpg_t *rpg)
 
 void i_house_door(rpg_t *rpg)
 {
-    if (sfKeyboard_isKeyPressed(sfKeyE) == sfTrue)
+    if (sfKeyboard_isKeyPressed(rpg->player->keys->interact.key) == sfTrue)
         change_map(rpg);
-    while (sfKeyboard_isKeyPressed(sfKeyE) == sfTrue);
+    while (sfKeyboard_isKeyPressed(rpg->player->keys->interact.key) == sfTrue);
 }
