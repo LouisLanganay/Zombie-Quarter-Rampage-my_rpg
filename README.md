@@ -58,7 +58,7 @@ General
     - [ ] Window mode
     - [ ] Full-screen mode
 - [ ] The windows may have differents resolutions, at least two (1920x1080, and an other)
-- [ ] The game manages inputs from the mouse click and keyboard,
+- [X] The game manages inputs from the mouse click and keyboard,
 - [ ] The game contains animated sprites rendered thanks to sprite sheets,
 - [ ] Animations in your program are frame rate independent,
 - [ ] Animations and movements in your program are timed by clocks.
@@ -100,7 +100,7 @@ In game menu
 - [ ] Have a skill tree, unlocking different abilities (active and passive).
 - [ ] Have a complete particle engine.
 - [ ] Use scripting to describe entities.
-- [ ] Have a map edit
+- [X] Have a map edit
 
 ## Usefull links
 
