@@ -3,7 +3,7 @@
  "infinite":false,
  "layers":[
         {
-         "color":"#e01b24",
+         "color":"#62a0ea",
          "draworder":"topdown",
          "id":68,
          "name":"interactions",
@@ -18,6 +18,17 @@
                  "width":45.2958776595745,
                  "x":307.097739361702,
                  "y":257.646276595745
+                }, 
+                {
+                 "class":"",
+                 "height":40.7247340425532,
+                 "id":7,
+                 "name":"i_house_paper",
+                 "rotation":0,
+                 "visible":true,
+                 "width":41.9714095744681,
+                 "x":160.821143617021,
+                 "y":163.314494680851
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -426,7 +437,7 @@
          "y":0
         }],
  "nextlayerid":69,
- "nextobjectid":7,
+ "nextobjectid":8,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.9.2",

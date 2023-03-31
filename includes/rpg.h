@@ -24,6 +24,7 @@
     #define RGW rpg->glib->window
     #define RPK rpg->player->keys
     #define RPH rpg->player->hitbox
+    #define RSG rpg->settings->game_language
 
     typedef struct pos_s {
         int x;
@@ -88,6 +89,20 @@
         struct map_s *next;
     } map_t;
 
+    typedef enum language_type_e {
+        FR,
+        EN
+    } language_type_t;
+
+    typedef struct languages_s {
+        char *name;
+        char *fr;
+        char *en;
+    } languages_t;
+
+    typedef struct settings_s {
+        language_type_t game_language;
+    } settings_t;
 
     typedef struct rpg_s {
         int debug;
@@ -95,6 +110,8 @@
         map_t *maps;
         GLib_t *glib;
         player_t *player;
+        languages_t **languages;
+        settings_t *settings;
     } rpg_t;
 
     typedef struct keyboard_images_s {
@@ -112,6 +129,9 @@
     char *my_strcpy(char *dest, char const *src);
     char *my_strcat_malloc(char *dest, char const *src);
     int my_strlen(char const *str);
+
+    /* LANGUAGE */
+    char *get_language(rpg_t *rpg, char *name, language_type_t language);
 
 
     /* MAP */
@@ -150,6 +170,7 @@
     /* CALL ACTIONS */
     void inte_test(rpg_t *rpg);
     void i_house_door(rpg_t *rpg, sfVector2f pos);
+    void i_house_paper(rpg_t *rpg, sfVector2f pos);
     void i_chest(rpg_t *rpg);
     interactions_t *get_interactions_array(void);
     void draw_interaction_popup(
@@ -172,6 +193,8 @@
     void init_glib(rpg_t *rpg);
     void init_fonts(rpg_t *rpg);
     void init_window(rpg_t *rpg);
+    void init_settings(rpg_t *rpg);
+    void init_language(rpg_t *rpg);
     void init_events(rpg_t *rpg);
     void init_player_assets(player_t *player);
     void init_rpg(rpg_t *rpg, int ac, char **av);

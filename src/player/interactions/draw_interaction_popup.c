@@ -32,15 +32,19 @@ void draw_interaction_popup(
 
     if (str != NULL)
         sfText_setString(gl_get_text(rpg->glib, PLAYER_INTERACT_TEXT),
-            my_strcat_malloc("Press      to ", str));
+        my_strcat_malloc(get_language(rpg, "interact_press__to", RSG), str));
 
     sfText_setPosition(gl_get_text(rpg->glib, PLAYER_INTERACT_TEXT),
         (sfVector2f) {pos.x + 55, pos.y - 30});
     gl_draw_text(rpg->glib, PLAYER_INTERACT_TEXT);
 
     if (id != -1) {
-        sfSprite_setPosition(RPA->key_sprite[id],
-            (sfVector2f) {pos.x + 75, pos.y - 33});
+        if (RSG == EN)
+            sfSprite_setPosition(RPA->key_sprite[id],
+                (sfVector2f) {pos.x + 75, pos.y - 33});
+        else if (RSG == FR)
+            sfSprite_setPosition(RPA->key_sprite[id],
+                (sfVector2f) {pos.x + 99, pos.y - 33});
         sfRenderWindow_drawSprite(RGW->window, RPA->key_sprite[id], NULL);
     }
 }

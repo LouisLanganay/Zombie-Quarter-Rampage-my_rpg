@@ -15,7 +15,7 @@ static void init_popup_interaction_text(rpg_t *rpg)
     my_text->font = gl_get_font(rpg->glib, MINECRAFT_FONT);
     my_text->scale = (sfVector2f){0.1, 0.1};
     my_text->color = (sfColor){255, 255, 255, 255};
-    my_text->string = "Press      to interact";
+    my_text->string = get_language(rpg, "interact_press__to", RSG);
     my_text->size = 75;
     gl_create_text(rpg->glib, my_text);
 }
