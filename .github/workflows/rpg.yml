@@ -94,8 +94,48 @@ jobs:
             fi
           done
 
+  run_json_parser_tests:
+    name: Run json parser tests
+    if: ${{ github.event.inputs.run_jp_tests == 'true' }}
+    runs-on: ubuntu-latest
+    container:
+      image: epitechcontent/epitest-docker
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check if json parser tests are present
+        run: |
+          if [ ! -d tests/ ]
+          then
+            echo "::warning title=Missing tests::No tests were found in tests/"
+            exit 1
+          fi
+      - name: Run tests
+        run: |
+          testsfailed=0
+          make -C tests/ run_tests 2> logs.txt
+          cat logs.txt | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2};?)?)?[mGK]//g" | while read line
+          do
+            if [[ $line == *"----"* && $line == *":"* ]]
+            then
+              my_file=$(echo $line | cut -d' ' -f2 | cut -d':' -f1)
+              my_line=$(echo $line | cut -d':' -f2)
+              my_message=$(echo $line | cut -d':' -f3 | cut -c2-)
+              echo "::error title=Json Parser test failed,file=$my_file,line=$my_line::$my_message"
+              testsfailed=1
+            fi
+          done
+          rm logs.txt
+          if [ $testsfailed -eq 1 ]
+          then
+            exit 1
+          else
+            echo "::notice title=Json Parser tests::All tests passed"
+          fi
+      - name: Make fclean
+        run: make -C tests/ fclean
+
   check_program_compilation:
-    needs: [check_repository_size, check_coding_style, check_static_functions]
+    needs: [check_repository_size, check_coding_style, check_static_functions, run_json_parser_tests]
     name: Check program compilation
     runs-on: ubuntu-latest
     container:
@@ -152,43 +192,3 @@ jobs:
           fi
       - name: Make fclean
         run: make fclean
-
-  run_json_parser_tests:
-    name: Run json parser tests
-    if: ${{ github.event.inputs.run_jp_tests == 'true' }}
-    runs-on: ubuntu-latest
-    container:
-      image: epitechcontent/epitest-docker
-    steps:
-      - uses: actions/checkout@v3
-      - name: Check if json parser tests are present
-        run: |
-          if [ ! -d tests/ ]
-          then
-            echo "::warning title=Missing tests::No tests were found in tests/"
-            exit 1
-          fi
-      - name: Run tests
-        run: |
-          testsfailed=0
-          make -C tests/ run_tests 2> logs.txt
-          cat logs.txt | sed -r "s/\x1B\[([0-9]{1,3}(;[0-9]{1,2};?)?)?[mGK]//g" | while read line
-          do
-            if [[ $line == *"----"* && $line == *":"* ]]
-            then
-              my_file=$(echo $line | cut -d' ' -f2 | cut -d':' -f1)
-              my_line=$(echo $line | cut -d':' -f2)
-              my_message=$(echo $line | cut -d':' -f3 | cut -c2-)
-              echo "::error title=Json Parser test failed,file=$my_file,line=$my_line::$my_message"
-              testsfailed=1
-            fi
-          done
-          rm logs.txt
-          if [ $testsfailed -eq 1 ]
-          then
-            exit 1
-          else
-            echo "::notice title=Json Parser tests::All tests passed"
-          fi
-      - name: Make fclean
-        run: make -C tests/ fclean
