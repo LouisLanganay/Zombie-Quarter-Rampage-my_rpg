@@ -135,7 +135,7 @@ jobs:
         run: make -C tests/ fclean
 
   check_program_compilation:
-    needs: [check_repository_size, check_coding_style, check_static_functions, run_json_parser_tests]
+    needs: run_json_parser_tests
     name: Check program compilation
     runs-on: ubuntu-latest
     container:
