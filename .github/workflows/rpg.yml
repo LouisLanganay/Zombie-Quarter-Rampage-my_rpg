@@ -90,7 +90,7 @@ jobs:
             num_static_functions=$(grep -c "^ *static \(int\|void\|double\|float\|char\|long\|short\) *[a-zA-Z0-9_]*(.*" $file)
             if [ $(($num_functions - $num_static_functions)) -gt 1 ]
             then
-              echo "::warning title=Non-static file,file=$file::More than 1 non-static function"
+              echo "::warning title=Non-static file::More than 1 non-static function in $file"
             fi
           done
 
