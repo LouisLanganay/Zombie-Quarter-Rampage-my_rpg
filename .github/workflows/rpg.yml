@@ -54,7 +54,6 @@ jobs:
           fi
 
   check_coding_style:
-    needs: check_repository_size
     name: Check coding style
     runs-on: ubuntu-latest
     container:
@@ -76,8 +75,27 @@ jobs:
             echo "::notice title=Coding style::No coding style error found"
           fi
 
+  check_static_functions:
+    name: Check static functions
+    runs-on: ubuntu-latest
+    container:
+      image: epitechcontent/epitest-docker
+    steps:
+      - uses: actions/checkout@v3
+      - name: Check all .c files
+        run: |
+          c_files=$(find . -name "*.c")
+          for file in $c_files; do
+            num_functions=$(grep -c "^ *\(static \)*\(int\|void\|double\|float\|char\|long\|short\) *[a-zA-Z0-9_]*(.*" $file)
+            num_static_functions=$(grep -c "^ *static \(int\|void\|double\|float\|char\|long\|short\) *[a-zA-Z0-9_]*(.*" $file)
+            if [ $num_functions - $num_static_functions -gt 1 ]
+            then
+              echo "::warning title=Non-static file,file=$file::More than 1 non-static function"
+            fi
+          done
+
   check_program_compilation:
-    needs: check_repository_size
+    needs: [check_repository_size, check_coding_style, check_static_functions]
     name: Check program compilation
     runs-on: ubuntu-latest
     container:
