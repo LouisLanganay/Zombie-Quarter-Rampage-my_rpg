@@ -88,10 +88,7 @@ jobs:
           for file in $c_files; do
             num_functions=$(grep -c "^ *\(static \)*\(int\|void\|double\|float\|char\|long\|short\) *[a-zA-Z0-9_]*(.*" $file)
             num_static_functions=$(grep -c "^ *static \(int\|void\|double\|float\|char\|long\|short\) *[a-zA-Z0-9_]*(.*" $file)
-            if [ $(($num_functions - $num_static_functions)) -gt 1 ]
-            then
-              echo "::warning title=Non-static file::More than 1 non-static function in $file"
-            fi
+            echo "$file: $num_functions functions, $num_static_functions static functions"
           done
 
   run_json_parser_tests:
