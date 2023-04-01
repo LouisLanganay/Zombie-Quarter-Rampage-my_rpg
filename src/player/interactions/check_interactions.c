@@ -24,7 +24,7 @@ static void exe_interaction_functions(
 
     for (int i = 0; interactions[i].name; i++) {
         if (my_strcmp(tmp->name, interactions[i].name) == 0) {
-            interactions[i].func(rpg);
+            interactions[i].func(rpg, tmp->pos);
             return;
         }
     }

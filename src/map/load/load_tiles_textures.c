@@ -32,7 +32,6 @@ static int load_tiles_textures_tileset(
     sfIntRect *rect = malloc(sizeof(sfIntRect));
     *rect = (sfIntRect){0, 0, map->tile_width, map->tile_height};
     for (int x = 1; x < tmp->tile_count; x++, i++) {
-        printf("Texture %i %i\n", i, x);
         textures[i] = sfTexture_createFromImage(tileset_image, rect);
         if (rect->left + map->tile_width >= (int)size.x) {
             rect->left = 0;
