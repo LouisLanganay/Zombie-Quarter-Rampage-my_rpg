@@ -38,6 +38,7 @@ static sfSprite **init_player_assets_keyboard_sprites(sfTexture **textures)
     for (int i = 0; i < 112; i++) {
         sprites[i] = sfSprite_create();
         sfSprite_setTexture(sprites[i], textures[i], sfTrue);
+        sfSprite_setOrigin(sprites[i], (sfVector2f){8, 8});
     }
     return (sprites);
 }

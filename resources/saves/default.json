@@ -6,5 +6,12 @@
     },
     "settings": {
         "game_language": "en"
+    },
+    "player": {
+        "pos": {
+            "x": 1700,
+            "y": 650
+        },
+        "hp": 100
     }
 }

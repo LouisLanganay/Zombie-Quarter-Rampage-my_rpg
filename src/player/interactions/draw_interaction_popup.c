@@ -7,7 +7,21 @@
 
 #include "rpg.h"
 
-static int get_key_id(sfKeyCode key)
+static void draw_interaction_popup_change_size(
+    int id,
+    keyboard_images_t *keyboard,
+    rpg_t *rpg)
+{
+    if (id != -1) {
+        if (sfKeyboard_isKeyPressed(keyboard[id].key) == sfTrue) {
+            sfSprite_setScale(RPA->key_sprite[id], (sfVector2f){0.9, 0.9});
+        } else {
+            sfSprite_setScale(RPA->key_sprite[id], (sfVector2f){1, 1});
+        }
+    }
+}
+
+static int get_key_id(sfKeyCode key, rpg_t *rpg)
 {
     int id = -1;
     keyboard_images_t *keyboard = get_keyboard_array();
@@ -18,6 +32,7 @@ static int get_key_id(sfKeyCode key)
             break;
         }
     }
+    draw_interaction_popup_change_size(id, keyboard, rpg);
     free(keyboard);
     return id;
 }
@@ -28,7 +43,7 @@ void draw_interaction_popup(
     sfKeyCode key,
     char *str)
 {
-    int id = get_key_id(key);
+    int id = get_key_id(key, rpg);
 
     if (str != NULL)
         sfText_setString(gl_get_text(rpg->glib, PLAYER_INTERACT_TEXT),
@@ -41,10 +56,10 @@ void draw_interaction_popup(
     if (id != -1) {
         if (RSG == EN)
             sfSprite_setPosition(RPA->key_sprite[id],
-                (sfVector2f) {pos.x + 75, pos.y - 33});
+                (sfVector2f) {pos.x + 85, pos.y - 25});
         if (RSG == FR)
             sfSprite_setPosition(RPA->key_sprite[id],
-                (sfVector2f) {pos.x + 99, pos.y - 33});
+                (sfVector2f) {pos.x + 109, pos.y - 25});
         sfRenderWindow_drawSprite(RGW->window, RPA->key_sprite[id], NULL);
     }
 }

@@ -60,6 +60,7 @@
     } player_assets_t;
 
     typedef struct player_s {
+        int hp;
         sfRectangleShape *hitbox;
         sfVector2f pos;
         sfView *view;

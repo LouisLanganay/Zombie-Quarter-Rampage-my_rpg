@@ -14,6 +14,15 @@ int load_save_settings(settings_t *settings, parsed_data_t *data)
     return (0);
 }
 
+int load_save_player(player_t *player, parsed_data_t *data)
+{
+    data = data->value.p_obj;
+    player->pos.x = jp_search(data, "pos.x")->value.p_int;
+    player->pos.y = jp_search(data, "pos.y")->value.p_int;
+    player->hp = jp_search(data, "hp")->value.p_int;
+    return 0;
+}
+
 int load_save_save(save_t *save, parsed_data_t *data)
 {
     data = data->value.p_obj;
@@ -31,6 +40,8 @@ int load_save(rpg_t *rpg, char *path)
     if (load_save_settings(rpg->settings, jp_search(data, "settings")) != 0)
         return (84);
     if (load_save_save(rpg->save, jp_search(data, "save_file")) != 0)
+        return (84);
+    if (load_save_player(rpg->player, jp_search(data, "player")) != 0)
         return (84);
     return (0);
 }
