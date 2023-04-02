@@ -78,18 +78,22 @@ jobs:
   check_static_functions:
     name: Check static functions
     runs-on: ubuntu-latest
-    container:
-      image: epitechcontent/epitest-docker
     steps:
       - uses: actions/checkout@v3
-      - name: Check all .c files
+      - name: Check static functions
         run: |
+          nonstatic=0
           c_files=$(find . -name "*.c")
           for file in $c_files; do
-            num_functions=$(grep -c "^ *\(static \)*\(int\|void\|double\|float\|char\|long\|short\) *[a-zA-Z0-9_]*(.*" $file)
-            num_static_functions=$(grep -c "^ *static \(int\|void\|double\|float\|char\|long\|short\) *[a-zA-Z0-9_]*(.*" $file)
-            echo "$file: $num_functions functions, $num_static_functions static functions"
+              if [[ $(grep -c "^ *\(int\|void\|double\|float\|char\|long\|short\) *[a-zA-Z0-9_]*(.*" $file) -gt 1 ]]; then
+                echo "::warning title=Check static functions,file=$file::More than one non-static function in this file"
+                nonstatic=1
+              fi
           done
+          if [ $nonstatic -eq 0 ]
+          then
+              echo "::notice title=Check static functions::All files do not contain more than one non-static function"
+          fi
 
   run_json_parser_tests:
     name: Run json parser tests
