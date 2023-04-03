@@ -36,4 +36,3 @@ void init_player_items_packs(player_t *player)
     player->assets = malloc(sizeof(player_assets_t));
     player->assets->items_texture = init_player_assets_objects();
 }
-

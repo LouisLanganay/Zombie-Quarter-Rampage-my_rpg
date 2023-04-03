@@ -22,7 +22,7 @@
     #define PLAYER_KEYBOARD_PATH "resources/assets/keys/keyboard.png"
     #define PLAYER_KEYBOARD_PATH2 "resources/assets/keys/extras.png"
     #define PLAYER_INVENTORY_PATH "ressources/assets/items/items_packs.png"
-    
+
     #define PLAYER_INTERACT_TEXT 613255
     #define PLAYER_SPRITE_WIDTH 25
     #define PLAYER_SPRITE_HEIGHT 45

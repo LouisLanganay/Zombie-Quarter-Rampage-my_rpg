@@ -7,14 +7,14 @@
 
 #include "rpg.h"
 
-int load_save_settings(settings_t *settings, parsed_data_t *data)
+static int load_save_settings(settings_t *settings, parsed_data_t *data)
 {
     data = data->value.p_obj;
     settings->game_language = GET_SAVE_GAMELANGUAGE;
     return (0);
 }
 
-int load_save_player(player_t *player, parsed_data_t *data)
+static int load_save_player(player_t *player, parsed_data_t *data)
 {
     data = data->value.p_obj;
     player->pos.x = jp_search(data, "pos.x")->value.p_int;
@@ -23,7 +23,7 @@ int load_save_player(player_t *player, parsed_data_t *data)
     return 0;
 }
 
-int load_save_save(save_t *save, parsed_data_t *data)
+static int load_save_save(save_t *save, parsed_data_t *data)
 {
     data = data->value.p_obj;
     save->format = jp_search(data, "format")->value.p_str;
