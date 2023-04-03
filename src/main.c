@@ -19,12 +19,7 @@ int main(int ac, char **av)
     init_rpg(rpg, ac, av);
     create_map(rpg, "resources/maps/main_map.json");
     create_map(rpg, "resources/maps/player_house.json");
-    init_glib(rpg);
-    init_language(rpg);
-    init_settings(rpg);
-    init_player(rpg);
-    init_popup_interaction(rpg);
-    init_save(rpg);
+    init(rpg);
     load_save(rpg, "resources/saves/default.json");
 
     while (sfRenderWindow_isOpen(rpg->glib->window->window)) {
@@ -33,6 +28,7 @@ int main(int ac, char **av)
         set_view_on_player(rpg);
         gl_check_events(rpg->glib->window, rpg->glib->events, rpg);
         draw_map(rpg->maps, rpg->actual_map, rpg);
+        display_dialogue(rpg);
         sfRenderWindow_display(rpg->glib->window->window);
     }
 }

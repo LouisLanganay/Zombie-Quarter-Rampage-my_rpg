@@ -32,17 +32,20 @@ static void init_player_texture(player_t *player)
 static void init_player_keys(player_t *player)
 {
     player->keys = malloc(sizeof(keys_t));
-    player->keys->up = (moovement_key_t){0, sfKeyZ};
-    player->keys->down = (moovement_key_t){0, sfKeyS};
-    player->keys->left = (moovement_key_t){0, sfKeyQ};
-    player->keys->right = (moovement_key_t){0, sfKeyD};
-    player->keys->interact = (moovement_key_t){0, sfKeyE};
+    player->keys->up = (p_key_t){0, sfKeyZ};
+    player->keys->down = (p_key_t){0, sfKeyS};
+    player->keys->left = (p_key_t){0, sfKeyQ};
+    player->keys->right = (p_key_t){0, sfKeyD};
+    player->keys->interact = (p_key_t){0, sfKeyE};
+    player->keys->choice_one = (p_key_t){0, sfKeyU};
+    player->keys->choice_two = (p_key_t){0, sfKeyI};
 }
 
 void init_player(rpg_t *rpg)
 {
     player_t *player = malloc(sizeof(player_t));
     player->pos = (sfVector2f){SPAWN_X, SPAWN_Y};
+    player->in_dialogue = 0;
     sfVector2f screen_size = (sfVector2f){
         rpg->glib->window->mode.width,
         rpg->glib->window->mode.height

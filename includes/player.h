@@ -26,6 +26,10 @@
     #define PLAYER_SPRITE_HEIGHT 45
     #define PLAYER_SPEED 1.5
 
+    #define PLAYER_DIALOGUE_TEXT 613256
+    #define PLAYER_DIALOGUE_CHOICE_ONE_TEXT 613257
+    #define PLAYER_DIALOGUE_CHOICE_TWO_TEXT 613258
+
     #define EVENT_KEY_PRESSED 5465
     #define EVENT_KEY_RELEASED 5466
 
@@ -42,28 +46,32 @@
     player->rect.width, player->pos.y}, player, rpg) == 0)
 
 
-    typedef struct moovement_key_s {
+    typedef struct p_key_s {
         int state;
         sfKeyCode key;
-    } moovement_key_t;
+    } p_key_t;
 
     typedef struct keys_s {
-        moovement_key_t up;
-        moovement_key_t down;
-        moovement_key_t left;
-        moovement_key_t right;
-        moovement_key_t interact;
+        p_key_t up;
+        p_key_t down;
+        p_key_t left;
+        p_key_t right;
+        p_key_t interact;
+        p_key_t choice_one;
+        p_key_t choice_two;
     } keys_t;
 
     typedef struct player_assets_s {
         sfTexture **key_texture;
         sfSprite **key_sprite;
         sfTexture **items_texture;
-        sfSprite **key_sprite;
+        sfSprite **key_choice1;
+        sfSprite **key_choice2;
     } player_assets_t;
 
     typedef struct player_s {
         int hp;
+        int in_dialogue;
         sfRectangleShape *hitbox;
         sfVector2f pos;
         sfView *view;

@@ -21,6 +21,7 @@ static void init_values(map_t *tmp, parsed_data_t *data, char *json_path)
     load_map_layers(tmp, data);
     tmp->tiles = NULL;
     load_tiles_colisions(tmp, data);
+    init_npcs(tmp, "resources/jsons/npc.json");
 }
 
 int create_map(rpg_t *rpg, char *json_path)
