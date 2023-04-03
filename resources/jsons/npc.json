@@ -25,6 +25,25 @@
             {
                 "name": "help",
                 "text": "Thank you! I lost my parents and here that was their grocery store. I'm so scared.",
+                "options": [
+                    {
+                        "text": "Give food",
+                        "next": "help_give_food"
+                    },
+                    {
+                        "text": "Talk about something else",
+                        "next": "help_give_nothing"
+                    }
+                ]
+            },
+            {
+                "name": "help_give_food",
+                "text": "Thank you for this food! I'm so hungry! I have this in my bag. It's a gun. It's for you.",
+                "options": null
+            },
+            {
+                "name": "help_give_nothing",
+                "text": "Oh, ok then. I will go there. Thank you!",
                 "options": null
             },
             {

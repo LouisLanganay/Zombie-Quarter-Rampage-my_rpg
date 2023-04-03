@@ -17,6 +17,7 @@
     #define WINDOW_NAME "RPG"
 
     #define MINECRAFT_FONT 8888
+    #define CRYSTAL_FONT 8889
 
     #define EVENT_WINDOW_CLOSE 1
     #define EVENT_DIALOGUE_CHOICE 651546
@@ -170,6 +171,8 @@
     char *my_strcat_malloc(char *dest, char const *src);
     char *my_strdup(char *str);
     int my_strlen(char const *str);
+    char *my_strndup(const char *str, int n);
+    int get_mid_char(const char *str);
 
     /* LANGUAGE */
     char *get_language(rpg_t *rpg, char *name, language_type_t language);
@@ -217,6 +220,9 @@
     void next_dialogue(rpg_t *rpg, int choice);
     void display_dialogue(rpg_t *rpg);
 
+    /* TEXT */
+    void divide_a_sftext(sfText *text, sfVector2f pos, rpg_t *rpg);
+
 
     /* CALL ACTIONS */
     void little_girl(rpg_t *rpg, sfVector2f pos);
@@ -258,5 +264,6 @@
     void init_rpg(rpg_t *rpg, int ac, char **av);
     void init_popup_interaction(rpg_t *rpg);
     void init_player_items_packs(player_t *player);
+    void init_player_assets_dialogue(player_t *player);
 
 #endif

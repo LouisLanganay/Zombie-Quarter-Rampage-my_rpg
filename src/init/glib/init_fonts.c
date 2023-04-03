@@ -12,4 +12,5 @@ void init_fonts(rpg_t *rpg)
 {
     rpg->glib->fonts = NULL;
     gl_create_font(rpg->glib, MINECRAFT_FONT, "resources/fonts/Minecraft.ttf");
+    gl_create_font(rpg->glib, CRYSTAL_FONT, "resources/fonts/crystal.ttf");
 }
