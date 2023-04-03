@@ -19,9 +19,6 @@ static void gl_draw_scene_buttons(
             gl_draw_button(tmp->buttons[i], buttons, window);
 }
 
-//// DRAW SPRITES
-//// DRAW TEXTS
-
 void gl_draw_scene(GLib_t *glib, int id)
 {
     scenes_t *tmp = glib->scenes;
