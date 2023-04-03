@@ -100,6 +100,8 @@ SRC += display_dialogue.c
 SRC += start_dialogue.c
 SRC += init.c
 SRC += get_key_id.c
+SRC += next_dialogue.c
+SRC += e_dialogue.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

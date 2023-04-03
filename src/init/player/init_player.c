@@ -39,6 +39,7 @@ static void init_player_keys(player_t *player)
     player->keys->interact = (p_key_t){0, sfKeyE};
     player->keys->choice_one = (p_key_t){0, sfKeyU};
     player->keys->choice_two = (p_key_t){0, sfKeyI};
+    player->keys->escape = (p_key_t){0, sfKeyEscape};
 }
 
 void init_player(rpg_t *rpg)

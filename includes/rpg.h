@@ -19,6 +19,7 @@
     #define MINECRAFT_FONT 8888
 
     #define EVENT_WINDOW_CLOSE 1
+    #define EVENT_DIALOGUE_CHOICE 651546
 
     #define RPA rpg->player->assets
     #define RGW rpg->glib->window
@@ -143,6 +144,8 @@
     typedef struct rpg_s {
         int debug;
         char *actual_map;
+        dialog_t *actual_dialog;
+        npc_t *actual_npc;
         map_t *maps;
         GLib_t *glib;
         player_t *player;
@@ -211,6 +214,7 @@
     npc_t *get_npc(map_t *map, char *name);
     void draw_npcs(map_t *map, rpg_t *rpg);
     void start_dialogue(rpg_t *rpg, npc_t *npc);
+    void next_dialogue(rpg_t *rpg, int choice);
     void display_dialogue(rpg_t *rpg);
 
 
@@ -235,6 +239,7 @@
     void e_key_released(window_t *window, void *main);
     void e_key_pressed(window_t *window, void *main);
     void e_close(window_t *window, void *main);
+    void e_dialogue(window_t *window, void *main);
 
     /* INIT */
     void init(rpg_t *rpg);

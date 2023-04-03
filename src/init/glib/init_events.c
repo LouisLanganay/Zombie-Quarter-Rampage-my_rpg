@@ -16,4 +16,6 @@ void init_events(rpg_t *rpg)
         sfEvtKeyPressed, e_key_pressed);
     gl_create_event(rpg->glib, EVENT_WINDOW_CLOSE,
                     sfEvtClosed, e_close);
+    gl_create_event(rpg->glib, EVENT_DIALOGUE_CHOICE,
+                    sfEvtKeyPressed, e_dialogue);
 }
