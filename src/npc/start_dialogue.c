@@ -28,8 +28,7 @@ void start_dialogue(rpg_t *rpg, npc_t *npc)
 {
     sfText *main_text = gl_get_text(rpg->glib, PLAYER_DIALOGUE_TEXT);
     sfText *choice_one_text = gl_get_text(rpg->glib, PLAYER_DCHOICE_ONE_TEXT);
-    sfText *choice_two_text = gl_get_text(rpg->glib,
-        PLAYER_DCHOICE_TWO_TEXT);
+    sfText *choice_two_text = gl_get_text(rpg->glib, PLAYER_DCHOICE_TWO_TEXT);
     dialog_t *dialog = npc->dialogs;
 
     if (rpg->player->in_dialogue != 0) return;
