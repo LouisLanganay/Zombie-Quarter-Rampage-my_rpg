@@ -5,7 +5,7 @@
 ** task05
 */
 
-int invert_nb(char *str, int *c)
+static int invert_nb(char *str, int *c)
 {
     int invert = 1;
 
