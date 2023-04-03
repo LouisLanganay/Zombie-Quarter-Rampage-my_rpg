@@ -20,12 +20,13 @@ void start_dialogue(rpg_t *rpg, npc_t *npc)
         return;
 
     while (dialog) {
-        if (my_strcmp(dialog->name, "discovery") == 0)
-            break;
+        if (my_strcmp(dialog->name, "discovery") == 0) break;
         dialog = dialog->next;
     }
     sfText_setString(main_text, dialog->text);
     sfText_setString(choice_one_text, dialog->options[0]->text);
     sfText_setString(choice_two_text, dialog->options[1]->text);
     rpg->player->in_dialogue = 1;
+    rpg->actual_dialog = dialog;
+    rpg->actual_npc = npc;
 }

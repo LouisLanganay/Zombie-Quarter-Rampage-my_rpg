@@ -20,7 +20,9 @@
 
     #define PLAYER_SPRITE_PATH "resources/player/player_sprite.png"
     #define PLAYER_KEYBOARD_PATH "resources/assets/keys/keyboard.png"
+    #define PLAYER_KEYBOARD_PATH2 "resources/assets/keys/extras.png"
     #define PLAYER_INVENTORY_PATH "ressources/assets/items/items_packs.png"
+    
     #define PLAYER_INTERACT_TEXT 613255
     #define PLAYER_SPRITE_WIDTH 25
     #define PLAYER_SPRITE_HEIGHT 45
@@ -29,6 +31,7 @@
     #define PLAYER_DIALOGUE_TEXT 613256
     #define PLAYER_DIALOGUE_CHOICE_ONE_TEXT 613257
     #define PLAYER_DIALOGUE_CHOICE_TWO_TEXT 613258
+    #define PLAYER_DIALOGUE_TEXT_ESCAPE 613259
 
     #define EVENT_KEY_PRESSED 5465
     #define EVENT_KEY_RELEASED 5466
@@ -59,6 +62,7 @@
         p_key_t interact;
         p_key_t choice_one;
         p_key_t choice_two;
+        p_key_t escape;
     } keys_t;
 
     typedef struct player_assets_s {
