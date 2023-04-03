@@ -20,6 +20,7 @@
 
     #define PLAYER_SPRITE_PATH "resources/player/player_sprite.png"
     #define PLAYER_KEYBOARD_PATH "resources/assets/keys/keyboard.png"
+    #define PLAYER_INVENTORY_PATH "ressources/assets/items/items_packs.png"
     #define PLAYER_INTERACT_TEXT 613255
     #define PLAYER_SPRITE_WIDTH 25
     #define PLAYER_SPRITE_HEIGHT 45
@@ -56,6 +57,8 @@
 
     typedef struct player_assets_s {
         sfTexture **key_texture;
+        sfSprite **key_sprite;
+        sfTexture **items_texture;
         sfSprite **key_sprite;
     } player_assets_t;
 
