@@ -257,5 +257,6 @@
     void init_player_assets(player_t *player);
     void init_rpg(rpg_t *rpg, int ac, char **av);
     void init_popup_interaction(rpg_t *rpg);
+    void init_player_items_packs(player_t *player);
 
 #endif
