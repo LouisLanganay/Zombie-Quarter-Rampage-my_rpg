@@ -31,7 +31,7 @@ static void display_dialogue_choice_one(
 {
     int id = get_key_id(RPK->choice_one.key, rpg);
     sfText *choice_one_text = gl_get_text(rpg->glib,
-        PLAYER_DIALOGUE_CHOICE_ONE_TEXT);
+        PLAYER_DCHOICE_ONE_TEXT);
 
     sfText_setPosition(choice_one_text,
         (sfVector2f){view_pos.x - 29 * 3 + 16, view_pos.y + 138});
@@ -50,7 +50,7 @@ static void display_dialogue_choice_two(
 {
     int id = get_key_id(RPK->choice_two.key, rpg);
     sfText *choice_two_text = gl_get_text(rpg->glib,
-        PLAYER_DIALOGUE_CHOICE_TWO_TEXT);
+        PLAYER_DCHOICE_TWO_TEXT);
 
     sfText_setPosition(choice_two_text,
         (sfVector2f){view_pos.x + 15, view_pos.y + 138});

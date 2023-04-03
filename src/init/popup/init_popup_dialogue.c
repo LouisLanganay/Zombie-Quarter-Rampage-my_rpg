@@ -10,7 +10,7 @@
 static void init_popup_dialogue_choice_one(rpg_t *rpg)
 {
     text_t *my_text = malloc(sizeof(text_t));
-    my_text->id = PLAYER_DIALOGUE_CHOICE_ONE_TEXT;
+    my_text->id = PLAYER_DCHOICE_ONE_TEXT;
     my_text->pos = (sfVector2f){0, 0};
     my_text->font = gl_get_font(rpg->glib, MINECRAFT_FONT);
     my_text->scale = (sfVector2f){0.1, 0.1};
@@ -23,7 +23,7 @@ static void init_popup_dialogue_choice_one(rpg_t *rpg)
 static void init_popup_dialogue_choice_two(rpg_t *rpg)
 {
     text_t *my_text = malloc(sizeof(text_t));
-    my_text->id = PLAYER_DIALOGUE_CHOICE_TWO_TEXT;
+    my_text->id = PLAYER_DCHOICE_TWO_TEXT;
     my_text->pos = (sfVector2f){0, 0};
     my_text->font = gl_get_font(rpg->glib, MINECRAFT_FONT);
     my_text->scale = (sfVector2f){0.1, 0.1};

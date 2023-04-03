@@ -7,6 +7,7 @@
             "y": 750
         },
         "texture_path": "resources/npc/annia.png",
+        "one_time": true,
         "dialogues": [
             {
                 "name": "discovery",
@@ -60,6 +61,7 @@
             "x": 1700,
             "y": 600
         },
+        "one_time": true,
         "texture_path": "resources/npc/annia.png",
         "dialogues": [
             {

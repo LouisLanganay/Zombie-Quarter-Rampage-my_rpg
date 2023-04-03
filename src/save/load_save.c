@@ -43,5 +43,7 @@ int load_save(rpg_t *rpg, char *path)
         return (84);
     if (load_save_player(rpg->player, jp_search(data, "player")) != 0)
         return (84);
+    if (load_game(rpg->save, jp_search(data, "game_timeline")) != 0)
+        return (84);
     return (0);
 }

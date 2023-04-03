@@ -29,9 +29,9 @@ static void change_main_text(rpg_t *rpg, dialog_t *next)
 static void change_choice_text(rpg_t *rpg, dialog_t *next)
 {
     sfText *choice_one_text = gl_get_text(rpg->glib,
-        PLAYER_DIALOGUE_CHOICE_ONE_TEXT);
+        PLAYER_DCHOICE_ONE_TEXT);
     sfText *choice_two_text = gl_get_text(rpg->glib,
-        PLAYER_DIALOGUE_CHOICE_TWO_TEXT);
+        PLAYER_DCHOICE_TWO_TEXT);
 
     if (next->options == NULL) {
         sfText_setString(choice_one_text, NULL);

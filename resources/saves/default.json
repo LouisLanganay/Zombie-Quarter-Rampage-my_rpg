@@ -13,5 +13,8 @@
             "y": 650
         },
         "hp": 100
+    },
+    "game_timeline": {
+        "npc_interactions": [ "Michel" ]
     }
 }

@@ -13,4 +13,5 @@ void init_save(rpg_t *rpg)
     rpg->save->format = NULL;
     rpg->save->name = NULL;
     rpg->save->path = NULL;
+    rpg->save->npc_interactions = NULL;
 }

@@ -28,6 +28,7 @@
     #define RPH rpg->player->hitbox
     #define RSG rpg->settings->game_language
     #define PA player->assets
+    #define RSNI rpg->save->npc_interactions
 
 
     #define GET_SAVE_GAMELANGUAGE my_strcmp(jp_search(data, \
@@ -96,6 +97,7 @@
     typedef struct npc_s {
         char *name;
         char *texture_path;
+        bool_t one_time;
         sfVector2f pos;
         sfSprite *sprite;
         sfTexture *texture;
@@ -139,8 +141,8 @@
         char *name;
         char *path;
         char *format;
+        char **npc_interactions;
     } save_t;
-
 
     typedef struct rpg_s {
         int debug;
@@ -173,12 +175,16 @@
     int my_strlen(char const *str);
     char *my_strndup(const char *str, int n);
     int get_mid_char(const char *str);
+    int my_arr_contains(char **arr, char *str);
+    int my_arrlen(char **arr);
 
     /* LANGUAGE */
     char *get_language(rpg_t *rpg, char *name, language_type_t language);
 
     /* SAVE */
     int load_save(rpg_t *rpg, char *path);
+    int load_game(save_t *save, parsed_data_t *data);
+    void save_game(rpg_t *rpg, char *path);
 
     /* MAP */
     int create_map(rpg_t *rpg, char *json_path);
