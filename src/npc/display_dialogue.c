@@ -28,31 +28,30 @@ static void display_dialogue_choice_one(
         PLAYER_DIALOGUE_CHOICE_ONE_TEXT);
 
     sfText_setPosition(choice_one_text,
-        (sfVector2f){view_pos.x - mid * 3, view_pos.y + 125});
+        (sfVector2f){view_pos.x - mid * 3 + 20, view_pos.y + 125});
     sfRenderWindow_drawText(RGW->window, choice_one_text, NULL);
     if (id != -1) {
         sfSprite_setPosition(RPA->key_sprite[id],
-            (sfVector2f) {view_pos.x - mid * 3 - 10, view_pos.y + 129});
+            (sfVector2f) {view_pos.x - mid * 3, view_pos.y + 129});
         sfRenderWindow_drawSprite(RGW->window, RPA->key_sprite[id], NULL);
     }
 }
 
 static void display_dialogue_choice_two(
     rpg_t *rpg,
-    sfVector2f view_pos,
-    int mid
+    sfVector2f view_pos
 )
 {
-    int id = get_key_id(RPK->choice_one.key, rpg);
-    sfText *choice_one_text = gl_get_text(rpg->glib,
-        PLAYER_DIALOGUE_CHOICE_ONE_TEXT);
+    int id = get_key_id(RPK->choice_two.key, rpg);
+    sfText *choice_two_text = gl_get_text(rpg->glib,
+        PLAYER_DIALOGUE_CHOICE_TWO_TEXT);
 
-    sfText_setPosition(choice_one_text,
-        (sfVector2f){view_pos.x - mid * 3, view_pos.y + 125});
-    sfRenderWindow_drawText(RGW->window, choice_one_text, NULL);
+    sfText_setPosition(choice_two_text,
+        (sfVector2f){view_pos.x + 20, view_pos.y + 125});
+    sfRenderWindow_drawText(RGW->window, choice_two_text, NULL);
     if (id != -1) {
         sfSprite_setPosition(RPA->key_sprite[id],
-            (sfVector2f) {view_pos.x - mid * 3 - 10, view_pos.y + 129});
+            (sfVector2f) {view_pos.x, view_pos.y + 129});
         sfRenderWindow_drawSprite(RGW->window, RPA->key_sprite[id], NULL);
     }
 }
@@ -70,4 +69,5 @@ void display_dialogue(rpg_t *rpg)
         (sfVector2f){view_pos.x - mid * 3, view_pos.y + 100});
     sfRenderWindow_drawText(RGW->window, main_text, NULL);
     display_dialogue_choice_one(rpg, view_pos, mid);
+    display_dialogue_choice_two(rpg, view_pos);
 }

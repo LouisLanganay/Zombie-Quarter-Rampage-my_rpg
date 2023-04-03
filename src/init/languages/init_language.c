@@ -21,7 +21,7 @@ static int language_count(parsed_data_t *data)
 
 void init_language(rpg_t *rpg)
 {
-    parsed_data_t *data = jp_parse("resources/language.json");
+    parsed_data_t *data = jp_parse("resources/jsons/language.json");
     rpg->languages = malloc(sizeof(languages_t *) * (language_count(data) + 1));
     rpg->languages[language_count(data)] = NULL;
     parsed_data_t *tmp = data;

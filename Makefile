@@ -18,9 +18,12 @@ VPATH += src/init/rpg
 VPATH += src/init/save
 VPATH += src/init/player
 VPATH += src/init/popup
+VPATH += src/init/languages
+VPATH += src/init/npc
 VPATH += src/init/settings
 VPATH += src/languages
 VPATH += src/save
+VPATH += src/npc
 VPATH += src/map
 VPATH += src/map/load
 VPATH += src/map/draw
@@ -32,6 +35,7 @@ VPATH += src/player/moovment
 VPATH += src/player/interactions
 VPATH += src/player/colisions
 VPATH += src/player/interactions/functions
+VPATH += src/player/interactions/functions/npc
 
 vpath %.c $(VPATH)
 
@@ -85,6 +89,17 @@ SRC += init_settings.c
 SRC += get_language.c
 SRC += load_save.c
 SRC += init_save.c
+SRC += init_npcs.c
+SRC += my_strdup.c
+SRC += init_npc_dialogs.c
+SRC += draw_npc.c
+SRC += little_girl.c
+SRC += get_npc.c
+SRC += init_popup_dialogue.c
+SRC += display_dialogue.c
+SRC += start_dialogue.c
+SRC += init.c
+SRC += get_key_id.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

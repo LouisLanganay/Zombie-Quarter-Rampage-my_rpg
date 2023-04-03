@@ -22,6 +22,11 @@ static int jp_getvalue_suite(char **str, parsed_data_t *data)
         jp_getvalue_bool(str, data);
         return 1;
     }
+    if (**str == 'n') {
+        data->type = p_null;
+        *str += 4;
+        return 1;
+    }
     return 0;
 }
 

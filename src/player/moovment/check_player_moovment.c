@@ -47,6 +47,7 @@ static int check_player_moovment_complex_bis(
 
 void check_player_moovment(player_t *player, map_t *map, rpg_t *rpg)
 {
+    if (player->in_dialogue == 1) return;
     check_interactions(player, map, rpg);
     if (check_player_moovment_complex(player, map, rpg) == 1) return;
     if (check_player_moovment_complex_bis(player, map, rpg) == 1) return;

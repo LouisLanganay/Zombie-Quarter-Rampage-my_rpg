@@ -47,6 +47,7 @@ void init_player_assets(player_t *player)
 {
     player->assets = malloc(sizeof(player_assets_t));
     player->assets->key_texture = init_player_assets_keyboard();
-    player->assets->key_sprite = init_player_assets_keyboard_sprites(
-        player->assets->key_texture);
+    PA->key_sprite = init_player_assets_keyboard_sprites(PA->key_texture);
+    PA->key_choice1 = init_player_assets_keyboard_sprites(PA->key_texture);
+    PA->key_choice2 = init_player_assets_keyboard_sprites(PA->key_texture);
 }
