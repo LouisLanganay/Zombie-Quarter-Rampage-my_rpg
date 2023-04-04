@@ -13,6 +13,7 @@
     #include "jp.h"
     #include "view.h"
     #include "player.h"
+    #include "menu.h"
 
     #define WINDOW_NAME "RPG"
 
@@ -193,10 +194,14 @@
         char *str
     );
 
+    /* MENU */
+    void init_main_menu(rpg_t *rpg);
+
     /* FPS */
     void print_framerate(void);
 
     /* EVENTS */
+    void e_start_game(int id, void *main);
     void e_key_released(window_t *window, void *main);
     void e_key_pressed(window_t *window, void *main);
     void e_close(window_t *window, void *main);
