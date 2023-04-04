@@ -260,6 +260,7 @@
     void init_glib(rpg_t *rpg);
     void init_npcs(map_t *map, char *path);
     void init_fonts(rpg_t *rpg);
+    void init_player_textures(player_t *player);
     void init_window(rpg_t *rpg);
     void init_npc_dialogs(npc_t *npc, parsed_data_t *dialogs_arr);
     void init_settings(rpg_t *rpg);

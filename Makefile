@@ -111,6 +111,7 @@ SRC += load_npc_interactions.c
 SRC += my_arr_contains.c
 SRC += my_arrlen.c
 SRC += save_npc_interactions.c
+SRC += init_player_textures.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl
