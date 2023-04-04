@@ -44,11 +44,16 @@ static void change_choice_text(rpg_t *rpg, dialog_t *next)
 
 void next_dialogue(rpg_t *rpg, int choice)
 {
+    npc_t *npc = rpg->actual_npc;
     dialog_t *tmp = rpg->actual_npc->dialogs;
     dialog_t *actual = rpg->actual_dialog;
     dialog_t *next = get_dialogue(tmp, actual, choice);
+    parsed_data_t *data = NULL;
 
     if (next == NULL) {
+        save_npc_interactions(rpg, npc);
+        data = jp_parse(rpg->save->path);
+        load_npc_interactions(rpg->save, jp_search(data, "game_timeline"));
         rpg->player->in_dialogue = 0;
         return;
     }
