@@ -1,0 +1,18 @@
+{
+    "house_paper_interact": {
+        "en": "read the paper.",
+        "fr": "lire le papier."
+    },
+    "house_door_interact_enter": {
+        "en": "enter in the house.",
+        "fr": "entrer dans la maison."
+    },
+    "house_door_interact_leave": {
+        "en": "leave the house.",
+        "fr": "sortir de la maison."
+    },
+    "interact_press__to": {
+        "en": "Press        to ",
+        "fr": "Appuyez sur      pour "
+    }
+}
