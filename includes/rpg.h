@@ -19,6 +19,9 @@
     #define MINECRAFT_FONT 8888
 
     #define EVENT_WINDOW_CLOSE 1
+    #define EVENT_INVENTORY_OPEN 454545
+    #define NB_ITEMS 12
+
 
     #define RPA rpg->player->assets
     #define RGW rpg->glib->window
@@ -187,6 +190,8 @@
     void draw_layer(rpg_t *rpg, layer_t *layer);
     void draw_layer_by_class(map_t *map, rpg_t *rpg, char *class);
     void draw_layer_by_order(map_t *map, rpg_t *rpg, int order);
+    void draw_inventory(rpg_t *rpg);
+    void draw_items(rpg_t *rpg);
     map_t *get_map(rpg_t *rpg, char *map_path);
 
     /* VIEW */
@@ -234,6 +239,7 @@
     /* EVENTS */
     void e_key_released(window_t *window, void *main);
     void e_key_pressed(window_t *window, void *main);
+    void e_open_inventory(window_t *window, void *main);
     void e_close(window_t *window, void *main);
 
     /* INIT */
@@ -253,5 +259,6 @@
     void init_rpg(rpg_t *rpg, int ac, char **av);
     void init_popup_interaction(rpg_t *rpg);
     void init_player_items_packs(player_t *player);
+    void init_inventory(rpg_t *rpg);
 
 #endif

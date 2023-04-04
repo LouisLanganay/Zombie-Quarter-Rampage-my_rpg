@@ -28,6 +28,7 @@ int main(int ac, char **av)
         set_view_on_player(rpg);
         gl_check_events(rpg->glib->window, rpg->glib->events, rpg);
         draw_map(rpg->maps, rpg->actual_map, rpg);
+        draw_inventory(rpg);
         display_dialogue(rpg);
         sfRenderWindow_display(rpg->glib->window->window);
     }

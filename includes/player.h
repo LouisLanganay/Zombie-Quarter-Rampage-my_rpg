@@ -20,7 +20,7 @@
 
     #define PLAYER_SPRITE_PATH "resources/player/player_sprite.png"
     #define PLAYER_KEYBOARD_PATH "resources/assets/keys/keyboard.png"
-    #define PLAYER_INVENTORY_PATH "ressources/assets/items/items_packs.png"
+    #define PLAYER_INVENTORY_PATH "resources/assets/items/items_packs.png"
     #define PLAYER_INTERACT_TEXT 613255
     #define PLAYER_SPRITE_WIDTH 25
     #define PLAYER_SPRITE_HEIGHT 45
@@ -59,6 +59,7 @@
         p_key_t interact;
         p_key_t choice_one;
         p_key_t choice_two;
+        p_key_t inventory;
     } keys_t;
 
     typedef struct player_assets_s {
@@ -69,9 +70,17 @@
         sfSprite **key_choice2;
     } player_assets_t;
 
+    typedef struct inventory_s {
+        int is_open;
+        int *items;
+        sfSprite **items_sprite;
+        sfRectangleShape *background;
+    } inventory_t;
+
     typedef struct player_s {
         int hp;
         int in_dialogue;
+        inventory_t *inventory;
         sfRectangleShape *hitbox;
         sfVector2f pos;
         sfView *view;
