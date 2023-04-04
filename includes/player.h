@@ -38,10 +38,10 @@
     #define EVENT_KEY_RELEASED 5466
 
     #define UP_CONDITION ((check_colisions(map, (sfVector2f){player->pos.x +   \
-    player->rect.width / 2, player->pos.y - 3}, player, rpg) == 0))
+    player->rect.width / 2, player->pos.y - 7}, player, rpg) == 0))
 
     #define DOWN_CONDITION ((check_colisions(map, (sfVector2f){player->pos.x \
-    + player->rect.width / 2, player->pos.y + 3}, player, rpg) == 0))
+    + player->rect.width / 2, player->pos.y + 5}, player, rpg) == 0))
 
     #define LEFT_CONDITION (check_colisions(map, (sfVector2f){player->pos.x, \
     player->pos.y}, player, rpg) == 0)
