@@ -183,8 +183,8 @@
 
     /* SAVE */
     int load_save(rpg_t *rpg, char *path);
-    int load_game(save_t *save, parsed_data_t *data);
-    void save_game(rpg_t *rpg, char *path);
+    int load_npc_interactions(save_t *save, parsed_data_t *data);
+    void save_npc_interactions(rpg_t *rpg, npc_t *npc);
 
     /* MAP */
     int create_map(rpg_t *rpg, char *json_path);

@@ -107,10 +107,10 @@ SRC += get_mid_char.c
 SRC += init_player_assets_dialogue.c
 SRC += divide_a_sftext.c
 SRC += my_strndup.c
-SRC += load_game.c
+SRC += load_npc_interactions.c
 SRC += my_arr_contains.c
 SRC += my_arrlen.c
-SRC += save_game.c
+SRC += save_npc_interactions.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl
