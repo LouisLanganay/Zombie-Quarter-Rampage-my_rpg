@@ -1,17 +1,20 @@
 {
-    "save_file": {
-        "path": "resources/save.json",
-        "format": "json",
-        "name": "save"
-    },
-    "settings": {
-        "game_language": "en"
-    },
-    "player": {
-        "pos": {
-            "x": 1700,
-            "y": 650
-        },
-        "hp": 100
-    }
+	"save_file": {
+		"path": "resources/save.json",
+		"format": "json",
+		"name": "save"
+	},
+	"settings": {
+		"game_language": "en"
+	},
+	"player": {
+		"pos": {
+			"x": 1700,
+			"y": 650
+		},
+		"hp": 100
+	},
+	"game_timeline": {
+		"npc_interactions": [ "npc" ]
+	}
 }

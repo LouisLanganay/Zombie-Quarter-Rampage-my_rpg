@@ -17,6 +17,7 @@
     #define WINDOW_NAME "RPG"
 
     #define MINECRAFT_FONT 8888
+    #define CRYSTAL_FONT 8889
 
     #define EVENT_WINDOW_CLOSE 1
     #define EVENT_DIALOGUE_CHOICE 651546
@@ -27,6 +28,7 @@
     #define RPH rpg->player->hitbox
     #define RSG rpg->settings->game_language
     #define PA player->assets
+    #define RSNI rpg->save->npc_interactions
 
 
     #define GET_SAVE_GAMELANGUAGE my_strcmp(jp_search(data, \
@@ -95,6 +97,7 @@
     typedef struct npc_s {
         char *name;
         char *texture_path;
+        bool_t one_time;
         sfVector2f pos;
         sfSprite *sprite;
         sfTexture *texture;
@@ -138,8 +141,8 @@
         char *name;
         char *path;
         char *format;
+        char **npc_interactions;
     } save_t;
-
 
     typedef struct rpg_s {
         int debug;
@@ -170,12 +173,18 @@
     char *my_strcat_malloc(char *dest, char const *src);
     char *my_strdup(char *str);
     int my_strlen(char const *str);
+    char *my_strndup(const char *str, int n);
+    int get_mid_char(const char *str);
+    int my_arr_contains(char **arr, char *str);
+    int my_arrlen(char **arr);
 
     /* LANGUAGE */
     char *get_language(rpg_t *rpg, char *name, language_type_t language);
 
     /* SAVE */
     int load_save(rpg_t *rpg, char *path);
+    int load_npc_interactions(save_t *save, parsed_data_t *data);
+    void save_npc_interactions(rpg_t *rpg, npc_t *npc);
 
     /* MAP */
     int create_map(rpg_t *rpg, char *json_path);
@@ -216,6 +225,9 @@
     void start_dialogue(rpg_t *rpg, npc_t *npc);
     void next_dialogue(rpg_t *rpg, int choice);
     void display_dialogue(rpg_t *rpg);
+
+    /* TEXT */
+    void divide_a_sftext(sfText *text, sfVector2f pos, rpg_t *rpg);
 
 
     /* CALL ACTIONS */
@@ -258,5 +270,6 @@
     void init_rpg(rpg_t *rpg, int ac, char **av);
     void init_popup_interaction(rpg_t *rpg);
     void init_player_items_packs(player_t *player);
+    void init_player_assets_dialogue(player_t *player);
 
 #endif

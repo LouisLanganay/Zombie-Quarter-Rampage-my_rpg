@@ -22,6 +22,7 @@
     #define PLAYER_KEYBOARD_PATH "resources/assets/keys/keyboard.png"
     #define PLAYER_KEYBOARD_PATH2 "resources/assets/keys/extras.png"
     #define PLAYER_INVENTORY_PATH "ressources/assets/items/items_packs.png"
+    #define PLAYER_GUI_PATH "resources/assets/gui/UI.png"
 
     #define PLAYER_INTERACT_TEXT 613255
     #define PLAYER_SPRITE_WIDTH 25
@@ -29,8 +30,8 @@
     #define PLAYER_SPEED 1.5
 
     #define PLAYER_DIALOGUE_TEXT 613256
-    #define PLAYER_DIALOGUE_CHOICE_ONE_TEXT 613257
-    #define PLAYER_DIALOGUE_CHOICE_TWO_TEXT 613258
+    #define PLAYER_DCHOICE_ONE_TEXT 613257
+    #define PLAYER_DCHOICE_TWO_TEXT 613258
     #define PLAYER_DIALOGUE_TEXT_ESCAPE 613259
 
     #define EVENT_KEY_PRESSED 5465
@@ -71,6 +72,7 @@
         sfTexture **items_texture;
         sfSprite **key_choice1;
         sfSprite **key_choice2;
+        sfSprite *dialog_box;
     } player_assets_t;
 
     typedef struct player_s {
@@ -79,6 +81,7 @@
         sfRectangleShape *hitbox;
         sfVector2f pos;
         sfView *view;
+        sfClock *clock;
         sfTexture *texture;
         sfSprite *sprite;
         sfIntRect rect;

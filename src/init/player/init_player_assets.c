@@ -76,4 +76,5 @@ void init_player_assets(player_t *player)
     PA->key_sprite = init_player_assets_keyboard_sprites(PA->key_texture);
     PA->key_choice1 = init_player_assets_keyboard_sprites(PA->key_texture);
     PA->key_choice2 = init_player_assets_keyboard_sprites(PA->key_texture);
+    init_player_assets_dialogue(player);
 }

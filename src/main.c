@@ -20,7 +20,7 @@ int main(int ac, char **av)
     create_map(rpg, "resources/maps/main_map.json");
     create_map(rpg, "resources/maps/player_house.json");
     init(rpg);
-    load_save(rpg, "resources/saves/default.json");
+    load_save(rpg, "resources/save.json");
 
     while (sfRenderWindow_isOpen(rpg->glib->window->window)) {
         print_framerate();
