@@ -112,8 +112,8 @@ In game menu
 
 - [@L.Langanay](https://github.com/LouisLanganay) [![wakatime](https://wakatime.com/badge/user/3372edb3-08ff-4829-807b-29bbe42cf52b/project/b37acda6-2743-4b81-baa5-a7701a38e485.svg)](https://wakatime.com/badge/user/3372edb3-08ff-4829-807b-29bbe42cf52b/project/b37acda6-2743-4b81-baa5-a7701a38e485)
 - [@V.Peron]
-- [@A.Bost]
-- [@G.Blaizot]
+- [@A.Bost](https://github.com/AugustinBst)
+- [@G.Blaizot](https://github.com/Gaulaume)
 
 ![Logo](https://newsroom.ionis-group.com/wp-content/uploads/2021/10/EPITECH-TECHNOLOGY-QUADRI-2021.png)
 
