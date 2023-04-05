@@ -18,6 +18,10 @@
 
     #define MINECRAFT_FONT 8888
     #define CRYSTAL_FONT 8889
+    #define TLOU_FONT 8890
+
+    #define SPLASH_SCREEN_TEXT1 9999
+    #define SPLASH_SCREEN_TEXT2 10001
 
     #define EVENT_WINDOW_CLOSE 1
     #define EVENT_DIALOGUE_CHOICE 651546
@@ -139,15 +143,22 @@
     } settings_t;
 
     typedef struct save_s {
+        int loaded;
         char *name;
         char *path;
         char *format;
         char **npc_interactions;
     } save_t;
 
+    typedef struct splash_screen_s {
+        sfClock *clock;
+    } splash_screen_t;
+
     typedef struct rpg_s {
         int debug;
         char *actual_map;
+        int game_started;
+        int maps_loaded;
         dialog_t *actual_dialog;
         npc_t *actual_npc;
         map_t *maps;
@@ -156,6 +167,7 @@
         languages_t **languages;
         settings_t *settings;
         save_t *save;
+        splash_screen_t *splash_screen;
     } rpg_t;
 
     typedef struct keyboard_images_s {
@@ -179,6 +191,14 @@
     int my_arr_contains(char **arr, char *str);
     int my_arrlen(char **arr);
 
+    /* GAME */
+    void game_loop(rpg_t *rpg);
+    void start_game(rpg_t *rpg);
+
+    /* SPLASH SCREEN */
+    void draw_splash_screen(rpg_t *rpg);
+    void init_splash_screen(rpg_t *rpg);
+
     /* LANGUAGE */
     char *get_language(rpg_t *rpg, char *name, language_type_t language);
 
@@ -188,6 +208,7 @@
     void save_npc_interactions(rpg_t *rpg, npc_t *npc);
 
     /* MAP */
+    void load_maps(rpg_t *rpg);
     int create_map(rpg_t *rpg, char *json_path);
     sfTexture **load_tiles_textures(map_t *map);
     sfSprite **load_layer_sprites(layer_t *layer, map_t *map);

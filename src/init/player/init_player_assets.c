@@ -71,6 +71,7 @@ static sfSprite **init_player_assets_keyboard_sprites(sfTexture **textures)
 void init_player_assets(player_t *player)
 {
     player->assets = malloc(sizeof(player_assets_t));
+    player->assets->clock = sfClock_create();
     player->assets->key_texture = init_player_assets_keyboard();
     init_player_assets_keyboard_extra(player->assets);
     PA->key_sprite = init_player_assets_keyboard_sprites(PA->key_texture);

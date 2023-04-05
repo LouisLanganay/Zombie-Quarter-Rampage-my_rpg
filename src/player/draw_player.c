@@ -17,7 +17,8 @@ static void draw_player_hitbox(rpg_t *rpg)
 
 void draw_player(rpg_t *rpg)
 {
-    check_player_moovment(rpg->player, get_map(rpg, rpg->actual_map), rpg);
+    if (rpg->player->in_dialogue != 1)
+        check_player_moovment(rpg->player, get_map(rpg, rpg->actual_map), rpg);
     sfSprite_setPosition(rpg->player->sprite, rpg->player->pos);
     change_player_rect(rpg->player);
     sfRectangleShape_setPosition(
