@@ -17,17 +17,7 @@ void event_window_close(window_t *window)
     sfRenderWindow_close(window->window);
 }
 
-sfSprite *gl_get_sprite(GLib_t *glib, int id)
-{
-    sprite_t *tmp = glib->sprites;
-    while (tmp != NULL) {
-        if (tmp->id == id) {
-            return tmp->sprite;
-        }
-        tmp = tmp->next;
-    }
-    return NULL;
-}
+
 
 void init_background(rpg_t *rpg)
 {
@@ -71,97 +61,9 @@ void move_player(rpg_t *rpg, sfClock *clock)
     }
 }
 
-float shot_angle(sfVector2f pos, sfVector2i mouse)
-{
-    float angle = atan2(mouse.y - pos.y, mouse.x - pos.x) * 180 / M_PI;
-    return angle;
-}
 
-void insert_bullet(bullets_t **list, rpg_t *rpg)
-{
-    bullets_t *new_node = malloc(sizeof(bullets_t));
-    new_node->speed = 10;
-    new_node->pos = sfSprite_getPosition(gl_get_sprite(rpg->glib, 2));
-    new_node->sprite = sfSprite_create();
-    new_node->texture = sfTexture_createFromFile("assets/bullet.png", NULL);
-    new_node->rect = (sfIntRect){0, 0, 100, 100};
-    new_node->scale = (sfVector2f){1.0, 1.0};
-    new_node->angle = shot_angle(new_node->pos, sfMouse_getPositionRenderWindow(rpg->glib->window->window));
-    new_node->next = *list;
-    sfSprite_setTexture(new_node->sprite, new_node->texture, sfTrue);
-    sfSprite_setTextureRect(new_node->sprite, new_node->rect);
-    sfSprite_setScale(new_node->sprite, new_node->scale);
-    sfSprite_setPosition(new_node->sprite, new_node->pos);
-    *list = new_node;
-}
 
-void delete_bullet(bullets_t **list, int index)
-{
-    bullets_t *tmp = *list;
-    bullets_t *prev = NULL;
-    int i = 0;
-    if (tmp == NULL)
-        return;
-    if (index == 0) {
-        if (tmp->next == NULL) {
-            *list = tmp->next;
-            free(tmp);
-        }
-        else {
-            *list = tmp->next;
-            free(tmp);
-        }
-        return;
-    }
-    while (tmp != NULL && i != index) {
-        prev = tmp;
-        tmp = tmp->next;
-        i++;
-    }
-    if (tmp == NULL)
-        return;
-    prev->next = tmp->next;
-    free(tmp);
-}
 
-void move_bullets(bullets_t *bullets)
-{
-    bullets_t *tmp = bullets;
-    while (tmp != NULL) {
-        tmp->pos.x += cos(tmp->angle * M_PI / 180) * tmp->speed;
-        tmp->pos.y += sin(tmp->angle * M_PI / 180) * tmp->speed;
-        sfSprite_setPosition(tmp->sprite, tmp->pos);
-        tmp = tmp->next;
-    }
-}
-
-void delete_outmap_bullet(bullets_t **bullets)
-{
-    bullets_t *tmp = *bullets;
-    if (tmp == NULL)
-        return;
-    int i = 0;
-    while (tmp != NULL) {
-        if (tmp->pos.x > 1920 || tmp->pos.x < 0 || tmp->pos.y > 1080 || tmp->pos.y < 0) {
-            delete_bullet(bullets, i);
-            printf("delete bullet out of map");
-            return;
-        }
-        tmp = tmp->next;
-        i++;
-    }
-}
-
-void print_len_list(bullets_t *bullets)
-{
-    int i = 0;
-    bullets_t *tmp = bullets;
-    while (tmp != NULL) {
-        i++;
-        tmp = tmp->next;
-    }
-    printf("len = %d\n", i);
-}
 
 void delete_element(bullets_t *bullets, int index)
 {
@@ -173,17 +75,6 @@ void delete_element(bullets_t *bullets, int index)
             return;
         }
         i++;
-        tmp = tmp->next;
-    }
-}
-
-void draw_bullets(bullets_t *bullets, rpg_t *rpg)
-{
-    bullets_t *tmp = bullets;
-    if (tmp == NULL)
-        return;
-    while (tmp != NULL) {
-        sfRenderWindow_drawSprite(rpg->glib->window->window, tmp->sprite, NULL);
         tmp = tmp->next;
     }
 }
@@ -229,27 +120,6 @@ void init_boss(rpg_t *rpg)
     gl_create_sprite(rpg->glib, my_sprite);
 }
 
-
-
-
-/*
-
-    bullets_t *tmp = *bullets;
-    if (tmp == NULL)
-        return;
-    int i = 0;
-    while (tmp != NULL) {
-        if (tmp->pos.x > 1920 || tmp->pos.x < 0 || tmp->pos.y > 1080 || tmp->pos.y < 0) {
-            delete_bullet(bullets, i);
-            printf("delete bullet out of map");
-            return;
-        }
-        tmp = tmp->next;
-        i++;
-    }
-*/
-
-
 int main(int ac, char **av)
 {
     rpg_t *rpg = malloc(sizeof(rpg_t));
@@ -265,15 +135,6 @@ int main(int ac, char **av)
     zombies_t *zombies = NULL;
     sfClock *clock_zombies = sfClock_create();
 
-    // sfRectangleShape *rect = sfRectangleShape_create();
-    // sfRectangleShape_setPosition(rect, (sfVector2f){1500, 300});
-    // sfRectangleShape_setSize(rect, (sfVector2f){100, 100});
-    // sfRectangleShape_setFillColor(rect, sfTransparent);
-    // sfRectangleShape_setOutlineColor(rect, sfRed);
-    // sfRectangleShape_setOutlineThickness(rect, 5);
-    // sfRectangleShape_setScale(rect, (sfVector2f){-3.0, 3.0});
-
-
 
     while (sfRenderWindow_isOpen(rpg->glib->window->window)) {
         print_framerate();
@@ -282,9 +143,8 @@ int main(int ac, char **av)
         gl_draw_sprite(rpg->glib, 0);
         move_player(rpg, clock);
         if (sfMouse_isButtonPressed(sfMouseLeft) && sfClock_getElapsedTime(clock_shoot).microseconds / 200000.0 > 1) {
-            //bullet_insert(bullets, rpg);
             insert_bullet(&bullets, rpg);
-            print_len_list(bullets);
+            print_len_bullets(bullets);
             sfClock_restart(clock_shoot);
         }
         draw_bullets(bullets, rpg);
@@ -303,20 +163,6 @@ int main(int ac, char **av)
         //move_zombies(zombies, rpg);
         //bullet_hit_zombies(zombies, bullets);
         colision_bullet_zombies(zombies, bullets);
-        //if (sfMouse_isButtonPressed(sfMouseLeft)) {
-        //    sfVector2i mouse_pos = sfMouse_getPositionRenderWindow(rpg->glib->window->window);
-        //    sfVector2f mouse_pos_f = (sfVector2f){mouse_pos.x, mouse_pos.y};
-        //    //click_in_rect(rect, mouse_pos_f);
-        //}
-        //bullets = delete_outmap_bullet(bullets);
-        //hit_boss(rpg, bullets);
-        // sfRenderWindow_drawRectangleShape(rpg->glib->window->window, rect, NULL);
-        //collision(rect, bullets);
-        //hit_by_bullet(gl_get_sprite(rpg->glib, 0), bullets);
-        //print_len_list(bullets);
-        //if (zombies != NULL) {
-        //    move_zombies(zombies, rpg);
-        //}
         if (sfClock_getElapsedTime(clock_zombies).microseconds / 2000000.0 > 1) {
             move_zombies(zombies, rpg);
             sfClock_restart(clock_zombies);

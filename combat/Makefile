@@ -38,6 +38,7 @@ VPATH += src/player/interactions/functions
 VPATH += src/player/interactions/functions/npc
 VPATH += src/colision
 VPATH += src/zombies
+VPATH += src/bullets
 
 vpath %.c $(VPATH)
 
@@ -108,6 +109,13 @@ SRC += move_zombies.c
 SRC += draw_zombies.c
 SRC += insert_zombies.c
 SRC += delete_zombie.c
+SRC += draw_bullets.c
+SRC += print_len_bullets.c
+SRC += delete_outmap_bullet.c
+SRC += delete_bullet.c
+SRC += move_bullets.c
+SRC += insert_bullet.c
+SRC += shot_angle.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

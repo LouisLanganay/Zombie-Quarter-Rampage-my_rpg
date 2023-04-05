@@ -284,5 +284,13 @@
     void draw_zombies(zombies_t *list, rpg_t *rpg);
     void insert_zombies(rpg_t *rpg, zombies_t **list);
     void delete_zombie(zombies_t *list, zombies_t *node);
-
+    void draw_bullets(bullets_t *bullets, rpg_t *rpg);
+    void print_len_bullets(bullets_t *bullets);
+    void draw_bullets(bullets_t *bullets, rpg_t *rpg);
+    void delete_bullet(bullets_t **list, int index);
+    void delete_outmap_bullet(bullets_t **bullets);
+    void move_bullets(bullets_t *bullets);
+    void insert_bullet(bullets_t **list, rpg_t *rpg);
+    float shot_angle(sfVector2f pos, sfVector2i mouse);
+    sfSprite *gl_get_sprite(GLib_t *glib, int id);
 #endif
