@@ -7,7 +7,12 @@
 
 #include "rpg.h"
 
-static void init_values(map_t *tmp, parsed_data_t *data, char *json_path)
+static void init_values(
+    map_t *tmp,
+    parsed_data_t *data,
+    char *json_path,
+    rpg_t *rpg
+)
 {
     tmp->tilesets = NULL;
     load_tilesets(data, tmp);
@@ -21,7 +26,7 @@ static void init_values(map_t *tmp, parsed_data_t *data, char *json_path)
     load_map_layers(tmp, data);
     tmp->tiles = NULL;
     load_tiles_colisions(tmp, data);
-    init_npcs(tmp, "resources/jsons/npc.json");
+    init_npcs(tmp, "resources/jsons/npc.json", rpg);
 }
 
 int create_map(rpg_t *rpg, char *json_path)
@@ -31,7 +36,7 @@ int create_map(rpg_t *rpg, char *json_path)
         return write(2, "Error: malloc failed\n", 21);
     parsed_data_t *data = jp_parse(json_path);
 
-    init_values(tmp, data, json_path);
+    init_values(tmp, data, json_path, rpg);
 
     tmp->next = rpg->maps;
     rpg->maps = tmp;

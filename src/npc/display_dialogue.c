@@ -76,8 +76,12 @@ static void display_dialogue_escape(
         (sfVector2f){view_pos.x - 29 * 3, view_pos.y + 138});
     sfRenderWindow_drawText(RGW->window, escape_text, NULL);
     if (id != -1) {
-        sfSprite_setPosition(RPA->key_sprite[id],
+        if (RSG == EN)
+            sfSprite_setPosition(RPA->key_sprite[id],
             (sfVector2f) {view_pos.x - 29 * 3 + 35, view_pos.y + 142});
+        if (RSG == FR)
+            sfSprite_setPosition(RPA->key_sprite[id],
+            (sfVector2f) {view_pos.x - 29 * 3 + 57, view_pos.y + 142});
         sfRenderWindow_drawSprite(RGW->window, RPA->key_sprite[id], NULL);
     }
 }

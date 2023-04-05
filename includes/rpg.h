@@ -293,11 +293,11 @@
     void init_player(rpg_t *rpg);
     void init_popup_dialogue(rpg_t *rpg);
     void init_glib(rpg_t *rpg);
-    void init_npcs(map_t *map, char *path);
+    void init_npcs(map_t *map, char *path, rpg_t *rpg);
     void init_fonts(rpg_t *rpg);
     void init_player_textures(player_t *player);
     void init_window(rpg_t *rpg);
-    void init_npc_dialogs(npc_t *npc, parsed_data_t *dialogs_arr);
+    void init_npc_dialogs(npc_t *npc, parsed_data_t *dialogs_arr, rpg_t *rpg);
     void init_settings(rpg_t *rpg);
     void init_language(rpg_t *rpg);
     void init_save(rpg_t *rpg);

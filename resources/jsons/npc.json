@@ -12,20 +12,20 @@
         "dialogues": [
             {
                 "name": "default",
-                "text": "Hi! I'm Annia.",
+                "text": "annia_default",
                 "options": null,
                 "function": null
             },
             {
                 "name": "discovery",
-                "text": "Hello... I'm Annia. I'm lost. I don't know anything.",
+                "text": "annia_discovery",
                 "options": [
                     {
-                        "text": "I'll help you",
+                        "text": "annia_discovery_help",
                         "next": "help"
                     },
                     {
-                        "text": "I don't care",
+                        "text": "annia_discovery_ignore",
                         "next": "ignore"
                     }
                 ],
@@ -33,14 +33,14 @@
             },
             {
                 "name": "help",
-                "text": "Thank you! I lost my parents and here that was their grocery store. I'm so scared.",
+                "text": "annia_help",
                 "options": [
                     {
-                        "text": "Give food",
+                        "text": "annia_help_help",
                         "next": "help_give_food"
                     },
                     {
-                        "text": "Talk about something else",
+                        "text": "annia_help_ignore",
                         "next": "help_give_nothing"
                     }
                 ],
@@ -48,59 +48,19 @@
             },
             {
                 "name": "help_give_food",
-                "text": "Thank you for this food! I'm so hungry! I have this in my bag. It's a gun. It's for you.",
+                "text": "annia_help_give_food",
                 "options": null,
                 "function": "give_food"
             },
             {
                 "name": "help_give_nothing",
-                "text": "Oh, ok then. I will go there. Thank you!",
+                "text": "annia_give_nothing",
                 "options": null,
                 "function": null
             },
             {
                 "name": "ignore",
-                "text": "Please...",
-                "options": null,
-                "function": null
-            }
-        ]
-    },
-    "musician": {
-        "name": "Musician",
-        "map": "resources/maps/main_map.json",
-        "pos": {
-            "x": 1700,
-            "y": 600
-        },
-        "one_time": false,
-        "default_dialog": "discovery",
-        "texture_path": "resources/npc/annia.png",
-        "dialogues": [
-            {
-                "name": "discovery",
-                "text": "Hello there! I'm a musician. I'm playing here to earn some money. I'm not very good, but I'm trying.",
-                "options": [
-                    {
-                        "text": "Oh, I see, I need to go",
-                        "next": "ignore"
-                    },
-                    {
-                        "text": "I will give you some food",
-                        "next": "help"
-                    }
-                ],
-                "function": null
-            },
-            {
-                "name": "help",
-                "text": "Thank you! I'm starving!",
-                "options": null,
-                "function": null
-            },
-            {
-                "name": "ignore",
-                "text": "Ok, bye!",
+                "text": "annia_ignore",
                 "options": null,
                 "function": null
             }
