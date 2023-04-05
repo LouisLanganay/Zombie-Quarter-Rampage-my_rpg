@@ -23,13 +23,13 @@ static int player_in_moovment(player_t *player)
 
 static void change_player_rect_annimate(player_t *player)
 {
-    time_t time = sfClock_getElapsedTime(player->clock).microseconds;
+    time_t time = sfClock_getElapsedTime(player->assets->clock).microseconds;
     float seconds = time / 1000000.0;
     if (seconds > (player_in_moovment(player) ? 0.1 : 0.25)) {
         player->rect.top += PLAYER_SPRITE_HEIGHT;
         if (player->rect.top >= PLAYER_SPRITE_HEIGHT * 6)
             player->rect.top = 0;
-        sfClock_restart(player->clock);
+        sfClock_restart(player->assets->clock);
     }
 }
 
