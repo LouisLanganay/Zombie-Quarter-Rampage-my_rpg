@@ -91,9 +91,15 @@
         char *next_dialog;
     } dialog_option_t;
 
+    typedef struct dialog_func_s {
+        char *name;
+        void (*func)(void*);
+    } dialog_func_t;
+
     typedef struct dialog_s {
         char *name;
         char *text;
+        char *function;
         dialog_option_t **options;
         struct dialog_s *next;
     } dialog_t;
@@ -251,18 +257,21 @@
     void start_dialogue(rpg_t *rpg, npc_t *npc);
     void next_dialogue(rpg_t *rpg, int choice);
     void display_dialogue(rpg_t *rpg);
+    void check_dialogue_function(rpg_t *rpg, dialog_t *dialogue);
 
     /* TEXT */
     void divide_a_sftext(sfText *text, sfVector2f pos, rpg_t *rpg);
 
 
     /* CALL ACTIONS */
+    void npc_give_food(void*);
     void little_girl(rpg_t *rpg, sfVector2f pos);
     void inte_test(rpg_t *rpg);
     void i_house_door(rpg_t *rpg, sfVector2f pos);
     void i_house_paper(rpg_t *rpg, sfVector2f pos);
     void i_chest(rpg_t *rpg);
     interactions_t *get_interactions_array(void);
+    dialog_func_t *get_npc_func_arr(void);
     void draw_interaction_popup(
         rpg_t *rpg,
         sfVector2f pos,

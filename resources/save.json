@@ -18,6 +18,8 @@
 		"actual_map": "resources/maps/main_map.json"
 	},
 	"game_timeline": {
-		"npc_interactions": [ "npc" ]
+		"npc_interactions": [
+			"npc"
+		]
 	}
 }

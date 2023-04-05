@@ -27,6 +27,7 @@ VPATH += src/save
 VPATH += src/save/save
 VPATH += src/save/load
 VPATH += src/npc
+VPATH += src/npc/functions
 VPATH += src/game
 VPATH += src/splash_screen
 VPATH += src/text
@@ -126,6 +127,9 @@ SRC += save_player.c
 SRC += load_player.c
 SRC += load_game.c
 SRC += save_game.c
+SRC += npc_give_food.c
+SRC += check_dialogue_function.c
+SRC += get_npc_func_arr.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl
