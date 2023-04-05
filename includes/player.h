@@ -38,7 +38,7 @@
     #define PLAYER_INTERACT_TEXT 613255
     #define PLAYER_SPRITE_WIDTH 16
     #define PLAYER_SPRITE_HEIGHT 35
-    #define PLAYER_SPEED 1
+    #define PLAYER_SPEED 60
 
     #define PLAYER_DIALOGUE_TEXT 613256
     #define PLAYER_DCHOICE_ONE_TEXT 613257
@@ -86,6 +86,7 @@
     } keys_t;
 
     typedef struct player_assets_s {
+        sfClock *clock;
         sfTexture **key_texture;
         sfSprite **key_sprite;
         sfTexture **items_texture;
