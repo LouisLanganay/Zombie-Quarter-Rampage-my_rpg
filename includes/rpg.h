@@ -299,6 +299,8 @@
     void e_close(window_t *window, void *main);
     void e_dialogue(window_t *window, void *main);
     void e_seeting_game(int id, void *main);
+    void e_seeting_keybinds_game(int id, void *main);
+
 
     /* INIT */
     void init(rpg_t *rpg);
