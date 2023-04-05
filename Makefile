@@ -125,6 +125,9 @@ SRC += draw_splash_screen.c
 SRC += init_splash_screen.c
 SRC += game_loop.c
 SRC += load_maps.c
+SRC += init_settings_menu.c
+SRC += e_seetings.c
+SRC += init_keybinds.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

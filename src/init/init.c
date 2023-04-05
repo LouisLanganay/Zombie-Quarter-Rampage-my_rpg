@@ -17,4 +17,5 @@ void init(rpg_t *rpg)
     init_popup_dialogue(rpg);
     init_save(rpg);
     init_splash_screen(rpg);
+    init_main_menu(rpg);
 }
