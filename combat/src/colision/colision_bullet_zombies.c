@@ -34,4 +34,3 @@ int colision_bullet_zombies(zombies_t *list, bullets_t *bullets)
     }
     return (0);
 }
-

@@ -280,5 +280,9 @@
     void init_player_items_packs(player_t *player);
     int colision_with_rect(sfRectangleShape *rect, sfVector2f pos);
     int colision_bullet_zombies(zombies_t *list, bullets_t *bullets);
+    void move_zombies(zombies_t *list, rpg_t *rpg);
+    void draw_zombies(zombies_t *list, rpg_t *rpg);
+    void insert_zombies(rpg_t *rpg, zombies_t **list);
+    void delete_zombie(zombies_t *list, zombies_t *node);
 
 #endif
