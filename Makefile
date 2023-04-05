@@ -21,7 +21,6 @@ VPATH += src/init/player
 VPATH += src/init/popup
 VPATH += src/init/languages
 VPATH += src/init/npc
-VPATH += src/init/quests
 VPATH += src/init/settings
 VPATH += src/languages
 VPATH += src/save
@@ -131,7 +130,6 @@ SRC += save_game.c
 SRC += npc_give_food.c
 SRC += check_dialogue_function.c
 SRC += get_npc_func_arr.c
-SRC += init_quests.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl
