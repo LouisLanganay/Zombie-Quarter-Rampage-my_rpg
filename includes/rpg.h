@@ -203,9 +203,13 @@
     char *get_language(rpg_t *rpg, char *name, language_type_t language);
 
     /* SAVE */
+    int load_game(rpg_t *rpg, parsed_data_t *data);
     int load_save(rpg_t *rpg, char *path);
     int load_npc_interactions(save_t *save, parsed_data_t *data);
+    int load_player(player_t *player, parsed_data_t *data);
     void save_npc_interactions(rpg_t *rpg, npc_t *npc);
+    void save_game(rpg_t *rpg);
+    void save_player(rpg_t *rpg);
 
     /* MAP */
     void load_maps(rpg_t *rpg);
