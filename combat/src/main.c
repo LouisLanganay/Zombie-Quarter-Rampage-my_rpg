@@ -221,6 +221,64 @@ void init_boss(rpg_t *rpg)
     my_sprite->call_action = NULL;
     gl_create_sprite(rpg->glib, my_sprite);
 }
+
+void insert_zombies(rpg_t *rpg, zombies_t **list)
+{
+    zombies_t *new_node = malloc(sizeof(zombies_t));
+    //new_node->pos = (sfVector2f){1920 + rand() % 1000, rand() % 1080};
+    new_node->pos = (sfVector2f){1920 / 2, 1080 / 2};
+    new_node->type = 1;
+    new_node->hp = 100;
+    new_node->damage = 10;
+    new_node->speed = 1;
+
+    new_node->hitbox = sfRectangleShape_create();
+    sfRectangleShape_setPosition(new_node->hitbox, new_node->pos);
+    sfRectangleShape_setSize(new_node->hitbox, (sfVector2f){60, 100});
+    sfRectangleShape_setFillColor(new_node->hitbox, sfTransparent);
+    sfRectangleShape_setOutlineColor(new_node->hitbox, sfRed);
+    sfRectangleShape_setOutlineThickness(new_node->hitbox, 3);
+    // sfRectangleShape_setOrigin(new_node->hitbox, (sfVector2f){new_node->pos.x + 50, new_node->pos.y + 50});
+    //sfRectangleShape_setRotation(new_node->hitbox, 0);
+    sfRectangleShape_setScale(new_node->hitbox, (sfVector2f){-1, 1});
+    sfRectangleShape_move(new_node->hitbox, (sfVector2f){-60, 40});
+    new_node->sprite = sfSprite_create();
+    new_node->texture = sfTexture_createFromFile("assets/zombie.png", NULL);
+    new_node->rect = (sfIntRect){0, 0, 72, 72};
+    new_node->scale = (sfVector2f){-2.0, 2.0};
+    sfSprite_setTexture(new_node->sprite, new_node->texture, sfTrue);
+    sfSprite_setTextureRect(new_node->sprite, new_node->rect);
+    sfSprite_setPosition(new_node->sprite, new_node->pos);
+    sfSprite_setScale(new_node->sprite, new_node->scale);
+    new_node->next = *list;
+    *list = new_node;
+}
+
+void move_zombies(zombies_t *list, rpg_t *rpg)
+{
+    zombies_t *tmp = list;
+    if (tmp == NULL)
+        return;
+    while (tmp != NULL) {
+        tmp->pos.x -= tmp->speed;
+        sfSprite_setPosition(tmp->sprite, tmp->pos);
+        sfRectangleShape_setPosition(tmp->hitbox, sfSprite_getPosition(tmp->sprite));
+        tmp = tmp->next;
+    }
+}
+
+void draw_zombies(zombies_t *list, rpg_t *rpg)
+{
+    zombies_t *tmp = list;
+    if (tmp == NULL)
+        return;
+    while (tmp != NULL) {
+        sfRenderWindow_drawSprite(rpg->glib->window->window, tmp->sprite, NULL);
+        sfRenderWindow_drawRectangleShape(rpg->glib->window->window, tmp->hitbox, NULL);
+        tmp = tmp->next;
+    }
+}
+
 int main(int ac, char **av)
 {
     rpg_t *rpg = malloc(sizeof(rpg_t));
@@ -233,14 +291,15 @@ int main(int ac, char **av)
     sfClock *clock = sfClock_create();
     sfClock *clock_shoot = sfClock_create();
     bullets_t *bullets = NULL;
+    zombies_t *zombies = NULL;
 
-    sfRectangleShape *rect = sfRectangleShape_create();
-    sfRectangleShape_setPosition(rect, (sfVector2f){1500, 300});
-    sfRectangleShape_setSize(rect, (sfVector2f){100, 100});
-    sfRectangleShape_setFillColor(rect, sfTransparent);
-    sfRectangleShape_setOutlineColor(rect, sfRed);
-    sfRectangleShape_setOutlineThickness(rect, 5);
-    sfRectangleShape_setScale(rect, (sfVector2f){-3.0, 3.0});
+    // sfRectangleShape *rect = sfRectangleShape_create();
+    // sfRectangleShape_setPosition(rect, (sfVector2f){1500, 300});
+    // sfRectangleShape_setSize(rect, (sfVector2f){100, 100});
+    // sfRectangleShape_setFillColor(rect, sfTransparent);
+    // sfRectangleShape_setOutlineColor(rect, sfRed);
+    // sfRectangleShape_setOutlineThickness(rect, 5);
+    // sfRectangleShape_setScale(rect, (sfVector2f){-3.0, 3.0});
 
 
 
@@ -259,7 +318,16 @@ int main(int ac, char **av)
         draw_bullets(bullets, rpg);
         gl_draw_sprite(rpg->glib, 2);
         move_bullets(bullets);
-        
+        if (sfMouse_isButtonPressed(sfMouseRight)) {
+            sfClock_restart(clock);
+        }
+        if (zombies == NULL) {
+            insert_zombies(rpg, &zombies);
+            printf("zombie inserted\n");
+        }
+        //insert_zombies(rpg, &zombies);
+        //move_zombies(zombies, rpg);
+        draw_zombies(zombies, rpg);
         //if (sfMouse_isButtonPressed(sfMouseLeft)) {
         //    sfVector2i mouse_pos = sfMouse_getPositionRenderWindow(rpg->glib->window->window);
         //    sfVector2f mouse_pos_f = (sfVector2f){mouse_pos.x, mouse_pos.y};
@@ -267,7 +335,7 @@ int main(int ac, char **av)
         //}
         //bullets = delete_outmap_bullet(bullets);
         //hit_boss(rpg, bullets);
-        sfRenderWindow_drawRectangleShape(rpg->glib->window->window, rect, NULL);
+        // sfRenderWindow_drawRectangleShape(rpg->glib->window->window, rect, NULL);
         //collision(rect, bullets);
         //hit_by_bullet(gl_get_sprite(rpg->glib, 0), bullets);
         //print_len_list(bullets);
