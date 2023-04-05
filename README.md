@@ -38,7 +38,7 @@ To compile this project run the following commands at ``.``
 - [ ] The player have an inventory which can contain a limited set of items
 - [ ] The player can earn experience by winning fights and/or accomplishing specific actions
 - [ ] The player can level up thanks to experience AND upgrading its characteristics
-- [ ] The game contains NPC
+- [X] The game contains NPC
 - [ ] The game contains at least one quest
 - [ ] The game contains a how to play system at the very beginning
 
@@ -48,7 +48,7 @@ This project, being the last project of the module, the following requierement a
 - [ ] Camera movements (zoom, translation, rotation).
 - [X] 3D effects (depth scaling, isometric projection. . . ).
 - [X] Buttons must have at least 3 differents state
-- [ ] Saving system
+- [X] Saving system
 
 ### MUST
 General
@@ -59,7 +59,7 @@ General
     - [ ] Full-screen mode
 - [ ] The windows may have differents resolutions, at least two (1920x1080, and an other)
 - [X] The game manages inputs from the mouse click and keyboard,
-- [ ] The game contains animated sprites rendered thanks to sprite sheets,
+- [X] The game contains animated sprites rendered thanks to sprite sheets,
 - [ ] Animations in your program are frame rate independent,
 - [ ] Animations and movements in your program are timed by clocks.
 
@@ -88,7 +88,7 @@ In game menu
         - [ ] commands list
 
 ### SHOULD
-- [ ] Splash screen at the beginning
+- [X] Splash screen at the beginning
 - [ ] Command edit into the in game menu
 - [X] As much information as possible about the game should be stored in a configuration file.
 - [ ] The game should have an advanced collision system to manage complex fighting.
@@ -110,8 +110,8 @@ In game menu
 
 ## Authors
 
-- [@L.Langanay](https://github.com/LouisLanganay) [![wakatime](https://wakatime.com/badge/user/3372edb3-08ff-4829-807b-29bbe42cf52b/project/b37acda6-2743-4b81-baa5-a7701a38e485.svg)](https://wakatime.com/badge/user/3372edb3-08ff-4829-807b-29bbe42cf52b/project/b37acda6-2743-4b81-baa5-a7701a38e485)
-- [@V.Peron]
+- [@L.Langanay](https://github.com/LouisLanganay) [![wakatime](https://wakatime.com/badge/user/3372edb3-08ff-4829-807b-29bbe42cf52b/project/548bc92f-b85d-4dde-9e80-3bc440b14d54.svg)](https://wakatime.com/badge/user/3372edb3-08ff-4829-807b-29bbe42cf52b/project/548bc92f-b85d-4dde-9e80-3bc440b14d54)
+- [@V.Peron](https://github.com/ValentinPeron)
 - [@A.Bost](https://github.com/AugustinBst)
 - [@G.Blaizot](https://github.com/Gaulaume)
 
