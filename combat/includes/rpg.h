@@ -163,6 +163,7 @@
 
     typedef struct bullets_s {
         float speed;
+        float angle;
         sfVector2f pos;
         sfSprite *sprite;
         sfTexture *texture;
@@ -263,5 +264,6 @@
     void init_rpg(rpg_t *rpg, int ac, char **av);
     void init_popup_interaction(rpg_t *rpg);
     void init_player_items_packs(player_t *player);
+    int colision_with_rect(sfRectangleShape *rect, sfVector2f pos);
 
 #endif

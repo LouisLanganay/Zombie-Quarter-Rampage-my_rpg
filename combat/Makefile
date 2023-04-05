@@ -36,6 +36,7 @@ VPATH += src/player/interactions
 VPATH += src/player/colisions
 VPATH += src/player/interactions/functions
 VPATH += src/player/interactions/functions/npc
+VPATH += src/colision
 
 vpath %.c $(VPATH)
 
