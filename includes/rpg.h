@@ -20,7 +20,7 @@
 
     #define EVENT_WINDOW_CLOSE 1
     #define EVENT_INVENTORY_OPEN 454545
-    #define NB_ITEMS 12
+    #define INVENTORY_SIZE 16
 
 
     #define RPA rpg->player->assets

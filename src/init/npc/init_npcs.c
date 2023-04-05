@@ -48,7 +48,6 @@ static void add_npc_to_linked_list(map_t *map, parsed_data_t *data)
     init_npc_dialogs(npc, jp_search(data, "dialogues")->value.p_arr);
     init_npc_interaction(npc, map);
 
-    printf("NPC: %s, pos: %f, %f\n", npc->name, npc->pos.x, npc->pos.y);
     npc->next = map->npcs;
     map->npcs = npc;
 }
