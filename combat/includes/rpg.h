@@ -172,6 +172,20 @@
         struct bullets_s *next;
     } bullets_t;
 
+    typedef struct zombies_s {
+        sfVector2f pos;
+        int type;
+        int hp;
+        int damage;
+        int speed;
+        sfRectangleShape *hitbox;
+        struct zombies_s *next;
+        sfSprite *sprite;
+        sfTexture *texture;
+        sfIntRect rect;
+        sfVector2f scale;
+    } zombies_t;
+
     int my_strcmp(char const *s1, char const *s2);
     char *my_strcat(char *dest, char const *src);
     char *my_strcpy(char *dest, char const *src);
