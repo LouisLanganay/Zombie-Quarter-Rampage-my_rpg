@@ -24,15 +24,16 @@ static void draw_interaction_popup_change_size(
 int get_key_id(sfKeyCode key, rpg_t *rpg)
 {
     int id = -1;
+    int x = 0;
     keyboard_images_t *keyboard = get_keyboard_array();
 
-    for (long unsigned int x = 0; keyboard[x].key != sfKeyUnknown; x++) {
+    for (; keyboard[x].key != sfKeyUnknown; x++) {
         if (keyboard[x].key == key) {
             id = keyboard[x].id;
             break;
         }
     }
-    draw_interaction_popup_change_size(id, keyboard, rpg);
+    draw_interaction_popup_change_size(x, keyboard, rpg);
     free(keyboard);
     return id;
 }
