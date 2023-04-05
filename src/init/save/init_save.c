@@ -10,6 +10,7 @@
 void init_save(rpg_t *rpg)
 {
     rpg->save = malloc(sizeof(save_t));
+    rpg->save->loaded = 0;
     rpg->save->format = NULL;
     rpg->save->name = NULL;
     rpg->save->path = NULL;
