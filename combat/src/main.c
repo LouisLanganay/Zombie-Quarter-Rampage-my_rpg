@@ -61,53 +61,6 @@ void move_player(rpg_t *rpg, sfClock *clock)
     }
 }
 
-
-
-
-
-void delete_element(bullets_t *bullets, int index)
-{
-    bullets_t *tmp = bullets;
-    int i = 0;
-    while (tmp->next != NULL) {
-        if (i == index) {
-            tmp->next = tmp->next->next;
-            return;
-        }
-        i++;
-        tmp = tmp->next;
-    }
-}
-
-void hit_by_bullet(sfSprite *sprite, bullets_t *bullets)
-{
-    sfVector2f sprite_pos = sfSprite_getPosition(sprite);
-    sfVector2f sprite_size = sfSprite_getScale(sprite);
-    bullets_t *tmp = bullets;
-    while (tmp != NULL) {
-        if (tmp->pos.x > sprite_pos.x && tmp->pos.x < sprite_pos.x + sprite_size.x * 100) {
-            if (tmp->pos.y > sprite_pos.y && tmp->pos.y < sprite_pos.y + sprite_size.y * 100) {
-                printf("hit");
-            }
-        }
-        tmp = tmp->next;
-    }
-}
-
-void collision(sfRectangleShape *hitbox, bullets_t *bullets)
-{
-    bullets_t *tmp = bullets;
-    int i = 0;
-    while (tmp != NULL) {
-        if (colision_with_rect(hitbox, tmp->pos) == 1) {
-            delete_element(bullets, i);
-            printf(":::hit\n");
-        }
-        tmp = tmp->next;
-        i++;
-    }
-}
-
 void init_boss(rpg_t *rpg)
 {
     sprite_t *my_sprite = malloc(sizeof(sprite_t));
