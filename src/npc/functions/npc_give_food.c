@@ -12,5 +12,6 @@ void npc_give_food(void *main)
     (void)(main);
     rpg_t *rpg = (rpg_t *)main;
     start_quest(rpg, "go_to_annia");
+    start_quest(rpg, "test_quest");
     printf("Food given\n");
 }

@@ -136,6 +136,10 @@ SRC += init_quests.c
 SRC += start_quest.c
 SRC += draw_quests.c
 SRC += stop_quest.c
+SRC += init_quest_assets.c
+SRC += get_quest.c
+SRC += load_quests_in_progress.c
+SRC += save_quests_in_progress.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

@@ -18,4 +18,5 @@ void init(rpg_t *rpg)
     init_save(rpg);
     init_splash_screen(rpg);
     init_quests(rpg);
+    init_quest_assets(rpg);
 }

@@ -3,5 +3,10 @@
         "name": "Explore",
         "description": "Go to the grocery store to the left of your house.",
         "type": "go_to"
+    },
+    "test_quest": {
+        "name": "Test Quest",
+        "description": "This is a test quest.",
+        "type": "talk"
     }
 }

@@ -7,11 +7,11 @@
 
 #include "rpg.h"
 
-static void remove_from_arr(char **arr, int i, rpg_t *rpg)
+static void remove_from_arr(char **arr, int i)
 {
-    rpg->quests_in_progress[i] = NULL;
-    for (int j = i; rpg->quests_in_progress[j] != NULL; j++) {
-        rpg->quests_in_progress[j] = rpg->quests_in_progress[j + 1];
+    arr[i] = NULL;
+    for (int j = i; arr[j] != NULL; j++) {
+        arr[j] = arr[j + 1];
     }
 }
 
@@ -21,7 +21,7 @@ void stop_quest(rpg_t *rpg, char *id)
 
     while (rpg->quests_in_progress[i] != NULL) {
         if (my_strcmp(rpg->quests_in_progress[i], id) == 0) {
-            remove_from_arr(rpg->quests_in_progress, i, rpg);
+            remove_from_arr(rpg->quests_in_progress, i);
             break;
         }
         i++;
