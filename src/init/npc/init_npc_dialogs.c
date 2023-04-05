@@ -39,6 +39,10 @@ static void add_dialog(npc_t *npc, parsed_data_t *obj)
     dialog_t *dialog = malloc(sizeof(dialog_t));
     dialog->name = jp_search(obj, "name")->value.p_str;
     dialog->text = jp_search(obj, "text")->value.p_str;
+    if (jp_search(obj, "function")->type != p_null)
+        dialog->function = jp_search(obj, "function")->value.p_str;
+    else
+        dialog->function = NULL;
     if (jp_search(obj, "options")->type != p_null)
         add_options(dialog, jp_search(obj, "options")->value.p_arr);
     else

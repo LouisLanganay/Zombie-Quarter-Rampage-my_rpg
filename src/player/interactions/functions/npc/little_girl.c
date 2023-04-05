@@ -12,7 +12,8 @@ void little_girl(rpg_t *rpg, sfVector2f pos)
     map_t *map = get_map(rpg, rpg->actual_map);
     npc_t *npc = get_npc(map, "Annia");
 
-    if (my_arr_contains(rpg->save->npc_interactions, npc->name) == 1)
+    if (my_arr_contains(rpg->save->npc_interactions, npc->name) == 1 &&
+        npc->default_dialog == NULL)
         return;
     draw_interaction_popup(rpg,
         (sfVector2f){pos.x - 25, pos.y + 20},

@@ -7,8 +7,15 @@
             "y": 750
         },
         "texture_path": "resources/npc/annia.png",
-        "one_time": false,
+        "default_dialog": "default",
+        "one_time": true,
         "dialogues": [
+            {
+                "name": "default",
+                "text": "Hi! I'm Annia.",
+                "options": null,
+                "function": null
+            },
             {
                 "name": "discovery",
                 "text": "Hello... I'm Annia. I'm lost. I don't know anything.",
@@ -21,7 +28,8 @@
                         "text": "I don't care",
                         "next": "ignore"
                     }
-                ]
+                ],
+                "function": null
             },
             {
                 "name": "help",
@@ -35,22 +43,26 @@
                         "text": "Talk about something else",
                         "next": "help_give_nothing"
                     }
-                ]
+                ],
+                "function": null
             },
             {
                 "name": "help_give_food",
                 "text": "Thank you for this food! I'm so hungry! I have this in my bag. It's a gun. It's for you.",
-                "options": null
+                "options": null,
+                "function": "give_food"
             },
             {
                 "name": "help_give_nothing",
                 "text": "Oh, ok then. I will go there. Thank you!",
-                "options": null
+                "options": null,
+                "function": null
             },
             {
                 "name": "ignore",
                 "text": "Please...",
-                "options": null
+                "options": null,
+                "function": null
             }
         ]
     },
@@ -61,7 +73,8 @@
             "x": 1700,
             "y": 600
         },
-        "one_time": true,
+        "one_time": false,
+        "default_dialog": "discovery",
         "texture_path": "resources/npc/annia.png",
         "dialogues": [
             {
@@ -76,17 +89,20 @@
                         "text": "I will give you some food",
                         "next": "help"
                     }
-                ]
+                ],
+                "function": null
             },
             {
                 "name": "help",
                 "text": "Thank you! I'm starving!",
-                "options": null
+                "options": null,
+                "function": null
             },
             {
                 "name": "ignore",
                 "text": "Ok, bye!",
-                "options": null
+                "options": null,
+                "function": null
             }
         ]
     }
