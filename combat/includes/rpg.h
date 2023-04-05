@@ -279,5 +279,6 @@
     void init_popup_interaction(rpg_t *rpg);
     void init_player_items_packs(player_t *player);
     int colision_with_rect(sfRectangleShape *rect, sfVector2f pos);
+    int colision_bullet_zombies(zombies_t *list, bullets_t *bullets);
 
 #endif

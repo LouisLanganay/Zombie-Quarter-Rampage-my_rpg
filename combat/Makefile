@@ -102,6 +102,7 @@ SRC += start_dialogue.c
 SRC += init.c
 SRC += get_key_id.c
 SRC += colision_with_rect.c
+SRC += colision_bullet_zombies.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl
@@ -109,7 +110,7 @@ LIB_NAME1 	:= gl
 LIB_DIR2 	:= ./lib/jp
 LIB_NAME2 	:= jp
 
-CFLAGS = -iquote $(INC_DIR) #-Wall -Wextra -Werror -g
+CFLAGS = -iquote $(INC_DIR) -g #-Wall -Wextra -Werror -g
 CFLAGS += -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm
 
 LIBFLAGS = -L$(LIB_DIR1) -l$(LIB_NAME1) -L$(LIB_DIR2) -l$(LIB_NAME2)
