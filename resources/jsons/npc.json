@@ -7,8 +7,14 @@
             "y": 750
         },
         "texture_path": "resources/npc/annia.png",
-        "one_time": false,
+        "default_dialog": "default",
+        "one_time": true,
         "dialogues": [
+            {
+                "name": "default",
+                "text": "Hi! I'm Annia.",
+                "options": null
+            },
             {
                 "name": "discovery",
                 "text": "Hello... I'm Annia. I'm lost. I don't know anything.",
@@ -61,7 +67,8 @@
             "x": 1700,
             "y": 600
         },
-        "one_time": true,
+        "one_time": false,
+        "default_dialog": "discovery",
         "texture_path": "resources/npc/annia.png",
         "dialogues": [
             {

@@ -97,6 +97,7 @@
     typedef struct npc_s {
         char *name;
         char *texture_path;
+        char *default_dialog;
         bool_t one_time;
         sfVector2f pos;
         sfSprite *sprite;
