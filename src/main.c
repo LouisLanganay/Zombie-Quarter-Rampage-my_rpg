@@ -31,9 +31,7 @@ int main(int ac, char **av)
     while (sfRenderWindow_isOpen(rpg->glib->window->window)) {
         print_framerate();
         sfRenderWindow_clear(rpg->glib->window->window, sfBlack);
-        gl_button_change_state(BTN_RESUME, rpg->glib->buttons, sfFalse);
-        gl_buttons_hovered(rpg->glib->buttons, rpg->glib->window, rpg);
-        gl_draw_button(BTN_RESUME, rpg->glib->buttons, rpg->glib->window);
+        draw_menu(rpg);
         //set_view_on_player(rpg);
         //gl_check_events(rpg->glib->window, rpg->glib->events, rpg);
         //draw_map(rpg->maps, rpg->actual_map, rpg);

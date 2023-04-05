@@ -89,6 +89,7 @@ SRC += load_save.c
 SRC += init_save.c
 SRC += init_main_menu.c
 SRC += e_start_game.c
+SRC += draw_menu.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

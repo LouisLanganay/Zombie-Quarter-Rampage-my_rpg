@@ -105,6 +105,11 @@
         char *en;
     } languages_t;
 
+    typedef struct menu_s {
+        sfTexture *settings_bg_sprite;
+        sfSprite *settings_bg_sprite;
+    } menu_t;
+
     typedef struct settings_s {
         language_type_t game_language;
     } settings_t;
@@ -120,6 +125,7 @@
         char *actual_map;
         map_t *maps;
         GLib_t *glib;
+        menu_t *menu;
         player_t *player;
         languages_t **languages;
         settings_t *settings;
@@ -195,6 +201,7 @@
     );
 
     /* MENU */
+    void draw_menu(rpg_t *rpg);
     void init_main_menu(rpg_t *rpg);
 
     /* FPS */

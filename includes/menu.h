@@ -8,7 +8,10 @@
 #ifndef _MENU_H__
     #define _MENU_H__
 
-    #define BTN_RESUME 56553
     #define BTN_PATH_RESUME "resources/assets/buttons/Resume.png"
+    #define BTN_QUIT 10
+    #define BTN_START 11
+    #define BTN_RESUME 12
+    #define BTN_SEETING 13
 
 #endif
