@@ -39,6 +39,7 @@ VPATH += src/player/interactions/functions/npc
 VPATH += src/colision
 VPATH += src/zombies
 VPATH += src/bullets
+VPATH += src/combat
 
 vpath %.c $(VPATH)
 
@@ -116,6 +117,9 @@ SRC += delete_bullet.c
 SRC += move_bullets.c
 SRC += insert_bullet.c
 SRC += shot_angle.c
+SRC += init_background.c
+SRC += init_guy.c
+SRC += move_player.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

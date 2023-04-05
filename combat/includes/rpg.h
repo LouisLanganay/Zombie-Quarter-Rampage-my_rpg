@@ -293,4 +293,7 @@
     void insert_bullet(bullets_t **list, rpg_t *rpg);
     float shot_angle(sfVector2f pos, sfVector2i mouse);
     sfSprite *gl_get_sprite(GLib_t *glib, int id);
+    void init_background(rpg_t *rpg);
+    void init_guy(rpg_t *rpg);
+    void move_player(rpg_t *rpg, sfClock *clock);
 #endif
