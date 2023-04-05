@@ -26,7 +26,11 @@
 	},
 	"game_timeline": {
 		"npc_interactions": [
-			"npc"
+			"npc",
+			"Annia"
+		],
+		"quests_in_progress": [
+			"quest"
 		]
 	}
 }

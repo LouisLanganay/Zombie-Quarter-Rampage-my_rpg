@@ -160,6 +160,14 @@
         sfClock *clock;
     } splash_screen_t;
 
+    typedef struct quest_s {
+        char *id;
+        char *name;
+        char *description;
+        char *type;
+        struct quest_s *next;
+    } quest_t;
+
     typedef struct rpg_s {
         int debug;
         char *actual_map;
@@ -174,6 +182,8 @@
         settings_t *settings;
         save_t *save;
         splash_screen_t *splash_screen;
+        quest_t *quests;
+        char **quests_in_progress;
     } rpg_t;
 
     typedef struct keyboard_images_s {
@@ -216,6 +226,11 @@
     void save_npc_interactions(rpg_t *rpg, npc_t *npc);
     void save_game(rpg_t *rpg);
     void save_player(rpg_t *rpg);
+
+    /* QUESTS */
+    void start_quest(rpg_t *rpg, char *id);
+    void draw_quests(rpg_t *rpg);
+    void stop_quest(rpg_t *rpg, char *id);
 
     /* MAP */
     void load_maps(rpg_t *rpg);
@@ -290,6 +305,7 @@
 
     /* INIT */
     void init(rpg_t *rpg);
+    void init_quests(rpg_t *rpg);
     void init_player(rpg_t *rpg);
     void init_popup_dialogue(rpg_t *rpg);
     void init_glib(rpg_t *rpg);

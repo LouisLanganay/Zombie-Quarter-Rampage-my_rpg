@@ -1,0 +1,7 @@
+{
+    "go_to_annia": {
+        "name": "Explore",
+        "description": "Go to the grocery store to the left of your house.",
+        "type": "go_to"
+    }
+}
