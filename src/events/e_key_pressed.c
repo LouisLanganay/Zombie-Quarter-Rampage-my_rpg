@@ -19,4 +19,6 @@ void e_key_pressed(window_t *window, void *main)
         rpg->player->keys->left.state = 1;
     if (rpg->glib->window->event.key.code == rpg->player->keys->right.key)
         rpg->player->keys->right.state = 1;
+    if (rpg->glib->window->event.key.code == sfKeyN)
+        start_game(rpg);
 }

@@ -7,28 +7,13 @@
 
 #include "rpg.h"
 
-static int get_key_id(sfKeyCode key)
-{
-    int id = -1;
-    keyboard_images_t *keyboard = get_keyboard_array();
-
-    for (long unsigned int x = 0; keyboard[x].key != sfKeyUnknown; x++) {
-        if (keyboard[x].key == key) {
-            id = keyboard[x].id;
-            break;
-        }
-    }
-    free(keyboard);
-    return id;
-}
-
 void draw_interaction_popup(
     rpg_t *rpg,
     sfVector2f pos,
     sfKeyCode key,
     char *str)
 {
-    int id = get_key_id(key);
+    int id = get_key_id(key, rpg);
 
     if (str != NULL)
         sfText_setString(gl_get_text(rpg->glib, PLAYER_INTERACT_TEXT),
@@ -41,10 +26,10 @@ void draw_interaction_popup(
     if (id != -1) {
         if (RSG == EN)
             sfSprite_setPosition(RPA->key_sprite[id],
-                (sfVector2f) {pos.x + 75, pos.y - 33});
+                (sfVector2f) {pos.x + 85, pos.y - 25});
         if (RSG == FR)
             sfSprite_setPosition(RPA->key_sprite[id],
-                (sfVector2f) {pos.x + 99, pos.y - 33});
+                (sfVector2f) {pos.x + 109, pos.y - 25});
         sfRenderWindow_drawSprite(RGW->window, RPA->key_sprite[id], NULL);
     }
 }

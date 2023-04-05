@@ -32,6 +32,7 @@ void gl_check_events(window_t *window, events_t *events, void *main)
         exit(84);
     events_t *tmp = events;
     while (sfRenderWindow_pollEvent(window->window, &window->event)) {
+        tmp = events;
         while (tmp) {
             tmp = gl_check_events_each(window, tmp, main);
         }

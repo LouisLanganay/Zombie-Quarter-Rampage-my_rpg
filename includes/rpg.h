@@ -18,14 +18,22 @@
     #define WINDOW_NAME "RPG"
 
     #define MINECRAFT_FONT 8888
+    #define CRYSTAL_FONT 8889
+    #define TLOU_FONT 8890
+
+    #define SPLASH_SCREEN_TEXT1 9999
+    #define SPLASH_SCREEN_TEXT2 10001
 
     #define EVENT_WINDOW_CLOSE 1
+    #define EVENT_DIALOGUE_CHOICE 651546
 
     #define RPA rpg->player->assets
     #define RGW rpg->glib->window
     #define RPK rpg->player->keys
     #define RPH rpg->player->hitbox
     #define RSG rpg->settings->game_language
+    #define PA player->assets
+    #define RSNI rpg->save->npc_interactions
 
 
     #define GET_SAVE_GAMELANGUAGE my_strcmp(jp_search(data, \
@@ -79,6 +87,30 @@
         struct tilesets_l *next;
     } tilesets_t;
 
+    typedef struct dialog_option_s {
+        char *text;
+        char *next_dialog;
+    } dialog_option_t;
+
+    typedef struct dialog_s {
+        char *name;
+        char *text;
+        dialog_option_t **options;
+        struct dialog_s *next;
+    } dialog_t;
+
+    typedef struct npc_s {
+        char *name;
+        char *texture_path;
+        bool_t one_time;
+        sfVector2f pos;
+        sfSprite *sprite;
+        sfTexture *texture;
+        sfIntRect rect;
+        dialog_t *dialogs;
+        struct npc_s *next;
+    } npc_t;
+
     typedef struct map_s {
         char *map_path;
         char *map_name;
@@ -89,6 +121,7 @@
         char *tileset_path;
         sfTexture **textures;
         layer_t *layers;
+        npc_t *npcs;
         struct tilesets_l *tilesets;
         struct tile_s *tiles;
         struct map_s *next;
@@ -115,14 +148,24 @@
     } settings_t;
 
     typedef struct save_s {
+        int loaded;
         char *name;
         char *path;
         char *format;
+        char **npc_interactions;
     } save_t;
+
+    typedef struct splash_screen_s {
+        sfClock *clock;
+    } splash_screen_t;
 
     typedef struct rpg_s {
         int debug;
         char *actual_map;
+        int game_started;
+        int maps_loaded;
+        dialog_t *actual_dialog;
+        npc_t *actual_npc;
         map_t *maps;
         GLib_t *glib;
         menu_t *menu;
@@ -130,6 +173,7 @@
         languages_t **languages;
         settings_t *settings;
         save_t *save;
+        splash_screen_t *splash_screen;
     } rpg_t;
 
     typedef struct keyboard_images_s {
@@ -146,15 +190,31 @@
     char *my_strcat(char *dest, char const *src);
     char *my_strcpy(char *dest, char const *src);
     char *my_strcat_malloc(char *dest, char const *src);
+    char *my_strdup(char *str);
     int my_strlen(char const *str);
+    char *my_strndup(const char *str, int n);
+    int get_mid_char(const char *str);
+    int my_arr_contains(char **arr, char *str);
+    int my_arrlen(char **arr);
+
+    /* GAME */
+    void game_loop(rpg_t *rpg);
+    void start_game(rpg_t *rpg);
+
+    /* SPLASH SCREEN */
+    void draw_splash_screen(rpg_t *rpg);
+    void init_splash_screen(rpg_t *rpg);
 
     /* LANGUAGE */
     char *get_language(rpg_t *rpg, char *name, language_type_t language);
 
     /* SAVE */
     int load_save(rpg_t *rpg, char *path);
+    int load_npc_interactions(save_t *save, parsed_data_t *data);
+    void save_npc_interactions(rpg_t *rpg, npc_t *npc);
 
     /* MAP */
+    void load_maps(rpg_t *rpg);
     int create_map(rpg_t *rpg, char *json_path);
     sfTexture **load_tiles_textures(map_t *map);
     sfSprite **load_layer_sprites(layer_t *layer, map_t *map);
@@ -173,6 +233,7 @@
     void set_view_on_player(rpg_t *rpg);
 
     /* PLAYER */
+    int get_key_id(sfKeyCode key, rpg_t *rpg);
     void *key_pressed(rpg_t *rpg);
     void draw_player(rpg_t *rpg);
     void change_player_rect(player_t *player);
@@ -186,8 +247,19 @@
     void check_interactions(player_t *player, map_t *map, rpg_t *rpg);
     keyboard_images_t *get_keyboard_array(void);
 
+    /* NPC */
+    npc_t *get_npc(map_t *map, char *name);
+    void draw_npcs(map_t *map, rpg_t *rpg);
+    void start_dialogue(rpg_t *rpg, npc_t *npc);
+    void next_dialogue(rpg_t *rpg, int choice);
+    void display_dialogue(rpg_t *rpg);
+
+    /* TEXT */
+    void divide_a_sftext(sfText *text, sfVector2f pos, rpg_t *rpg);
+
 
     /* CALL ACTIONS */
+    void little_girl(rpg_t *rpg, sfVector2f pos);
     void inte_test(rpg_t *rpg);
     void i_house_door(rpg_t *rpg, sfVector2f pos);
     void i_house_paper(rpg_t *rpg, sfVector2f pos);
@@ -212,12 +284,18 @@
     void e_key_released(window_t *window, void *main);
     void e_key_pressed(window_t *window, void *main);
     void e_close(window_t *window, void *main);
+    void e_dialogue(window_t *window, void *main);
 
     /* INIT */
+    void init(rpg_t *rpg);
     void init_player(rpg_t *rpg);
+    void init_popup_dialogue(rpg_t *rpg);
     void init_glib(rpg_t *rpg);
+    void init_npcs(map_t *map, char *path);
     void init_fonts(rpg_t *rpg);
+    void init_player_textures(player_t *player);
     void init_window(rpg_t *rpg);
+    void init_npc_dialogs(npc_t *npc, parsed_data_t *dialogs_arr);
     void init_settings(rpg_t *rpg);
     void init_language(rpg_t *rpg);
     void init_save(rpg_t *rpg);
@@ -225,5 +303,7 @@
     void init_player_assets(player_t *player);
     void init_rpg(rpg_t *rpg, int ac, char **av);
     void init_popup_interaction(rpg_t *rpg);
+    void init_player_items_packs(player_t *player);
+    void init_player_assets_dialogue(player_t *player);
 
 #endif

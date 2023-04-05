@@ -12,7 +12,11 @@
         "fr": "sortir de la maison."
     },
     "interact_press__to": {
-        "en": "Press      to ",
+        "en": "Press        to ",
         "fr": "Appuyez sur      pour "
+    },
+    "press__to_quit_dialog": {
+        "en": "Press             to quit the dialog.",
+        "fr": "Appuyez sur           pour quitter le dialogue."
     }
 }

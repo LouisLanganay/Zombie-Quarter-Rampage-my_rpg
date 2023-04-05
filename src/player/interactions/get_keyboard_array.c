@@ -18,7 +18,7 @@ keyboard_images_t *get_keyboard_array(void)
         {sfKeyK, 26}, {sfKeyL, 27}, {sfKeyM, 28}, {sfKeyN, 29}, {sfKeyO, 30},
         {sfKeyP, 31}, {sfKeyQ, 32}, {sfKeyR, 33}, {sfKeyS, 34}, {sfKeyT, 35},
         {sfKeyU, 36}, {sfKeyV, 37}, {sfKeyW, 38}, {sfKeyX, 39}, {sfKeyY, 40},
-        {sfKeyZ, 41}, {sfKeyUnknown, -1 }
+        {sfKeyZ, 41}, {sfKeyEscape, 113}, {sfKeyUnknown, -1 }
     };
     keyboard_images_t *keyboard = malloc(sizeof(keyboard_images_t) *
         (sizeof(keyboard_images) / sizeof(keyboard_images_t)));

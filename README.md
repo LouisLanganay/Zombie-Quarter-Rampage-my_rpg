@@ -46,7 +46,7 @@ To compile this project run the following commands at ``.``
 This project, being the last project of the module, the following requierement are the mathematical and technical parts which has to be present in your final project:
 - [X] A collision system including moving and static elements with different shapes.
 - [ ] Camera movements (zoom, translation, rotation).
-- [ ] 3D effects (depth scaling, isometric projection. . . ).
+- [X] 3D effects (depth scaling, isometric projection. . . ).
 - [X] Buttons must have at least 3 differents state
 - [ ] Saving system
 
@@ -99,7 +99,7 @@ In game menu
 ### COULD
 - [ ] Have a skill tree, unlocking different abilities (active and passive).
 - [ ] Have a complete particle engine.
-- [ ] Use scripting to describe entities.
+- [X] Use scripting to describe entities.
 - [X] Have a map edit
 
 ## Usefull links
@@ -112,8 +112,8 @@ In game menu
 
 - [@L.Langanay](https://github.com/LouisLanganay) [![wakatime](https://wakatime.com/badge/user/3372edb3-08ff-4829-807b-29bbe42cf52b/project/b37acda6-2743-4b81-baa5-a7701a38e485.svg)](https://wakatime.com/badge/user/3372edb3-08ff-4829-807b-29bbe42cf52b/project/b37acda6-2743-4b81-baa5-a7701a38e485)
 - [@V.Peron]
-- [@A.Bost]
-- [@G.Blaizot]
+- [@A.Bost](https://github.com/AugustinBst)
+- [@G.Blaizot](https://github.com/Gaulaume)
 
 ![Logo](https://newsroom.ionis-group.com/wp-content/uploads/2021/10/EPITECH-TECHNOLOGY-QUADRI-2021.png)
 
