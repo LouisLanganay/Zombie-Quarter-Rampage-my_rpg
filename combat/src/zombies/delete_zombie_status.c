@@ -14,7 +14,6 @@ void delete_zombie_status(zombies_t **list)
 
     while (tmp != NULL && tmp->alive == 1) {
         *list = tmp->next;
-        printf("delete zombie\n");
         free(tmp);
         tmp = *list;
     }
