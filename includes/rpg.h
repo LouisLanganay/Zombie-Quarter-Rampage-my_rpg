@@ -40,8 +40,6 @@
 
     #define GET_SAVE_GAMELANGUAGE my_strcmp(jp_search(data, \
         "game_language")->value.p_str, "fr") == 0 ? FR : EN;
-    #define LOAD_SAVE_GAMELANGUAGE rpg->settings->game_language == FR ? \
-        "fr" : "en";
 
     typedef struct pos_s {
         int x;
@@ -200,8 +198,6 @@
     char *my_strcat(char *dest, char const *src);
     char *my_strcpy(char *dest, char const *src);
     char *my_strcat_malloc(char *dest, char const *src);
-    int sfkey_to_int(sfKeyCode key);
-    sfKeyCode int_to_sfkey(int i);
     char *my_strdup(char *str);
     int my_strlen(char const *str);
     char *my_strndup(const char *str, int n);
