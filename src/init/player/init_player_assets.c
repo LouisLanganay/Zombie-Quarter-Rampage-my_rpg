@@ -56,7 +56,6 @@ static sfTexture **init_player_assets_keyboard(void)
 static sfSprite **init_player_assets_keyboard_sprites(sfTexture **textures)
 {
     sfSprite **sprites = malloc(sizeof(sfSprite *) * 144);
-
     for (int i = 0; i < 144; i++) {
         sprites[i] = sfSprite_create();
         sfSprite_setTexture(sprites[i], textures[i], sfTrue);
