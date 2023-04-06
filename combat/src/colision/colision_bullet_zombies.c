@@ -23,7 +23,7 @@ int colision_bullet_zombies(zombies_t *list, bullets_t *bullets)
             if (colision_with_rect(tmp_zombie->hitbox, tmp_bullet->pos) == 1) {
                 tmp_zombie->hp -= 10;
                 if (tmp_zombie->hp <= 0) {
-                    delete_zombie(list, tmp_zombie);
+                    tmp_zombie->alive = 1;
                 }
                 tmp_bullet->status = 1;
                 return (1);
