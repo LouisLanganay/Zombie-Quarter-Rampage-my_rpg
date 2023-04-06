@@ -22,9 +22,10 @@ int colision_bullet_zombies(zombies_t *list, bullets_t *bullets)
         while (tmp_bullet != NULL) {
             if (colision_with_rect(tmp_zombie->hitbox, tmp_bullet->pos) == 1) {
                 tmp_zombie->hp -= 10;
-                printf("index_bullet: %d\n", index_bullet);
-                //delete_bullet(&bullets, index_bullet);
-                printf(":::hp: %d\n", tmp_zombie->hp);
+                if (tmp_zombie->hp <= 0) {
+                    delete_zombie(list, tmp_zombie);
+                }
+                tmp_bullet->status = 1;
                 return (1);
             }
             index_bullet++;
