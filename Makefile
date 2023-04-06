@@ -34,6 +34,7 @@ VPATH += src/game
 VPATH += src/splash_screen
 VPATH += src/text
 VPATH += src/quests
+VPATH += src/quests/functions
 VPATH += src/map
 VPATH += src/map/load
 VPATH += src/map/draw
@@ -147,6 +148,9 @@ SRC += init_quest_assets.c
 SRC += get_quest.c
 SRC += load_quests_in_progress.c
 SRC += save_quests_in_progress.c
+SRC += get_quests_func_arr.c
+SRC += get_quest_by_id.c
+SRC += go_to_annia.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

@@ -2,16 +2,19 @@
     "go_to_annia": {
         "name": "Explore",
         "description": "Go to the grocery store to the left of your house.",
-        "type": "go_to"
+        "type": "go_to",
+        "function": "go_to_annia"
     },
     "test_quest": {
         "name": "Test Quest",
         "description": "This is a test quest.",
-        "type": "talk"
+        "type": "talk",
+        "function": null
     },
     "find_money": {
         "name": "Find Money",
         "description": "Find some money.",
-        "type": "collect"
+        "type": "collect",
+        "function": null
     }
 }

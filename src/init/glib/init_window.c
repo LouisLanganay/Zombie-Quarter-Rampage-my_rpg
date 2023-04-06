@@ -14,6 +14,6 @@ void init_window(rpg_t *rpg)
     window->height = 1080;
     window->title = WINDOW_NAME;
     window->framerate = 120;
-    window->style = sfClose | sfFullscreen;
+    window->style = sfClose;
     rpg->glib->window = gl_create_window(window);
 }

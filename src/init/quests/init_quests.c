@@ -15,6 +15,10 @@ static void add_quest(rpg_t *rpg, parsed_data_t *quest, char *id)
     new_quest->name = jp_search(quest, "name")->value.p_str;
     new_quest->description = jp_search(quest, "description")->value.p_str;
     new_quest->type = jp_search(quest, "type")->value.p_str;
+    if (jp_search(quest, "function")->type != p_null)
+        new_quest->func = jp_search(quest, "function")->value.p_str;
+    else
+        new_quest->func = NULL;
     new_quest->next = rpg->quests;
     rpg->quests = new_quest;
 }

@@ -164,11 +164,17 @@
         sfClock *clock;
     } splash_screen_t;
 
+    typedef struct quests_func_s {
+        char *name;
+        void (*func)(void*);
+    } quests_func_t;
+
     typedef struct quest_s {
         char *id;
         char *name;
         char *description;
         char *type;
+        char *func;
         struct quest_s *next;
     } quest_t;
 
@@ -237,6 +243,8 @@
     void start_quest(rpg_t *rpg, char *id);
     quest_t *get_quest(rpg_t *rpg, char *id);
     void draw_quests(rpg_t *rpg);
+    quests_func_t *get_quests_func_arr(void);
+    quest_t *get_quest_by_id(rpg_t *rpg, char *id);
     void stop_quest(rpg_t *rpg, char *id);
 
     /* MAP */
@@ -281,6 +289,7 @@
     void start_dialogue(rpg_t *rpg, npc_t *npc);
     void next_dialogue(rpg_t *rpg, int choice);
     void display_dialogue(rpg_t *rpg);
+    dialog_func_t *get_npc_func_arr(void);
     void check_dialogue_function(rpg_t *rpg, dialog_t *dialogue);
 
     /* TEXT */
@@ -288,6 +297,7 @@
 
 
     /* CALL ACTIONS */
+    void go_to_annia(void *main);
     void npc_give_food(void*);
     void little_girl(rpg_t *rpg, sfVector2f pos);
     void inte_test(rpg_t *rpg);
@@ -295,7 +305,6 @@
     void i_house_paper(rpg_t *rpg, sfVector2f pos);
     void i_chest(rpg_t *rpg);
     interactions_t *get_interactions_array(void);
-    dialog_func_t *get_npc_func_arr(void);
     void draw_interaction_popup(
         rpg_t *rpg,
         sfVector2f pos,
