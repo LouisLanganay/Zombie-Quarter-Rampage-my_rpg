@@ -128,6 +128,7 @@ SRC += load_maps.c
 SRC += init_settings_menu.c
 SRC += e_seetings.c
 SRC += init_keybinds.c
+SRC += e_quit.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl
