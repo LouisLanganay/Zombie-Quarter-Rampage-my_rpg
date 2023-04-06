@@ -51,6 +51,7 @@ void init_player(rpg_t *rpg)
     player->clock = sfClock_create();
     player->pos = (sfVector2f){SPAWN_X, SPAWN_Y};
     player->in_dialogue = 0;
+    player->lore_open = 0;
     sfVector2f screen_size = (sfVector2f){
         rpg->glib->window->mode.width,
         rpg->glib->window->mode.height
