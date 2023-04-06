@@ -29,6 +29,18 @@ static void init_player_keys(player_t *player)
     player->keys->interact = (p_key_t){0, sfKeyE};
     player->keys->choice_one = (p_key_t){0, sfKeyU};
     player->keys->choice_two = (p_key_t){0, sfKeyI};
+    player->keys->inventory = (p_key_t){0, sfKeyA};
+    player->keys->last_direction = UP;
+}
+
+static void init_player_inventory(player_t *player)
+{
+    player->inventory = malloc(sizeof(inventory_t));
+    player->inventory->items = malloc(sizeof(int) * 12);
+
+    for (int i = 0; i < 12; i++)
+        player->inventory->items[i] = i;
+    player->inventory->is_open = 0;
     player->keys->escape = (p_key_t){0, sfKeyEscape};
     player->keys->last_direction = DOWN;
 }
@@ -48,5 +60,7 @@ void init_player(rpg_t *rpg)
     init_player_textures(player);
     init_player_keys(player);
     init_player_hitbox(player);
+    init_player_inventory(player);
+    init_player_items_packs(player);
     rpg->player = player;
 }
