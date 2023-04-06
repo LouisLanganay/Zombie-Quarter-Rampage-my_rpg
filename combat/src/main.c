@@ -29,6 +29,50 @@ void init_boss(rpg_t *rpg)
     gl_create_sprite(rpg->glib, my_sprite);
 }
 
+void animation_zombie1(zombies_t *list)
+{
+    if (list->animation == 8)
+        list->animation = 0;
+    if (list->animation == 0)
+        sfSprite_setTexture (list->sprite, sfTexture_createFromFile("assets/zombie_0.png", NULL), sfTrue);
+    if (list->animation == 1)
+        sfSprite_setTexture (list->sprite, sfTexture_createFromFile("assets/zombie_1.png", NULL), sfTrue);
+    if (list->animation == 2)
+        sfSprite_setTexture (list->sprite, sfTexture_createFromFile("assets/zombie_2.png", NULL), sfTrue);
+    if (list->animation == 3)
+        sfSprite_setTexture (list->sprite, sfTexture_createFromFile("assets/zombie_3.png", NULL), sfTrue);
+    if (list->animation == 4)
+        sfSprite_setTexture (list->sprite, sfTexture_createFromFile("assets/zombie_4.png", NULL), sfTrue);
+    if (list->animation == 5)
+        sfSprite_setTexture (list->sprite, sfTexture_createFromFile("assets/zombie_5.png", NULL), sfTrue);
+    if (list->animation == 6)
+        sfSprite_setTexture (list->sprite, sfTexture_createFromFile("assets/zombie_6.png", NULL), sfTrue);
+    if (list->animation == 7)
+        sfSprite_setTexture (list->sprite, sfTexture_createFromFile("assets/zombie_7.png", NULL), sfTrue);
+}
+
+void animation_zombie2(zombies_t *list)
+{
+    if (list->animation == 8)
+        list->animation = 0;
+    if (list->animation == 0)
+        sfSprite_setTexture (list->sprite, sfTexture_createFromFile("assets/witch0.png", NULL), sfTrue);
+    if (list->animation == 1)
+        sfSprite_setTexture (list->sprite, sfTexture_createFromFile("assets/witch1.png", NULL), sfTrue);
+    if (list->animation == 2)
+        sfSprite_setTexture (list->sprite, sfTexture_createFromFile("assets/witch2.png", NULL), sfTrue);
+    if (list->animation == 3)
+        sfSprite_setTexture (list->sprite, sfTexture_createFromFile("assets/witch3.png", NULL), sfTrue);
+    if (list->animation == 4)
+        sfSprite_setTexture (list->sprite, sfTexture_createFromFile("assets/witch4.png", NULL), sfTrue);
+    if (list->animation == 5)
+        sfSprite_setTexture (list->sprite, sfTexture_createFromFile("assets/witch5.png", NULL), sfTrue);
+    if (list->animation == 6)
+        sfSprite_setTexture (list->sprite, sfTexture_createFromFile("assets/witch6.png", NULL), sfTrue);
+    if (list->animation == 7)
+        sfSprite_setTexture (list->sprite, sfTexture_createFromFile("assets/witch7.png", NULL), sfTrue);
+}
+
 void animation_zombie(zombies_t *list)
 {
     zombies_t *tmp = list;
@@ -36,24 +80,13 @@ void animation_zombie(zombies_t *list)
         return;
     while (tmp != NULL) {
         tmp->animation++;
-        if (tmp->animation == 8)
-            tmp->animation = 0;
-        if (tmp->animation == 0)
-            sfSprite_setTexture (tmp->sprite, sfTexture_createFromFile("assets/zombie_0.png", NULL), sfTrue);
-        if (tmp->animation == 1)
-            sfSprite_setTexture (tmp->sprite, sfTexture_createFromFile("assets/zombie_1.png", NULL), sfTrue);
-        if (tmp->animation == 2)
-            sfSprite_setTexture (tmp->sprite, sfTexture_createFromFile("assets/zombie_2.png", NULL), sfTrue);
-        if (tmp->animation == 3)
-            sfSprite_setTexture (tmp->sprite, sfTexture_createFromFile("assets/zombie_3.png", NULL), sfTrue);
-        if (tmp->animation == 4)
-            sfSprite_setTexture (tmp->sprite, sfTexture_createFromFile("assets/zombie_4.png", NULL), sfTrue);
-        if (tmp->animation == 5)
-            sfSprite_setTexture (tmp->sprite, sfTexture_createFromFile("assets/zombie_5.png", NULL), sfTrue);
-        if (tmp->animation == 6)
-            sfSprite_setTexture (tmp->sprite, sfTexture_createFromFile("assets/zombie_6.png", NULL), sfTrue);
-        if (tmp->animation == 7)
-            sfSprite_setTexture (tmp->sprite, sfTexture_createFromFile("assets/zombie_7.png", NULL), sfTrue);
+        if (tmp->type == 1) {
+            animation_zombie1(tmp);
+            tmp = tmp->next;
+            continue;
+        }
+        if (tmp->type == 2)
+            animation_zombie2(tmp);
         tmp = tmp->next;
     }
 }
