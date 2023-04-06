@@ -16,6 +16,7 @@ void init_settings_menu(rpg_t *rpg)
     sfSprite_setTexture(rpg->menu->settings_bg_sprite, texture, sfTrue);
     sfSprite_setTextureRect(rpg->menu->settings_bg_sprite,
         (sfIntRect){415, 0, 50, 64});
-    sfSprite_setPosition(rpg->menu->settings_bg_sprite, (sfVector2f){rpg->glib->window->mode.width / 3.2, 1});
+    sfSprite_setPosition(rpg->menu->settings_bg_sprite,
+    (sfVector2f){rpg->glib->window->mode.width / 3.2, 1});
     sfSprite_setScale(rpg->menu->settings_bg_sprite, (sfVector2f){15, 15});
 }
