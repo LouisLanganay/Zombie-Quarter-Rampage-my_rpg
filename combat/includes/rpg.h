@@ -170,6 +170,7 @@
         sfIntRect rect;
         sfVector2f scale;
         struct bullets_s *next;
+        int status;
     } bullets_t;
 
     typedef struct zombies_s {
@@ -296,4 +297,5 @@
     void init_background(rpg_t *rpg);
     void init_guy(rpg_t *rpg);
     void move_player(rpg_t *rpg, sfClock *clock);
+    void delete_bullet_status(bullets_t **list);
 #endif

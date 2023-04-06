@@ -120,6 +120,7 @@ SRC += shot_angle.c
 SRC += init_background.c
 SRC += init_guy.c
 SRC += move_player.c
+SRC += delete_bullet_status.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

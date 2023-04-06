@@ -17,8 +17,6 @@ void event_window_close(window_t *window)
     sfRenderWindow_close(window->window);
 }
 
-
-
 void init_boss(rpg_t *rpg)
 {
     sprite_t *my_sprite = malloc(sizeof(sprite_t));
@@ -45,7 +43,6 @@ int main(int ac, char **av)
     bullets_t *bullets = NULL;
     zombies_t *zombies = NULL;
     sfClock *clock_zombies = sfClock_create();
-
 
     while (sfRenderWindow_isOpen(rpg->glib->window->window)) {
         print_framerate();
@@ -74,6 +71,7 @@ int main(int ac, char **av)
         //move_zombies(zombies, rpg);
         //bullet_hit_zombies(zombies, bullets);
         colision_bullet_zombies(zombies, bullets);
+        delete_bullet_status(&bullets);
         if (sfClock_getElapsedTime(clock_zombies).microseconds / 2000000.0 > 1) {
             move_zombies(zombies, rpg);
             sfClock_restart(clock_zombies);
