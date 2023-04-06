@@ -32,6 +32,7 @@
 
     #define PLAYER_KEYBOARD_PATH "resources/assets/keys/keyboard.png"
     #define PLAYER_INVENTORY_PATH "resources/assets/items/items_packs.png"
+    #define PLAYER_INVENTORY_UI_PATH "resources/assets/gui/UI_inv.png"
     #define PLAYER_KEYBOARD_PATH2 "resources/assets/keys/extras.png"
     #define PLAYER_GUI_PATH "resources/assets/gui/UI.png"
 
@@ -91,6 +92,7 @@
         sfTexture **key_texture;
         sfSprite **key_sprite;
         sfTexture **items_texture;
+        sfTexture *bg_items_texture;
         sfSprite **key_choice1;
         sfSprite **key_choice2;
         sfSprite *dialog_box;
@@ -109,6 +111,7 @@
         int is_open;
         int *items;
         sfSprite **items_sprite;
+        sfSprite *bg_items_sprite;
         sfRectangleShape *background;
     } inventory_t;
 
