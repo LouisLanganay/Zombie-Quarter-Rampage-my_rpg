@@ -40,6 +40,8 @@
 
     #define GET_SAVE_GAMELANGUAGE my_strcmp(jp_search(data, \
         "game_language")->value.p_str, "fr") == 0 ? FR : EN;
+    #define LOAD_SAVE_GAMELANGUAGE rpg->settings->game_language == FR ? \
+        "fr" : "en";
 
     typedef struct pos_s {
         int x;
@@ -184,6 +186,11 @@
         int id;
     } keyboard_images_t;
 
+    typedef struct keys_arr_s {
+        char *name;
+        sfKeyCode key;
+    } keys_arr_t;
+
     typedef struct interactions_s {
         char *name;
         void (*func)(rpg_t *, sfVector2f pos);
@@ -193,6 +200,8 @@
     char *my_strcat(char *dest, char const *src);
     char *my_strcpy(char *dest, char const *src);
     char *my_strcat_malloc(char *dest, char const *src);
+    int sfkey_to_int(sfKeyCode key);
+    sfKeyCode int_to_sfkey(int i);
     char *my_strdup(char *str);
     int my_strlen(char const *str);
     char *my_strndup(const char *str, int n);
@@ -212,13 +221,16 @@
     char *get_language(rpg_t *rpg, char *name, language_type_t language);
 
     /* SAVE */
+    int load_settings(rpg_t *rpg, parsed_data_t *data);
     int load_game(rpg_t *rpg, parsed_data_t *data);
     int load_save(rpg_t *rpg, char *path);
     int load_npc_interactions(save_t *save, parsed_data_t *data);
     int load_player(player_t *player, parsed_data_t *data);
+    void save_settings(rpg_t *rpg);
     void save_npc_interactions(rpg_t *rpg, npc_t *npc);
     void save_game(rpg_t *rpg);
     void save_player(rpg_t *rpg);
+    void save(rpg_t *rpg);
 
     /* MAP */
     void load_maps(rpg_t *rpg);

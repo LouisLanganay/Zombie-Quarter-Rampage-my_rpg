@@ -137,6 +137,12 @@ SRC += save_game.c
 SRC += npc_give_food.c
 SRC += check_dialogue_function.c
 SRC += get_npc_func_arr.c
+SRC += load_settings.c
+SRC += int_to_sfkey.c
+SRC += sfkey_to_int.c
+SRC += save_settings.c
+SRC += save.c
+
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl
