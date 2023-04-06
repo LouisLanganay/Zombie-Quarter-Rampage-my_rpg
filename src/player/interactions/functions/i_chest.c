@@ -22,7 +22,4 @@ void i_chest(rpg_t *rpg)
     gl_draw_text(rpg->glib, text->id);
     gl_delete_text(rpg->glib, text->id);
     free(text);
-
-    // if (sfKeyboard_isKeyPressed(sfKeyE) == sfTrue)
-    //     printf("Chest opened\n");
 }
