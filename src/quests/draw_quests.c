@@ -52,6 +52,10 @@ static void draw_quest_icon(char *quest_id, rpg_t *rpg, int i)
         sfSprite_setPosition(RPAQ->talk, (sfVector2f){pos.x, pos.y + 15 * i});
         sfRenderWindow_drawSprite(rpg->glib->window->window, RPAQ->talk, NULL);
     }
+    if (my_strcmp(quest->type, "collect") == 0) {
+        sfSprite_setPosition(RPAQ->collect,(sfVector2f){pos.x, pos.y + 15 * i});
+        sfRenderWindow_drawSprite(RGW->window, RPAQ->collect, NULL);
+    }
 }
 
 void draw_quests(rpg_t *rpg)

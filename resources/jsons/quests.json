@@ -8,5 +8,10 @@
         "name": "Test Quest",
         "description": "This is a test quest.",
         "type": "talk"
+    },
+    "find_money": {
+        "name": "Find Money",
+        "description": "Find some money.",
+        "type": "collect"
     }
 }

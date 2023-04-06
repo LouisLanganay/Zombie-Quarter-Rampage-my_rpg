@@ -27,6 +27,7 @@ void init_quest_icons(rpg_t *rpg)
     sfTexture *texture = sfTexture_createFromImage(image, NULL);
     rpg->player->assets->quest_icons->go_to = sfSprite_create();
     rpg->player->assets->quest_icons->talk = sfSprite_create();
+    rpg->player->assets->quest_icons->collect = sfSprite_create();
 
     sfSprite_setTexture(RPAQ->go_to, texture, sfTrue);
     sfSprite_setTextureRect(RPAQ->go_to, (sfIntRect){976, 305, 16, 16});
@@ -35,6 +36,10 @@ void init_quest_icons(rpg_t *rpg)
     sfSprite_setTexture(RPAQ->talk, texture, sfTrue);
     sfSprite_setTextureRect(RPAQ->talk, (sfIntRect){976, 256, 16, 16});
     sfSprite_setScale(RPAQ->talk, (sfVector2f){0.6, 0.6});
+
+    sfSprite_setTexture(RPAQ->collect, texture, sfTrue);
+    sfSprite_setTextureRect(RPAQ->collect, (sfIntRect){976, 288, 16, 16});
+    sfSprite_setScale(RPAQ->collect, (sfVector2f){0.6, 0.6});
 }
 
 void init_quest_assets(rpg_t *rpg)

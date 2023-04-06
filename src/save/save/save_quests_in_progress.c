@@ -10,11 +10,11 @@
 static char **get_new_arr(rpg_t *rpg)
 {
     int size = my_arrlen(rpg->quests_in_progress);
-    char **new_arr = malloc(sizeof(char *) * (size + 2));
+    char **new_arr = malloc(sizeof(char *) * (size + 1));
 
     for (int i = 0; i < size; i++)
         new_arr[i] = my_strdup(rpg->quests_in_progress[i]);
-    new_arr[size + 1] = NULL;
+    new_arr[size] = NULL;
 
     return new_arr;
 }
@@ -46,4 +46,5 @@ void save_quests_in_progress(rpg_t *rpg)
 
     jp_search(data, "game_timeline.quests_in_progress")->value.p_arr = my_arr;
     jp_write(rpg->save->path, data);
+    free(new_arr);
 }
