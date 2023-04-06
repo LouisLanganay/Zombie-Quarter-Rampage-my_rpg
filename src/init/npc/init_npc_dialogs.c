@@ -25,8 +25,10 @@ static void add_options(dialog_t *dialog, parsed_data_t *arr)
 
     for (int i = 0; i < count; i++) {
         dialog->options[i] = malloc(sizeof(dialog_option_t));
-        dialog->options[i]->text = jp_search(arr->value.p_obj, "text")->value.p_str;
-        dialog->options[i]->next_dialog = jp_search(arr->value.p_obj, "next")->value.p_str;
+        dialog->options[i]->text = jp_search(arr->value.p_obj,
+            "text")->value.p_str;
+        dialog->options[i]->next_dialog = jp_search(arr->value.p_obj,
+            "next")->value.p_str;
         arr = arr->next;
     }
     dialog->options[count] = NULL;

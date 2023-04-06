@@ -19,16 +19,6 @@ static void init_player_hitbox(player_t *player)
     });
 }
 
-static void init_player_texture(player_t *player)
-{
-    player->texture = sfTexture_createFromFile(PLAYER_SPRITE_PATH, NULL);
-    player->sprite = sfSprite_create();
-    sfSprite_setTexture(player->sprite, player->texture, sfTrue);
-    player->rect = (sfIntRect){0, 0, PLAYER_SPRITE_WIDTH, PLAYER_SPRITE_HEIGHT};
-    sfSprite_setTextureRect(player->sprite, player->rect);
-    sfSprite_setOrigin(player->sprite, (sfVector2f){0, PLAYER_SPRITE_HEIGHT});
-}
-
 static void init_player_keys(player_t *player)
 {
     player->keys = malloc(sizeof(keys_t));
@@ -50,11 +40,13 @@ static void init_player_inventory(player_t *player)
     for (int i = 0; i < 12; i++)
         player->inventory->items[i] = i;
     player->inventory->is_open = 0;
+    player->keys->escape = (p_key_t){0, sfKeyEscape};
 }
 
 void init_player(rpg_t *rpg)
 {
     player_t *player = malloc(sizeof(player_t));
+    player->clock = sfClock_create();
     player->pos = (sfVector2f){SPAWN_X, SPAWN_Y};
     player->in_dialogue = 0;
     sfVector2f screen_size = (sfVector2f){
@@ -62,7 +54,8 @@ void init_player(rpg_t *rpg)
         rpg->glib->window->mode.height
     };
     player->view = init_view(screen_size, 0.3, 3);
-    init_player_texture(player);
+    init_player_assets(player);
+    init_player_textures(player);
     init_player_keys(player);
     init_player_hitbox(player);
     init_player_assets(player);

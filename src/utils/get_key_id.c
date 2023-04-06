@@ -12,7 +12,7 @@ static void draw_interaction_popup_change_size(
     keyboard_images_t *keyboard,
     rpg_t *rpg)
 {
-    if (id != -1) {
+    if (id != -1 && keyboard[id].key != sfKeyUnknown) {
         if (sfKeyboard_isKeyPressed(keyboard[id].key) == sfTrue) {
             sfSprite_setScale(RPA->key_sprite[id], (sfVector2f){0.9, 0.9});
         } else {

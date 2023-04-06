@@ -18,4 +18,6 @@ void init_events(rpg_t *rpg)
                     sfEvtClosed, e_close);
     gl_create_event(rpg->glib, EVENT_INVENTORY_OPEN,
                     sfEvtKeyPressed, e_open_inventory);
+    gl_create_event(rpg->glib, EVENT_DIALOGUE_CHOICE,
+                    sfEvtKeyPressed, e_dialogue);
 }

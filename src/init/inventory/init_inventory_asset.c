@@ -35,5 +35,5 @@ void init_player_items_packs(player_t *player)
 {
     player->assets = malloc(sizeof(player_assets_t));
     player->assets->items_texture = init_inventory_assets_objects();
+    player->assets->bg_items_texture = sfTexture_createFromFile(PLAYER_INVENTORY_UI_PATH, NULL);
 }
-

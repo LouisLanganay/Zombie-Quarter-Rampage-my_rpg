@@ -43,6 +43,7 @@ static void add_npc_to_linked_list(map_t *map, parsed_data_t *data)
     npc->name = my_strdup(jp_search(data, "name")->value.p_str);
     npc->pos.x = jp_search(data, "pos.x")->value.p_int;
     npc->pos.y = jp_search(data, "pos.y")->value.p_int;
+    npc->one_time = jp_search(data, "one_time")->value.p_bool;
     npc->texture_path = my_strdup(jp_search(data, "texture_path")->value.p_str);
     init_npc_sprite(npc);
     init_npc_dialogs(npc, jp_search(data, "dialogues")->value.p_arr);
