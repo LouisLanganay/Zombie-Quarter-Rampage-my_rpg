@@ -12,6 +12,8 @@ void insert_bullet(bullets_t **list, rpg_t *rpg)
     bullets_t *new_node = malloc(sizeof(bullets_t));
     new_node->speed = 10;
     new_node->pos = sfSprite_getPosition(gl_get_sprite(rpg->glib, 2));
+    new_node->pos.x += -110;
+    new_node->pos.y += 50;
     new_node->sprite = sfSprite_create();
     new_node->texture = sfTexture_createFromFile("assets/bullet.png", NULL);
     new_node->rect = (sfIntRect){0, 0, 100, 100};
