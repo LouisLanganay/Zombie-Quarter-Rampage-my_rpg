@@ -48,6 +48,7 @@ static void change_player_rect_idle(player_t *player)
 void change_player_rect(player_t *player)
 {
     change_player_rect_idle(player);
+    if (player->in_dialogue != 0) return;
     if (player->keys->up.state == 1) {
         player->keys->last_direction = UP;
         player->rect.left = player->rect.width * 1;

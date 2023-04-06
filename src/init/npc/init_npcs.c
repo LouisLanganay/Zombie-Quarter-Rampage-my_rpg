@@ -37,23 +37,28 @@ static void init_npc_sprite(npc_t *npc)
     sfSprite_setPosition(npc->sprite, npc->pos);
 }
 
-static void add_npc_to_linked_list(map_t *map, parsed_data_t *data)
+static void add_npc_to_linked_list(map_t *map, parsed_data_t *data, rpg_t *rpg)
 {
     npc_t *npc = malloc(sizeof(npc_t));
     npc->name = my_strdup(jp_search(data, "name")->value.p_str);
     npc->pos.x = jp_search(data, "pos.x")->value.p_int;
     npc->pos.y = jp_search(data, "pos.y")->value.p_int;
     npc->one_time = jp_search(data, "one_time")->value.p_bool;
+    if (jp_search(data, "default_dialog")->type != p_null)
+        npc->default_dialog = my_strdup(jp_search(data,
+            "default_dialog")->value.p_str);
+    else
+        npc->default_dialog = NULL;
     npc->texture_path = my_strdup(jp_search(data, "texture_path")->value.p_str);
     init_npc_sprite(npc);
-    init_npc_dialogs(npc, jp_search(data, "dialogues")->value.p_arr);
+    init_npc_dialogs(npc, jp_search(data, "dialogues")->value.p_arr, rpg);
     init_npc_interaction(npc, map);
 
     npc->next = map->npcs;
     map->npcs = npc;
 }
 
-void init_npcs(map_t *map, char *path)
+void init_npcs(map_t *map, char *path, rpg_t *rpg)
 {
     parsed_data_t *data = jp_parse(path);
     map->npcs = NULL;
@@ -61,7 +66,7 @@ void init_npcs(map_t *map, char *path)
     while (data->next != NULL) {
         if (my_strcmp(jp_search(data->value.p_obj,
             "map")->value.p_str, map->map_path) == 0)
-            add_npc_to_linked_list(map, data->value.p_obj);
+            add_npc_to_linked_list(map, data->value.p_obj, rpg);
         data = data->next;
     }
 }

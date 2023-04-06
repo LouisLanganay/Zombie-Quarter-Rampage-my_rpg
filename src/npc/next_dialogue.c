@@ -51,9 +51,11 @@ void next_dialogue(rpg_t *rpg, int choice)
     parsed_data_t *data = NULL;
 
     if (next == NULL) {
-        save_npc_interactions(rpg, npc);
+        if (my_strcmp(actual->name, "default") != 0)
+            save_npc_interactions(rpg, npc);
         data = jp_parse(rpg->save->path);
         load_npc_interactions(rpg->save, jp_search(data, "game_timeline"));
+        check_dialogue_function(rpg, actual);
         rpg->player->in_dialogue = 0;
         return;
     }

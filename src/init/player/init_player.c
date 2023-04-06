@@ -42,6 +42,7 @@ static void init_player_inventory(player_t *player)
         player->inventory->items[i] = i;
     player->inventory->is_open = 0;
     player->keys->escape = (p_key_t){0, sfKeyEscape};
+    player->keys->last_direction = DOWN;
 }
 
 void init_player(rpg_t *rpg)

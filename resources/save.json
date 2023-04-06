@@ -12,9 +12,21 @@
 			"x": 1700,
 			"y": 650
 		},
-		"hp": 100
+		"hp": 100,
+		"inventory": {
+			"items": [
+				1,
+				5,
+				8
+			]
+		}
+	},
+	"game": {
+		"actual_map": "resources/maps/main_map.json"
 	},
 	"game_timeline": {
-		"npc_interactions": [ "npc" ]
+		"npc_interactions": [
+			"npc"
+		]
 	}
 }
