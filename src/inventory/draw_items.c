@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-void draw_ui(rpg_t *rpg)
+static void draw_ui(rpg_t *rpg)
 {
     sfVector2f view_pos = sfView_getCenter(rpg->player->view);
     sfVector2f items_pos = {view_pos.x - 74, view_pos.y - 101};
@@ -31,7 +31,8 @@ void draw_items(rpg_t *rpg)
     for (int i = 0; i < INVENTORY_SIZE; i++) {
         sfSprite_setTexture(rpg->player->inventory->items_sprite[i],
         rpg->player->assets->items_texture[i], sfFalse);
-        sfSprite_setPosition(rpg->player->inventory->items_sprite[i], items_pos);
+        sfSprite_setPosition(rpg->player->inventory->items_sprite[i],
+        items_pos);
         if ((i + 1) % 4 == 0) {
             items_pos.y += 35.3;
             items_pos.x = view_pos.x - 70;
