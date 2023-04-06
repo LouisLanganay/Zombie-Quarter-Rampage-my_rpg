@@ -5,8 +5,8 @@
 ** menu.h
 */
 
-#ifndef _MENU_H__
-    #define _MENU_H__
+#ifndef _BTN_KEYBIND_H__
+    #define _BTN_KEYBIND_H__
 
     #define BTN_PATH_RESUME "resources/assets/buttons/Resume.png"
     #define BTN_QUIT 10

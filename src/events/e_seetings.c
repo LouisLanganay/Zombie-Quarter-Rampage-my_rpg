@@ -17,20 +17,20 @@ void e_seeting_game(int id, void *main)
 {
     (void)(id);
     rpg_t *rpg = (rpg_t *)main;
-        if (rpg->menu->active == false) {
-            rpg->menu->active = true;
-            next_func();
-            return;
-        }
-        if (rpg->menu->active == true && rpg->menu_key->active == true) {
-            rpg->menu->active = false;
-            rpg->menu_key->active = false;
-            next_func();
-        }
-        if (rpg->menu->active == true) {
+    if (rpg->menu->active == false) {
+        rpg->menu->active = true;
+        next_func();
+        return;
+    }
+    if (rpg->menu->active == true && rpg->menu_key->active == true) {
+        rpg->menu->active = false;
+        rpg->menu_key->active = false;
+        next_func();
+    }
+    if (rpg->menu->active == true) {
         rpg->menu->active = false;
         next_func();
-        }
+    }
     return;
 }
 

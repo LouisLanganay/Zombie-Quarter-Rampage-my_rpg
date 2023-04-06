@@ -293,6 +293,7 @@
     void print_framerate(void);
 
     /* EVENTS */
+    void e_quit(int id, void *main);
     void e_start_game(int id, void *main);
     void e_key_released(window_t *window, void *main);
     void e_key_pressed(window_t *window, void *main);
