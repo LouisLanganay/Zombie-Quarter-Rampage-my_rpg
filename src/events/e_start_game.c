@@ -13,5 +13,4 @@ void e_start_game(int id, void *main)
     (void)(main);
 
     printf("CLICK_START\n");
-    //a faire LOUIS
 }
