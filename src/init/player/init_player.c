@@ -30,6 +30,7 @@ static void init_player_keys(player_t *player)
     player->keys->choice_one = (p_key_t){0, sfKeyU};
     player->keys->choice_two = (p_key_t){0, sfKeyI};
     player->keys->inventory = (p_key_t){0, sfKeyA};
+    player->keys->last_direction = UP;
 }
 
 static void init_player_inventory(player_t *player)
@@ -58,7 +59,6 @@ void init_player(rpg_t *rpg)
     init_player_textures(player);
     init_player_keys(player);
     init_player_hitbox(player);
-    init_player_assets(player);
     init_player_inventory(player);
     init_player_items_packs(player);
     rpg->player = player;
