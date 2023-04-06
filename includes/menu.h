@@ -14,6 +14,5 @@
     #define BTN_RESUME 12
     #define BTN_SEETING 13
 
-//keybinds
     #define BTN_KEYBIND 14
 #endif

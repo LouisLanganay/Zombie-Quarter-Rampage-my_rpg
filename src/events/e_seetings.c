@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-void next_func()
+void next_func(void)
 {
     while (sfMouse_isButtonPressed(sfMouseLeft) == sfTrue);
     return;
