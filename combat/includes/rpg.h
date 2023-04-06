@@ -185,6 +185,10 @@
         sfTexture *texture;
         sfIntRect rect;
         sfVector2f scale;
+        int animation;
+        int alive;
+        int direction;
+        int last_distance;
     } zombies_t;
 
     int my_strcmp(char const *s1, char const *s2);
@@ -281,7 +285,6 @@
     void init_player_items_packs(player_t *player);
     int colision_with_rect(sfRectangleShape *rect, sfVector2f pos);
     int colision_bullet_zombies(zombies_t *list, bullets_t *bullets);
-    void move_zombies(zombies_t *list, rpg_t *rpg);
     void draw_zombies(zombies_t *list, rpg_t *rpg);
     void insert_zombies(rpg_t *rpg, zombies_t **list);
     void delete_zombie(zombies_t *list, zombies_t *node);
@@ -298,4 +301,6 @@
     void init_guy(rpg_t *rpg);
     void move_player(rpg_t *rpg, sfClock *clock);
     void delete_bullet_status(bullets_t **list);
+    void delete_zombie_status(zombies_t **list);
+    void move_zombies(zombies_t *list, rpg_t *rpg, sfClock *attack_speed);
 #endif
