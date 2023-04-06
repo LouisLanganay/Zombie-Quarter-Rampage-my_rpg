@@ -18,5 +18,5 @@ void init_popup_lore(rpg_t *rpg)
     sfSprite_setTextureRect(RPA->lore_box,
         (sfIntRect){351, 80, 49, 48});
     sfSprite_setScale(RPA->lore_box, (sfVector2f){5, 5});
-    sfSprite_setOrigin(RPA->lore_box, (sfVector2f){49/2, 48/2});
+    sfSprite_setOrigin(RPA->lore_box, (sfVector2f){49 / 2, 48 / 2});
 }
