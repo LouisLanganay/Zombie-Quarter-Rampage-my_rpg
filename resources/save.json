@@ -5,7 +5,18 @@
 		"name": "save"
 	},
 	"settings": {
-		"game_language": "en"
+		"game_language": "en",
+		"keys": {
+			"up": 25,
+			"down": 18,
+			"left": 16,
+			"right": 3,
+			"interact": 4,
+			"choice1": 24,
+			"choice2": 20,
+			"inventory": 8,
+			"escape": 36
+		}
 	},
 	"player": {
 		"pos": {
@@ -26,12 +37,10 @@
 	},
 	"game_timeline": {
 		"npc_interactions": [
-			"npc",
-			"Annia"
+			"npc"
 		],
 		"quests_in_progress": [
-			"quest",
-			"go_to_annia"
+			"quest"
 		]
 	}
 }

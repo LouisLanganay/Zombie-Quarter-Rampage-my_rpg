@@ -205,6 +205,11 @@
         int id;
     } keyboard_images_t;
 
+    typedef struct keys_arr_s {
+        char *name;
+        sfKeyCode key;
+    } keys_arr_t;
+
     typedef struct interactions_s {
         char *name;
         void (*func)(rpg_t *, sfVector2f pos);
@@ -233,15 +238,18 @@
     char *get_language(rpg_t *rpg, char *name, language_type_t language);
 
     /* SAVE */
+    int load_settings(rpg_t *rpg, parsed_data_t *data);
     int load_game(rpg_t *rpg, parsed_data_t *data);
     int load_save(rpg_t *rpg, char *path);
     int load_npc_interactions(save_t *save, parsed_data_t *data);
     int load_player(player_t *player, parsed_data_t *data);
+    void save_settings(rpg_t *rpg);
     int load_quests_in_progress(rpg_t *rpg, parsed_data_t *data);
     void save_npc_interactions(rpg_t *rpg, npc_t *npc);
     void save_game(rpg_t *rpg);
     void save_quests_in_progress(rpg_t *rpg);
     void save_player(rpg_t *rpg);
+    void save(rpg_t *rpg);
 
     /* QUESTS */
     void start_quest(rpg_t *rpg, char *id);

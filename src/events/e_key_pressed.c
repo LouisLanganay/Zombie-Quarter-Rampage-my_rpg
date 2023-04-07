@@ -21,9 +21,7 @@ void e_key_pressed(window_t *window, void *main)
         rpg->player->keys->right.state = 1;
     if (rpg->glib->window->event.key.code == sfKeyN)
         start_game(rpg);
-    if (rpg->glib->window->event.key.code == sfKeyB) {
-        save_player(rpg);
-        save_game(rpg);
-        save_quests_in_progress(rpg);
+    if (rpg->glib->window->event.key.code == sfKeyB)
+        save(rpg);
     }
 }
