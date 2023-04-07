@@ -17,7 +17,7 @@ void init_keybinds(rpg_t *rpg)
     my_btn->rect = (sfIntRect){0, 0, 278, 72};
     my_btn->call_action = e_seeting_keybinds_game;
     my_btn->sprite = sfSprite_create();
-    my_btn->texture = sfTexture_createFromFile(BTN_PATH_RESUME, NULL);
+    my_btn->texture = sfTexture_createFromFile(BTN_PATH_CONTROLS, NULL);
     my_btn->sb_hover = NULL;
     my_btn->sb_click = NULL;
     gl_create_button(rpg->glib, my_btn);
