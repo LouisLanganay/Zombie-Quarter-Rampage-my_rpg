@@ -14,4 +14,3 @@ void e_close(window_t *window, void *main)
     sfRenderWindow_close(rpg->glib->window->window);
     sfRenderWindow_destroy(rpg->glib->window->window);
 }
-    
