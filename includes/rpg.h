@@ -266,6 +266,7 @@
 
     /* TEXT */
     void divide_a_sftext(sfText *text, sfVector2f pos, rpg_t *rpg);
+    void divide_a_text(rpg_t *rpg, char *str, sfVector2f pos, sfColor color);
 
 
     /* CALL ACTIONS */
@@ -283,6 +284,10 @@
         sfKeyCode key,
         char *str
     );
+
+    /* LORE */
+    void draw_popup_lore(rpg_t *rpg);
+    void check_popup_lore(rpg_t *rpg);
 
     /* FPS */
     void print_framerate(void);
@@ -306,6 +311,7 @@
     void init_npc_dialogs(npc_t *npc, parsed_data_t *dialogs_arr, rpg_t *rpg);
     void init_settings(rpg_t *rpg);
     void init_language(rpg_t *rpg);
+    void init_popup_lore(rpg_t *rpg);
     void init_save(rpg_t *rpg);
     void init_events(rpg_t *rpg);
     void init_player_assets(player_t *player);

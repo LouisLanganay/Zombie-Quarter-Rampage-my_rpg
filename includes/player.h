@@ -96,6 +96,7 @@
         sfSprite **key_choice1;
         sfSprite **key_choice2;
         sfSprite *dialog_box;
+        sfSprite *lore_box;
         sfTexture *down_attack;
         sfTexture *down_idle;
         sfTexture *down_walk;
@@ -118,6 +119,8 @@
     typedef struct player_s {
         int hp;
         int in_dialogue;
+        int lore_open;
+        char *lore_text;
         inventory_t *inventory;
         sfRectangleShape *hitbox;
         sfVector2f pos;
