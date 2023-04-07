@@ -16,7 +16,6 @@ void i_house_paper(rpg_t *rpg, sfVector2f pos)
     if (sfKeyboard_isKeyPressed(RPK->interact.key)) {
         stop_quest(rpg, "go_to_annia");
         while (sfKeyboard_isKeyPressed(RPK->interact.key));
-    if (sfKeyboard_isKeyPressed(rpg->player->keys->interact.key) == sfTrue) {
         rpg->player->lore_text = my_strdup(get_language(rpg,
             "house_paper", RSG));
         rpg->player->lore_open = 1;
