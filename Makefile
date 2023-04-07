@@ -150,6 +150,7 @@ SRC += load_quests_in_progress.c
 SRC += save_quests_in_progress.c
 SRC += get_quests_func_arr.c
 SRC += get_quest_by_id.c
+SRC += init_sounds.c
 SRC += go_to_annia.c
 
 INC_DIR 	:= includes

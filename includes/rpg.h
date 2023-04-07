@@ -334,6 +334,7 @@
     void init_window(rpg_t *rpg);
     void init_npc_dialogs(npc_t *npc, parsed_data_t *dialogs_arr, rpg_t *rpg);
     void init_settings(rpg_t *rpg);
+    void init_sounds(GLib_t *glib);
     void init_language(rpg_t *rpg);
     void init_save(rpg_t *rpg);
     void init_events(rpg_t *rpg);
