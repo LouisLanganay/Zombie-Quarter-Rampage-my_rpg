@@ -13,4 +13,5 @@ void game_loop(rpg_t *rpg)
     draw_map(rpg->maps, rpg->actual_map, rpg);
     gl_check_events(rpg->glib->window, rpg->glib->events, rpg);
     display_dialogue(rpg);
+    draw_inventory(rpg);
 }
