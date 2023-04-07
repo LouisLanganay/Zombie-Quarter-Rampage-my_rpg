@@ -36,6 +36,7 @@
     #define RSG rpg->settings->game_language
     #define PA player->assets
     #define RSNI rpg->save->npc_interactions
+    #define RPAQ rpg->player->assets->quest_icons
 
 
     #define GET_SAVE_GAMELANGUAGE my_strcmp(jp_search(data, \
@@ -163,6 +164,20 @@
         sfClock *clock;
     } splash_screen_t;
 
+    typedef struct quests_func_s {
+        char *name;
+        void (*func)(void*);
+    } quests_func_t;
+
+    typedef struct quest_s {
+        char *id;
+        char *name;
+        char *description;
+        char *type;
+        char *func;
+        struct quest_s *next;
+    } quest_t;
+
     typedef struct rpg_s {
         int debug;
         char *actual_map;
@@ -177,6 +192,8 @@
         settings_t *settings;
         save_t *save;
         splash_screen_t *splash_screen;
+        quest_t *quests;
+        char **quests_in_progress;
     } rpg_t;
 
     typedef struct keyboard_images_s {
@@ -216,9 +233,19 @@
     int load_save(rpg_t *rpg, char *path);
     int load_npc_interactions(save_t *save, parsed_data_t *data);
     int load_player(player_t *player, parsed_data_t *data);
+    int load_quests_in_progress(rpg_t *rpg, parsed_data_t *data);
     void save_npc_interactions(rpg_t *rpg, npc_t *npc);
     void save_game(rpg_t *rpg);
+    void save_quests_in_progress(rpg_t *rpg);
     void save_player(rpg_t *rpg);
+
+    /* QUESTS */
+    void start_quest(rpg_t *rpg, char *id);
+    quest_t *get_quest(rpg_t *rpg, char *id);
+    void draw_quests(rpg_t *rpg);
+    quests_func_t *get_quests_func_arr(void);
+    quest_t *get_quest_by_id(rpg_t *rpg, char *id);
+    void stop_quest(rpg_t *rpg, char *id);
 
     /* MAP */
     void load_maps(rpg_t *rpg);
@@ -262,6 +289,7 @@
     void start_dialogue(rpg_t *rpg, npc_t *npc);
     void next_dialogue(rpg_t *rpg, int choice);
     void display_dialogue(rpg_t *rpg);
+    dialog_func_t *get_npc_func_arr(void);
     void check_dialogue_function(rpg_t *rpg, dialog_t *dialogue);
 
     /* TEXT */
@@ -270,6 +298,7 @@
 
 
     /* CALL ACTIONS */
+    void go_to_annia(void *main);
     void npc_give_food(void*);
     void little_girl(rpg_t *rpg, sfVector2f pos);
     void inte_test(rpg_t *rpg);
@@ -277,7 +306,6 @@
     void i_house_paper(rpg_t *rpg, sfVector2f pos);
     void i_chest(rpg_t *rpg);
     interactions_t *get_interactions_array(void);
-    dialog_func_t *get_npc_func_arr(void);
     void draw_interaction_popup(
         rpg_t *rpg,
         sfVector2f pos,
@@ -301,6 +329,7 @@
 
     /* INIT */
     void init(rpg_t *rpg);
+    void init_quests(rpg_t *rpg);
     void init_player(rpg_t *rpg);
     void init_popup_dialogue(rpg_t *rpg);
     void init_glib(rpg_t *rpg);
@@ -310,6 +339,7 @@
     void init_window(rpg_t *rpg);
     void init_npc_dialogs(npc_t *npc, parsed_data_t *dialogs_arr, rpg_t *rpg);
     void init_settings(rpg_t *rpg);
+    void init_sounds(GLib_t *glib);
     void init_language(rpg_t *rpg);
     void init_popup_lore(rpg_t *rpg);
     void init_save(rpg_t *rpg);
@@ -318,6 +348,7 @@
     void init_rpg(rpg_t *rpg, int ac, char **av);
     void init_popup_interaction(rpg_t *rpg);
     void init_player_items_packs(player_t *player);
+    void init_quest_assets(rpg_t *rpg);
     void init_inventory(rpg_t *rpg);
     void init_player_assets_dialogue(player_t *player);
 

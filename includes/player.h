@@ -87,6 +87,12 @@
         p_key_t escape;
     } keys_t;
 
+    typedef struct quest_icons_s {
+        sfSprite *go_to;
+        sfSprite *collect;
+        sfSprite *talk;
+    } quest_icons_t;
+
     typedef struct player_assets_s {
         sfClock *clock;
         sfTexture **key_texture;
@@ -96,6 +102,8 @@
         sfSprite **key_choice1;
         sfSprite **key_choice2;
         sfSprite *dialog_box;
+        sfSprite *quests_box;
+        quest_icons_t *quest_icons;
         sfSprite *lore_box;
         sfTexture *down_attack;
         sfTexture *down_idle;
