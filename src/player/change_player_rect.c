@@ -35,6 +35,10 @@ static void change_player_rect_annimate(player_t *player)
 
 static void change_player_rect_idle(player_t *player)
 {
+    if (sfKeyboard_isKeyPressed(player->keys->interact.key) == sfTrue) {
+        player->rect.left = player->rect.width * 8;
+        return;
+    }
     if (player->keys->last_direction == DOWN)
         player->rect.left = player->rect.width * 4;
     if (player->keys->last_direction == UP)
