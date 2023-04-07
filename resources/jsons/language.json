@@ -1,4 +1,8 @@
 {
+    "house_paper": {
+        "en": "Bla bla blaaaa",
+        "fr": "Bla bla blaaaa"
+    },
     "house_paper_interact": {
         "en": "read the paper.",
         "fr": "lire le papier."
