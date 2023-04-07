@@ -20,7 +20,7 @@ static int gl_create_sound_check_id(sound_t *sounds, int id)
 
 int gl_create_sound(GLib_t *glib, sound_t *sound)
 {
-    if (gl_create_sound_check_id(glib->sounds, sprite->id) != 0)
+    if (gl_create_sound_check_id(glib->sounds, sound->id) != 0)
         return (84);
     sound_t *tmp = malloc(sizeof(*tmp));
     tmp->id = sound->id;
