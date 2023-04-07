@@ -7,12 +7,6 @@
 
 #include "rpg.h"
 
-
-void event_window_close(window_t *window)
-{
-    sfRenderWindow_close(window->window);
-}
-
 int main(int ac, char **av)
 {
     rpg_t *rpg = malloc(sizeof(rpg_t));

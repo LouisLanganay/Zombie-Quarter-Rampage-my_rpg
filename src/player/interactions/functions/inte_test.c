@@ -10,5 +10,4 @@
 void inte_test(rpg_t *rpg)
 {
     (void)(rpg);
-    printf("Test\n");
 }

@@ -15,4 +15,5 @@ void init_glib(rpg_t *rpg)
     init_window(rpg);
     init_events(rpg);
     init_fonts(rpg);
+    init_sounds(rpg->glib);
 }

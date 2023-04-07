@@ -5,16 +5,42 @@
 		"name": "save"
 	},
 	"settings": {
-		"game_language": "en"
+		"game_language": "en",
+		"keys": {
+			"up": 25,
+			"down": 18,
+			"left": 16,
+			"right": 3,
+			"interact": 4,
+			"choice1": 24,
+			"choice2": 20,
+			"inventory": 8,
+			"escape": 36
+		}
 	},
 	"player": {
 		"pos": {
-			"x": 1700,
-			"y": 650
+			"x": 1708,
+			"y": 717
 		},
-		"hp": 100
+		"hp": 100,
+		"inventory": {
+			"items": [
+				1,
+				5,
+				8
+			]
+		}
+	},
+	"game": {
+		"actual_map": "resources/maps/main_map.json"
 	},
 	"game_timeline": {
-		"npc_interactions": [ "npc" ]
+		"npc_interactions": [
+			"npc"
+		],
+		"quests_in_progress": [
+			"quest"
+		]
 	}
 }
