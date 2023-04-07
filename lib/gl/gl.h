@@ -110,7 +110,15 @@
         struct fonts_l *next;
     } fonts_t;
 
+    typedef struct sound_s {
+        int id;
+        sfSound *sound;
+        sfSoundBuffer *buffer;
+        struct sound_s *next;
+    } sound_t;
+
     typedef struct GLib_s {
+        sound_t *sounds;
         window_t *window;
         events_t *events;
         buttons_t *buttons;
@@ -201,5 +209,11 @@
     sfText *gl_get_text(GLib_t *glib, int id);
 
     void gl_ddown_draw_childs(dropdown_t *tmp, GLib_t *glib, void *main);
+
+    int gl_create_sound(GLib_t *glib, sound_t *sound);
+
+    void gl_play_sound(GLib_t *glib, int id);
+
+    sound_t *gl_get_sound(GLib_t *glib, int id);
 
 #endif

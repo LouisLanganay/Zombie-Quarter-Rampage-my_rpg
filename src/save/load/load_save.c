@@ -31,5 +31,7 @@ int load_save(rpg_t *rpg, char *path)
         return (84);
     if (load_game(rpg, jp_search(data, "game")) != 0)
         return (84);
+    if (load_quests_in_progress(rpg, jp_search(data, "game_timeline")) != 0)
+        return (84);
     return (0);
 }

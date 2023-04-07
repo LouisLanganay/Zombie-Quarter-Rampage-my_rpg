@@ -13,6 +13,7 @@ NAME = libgl.a
 VPATH := ./window
 VPATH += ./events
 VPATH += ./sprites
+VPATH += ./sounds
 VPATH += ./texts
 VPATH += ./buttons
 VPATH += ./scenes
@@ -51,6 +52,9 @@ SRC += gl_add_child_ddown.c
 SRC += gl_ddowns_hovered.c
 SRC += gl_get_text.c
 SRC += gl_ddown_draw_childs.c
+SRC += gl_create_sound.c
+SRC += gl_get_sound.c
+SRC += gl_play_sound.c
 
 
 

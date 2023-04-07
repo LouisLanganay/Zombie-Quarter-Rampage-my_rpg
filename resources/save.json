@@ -20,8 +20,8 @@
 	},
 	"player": {
 		"pos": {
-			"x": 1649,
-			"y": 756
+			"x": 1708,
+			"y": 717
 		},
 		"hp": 100,
 		"inventory": {
@@ -38,6 +38,9 @@
 	"game_timeline": {
 		"npc_interactions": [
 			"npc"
+		],
+		"quests_in_progress": [
+			"quest"
 		]
 	}
 }
