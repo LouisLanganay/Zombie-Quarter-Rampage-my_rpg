@@ -17,7 +17,7 @@ static void init_main_menu_quit(rpg_t *rpg)
     my_btn->rect = (sfIntRect){0, 0, 278, 72};
     my_btn->call_action = e_quit;
     my_btn->sprite = sfSprite_create();
-    my_btn->texture = sfTexture_createFromFile(BTN_PATH_RESUME, NULL);
+    my_btn->texture = sfTexture_createFromFile(BTN_PATH_QUIT, NULL);
     my_btn->sb_hover = NULL;
     my_btn->sb_click = NULL;
     gl_create_button(rpg->glib, my_btn);
@@ -29,10 +29,10 @@ static void init_main_menu_start(rpg_t *rpg)
     my_btn->id = BTN_START;
     my_btn->pos = (sfVector2f){ rpg->glib->window->mode.width / 7,
     rpg->glib->window->mode.height / 1.65};
-    my_btn->rect = (sfIntRect){0, 0, 278, 72};
+    my_btn->rect = (sfIntRect){0, 0, 69.5, 72};
     my_btn->call_action = e_start_game;
     my_btn->sprite = sfSprite_create();
-    my_btn->texture = sfTexture_createFromFile(BTN_PATH_RESUME, NULL);
+    my_btn->texture = sfTexture_createFromFile(BTN_PATH_PLAY, NULL);
     my_btn->sb_hover = NULL;
     my_btn->sb_click = NULL;
     gl_create_button(rpg->glib, my_btn);
@@ -59,10 +59,10 @@ static void init_main_menu_seeting(rpg_t *rpg)
     my_btn->id = BTN_SEETING;
     my_btn->pos = (sfVector2f){rpg->glib->window->mode.width / 1.2,
     rpg->glib->window->mode.height / 8};
-    my_btn->rect = (sfIntRect){0, 0, 278, 72};
+    my_btn->rect = (sfIntRect){0, 0, 69.5, 72};
     my_btn->call_action = e_seeting_game;
     my_btn->sprite = sfSprite_create();
-    my_btn->texture = sfTexture_createFromFile(BTN_PATH_RESUME, NULL);
+    my_btn->texture = sfTexture_createFromFile(BTN_PATH_OPTION, NULL);
     my_btn->sb_hover = NULL;
     my_btn->sb_click = NULL;
     gl_create_button(rpg->glib, my_btn);
