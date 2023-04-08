@@ -164,6 +164,8 @@ SRC += get_quest_by_id.c
 SRC += go_to_annia.c
 SRC += draw_quests.c
 SRC += get_quest.c
+SRC += i_house_basement.c
+SRC += i_grocery_door.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

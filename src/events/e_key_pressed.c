@@ -23,5 +23,4 @@ void e_key_pressed(window_t *window, void *main)
         start_game(rpg);
     if (rpg->glib->window->event.key.code == sfKeyB)
         save(rpg);
-    }
 }

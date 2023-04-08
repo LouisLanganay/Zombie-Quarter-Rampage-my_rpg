@@ -45,6 +45,7 @@
 
     #define GET_SAVE_GAMELANGUAGE my_strcmp(jp_search(data, \
         "game_language")->value.p_str, "fr") == 0 ? FR : EN;
+    #define SAVE_GAMELANGUAGE rpg->settings->game_language == FR ? "fr" : "en";
 
     typedef struct pos_s {
         int x;
@@ -313,6 +314,8 @@
     void go_to_annia(void *main);
     void npc_give_food(void*);
     void little_girl(rpg_t *rpg, sfVector2f pos);
+    void i_house_basement(rpg_t *rpg, sfVector2f pos);
+    void i_grocery_door(rpg_t *rpg, sfVector2f pos);
     void inte_test(rpg_t *rpg);
     void i_house_door(rpg_t *rpg, sfVector2f pos);
     void i_house_paper(rpg_t *rpg, sfVector2f pos);

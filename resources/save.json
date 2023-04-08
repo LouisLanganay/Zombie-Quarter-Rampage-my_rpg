@@ -20,8 +20,8 @@
 	},
 	"player": {
 		"pos": {
-			"x": 1708,
-			"y": 717
+			"x": 921,
+			"y": 404
 		},
 		"hp": 100,
 		"inventory": {
@@ -37,7 +37,8 @@
 	},
 	"game_timeline": {
 		"npc_interactions": [
-			"npc"
+			"npc",
+			"Annia"
 		],
 		"quests_in_progress": [
 			"quest"

@@ -15,6 +15,22 @@
         "en": "leave the house.",
         "fr": "sortir de la maison."
     },
+    "basement_door_interact_leave": {
+        "en": "go to the second floor.",
+        "fr": "aller au deuxième étage."
+    },
+    "basement_door_interact_enter": {
+        "en": "go to the basement.",
+        "fr": "aller au sous-sol."
+    },
+    "grocery_door_interact_leave": {
+        "en": "leave the grocery store.",
+        "fr": "sortir de l'épicerie."
+    },
+    "grocery_door_interact_enter": {
+        "en": "enter in the grocery store.",
+        "fr": "entrer dans l'épicerie."
+    },
     "interact_press__to": {
         "en": "Press        to ",
         "fr": "Appuyez sur      pour "
