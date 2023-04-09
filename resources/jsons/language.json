@@ -15,6 +15,10 @@
         "en": "leave the house.",
         "fr": "sortir de la maison."
     },
+    "pass_fence_interaction": {
+        "en": "pass the fence.",
+        "fr": "passer le grillage."
+    },
     "basement_door_interact_leave": {
         "en": "go to the second floor.",
         "fr": "aller au deuxième étage."

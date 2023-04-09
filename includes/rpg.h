@@ -329,11 +329,15 @@
 
     /* CALL ACTIONS */
     void go_to_annia(void *main);
+    void i_pass_fence(rpg_t *rpg, sfVector2f pos);
     void npc_give_food(void*);
     void little_girl(rpg_t *rpg, sfVector2f pos);
     void i_house_basement(rpg_t *rpg, sfVector2f pos);
     void i_grocery_door(rpg_t *rpg, sfVector2f pos);
+    void i_paper_resources(rpg_t *rpg, sfVector2f pos);
+    void i_paper_music(rpg_t *rpg, sfVector2f pos);
     void inte_test(rpg_t *rpg);
+    void i_end_map_top(rpg_t *rpg, sfVector2f pos);
     void i_house_door(rpg_t *rpg, sfVector2f pos);
     void i_house_paper(rpg_t *rpg, sfVector2f pos);
     void i_chest(rpg_t *rpg);

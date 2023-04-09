@@ -177,6 +177,10 @@ SRC += i_house_basement.c
 SRC += i_grocery_door.c
 SRC += game_start.c
 SRC += e_settings_key.c
+SRC += i_pass_fence.c
+SRC += i_end_map_top.c
+SRC += i_paper_music.c
+SRC += i_paper_resources.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

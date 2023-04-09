@@ -15,6 +15,10 @@ interactions_t *get_interactions_array(void)
         { "Annia", little_girl },
         { "i_house_basement", i_house_basement },
         { "i_grocery_door", i_grocery_door },
+        { "i_pass_fence", i_pass_fence },
+        { "i_end_map_top", i_end_map_top },
+        { "i_paper_music", i_paper_music },
+        { "i_paper_resources", i_paper_resources },
         { NULL, NULL }
     };
     interactions_t *inte = malloc(sizeof(interactions_t) *
