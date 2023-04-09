@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-static void draw_menu3(rpg_t *rpg)
+static void draw_conditions_buttons(rpg_t *rpg)
 {
         if (rpg->menu->active == false) {
                 gl_button_change_state(BTN_QUIT, rpg->glib->buttons, sfFalse);
@@ -20,7 +20,7 @@ static void draw_menu3(rpg_t *rpg)
                 rpg->menu_key->settings_bg_key_sprite, NULL);
 }
 
-static void draw_menu2(rpg_t *rpg)
+static void draw_buttons(rpg_t *rpg)
 {
         if (rpg->menu->active == true) {
                 gl_button_change_state(BTN_QUIT, rpg->glib->buttons, sfTrue);
@@ -34,7 +34,7 @@ static void draw_menu2(rpg_t *rpg)
                 gl_draw_button(BTN_KEYBIND, rpg->glib->buttons,
                 rpg->glib->window);
         }
-        draw_menu3(rpg);
+        draw_conditions_buttons(rpg);
 }
 
 void draw_menu(rpg_t *rpg)
@@ -50,5 +50,5 @@ void draw_menu(rpg_t *rpg)
         }
         gl_buttons_hovered(rpg->glib->buttons, rpg->glib->window, rpg);
         gl_draw_button(BTN_SEETING, rpg->glib->buttons, rpg->glib->window);
-        draw_menu2(rpg);
+        draw_buttons(rpg);
 }
