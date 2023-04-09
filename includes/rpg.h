@@ -347,15 +347,16 @@
     void init_settings_menu(rpg_t *rpg);
     void init_keybinds(rpg_t *rpg);
     void init_settings_keybind(rpg_t *rpg);
-    
-    
+
+
     /* LORE */
     void draw_popup_lore(rpg_t *rpg);
     void check_popup_lore(rpg_t *rpg);
-    
+
 
     /* FPS */
     void print_framerate(void);
+
 
     /* EVENTS */
     void e_quit(int id, void *main);
