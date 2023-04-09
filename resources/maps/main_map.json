@@ -7448,7 +7448,7 @@
          "name":"roof",
          "opacity":1,
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":152,
          "x":0,
          "y":0
@@ -7569,7 +7569,7 @@
          "name":"roof",
          "opacity":1,
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":152,
          "x":0,
          "y":0
@@ -7690,7 +7690,7 @@
          "name":"roof",
          "opacity":1,
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":152,
          "x":0,
          "y":0
@@ -7720,7 +7720,7 @@
          "y":0
         }, 
         {
-         "color":"#e01b24",
+         "color":"#3584e4",
          "draworder":"topdown",
          "id":59,
          "name":"interactions",

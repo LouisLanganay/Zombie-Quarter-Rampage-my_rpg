@@ -11,7 +11,7 @@
 void i_paper_music(rpg_t *rpg, sfVector2f pos)
 {
     sfVector2f pos2 = {pos.x - 160, pos.y + 10};
-    char *str = get_language(rpg, "house_paper_interact", RSG);
+    char *str = get_language(rpg, "paper_interact", RSG);
     draw_interaction_popup(rpg, pos2, RPK->interact.key, str);
 
 }

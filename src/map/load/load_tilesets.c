@@ -21,8 +21,6 @@ static void create_tileset(parsed_data_t *tmp_arr, map_t *map)
 {
     tilesets_t *tmp = malloc(sizeof(tilesets_t));
 
-    printf("Load tileset %s\n",
-        jp_search(tmp_arr, "name")->value.p_str);
     tmp->name = jp_search(tmp_arr, "name")->value.p_str;
     tmp->path = init_value_path(jp_search(tmp_arr, "image")->value.p_str);
     tmp->width = jp_search(tmp_arr, "imagewidth")->value.p_int;

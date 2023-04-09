@@ -3,9 +3,13 @@
         "en": "Bla bla blaaaa",
         "fr": "Bla bla blaaaa"
     },
-    "house_paper_interact": {
+    "paper_interact": {
         "en": "read the paper.",
         "fr": "lire le papier."
+    },
+    "basement_paper": {
+        "en": "Bla bla blaaaa",
+        "fr": "Bla bla blaaaa"
     },
     "house_door_interact_enter": {
         "en": "enter in the house.",

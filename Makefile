@@ -181,6 +181,7 @@ SRC += i_pass_fence.c
 SRC += i_end_map_top.c
 SRC += i_paper_music.c
 SRC += i_paper_resources.c
+SRC += i_basement_paper.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl
