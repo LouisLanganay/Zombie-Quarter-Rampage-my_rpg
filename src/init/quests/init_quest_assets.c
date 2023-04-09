@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-void init_quest_bg(rpg_t *rpg)
+static void init_quest_bg(rpg_t *rpg)
 {
     sfImage *image = sfImage_createFromFile(PLAYER_GUI_PATH);
     sfTexture *texture = sfTexture_createFromImage(image, NULL);
@@ -21,7 +21,7 @@ void init_quest_bg(rpg_t *rpg)
 
 }
 
-void init_quest_icons(rpg_t *rpg)
+static void init_quest_icons(rpg_t *rpg)
 {
     sfImage *image = sfImage_createFromFile(PLAYER_GUI_PATH);
     sfTexture *texture = sfTexture_createFromImage(image, NULL);

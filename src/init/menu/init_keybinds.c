@@ -8,7 +8,7 @@
 #include "rpg.h"
 
 
-void init_keybinds(rpg_t *rpg)
+static void init_keybinds(rpg_t *rpg)
 {
     buttons_t *my_btn = malloc(sizeof(buttons_t));
     my_btn->id = BTN_KEYBIND;
@@ -38,4 +38,5 @@ void init_settings_keybind(rpg_t *rpg)
     rpg->glib->window->mode.height / 3.4});
     sfSprite_setScale(rpg->menu_key->settings_bg_key_sprite,
     (sfVector2f){10, 10});
+    init_keybinds(rpg);
 }
