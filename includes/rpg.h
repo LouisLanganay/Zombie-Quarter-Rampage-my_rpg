@@ -350,7 +350,6 @@
     void init_main_menu(rpg_t *rpg);
     void init_settings_menu(rpg_t *rpg);
     void init_keybinds(rpg_t *rpg);
-    void init_settings_keybind(rpg_t *rpg);
 
 
     /* LORE */

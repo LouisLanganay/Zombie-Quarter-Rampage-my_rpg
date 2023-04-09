@@ -78,5 +78,4 @@ void init_main_menu(rpg_t *rpg)
     init_main_menu_seeting(rpg);
     init_settings_menu(rpg);
     init_keybinds(rpg);
-    init_settings_keybind(rpg);
 }
