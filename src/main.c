@@ -16,6 +16,7 @@ int main(int ac, char **av)
     while (sfRenderWindow_isOpen(rpg->glib->window->window)) {
         print_framerate();
         sfRenderWindow_clear(rpg->glib->window->window, sfBlack);
+        draw_menu(rpg);
         if (rpg->game_started == 1)
             game_loop(rpg);
         else {

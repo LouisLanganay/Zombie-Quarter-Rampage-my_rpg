@@ -13,6 +13,8 @@
     #include "jp.h"
     #include "view.h"
     #include "player.h"
+    #include <stdbool.h>
+    #include "menu.h"
 
     #define WINDOW_NAME "RPG"
 
@@ -153,6 +155,18 @@
         char *en;
     } languages_t;
 
+    typedef struct menu_s {
+        sfTexture *settings_bg_texture;
+        sfSprite *settings_bg_sprite;
+        bool active;
+    } menu_t;
+
+    typedef struct menu_keybinds_s {
+        sfTexture *settings_bg_key_texture;
+        sfSprite *settings_bg_key_sprite;
+        bool active;
+    } menu_keybinds_t;
+
     typedef struct settings_s {
         language_type_t game_language;
     } settings_t;
@@ -192,6 +206,8 @@
         npc_t *actual_npc;
         map_t *maps;
         GLib_t *glib;
+        menu_t *menu;
+        menu_keybinds_t *menu_key;
         player_t *player;
         languages_t **languages;
         settings_t *settings;
@@ -328,19 +344,34 @@
         char *str
     );
 
+    /* MENU */
+    void draw_menu(rpg_t *rpg);
+    void init_main_menu(rpg_t *rpg);
+    void init_settings_menu(rpg_t *rpg);
+    void init_keybinds(rpg_t *rpg);
+    void init_settings_keybind(rpg_t *rpg);
+
+
     /* LORE */
     void draw_popup_lore(rpg_t *rpg);
     void check_popup_lore(rpg_t *rpg);
 
+
     /* FPS */
     void print_framerate(void);
 
+
     /* EVENTS */
+    void e_quit(int id, void *main);
+    void e_start_game(int id, void *main);
     void e_key_released(window_t *window, void *main);
     void e_key_pressed(window_t *window, void *main);
     void e_open_inventory(window_t *window, void *main);
     void e_close(window_t *window, void *main);
     void e_dialogue(window_t *window, void *main);
+    void e_seeting_game(int id, void *main);
+    void e_seeting_keybinds_game(int id, void *main);
+
 
     /* INIT */
     void init(rpg_t *rpg);
