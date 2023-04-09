@@ -27,6 +27,7 @@ void init_settings_keybind(rpg_t *rpg)
 {
     sfImage *image = sfImage_createFromFile("resources/assets/gui/UI.png");
     sfTexture *texture = sfTexture_createFromImage(image, NULL);
+    rpg->menu_key->active = false;
     rpg->menu_key->settings_bg_key_sprite = sfSprite_create();
 
     sfSprite_setTexture(rpg->menu_key->settings_bg_key_sprite, texture, sfTrue);

@@ -175,6 +175,7 @@ SRC += draw_quests.c
 SRC += get_quest.c
 SRC += i_house_basement.c
 SRC += i_grocery_door.c
+SRC += game_start.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

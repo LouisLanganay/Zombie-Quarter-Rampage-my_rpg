@@ -245,6 +245,7 @@
 
     /* GAME */
     void game_loop(rpg_t *rpg);
+    void game_start(rpg_t *rpg);
     void start_game(rpg_t *rpg);
 
     /* SPLASH SCREEN */
