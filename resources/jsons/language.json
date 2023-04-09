@@ -15,6 +15,14 @@
         "en": "enter in the house.",
         "fr": "entrer dans la maison."
     },
+    "house1_door_interact_enter": {
+        "en": "climb the boxes.",
+        "fr": "escalader les caisses."
+    },
+    "house1_door_interact_leave": {
+        "en": "leave the house.",
+        "fr": "sortir de la maison."
+    },
     "house_door_interact_leave": {
         "en": "leave the house.",
         "fr": "sortir de la maison."

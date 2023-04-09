@@ -13,5 +13,6 @@ void load_maps(rpg_t *rpg)
     create_map(rpg, "resources/maps/player_house.json");
     create_map(rpg, "resources/maps/player_basement.json");
     create_map(rpg, "resources/maps/grocery_store.json");
+    create_map(rpg, "resources/maps/house1.json");
     rpg->maps_loaded = 1;
 }

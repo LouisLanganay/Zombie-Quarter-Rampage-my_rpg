@@ -16,7 +16,7 @@
     #include <stdbool.h>
     #include "menu.h"
 
-    #define WINDOW_NAME "RPG"
+    #define WINDOW_NAME "Zombie Quarter Rampage"
 
     #define MINECRAFT_FONT 8888
     #define CRYSTAL_FONT 8889
@@ -336,6 +336,8 @@
     void i_grocery_door(rpg_t *rpg, sfVector2f pos);
     void i_paper_resources(rpg_t *rpg, sfVector2f pos);
     void i_paper_music(rpg_t *rpg, sfVector2f pos);
+    void i_house1_door(rpg_t *rpg, sfVector2f pos);
+    void i_end_map_down(rpg_t *rpg, sfVector2f pos);
     void inte_test(rpg_t *rpg);
     void i_basement_paper(rpg_t *rpg, sfVector2f pos);
     void i_end_map_top(rpg_t *rpg, sfVector2f pos);

@@ -20,8 +20,8 @@
 	},
 	"player": {
 		"pos": {
-			"x": 259,
-			"y": 213
+			"x": 1026,
+			"y": 1218
 		},
 		"hp": 100,
 		"inventory": {
@@ -33,17 +33,14 @@
 		}
 	},
 	"game": {
-		"actual_map": "resources/maps/player_basement.json"
+		"actual_map": "resources/maps/main_map.json"
 	},
 	"game_timeline": {
 		"npc_interactions": [
-			"npc",
-			"Annia"
+			"npc"
 		],
 		"quests_in_progress": [
-			"quest",
-			"go_to_annia",
-			"go_to_annia"
+			"quest"
 		]
 	}
 }

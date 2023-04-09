@@ -25,6 +25,10 @@
     #define SPAWN_IN_GROCERY_Y 11 * 16
     #define SPAWN_OUT_GROCERY_X 60 * 16
     #define SPAWN_OUT_GROCERY_Y 23 * 16
+    #define SPAWN_INTO_HOUSE1_X 18 * 16
+    #define SPAWN_INTO_HOUSE1_Y 20 * 16
+    #define SPAWN_OUT_HOUSE1_X 51 * 16
+    #define SPAWN_OUT_HOUSE1_Y 65 * 16
 
     #define PLAYER_SPRITE_PATH "resources/assets/player/player.png"
 
