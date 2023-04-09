@@ -38,14 +38,14 @@ void e_seeting_keybinds_game(int id, void *main)
 {
     (void)(id);
     rpg_t *rpg = (rpg_t *)main;
-        if (rpg->menu_key->active == false) {
-            rpg->menu_key->active = true;
-            next_func();
-            return;
-        }
-        if (rpg->menu_key->active == true) {
-        rpg->menu_key->active = false;
+    if (rpg->menu_key->active == false) {
+        rpg->menu_key->active = true;
         next_func();
-        }
+        return;
+    }
+    if (rpg->menu_key->active == true) {
+    rpg->menu_key->active = false;
+    next_func();
+    }
     return;
 }
