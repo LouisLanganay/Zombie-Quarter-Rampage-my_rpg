@@ -85,7 +85,7 @@ jobs:
           nonstatic=0
           c_files=$(find . -name "*.c")
           for file in $c_files; do
-              if [[ $(grep -c "^ *\(int\|void\|double\|float\|char\|long\|short\) *[a-zA-Z0-9_]*(.*" $file) -gt 1 ]]; then
+              if [[ $(grep -c "^ *\(int\|void\|double\|float\|char\|long\|short\) *[a-zA-Z0-9_]*([^)]*)" $file) -gt 1 ]]; then
                 echo "::warning title=Check static functions,file=$file::More than one non-static function in this file"
                 nonstatic=1
               fi
@@ -136,7 +136,6 @@ jobs:
         run: make -C tests/ fclean
 
   check_program_compilation:
-    needs: run_json_parser_tests
     name: Check program compilation
     runs-on: ubuntu-latest
     container:

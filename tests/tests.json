@@ -1,0 +1,28 @@
+{
+	"name": "Louis",
+	"id": 65432123,
+	"pos": {
+		"x": 5632,
+		"y": 65131
+	},
+	"float": 0,
+	"float2": 0,
+	"alive": true,
+	"inventory": {
+		"items": [
+			1,
+			8,
+			9
+		],
+		"bag": [
+			{
+				"id": 1,
+				"name": "Popo"
+			},
+			{
+				"id": 4,
+				"name": "Shield"
+			}
+		]
+	}
+}

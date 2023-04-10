@@ -1,0 +1,102 @@
+{
+    "house_paper": {
+        "en": "Bla bla blaaaa",
+        "fr": "Bla bla blaaaa"
+    },
+    "paper_interact": {
+        "en": "read the paper.",
+        "fr": "lire le papier."
+    },
+    "basement_paper": {
+        "en": "Bla bla blaaaa",
+        "fr": "Bla bla blaaaa"
+    },
+    "house_door_interact_enter": {
+        "en": "enter in the house.",
+        "fr": "entrer dans la maison."
+    },
+    "house1_door_interact_enter": {
+        "en": "climb the boxes.",
+        "fr": "escalader les caisses."
+    },
+    "house1_door_interact_leave": {
+        "en": "leave the house.",
+        "fr": "sortir de la maison."
+    },
+    "house_door_interact_leave": {
+        "en": "leave the house.",
+        "fr": "sortir de la maison."
+    },
+    "pass_fence_interaction": {
+        "en": "pass the fence.",
+        "fr": "passer le grillage."
+    },
+    "basement_door_interact_leave": {
+        "en": "go to the second floor.",
+        "fr": "aller au deuxième étage."
+    },
+    "basement_door_interact_enter": {
+        "en": "go to the basement.",
+        "fr": "aller au sous-sol."
+    },
+    "grocery_door_interact_leave": {
+        "en": "leave the grocery store.",
+        "fr": "sortir de l'épicerie."
+    },
+    "grocery_door_interact_enter": {
+        "en": "enter in the grocery store.",
+        "fr": "entrer dans l'épicerie."
+    },
+    "interact_press__to": {
+        "en": "Press        to ",
+        "fr": "Appuyez sur      pour "
+    },
+    "little_girl_interact": {
+        "en": "talk to her.",
+        "fr": "lui parler."
+    },
+    "press__to_quit_dialog": {
+        "en": "Press             to quit the dialog.",
+        "fr": "Appuyez sur           pour quitter le dialogue."
+    },
+    "annia_default": {
+        "en": "Hi! I'm Annia.",
+        "fr": "Bonjour! Je m'appelle Annia."
+    },
+    "annia_discovery": {
+        "en": "Hello... I'm Annia. I'm lost. I don't know anything.",
+        "fr": "Bonjour... Je m'appelle Annia. Je suis perdue. Je ne sais rien."
+    },
+    "annia_discovery_help": {
+        "en": "I'll help you",
+        "fr": "Je vais t'aider"
+    },
+    "annia_discovery_ignore": {
+        "en": "I don't care",
+        "fr": "Je m'en fiche"
+    },
+    "annia_help": {
+        "en": "Thank you! I lost my parents and here that was their grocery store. I'm so scared.",
+        "fr": "Merci! J'ai perdu mes parents et ici c'était leur épicerie. Je suis tellement effrayée."
+    },
+    "annia_help_help": {
+        "en": "Give food",
+        "fr": "Donner de la nourriture"
+    },
+    "annia_help_ignore": {
+        "en": "Talk about something else",
+        "fr": "Parler de quelque chose d'autre"
+    },
+    "annia_help_give_food": {
+        "en": "Thank you for this food! I'm so hungry! I have this in my bag. It's a gun. It's for you.",
+        "fr": "Merci pour cette nourriture! J'ai tellement faim! J'ai ça dans mon sac. C'est un pistolet. C'est pour toi."
+    },
+    "annia_give_nothing": {
+        "en": "Oh, ok then. I will go there. Thank you!",
+        "fr": "Oh, d'accord alors. Je vais y aller. Merci!"
+    },
+    "annia_ignore": {
+        "en": "Please...",
+        "fr": "S'il te plaît..."
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "little_girl": {
+        "name": "Annia",
+        "map": "resources/maps/grocery_store.json",
+        "pos": {
+            "x": 160,
+            "y": 50
+        },
+        "texture_path": "resources/npc/annia.png",
+        "default_dialog": "default",
+        "one_time": true,
+        "dialogues": [
+            {
+                "name": "default",
+                "text": "annia_default",
+                "options": null,
+                "function": null
+            },
+            {
+                "name": "discovery",
+                "text": "annia_discovery",
+                "options": [
+                    {
+                        "text": "annia_discovery_help",
+                        "next": "help"
+                    },
+                    {
+                        "text": "annia_discovery_ignore",
+                        "next": "ignore"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "help",
+                "text": "annia_help",
+                "options": [
+                    {
+                        "text": "annia_help_help",
+                        "next": "help_give_food"
+                    },
+                    {
+                        "text": "annia_help_ignore",
+                        "next": "help_give_nothing"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "help_give_food",
+                "text": "annia_help_give_food",
+                "options": null,
+                "function": "give_food"
+            },
+            {
+                "name": "help_give_nothing",
+                "text": "annia_give_nothing",
+                "options": null,
+                "function": null
+            },
+            {
+                "name": "ignore",
+                "text": "annia_ignore",
+                "options": null,
+                "function": null
+            }
+        ]
+    }
+}
