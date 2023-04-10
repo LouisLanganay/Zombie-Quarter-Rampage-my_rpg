@@ -38,4 +38,5 @@ void init_keybinds(rpg_t *rpg)
     my_btn->sb_click = NULL;
     gl_create_button(rpg->glib, my_btn);
     init_settings_keybind(rpg);
+    init_keybinds_keys(rpg);
 }

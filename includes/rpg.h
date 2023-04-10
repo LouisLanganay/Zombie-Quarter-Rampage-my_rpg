@@ -43,6 +43,7 @@
     #define PA player->assets
     #define RSNI rpg->save->npc_interactions
     #define RPAQ rpg->player->assets->quest_icons
+    #define RM rpg->menu_key
 
 
     #define GET_SAVE_GAMELANGUAGE my_strcmp(jp_search(data, \
@@ -357,6 +358,8 @@
     void init_main_menu(rpg_t *rpg);
     void init_settings_menu(rpg_t *rpg);
     void init_keybinds(rpg_t *rpg);
+    void init_keybinds_keys(rpg_t *rpg);
+    void draw_menu_keys(rpg_t *rpg);
 
 
     /* LORE */

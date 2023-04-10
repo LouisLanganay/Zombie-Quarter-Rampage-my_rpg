@@ -21,5 +21,10 @@
     #define BTN_RESUME 12
     #define BTN_SEETING 13
 
+    #define SETTINGS_KEY_UP 56445
+    #define SETTINGS_KEY_DOWN 564445
+    #define SETTINGS_KEY_LEFT 5645
+    #define SETTINGS_KEY_RIGHT 564845
+
     #define BTN_KEYBIND 14
 #endif

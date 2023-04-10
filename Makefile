@@ -26,6 +26,7 @@ VPATH += src/init/languages
 VPATH += src/init/npc
 VPATH += src/init/settings
 VPATH += src/init/menu
+VPATH += src/init/menu/keybind
 VPATH += src/init/inventory
 VPATH += src/init/quests
 VPATH += src/init/lore
@@ -184,6 +185,8 @@ SRC += i_paper_resources.c
 SRC += i_basement_paper.c
 SRC += i_house1_door.c
 SRC += i_end_map_down.c
+SRC += init_keybinds_keys.c
+SRC += draw_menu_keys.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl
