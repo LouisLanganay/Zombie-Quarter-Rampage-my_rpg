@@ -187,6 +187,13 @@ SRC += i_house1_door.c
 SRC += i_end_map_down.c
 SRC += init_keybinds_keys.c
 SRC += draw_menu_keys.c
+SRC += init_saves_buttons.c
+SRC += init_saves_texts.c
+SRC += draw_saves_menu.c
+SRC += e_resume_btn.c
+SRC += e_save1.c
+SRC += e_save2.c
+SRC += e_save3.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

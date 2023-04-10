@@ -49,5 +49,7 @@ void draw_menu(rpg_t *rpg)
         }
         gl_buttons_hovered(rpg->glib->buttons, rpg->glib->window, rpg);
         gl_draw_button(BTN_SEETING, rpg->glib->buttons, rpg->glib->window);
+        if (rpg->menu_save->active == true)
+                draw_saves_menu(rpg);
         draw_buttons(rpg);
 }

@@ -45,7 +45,7 @@ static void init_main_menu_resume(rpg_t *rpg)
     my_btn->pos = (sfVector2f){rpg->glib->window->mode.width / 2.4,
     rpg->glib->window->mode.height / 1.3};
     my_btn->rect = (sfIntRect){0, 0, 278, 72};
-    my_btn->call_action = e_start_game;
+    my_btn->call_action = e_resume_btn;
     my_btn->sprite = sfSprite_create();
     my_btn->texture = sfTexture_createFromFile(BTN_PATH_RESUME, NULL);
     my_btn->sb_hover = NULL;
@@ -78,4 +78,6 @@ void init_main_menu(rpg_t *rpg)
     init_main_menu_seeting(rpg);
     init_settings_menu(rpg);
     init_keybinds(rpg);
+    init_saves_buttons(rpg);
+    init_saves_texts(rpg);
 }

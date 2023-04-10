@@ -162,6 +162,12 @@
         bool active;
     } menu_t;
 
+    typedef struct menu_save_s {
+        sfTexture *bg_texture;
+        sfSprite *bg_sprite;
+        bool active;
+    } menu_save_t;
+
     typedef struct menu_keybinds_s {
         sfTexture *settings_bg_key_texture;
         sfSprite *settings_bg_key_sprite;
@@ -209,6 +215,7 @@
         GLib_t *glib;
         menu_t *menu;
         menu_keybinds_t *menu_key;
+        menu_save_t *menu_save;
         player_t *player;
         languages_t **languages;
         settings_t *settings;
@@ -247,7 +254,7 @@
     /* GAME */
     void game_loop(rpg_t *rpg);
     void game_start(rpg_t *rpg);
-    void start_game(rpg_t *rpg);
+    void start_game(rpg_t *rpg, char *save_path);
 
     /* SPLASH SCREEN */
     void draw_splash_screen(rpg_t *rpg);
@@ -360,6 +367,9 @@
     void init_keybinds(rpg_t *rpg);
     void init_keybinds_keys(rpg_t *rpg);
     void draw_menu_keys(rpg_t *rpg);
+    void init_saves_buttons(rpg_t *rpg);
+    void draw_saves_menu(rpg_t *rpg);
+    void init_saves_texts(rpg_t *rpg);
 
 
     /* LORE */
@@ -372,6 +382,7 @@
 
 
     /* EVENTS */
+    void e_resume_btn(int id, void *main);
     void e_quit(int id, void *main);
     void e_start_game(int id, void *main);
     void e_key_released(window_t *window, void *main);
@@ -381,6 +392,9 @@
     void e_dialogue(window_t *window, void *main);
     void e_seeting_game(int id, void *main);
     void e_seeting_keybinds_game(int id, void *main);
+    void e_save1(int id, void *main);
+    void e_save2(int id, void *main);
+    void e_save3(int id, void *main);
 
 
     /* INIT */
