@@ -6,7 +6,7 @@
 		"played": false
 	},
 	"settings": {
-		"game_language": "en",
+		"game_language": "fr",
 		"keys": {
 			"up": 25,
 			"down": 18,
@@ -21,8 +21,8 @@
 	},
 	"player": {
 		"pos": {
-			"x": 1026,
-			"y": 1218
+			"x": 1121,
+			"y": 1543
 		},
 		"hp": 100,
 		"inventory": {
@@ -38,10 +38,14 @@
 	},
 	"game_timeline": {
 		"npc_interactions": [
-			"npc"
+			"npc",
+			"Annia"
 		],
 		"quests_in_progress": [
-			"quest"
+			"quest",
+			"test_quest",
+			"go_to_annia",
+			"go_to_annia"
 		]
 	}
 }

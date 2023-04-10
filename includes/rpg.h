@@ -204,6 +204,12 @@
         struct quest_s *next;
     } quest_t;
 
+    typedef struct narative_s {
+        sfText *text;
+        char *str;
+        sfClock *clock;
+    } narative_t;
+
     typedef struct rpg_s {
         int debug;
         char *actual_map;
@@ -222,6 +228,7 @@
         save_t *save;
         splash_screen_t *splash_screen;
         quest_t *quests;
+        narative_t *narative;
         char **quests_in_progress;
     } rpg_t;
 
@@ -336,6 +343,8 @@
 
 
     /* CALL ACTIONS */
+    void i_soda(rpg_t *rpg, sfVector2f pos);
+    void i_paper_grocery(rpg_t *rpg, sfVector2f pos);
     void go_to_annia(void *main);
     void i_pass_fence(rpg_t *rpg, sfVector2f pos);
     void npc_give_food(void*);
@@ -375,6 +384,8 @@
     /* LORE */
     void draw_popup_lore(rpg_t *rpg);
     void check_popup_lore(rpg_t *rpg);
+    void start_narative_popup(rpg_t *rpg);
+    void check_narative_popup(rpg_t *rpg);
 
 
     /* FPS */

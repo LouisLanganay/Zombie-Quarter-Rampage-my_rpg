@@ -194,6 +194,10 @@ SRC += e_resume_btn.c
 SRC += e_save1.c
 SRC += e_save2.c
 SRC += e_save3.c
+SRC += i_paper_grocery.c
+SRC += start_narative_popup.c
+SRC += check_narative_popup.c
+SRC += i_soda.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

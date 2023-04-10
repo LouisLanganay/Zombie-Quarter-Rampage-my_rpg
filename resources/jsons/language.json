@@ -7,9 +7,37 @@
         "en": "read the paper.",
         "fr": "lire le papier."
     },
+    "close_paper": {
+        "en": "close the paper.",
+        "fr": "fermer le papier."
+    },
     "basement_paper": {
         "en": "Bla bla blaaaa",
         "fr": "Bla bla blaaaa"
+    },
+    "grocery_paper": {
+        "en": "Hi sweetie, I hope you don't read this letter, if you do it will already be too late for your dad and me. As I write this I am still in our grocery store with your dad. We have little food left, I would say for 3-4 days maximum. I'm taking care of your father, he was injured while fighting with survivors, he is losing a lot of blood and can't even stand up. I found some bandages to heal him but I don't have any medicine and care in stock in the grocery store, the delivery was supposed to arrive last week but with what's happening, all the streets are infected with zombies we couldn't get it delivered. I don't know how long he has to live and neither do I. I hope you are safe. Never forget that we love you and that you are a strong and resourceful girl. To Annia, your mom who loves you very much.",
+        "fr": "Bonjour ma puce, j'espere que tu ne liras pas cette lettre, si oui c'est qu'il sera deja trop tard pour ton pere et moi. A l'heure ou j'ecris ceci je me trouve encore dans notre epicerie avec ton pere. Il nous reste peu de nourriture, je dirais pour 3-4 jours maximum. Je m'occupe de ton pere il s'est blesse en se battant avec des survivants il perds beaucoup de sang et n'arrive meme plus e se mettre debout. J'ai trouve des compresses pour le soigner mais je n'ai pas de medicaments et de soins en stock dans l'epicerie, la livraison devait arriver la semaine derniere mais avec ce qu'il se passe, toutes les rues sont infectees de zombies nous n'avons pas pu nous faire livrer. Je ne sais pas combien de temps il lui reste a vivre et a moi non plus. J'espere que tu es saine et sauve. N'oublies jamais qu'on t'aimes et que tu es une fille forte et debrouillarde on est fiere de toi. A Annia, ta maman qui t'aime fort."
+    },
+    "resources_paper": {
+        "en": "To the person who will find this letter, know that if you find it I will no longer be part of the living but I would still like to try to help or even save a person who can still do it. Take the food and my equipment if they have not already been taken. Because you will have no other way to survive otherwise. Good luck, signed Josh.",
+        "fr": "A la personne qui trouvera cette lettre, sache que si tu la trouves je ne ferais desormais plus parti des vivants mais je voudrais quand meme essayer d'aider ou meme de sauver une personne qui le peut encore. Accapare toi de la nourriture ainsi que de mes equipements si ils n'ont pas deja ete pris. Car tu n'auras aucun autre moyen de survivre autrement. Bon courage, signe Josh."
+    },
+    "top_map_interact": {
+        "en": "Oh no this passage is no longer accessible, the military sent missiles to eradicate the infected on this road ...",
+        "fr": "Oh non ce passage n'est plus possible d'acces, les militaires ont envoye des missiles pour eradiquer les infectes sur cette route ..."
+    },
+    "down_map_interact": {
+        "en": "Oh no... the military blocked the road with electric fence and barbed wire to prevent the intrusion of zombies",
+        "fr": "Mince... les militaires ont bloque la route avec du grillage electrique et des barbeles pour eviter l'intrusion de zombies"
+    },
+    "soda_interact": {
+        "en": "Distributor in service 7/7. Please insert the money payment only in bills and coins. Credit: 0$",
+        "fr": "Distributeur mis en service 7j/7. Veuillez inserer l'argent paiement par billets et pieces uniquement. Credit: 0$"
+    },
+    "to_inspect": {
+        "en": "inspect",
+        "fr": "inspecter"
     },
     "house_door_interact_enter": {
         "en": "enter in the house.",
@@ -33,7 +61,7 @@
     },
     "basement_door_interact_leave": {
         "en": "go to the second floor.",
-        "fr": "aller au deuxième étage."
+        "fr": "aller au deuxieme etage."
     },
     "basement_door_interact_enter": {
         "en": "go to the basement.",
@@ -41,15 +69,15 @@
     },
     "grocery_door_interact_leave": {
         "en": "leave the grocery store.",
-        "fr": "sortir de l'épicerie."
+        "fr": "sortir de l'epicerie."
     },
     "grocery_door_interact_enter": {
         "en": "enter in the grocery store.",
-        "fr": "entrer dans l'épicerie."
+        "fr": "entrer dans l'epicerie."
     },
     "interact_press__to": {
-        "en": "Press        to ",
-        "fr": "Appuyez sur      pour "
+        "en": "Press          to ",
+        "fr": "Appuyez sur        pour "
     },
     "little_girl_interact": {
         "en": "talk to her.",
@@ -77,7 +105,7 @@
     },
     "annia_help": {
         "en": "Thank you! I lost my parents and here that was their grocery store. I'm so scared.",
-        "fr": "Merci! J'ai perdu mes parents et ici c'était leur épicerie. Je suis tellement effrayée."
+        "fr": "Merci! J'ai perdu mes parents et ici c'etait leur epicerie. Je suis tellement effrayee."
     },
     "annia_help_help": {
         "en": "Give food",
@@ -97,6 +125,6 @@
     },
     "annia_ignore": {
         "en": "Please...",
-        "fr": "S'il te plaît..."
+        "fr": "S'il te plait..."
     }
 }

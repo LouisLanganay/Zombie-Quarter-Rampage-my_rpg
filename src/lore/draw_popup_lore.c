@@ -15,10 +15,9 @@ void draw_popup_lore(rpg_t *rpg)
         (sfVector2f){view_pos.x, view_pos.y});
     sfRenderWindow_drawSprite(rpg->glib->window->window,
         rpg->player->assets->lore_box, NULL);
-    draw_interaction_popup(rpg,(sfVector2f){view_pos.x - 105, view_pos.y + 123},
-        rpg->player->keys->escape.key, "to close the paper.");
-    printf("draw %s\n", rpg->player->lore_text);
-    divide_a_text(rpg, rpg->player->lore_text, (sfVector2f){view_pos.x - 85,
-        view_pos.y - 50}, sfBlack);
+    draw_interaction_popup(rpg,(sfVector2f){view_pos.x - 105, view_pos.y + 140},
+        rpg->player->keys->escape.key, get_language(rpg, "close_paper", RSG));
+    divide_a_text(rpg, rpg->player->lore_text, (sfVector2f){view_pos.x - 105,
+        view_pos.y - 70}, sfBlack);
     check_popup_lore(rpg);
 }
