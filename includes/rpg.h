@@ -230,6 +230,7 @@
         quest_t *quests;
         narative_t *narative;
         char **quests_in_progress;
+        char **quests_completed;
     } rpg_t;
 
     typedef struct keyboard_images_s {
@@ -283,6 +284,8 @@
     void save_quests_in_progress(rpg_t *rpg);
     void save_player(rpg_t *rpg);
     void save(rpg_t *rpg);
+    int load_quests_completed(rpg_t *rpg, parsed_data_t *data);
+    void save_quests_completed(rpg_t *rpg);
 
     /* QUESTS */
     void start_quest(rpg_t *rpg, char *id);
@@ -291,6 +294,8 @@
     quests_func_t *get_quests_func_arr(void);
     quest_t *get_quest_by_id(rpg_t *rpg, char *id);
     void stop_quest(rpg_t *rpg, char *id);
+    int quest_is_in_progress(rpg_t *rpg, char *quest_name);
+    int quest_is_completed(rpg_t *rpg, char *quest_name);
 
     /* MAP */
     void load_maps(rpg_t *rpg);

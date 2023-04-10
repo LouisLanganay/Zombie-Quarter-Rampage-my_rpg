@@ -29,6 +29,8 @@ void init_quests(rpg_t *rpg)
     rpg->quests = NULL;
     rpg->quests_in_progress = malloc(sizeof(char *) * 1);
     rpg->quests_in_progress[0] = NULL;
+    rpg->quests_completed = malloc(sizeof(char *) * 1);
+    rpg->quests_completed[0] = NULL;
 
     while (data->next != NULL) {
         add_quest(rpg, data->value.p_obj, data->name);

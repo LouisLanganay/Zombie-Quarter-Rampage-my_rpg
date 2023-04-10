@@ -198,6 +198,10 @@ SRC += i_paper_grocery.c
 SRC += start_narative_popup.c
 SRC += check_narative_popup.c
 SRC += i_soda.c
+SRC += quest_is_in_progress.c
+SRC += load_quests_completed.c
+SRC += quest_is_completed.c
+SRC += save_quests_completed.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

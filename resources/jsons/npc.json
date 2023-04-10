@@ -8,7 +8,7 @@
         },
         "texture_path": "resources/npc/annia.png",
         "default_dialog": "default",
-        "one_time": true,
+        "one_time": false,
         "dialogues": [
             {
                 "name": "default",
@@ -37,7 +37,7 @@
                 "options": [
                     {
                         "text": "annia_help_help",
-                        "next": "help_give_food"
+                        "next": "help_next"
                     },
                     {
                         "text": "annia_help_ignore",
@@ -47,10 +47,31 @@
                 "function": null
             },
             {
+                "name": "help_next",
+                "text": "annia_help_next",
+                "options": [
+                    {
+                        "text": "annia_help_next_help",
+                        "next": "help_give_food"
+                    },
+                    {
+                        "text": "annia_help_next_ignore",
+                        "next": "help_give_nothing"
+                    }
+                ],
+                "function": null
+            },
+            {
                 "name": "help_give_food",
-                "text": "annia_help_give_food",
+                "text": "annia_give_food",
                 "options": null,
-                "function": "give_food"
+                "function": "npc_give_food"
+            },
+            {
+                "name": "annia_help_next_ignore",
+                "text": "annia_give_nothing",
+                "options": null,
+                "function": null
             },
             {
                 "name": "help_give_nothing",
@@ -61,6 +82,21 @@
             {
                 "name": "ignore",
                 "text": "annia_ignore",
+                "options": [
+                    {
+                        "text": "annia_ignore_help",
+                        "next": "help"
+                    },
+                    {
+                        "text": "annia_ignore_ignore",
+                        "next": "ignore_give_nothing"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "ignore_give_nothing",
+                "text": "annia_give_nothing",
                 "options": null,
                 "function": null
             }

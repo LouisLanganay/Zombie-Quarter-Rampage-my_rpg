@@ -19,6 +19,6 @@ void i_house_paper(rpg_t *rpg, sfVector2f pos)
         rpg->player->lore_text = my_strdup(get_language(rpg,
             "house_paper", RSG));
         rpg->player->lore_open = 1;
-        start_quest(rpg, "test_quest");
+        start_quest(rpg, "go_to_annia");
     }
 }
