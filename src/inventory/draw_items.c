@@ -29,16 +29,20 @@ void draw_items(rpg_t *rpg)
 
     draw_ui(rpg);
     for (int i = 0; i < INVENTORY_SIZE; i++) {
-        sfSprite_setTexture(rpg->player->inventory->items_sprite[i],
-        rpg->player->assets->items_texture[i], sfFalse);
-        sfSprite_setPosition(rpg->player->inventory->items_sprite[i],
-        items_pos);
+        if (rpg->player->inventory->items[i] >= 0 &&
+        rpg->player->inventory->items[i] <= 114) {
+            sfSprite_setTexture(rpg->player->inventory->items_sprite[i],
+            rpg->player->assets->items_texture
+            [rpg->player->inventory->items[i]], sfFalse);
+            sfSprite_setPosition(rpg->player->inventory->items_sprite[i],
+            items_pos);
+            sfRenderWindow_drawSprite(rpg->glib->window->window,
+            rpg->player->inventory->items_sprite[i], NULL);
+        }
         if ((i + 1) % 4 == 0) {
             items_pos.y += 35.3;
             items_pos.x = view_pos.x - 70;
         } else
             items_pos.x += 35.2;
-        sfRenderWindow_drawSprite(rpg->glib->window->window,
-        rpg->player->inventory->items_sprite[i], NULL);
     }
 }
