@@ -36,10 +36,10 @@ static void init_player_keys(player_t *player)
 static void init_player_inventory(player_t *player)
 {
     player->inventory = malloc(sizeof(inventory_t));
-    player->inventory->items = malloc(sizeof(int) * 12);
+    player->inventory->items = malloc(sizeof(int) * 16);
 
-    for (int i = 0; i < 12; i++)
-        player->inventory->items[i] = i;
+    for (int i = 0; i < 16; i++)
+        player->inventory->items[i] = -1;
     player->inventory->is_open = 0;
     player->keys->escape = (p_key_t){0, sfKeyEscape};
     player->keys->last_direction = DOWN;
