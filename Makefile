@@ -202,6 +202,8 @@ SRC += quest_is_in_progress.c
 SRC += load_quests_completed.c
 SRC += quest_is_completed.c
 SRC += save_quests_completed.c
+SRC += draw_settings.c
+SRC += init_slider.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

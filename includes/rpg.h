@@ -159,6 +159,10 @@
     typedef struct menu_s {
         sfTexture *settings_bg_texture;
         sfSprite *settings_bg_sprite;
+        sfSprite *slider_sprite;
+        sfTexture *slider_texture;
+        sfRectangleShape *slider_back;
+        int slider_val;
         bool active;
     } menu_t;
 
@@ -176,6 +180,7 @@
 
     typedef struct settings_s {
         language_type_t game_language;
+        int volume;
     } settings_t;
 
     typedef struct save_s {
@@ -384,6 +389,7 @@
     void init_saves_buttons(rpg_t *rpg);
     void draw_saves_menu(rpg_t *rpg);
     void init_saves_texts(rpg_t *rpg);
+    void draw_settings(rpg_t *rpg);
 
 
     /* LORE */
@@ -428,6 +434,7 @@
     void init_sounds(GLib_t *glib);
     void init_language(rpg_t *rpg);
     void init_popup_lore(rpg_t *rpg);
+    void init_slider(rpg_t *rpg);
     void init_save(rpg_t *rpg);
     void init_events(rpg_t *rpg);
     void init_player_assets(player_t *player);
