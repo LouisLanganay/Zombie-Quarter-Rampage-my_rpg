@@ -23,7 +23,7 @@ static void change_main_text(rpg_t *rpg, dialog_t *next)
 {
     sfText *main_text = gl_get_text(rpg->glib, PLAYER_DIALOGUE_TEXT);
 
-    sfText_setString(main_text, next->text);
+    sfText_setString(main_text, get_language(rpg, next->text, RSG));
 }
 
 static void change_choice_text(rpg_t *rpg, dialog_t *next)
@@ -38,8 +38,10 @@ static void change_choice_text(rpg_t *rpg, dialog_t *next)
         sfText_setString(choice_two_text, NULL);
         return;
     }
-    sfText_setString(choice_one_text, next->options[0]->text);
-    sfText_setString(choice_two_text, next->options[1]->text);
+    sfText_setString(choice_one_text,
+        get_language(rpg, next->options[0]->text, RSG));
+    sfText_setString(choice_two_text,
+        get_language(rpg, next->options[1]->text, RSG));
 }
 
 void next_dialogue(rpg_t *rpg, int choice)
