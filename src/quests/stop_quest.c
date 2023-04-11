@@ -15,6 +15,14 @@ static void remove_from_arr(char **arr, int i)
     }
 }
 
+static int arr_len(char **arr)
+{
+    int i = 0;
+
+    while (arr[i] != NULL) i++;
+    return (i);
+}
+
 static void exe_quest_function(rpg_t *rpg, quest_t *quest)
 {
     quests_func_t *arr = get_quests_func_arr();
@@ -27,15 +35,18 @@ static void exe_quest_function(rpg_t *rpg, quest_t *quest)
     }
 }
 
-static void add_to_arr(char **arr, char *str)
+static char **add_item_to_arr(char **arr, char *item)
 {
+    char **new_arr = malloc(sizeof(char *) * (arr_len(arr) + 2));
     int i = 0;
 
     while (arr[i] != NULL) {
+        new_arr[i] = arr[i];
         i++;
     }
-    arr[i] = my_strdup(str);
-    arr[i + 1] = NULL;
+    new_arr[i] = item;
+    new_arr[i + 1] = NULL;
+    return (new_arr);
 }
 
 void stop_quest(rpg_t *rpg, char *id)
@@ -46,16 +57,9 @@ void stop_quest(rpg_t *rpg, char *id)
         if (my_strcmp(rpg->quests_in_progress[i], id) == 0) {
             exe_quest_function(rpg, get_quest_by_id(rpg, id));
             remove_from_arr(rpg->quests_in_progress, i);
-            add_to_arr(rpg->quests_completed, id);
+            rpg->quests_completed = add_item_to_arr(rpg->quests_completed, id);
             break;
         }
         i++;
     }
-    printf("Quests in progress: \n");
-    for (int i = 0; rpg->quests_in_progress[i] != NULL; i++)
-        printf("%s\n", rpg->quests_in_progress[i]);
-    printf("Quests completed: \n");
-    for (int i = 0; rpg->quests_completed[i] != NULL; i++)
-        printf("%s\n", rpg->quests_completed[i]);
-    save_quests_completed(rpg);
 }

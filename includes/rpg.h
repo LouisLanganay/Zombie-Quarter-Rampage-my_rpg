@@ -284,7 +284,7 @@
     int load_player(player_t *player, parsed_data_t *data);
     void save_settings(rpg_t *rpg);
     int load_quests_in_progress(rpg_t *rpg, parsed_data_t *data);
-    void save_npc_interactions(rpg_t *rpg, npc_t *npc);
+    void save_npc_interactions(rpg_t *rpg);
     void save_game(rpg_t *rpg);
     void save_quests_in_progress(rpg_t *rpg);
     void save_player(rpg_t *rpg);

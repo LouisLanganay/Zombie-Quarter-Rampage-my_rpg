@@ -6,7 +6,7 @@
 		"played": false
 	},
 	"settings": {
-		"game_language": "fr",
+		"game_language": "en",
 		"keys": {
 			"up": 25,
 			"down": 18,
@@ -21,8 +21,8 @@
 	},
 	"player": {
 		"pos": {
-			"x": 1121,
-			"y": 1543
+			"x": 305,
+			"y": 152
 		},
 		"hp": 100,
 		"inventory": {
@@ -34,18 +34,17 @@
 		}
 	},
 	"game": {
-		"actual_map": "resources/maps/main_map.json"
+		"actual_map": "resources/maps/player_basement.json"
 	},
 	"game_timeline": {
 		"npc_interactions": [
-			"npc",
-			"Annia"
+			"npc"
 		],
 		"quests_in_progress": [
-			"quest",
-			"test_quest",
-			"go_to_annia",
-			"go_to_annia"
+			"quest"
+		],
+		"quests_completed": [
+			"quest"
 		]
 	}
 }

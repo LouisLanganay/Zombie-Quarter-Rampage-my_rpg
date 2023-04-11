@@ -41,24 +41,10 @@
 			"npc"
 		],
 		"quests_in_progress": [
-			"quest",
-			"go_to_annia"
+			"quest"
 		],
 		"quests_completed": [
-			"0+—",
-			"go_to_annia",
-			"go_to_annia",
-			"go_to_annia",
-			"go_to_annia",
-			"go_to_annia",
-			"go_to_annia",
-			"go_to_annia",
-			"go_to_annia",
-			"go_to_annia",
-			"go_to_annia",
-			"go_to_annia",
-			"go_to_annia",
-			"go_to_annia"
+			"quest"
 		]
 	}
 }

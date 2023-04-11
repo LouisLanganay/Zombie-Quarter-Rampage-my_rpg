@@ -8,7 +8,7 @@
         },
         "texture_path": "resources/npc/annia.png",
         "default_dialog": "default",
-        "one_time": false,
+        "one_time": true,
         "dialogues": [
             {
                 "name": "default",
