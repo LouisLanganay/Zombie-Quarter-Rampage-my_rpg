@@ -9,6 +9,7 @@
 
 static void draw_conditions_buttons(rpg_t *rpg)
 {
+
         if (rpg->menu->active == false) {
                 gl_button_change_state(BTN_QUIT, rpg->glib->buttons, sfFalse);
                 gl_button_change_state(BTN_RESUME, rpg->glib->buttons, sfFalse);
@@ -32,6 +33,8 @@ static void draw_buttons(rpg_t *rpg)
                 rpg->glib->buttons, sfFalse);
                 gl_buttons_hovered(rpg->glib->buttons, rpg->glib->window, rpg);
                 gl_draw_button(BTN_KEYBIND, rpg->glib->buttons,
+                rpg->glib->window);
+                gl_draw_button(BTN_FRANCE, rpg->glib->buttons,
                 rpg->glib->window);
         }
         draw_conditions_buttons(rpg);

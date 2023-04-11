@@ -173,6 +173,7 @@ SRC += get_quest_by_id.c
 SRC += go_to_annia.c
 SRC += draw_quests.c
 SRC += get_quest.c
+SRC += init_button_language.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl
