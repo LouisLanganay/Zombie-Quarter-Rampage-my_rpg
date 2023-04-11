@@ -137,6 +137,9 @@ SRC += save_game.c
 SRC += npc_give_food.c
 SRC += check_dialogue_function.c
 SRC += get_npc_func_arr.c
+SRC += add_item_to_inventory.c
+SRC += add_item_to_inventory_pos.c
+SRC += remove_item_to_inventory.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

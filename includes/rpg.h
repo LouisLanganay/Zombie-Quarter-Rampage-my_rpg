@@ -256,6 +256,11 @@
     void check_interactions(player_t *player, map_t *map, rpg_t *rpg);
     keyboard_images_t *get_keyboard_array(void);
 
+    /* INVENTORY*/
+    int add_item_to_inventory(int id, rpg_t *rpg);
+    int remove_item_to_inventory(rpg_t *rpg, int pos);
+    int add_item_to_inventory_pos(rpg_t *rpg, int pos, int id);
+
     /* NPC */
     npc_t *get_npc(map_t *map, char *name);
     void draw_npcs(map_t *map, rpg_t *rpg);
