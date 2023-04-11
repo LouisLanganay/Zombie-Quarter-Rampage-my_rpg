@@ -174,6 +174,17 @@ SRC += go_to_annia.c
 SRC += draw_quests.c
 SRC += get_quest.c
 SRC += init_button_language.c
+SRC += i_house_basement.c
+SRC += i_grocery_door.c
+SRC += game_start.c
+SRC += e_settings_key.c
+SRC += i_pass_fence.c
+SRC += i_end_map_top.c
+SRC += i_paper_music.c
+SRC += i_paper_resources.c
+SRC += i_basement_paper.c
+SRC += i_house1_door.c
+SRC += i_end_map_down.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

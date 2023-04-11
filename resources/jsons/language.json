@@ -3,17 +3,49 @@
         "en": "Bla bla blaaaa",
         "fr": "Bla bla blaaaa"
     },
-    "house_paper_interact": {
+    "paper_interact": {
         "en": "read the paper.",
         "fr": "lire le papier."
+    },
+    "basement_paper": {
+        "en": "Bla bla blaaaa",
+        "fr": "Bla bla blaaaa"
     },
     "house_door_interact_enter": {
         "en": "enter in the house.",
         "fr": "entrer dans la maison."
     },
+    "house1_door_interact_enter": {
+        "en": "climb the boxes.",
+        "fr": "escalader les caisses."
+    },
+    "house1_door_interact_leave": {
+        "en": "leave the house.",
+        "fr": "sortir de la maison."
+    },
     "house_door_interact_leave": {
         "en": "leave the house.",
         "fr": "sortir de la maison."
+    },
+    "pass_fence_interaction": {
+        "en": "pass the fence.",
+        "fr": "passer le grillage."
+    },
+    "basement_door_interact_leave": {
+        "en": "go to the second floor.",
+        "fr": "aller au deuxième étage."
+    },
+    "basement_door_interact_enter": {
+        "en": "go to the basement.",
+        "fr": "aller au sous-sol."
+    },
+    "grocery_door_interact_leave": {
+        "en": "leave the grocery store.",
+        "fr": "sortir de l'épicerie."
+    },
+    "grocery_door_interact_enter": {
+        "en": "enter in the grocery store.",
+        "fr": "entrer dans l'épicerie."
     },
     "interact_press__to": {
         "en": "Press        to ",

@@ -10,7 +10,7 @@
 void e_start_game(int id, void *main)
 {
     (void)(id);
-    (void)(main);
+    rpg_t *rpg = (rpg_t *)main;
 
-    printf("CLICK_START\n");
+    start_game(rpg);
 }

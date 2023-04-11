@@ -7,6 +7,22 @@
 
 #include "rpg.h"
 
+static void init_settings_keybind(rpg_t *rpg)
+{
+    sfImage *image = sfImage_createFromFile("resources/assets/gui/UI.png");
+    sfTexture *texture = sfTexture_createFromImage(image, NULL);
+    rpg->menu_key->active = false;
+    rpg->menu_key->settings_bg_key_sprite = sfSprite_create();
+
+    sfSprite_setTexture(rpg->menu_key->settings_bg_key_sprite, texture, sfTrue);
+    sfSprite_setTextureRect(rpg->menu_key->settings_bg_key_sprite,
+        (sfIntRect){415, 0, 50, 64});
+    sfSprite_setPosition(rpg->menu_key->settings_bg_key_sprite,
+    (sfVector2f){rpg->glib->window->mode.width / 1.4,
+    rpg->glib->window->mode.height / 3.4});
+    sfSprite_setScale(rpg->menu_key->settings_bg_key_sprite,
+    (sfVector2f){10, 10});
+}
 
 void init_keybinds(rpg_t *rpg)
 {
@@ -21,20 +37,5 @@ void init_keybinds(rpg_t *rpg)
     my_btn->sb_hover = NULL;
     my_btn->sb_click = NULL;
     gl_create_button(rpg->glib, my_btn);
-}
-
-void init_settings_keybind(rpg_t *rpg)
-{
-    sfImage *image = sfImage_createFromFile("resources/assets/gui/UI.png");
-    sfTexture *texture = sfTexture_createFromImage(image, NULL);
-    rpg->menu_key->settings_bg_key_sprite = sfSprite_create();
-
-    sfSprite_setTexture(rpg->menu_key->settings_bg_key_sprite, texture, sfTrue);
-    sfSprite_setTextureRect(rpg->menu_key->settings_bg_key_sprite,
-        (sfIntRect){415, 0, 50, 64});
-    sfSprite_setPosition(rpg->menu_key->settings_bg_key_sprite,
-    (sfVector2f){rpg->glib->window->mode.width / 1.4,
-    rpg->glib->window->mode.height / 3.4});
-    sfSprite_setScale(rpg->menu_key->settings_bg_key_sprite,
-    (sfVector2f){10, 10});
+    init_settings_keybind(rpg);
 }

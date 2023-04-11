@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-void next_func(void)
+static void next_func(void)
 {
     while (sfMouse_isButtonPressed(sfMouseLeft) == sfTrue);
     return;
@@ -30,22 +30,6 @@ void e_seeting_game(int id, void *main)
     if (rpg->menu->active == true) {
         rpg->menu->active = false;
         next_func();
-    }
-    return;
-}
-
-void e_seeting_keybinds_game(int id, void *main)
-{
-    (void)(id);
-    rpg_t *rpg = (rpg_t *)main;
-    if (rpg->menu_key->active == false) {
-        rpg->menu_key->active = true;
-        next_func();
-        return;
-    }
-    if (rpg->menu_key->active == true) {
-    rpg->menu_key->active = false;
-    next_func();
     }
     return;
 }

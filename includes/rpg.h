@@ -16,7 +16,7 @@
     #include <stdbool.h>
     #include "menu.h"
 
-    #define WINDOW_NAME "RPG"
+    #define WINDOW_NAME "Zombie Quarter Rampage"
 
     #define MINECRAFT_FONT 8888
     #define CRYSTAL_FONT 8889
@@ -47,6 +47,7 @@
 
     #define GET_SAVE_GAMELANGUAGE my_strcmp(jp_search(data, \
         "game_language")->value.p_str, "fr") == 0 ? FR : EN;
+    #define SAVE_GAMELANGUAGE rpg->settings->game_language == FR ? "fr" : "en";
 
     typedef struct pos_s {
         int x;
@@ -244,6 +245,7 @@
 
     /* GAME */
     void game_loop(rpg_t *rpg);
+    void game_start(rpg_t *rpg);
     void start_game(rpg_t *rpg);
 
     /* SPLASH SCREEN */
@@ -327,9 +329,18 @@
 
     /* CALL ACTIONS */
     void go_to_annia(void *main);
+    void i_pass_fence(rpg_t *rpg, sfVector2f pos);
     void npc_give_food(void*);
     void little_girl(rpg_t *rpg, sfVector2f pos);
+    void i_house_basement(rpg_t *rpg, sfVector2f pos);
+    void i_grocery_door(rpg_t *rpg, sfVector2f pos);
+    void i_paper_resources(rpg_t *rpg, sfVector2f pos);
+    void i_paper_music(rpg_t *rpg, sfVector2f pos);
+    void i_house1_door(rpg_t *rpg, sfVector2f pos);
+    void i_end_map_down(rpg_t *rpg, sfVector2f pos);
     void inte_test(rpg_t *rpg);
+    void i_basement_paper(rpg_t *rpg, sfVector2f pos);
+    void i_end_map_top(rpg_t *rpg, sfVector2f pos);
     void i_house_door(rpg_t *rpg, sfVector2f pos);
     void i_house_paper(rpg_t *rpg, sfVector2f pos);
     void i_chest(rpg_t *rpg);
@@ -346,7 +357,6 @@
     void init_main_menu(rpg_t *rpg);
     void init_settings_menu(rpg_t *rpg);
     void init_keybinds(rpg_t *rpg);
-    void init_settings_keybind(rpg_t *rpg);
 
 
     /* LORE */
