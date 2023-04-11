@@ -35,6 +35,9 @@
     #define XP_SOUND_PATH "resources/sounds/xp.ogg"
     #define XP_SOUND_ID 10
 
+    #define MAIN_THEME_PATH "resources/sounds/main_theme_tlou.ogg"
+    #define MAIN_THEME_ID 11
+
     #define RPA rpg->player->assets
     #define RGW rpg->glib->window
     #define RPK rpg->player->keys
@@ -204,6 +207,14 @@
         struct quest_s *next;
     } quest_t;
 
+    typedef struct sounds_s {
+        int id;
+        sfClock *start;
+        sfClock *fade;
+        float fade_time;
+        struct sounds_s *next;
+    } sounds_t;
+
     typedef struct rpg_s {
         int debug;
         char *actual_map;
@@ -222,6 +233,7 @@
         save_t *save;
         splash_screen_t *splash_screen;
         quest_t *quests;
+        sounds_t *sounds;
         char **quests_in_progress;
     } rpg_t;
 
@@ -334,6 +346,10 @@
     void divide_a_sftext(sfText *text, sfVector2f pos, rpg_t *rpg);
     void divide_a_text(rpg_t *rpg, char *str, sfVector2f pos, sfColor color);
 
+    /* SOUNDS */
+    void fade_sound(rpg_t *rpg, int id, float time);
+    void start_sound(rpg_t *rpg, int id);
+    void check_sounds(rpg_t *rpg);
 
     /* CALL ACTIONS */
     void go_to_annia(void *main);
@@ -403,6 +419,7 @@
     void init_player(rpg_t *rpg);
     void init_popup_dialogue(rpg_t *rpg);
     void init_glib(rpg_t *rpg);
+    void init_game_sounds(rpg_t *rpg);
     void init_npcs(map_t *map, char *path, rpg_t *rpg);
     void init_fonts(rpg_t *rpg);
     void init_player_textures(player_t *player);
