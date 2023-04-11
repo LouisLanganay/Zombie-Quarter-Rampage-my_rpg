@@ -39,7 +39,7 @@ To compile this project run the following commands at ``.``
 - [ ] The player can earn experience by winning fights and/or accomplishing specific actions
 - [ ] The player can level up thanks to experience AND upgrading its characteristics
 - [X] The game contains NPC
-- [ ] The game contains at least one quest
+- [X] The game contains at least one quest
 - [ ] The game contains a how to play system at the very beginning
 
 ### TECHNICAL REQUIEREMENTS
@@ -60,18 +60,18 @@ General
 - [ ] The windows may have differents resolutions, at least two (1920x1080, and an other)
 - [X] The game manages inputs from the mouse click and keyboard,
 - [X] The game contains animated sprites rendered thanks to sprite sheets,
-- [ ] Animations in your program are frame rate independent,
-- [ ] Animations and movements in your program are timed by clocks.
+- [X] Animations in your program are frame rate independent,
+- [X] Animations and movements in your program are timed by clocks.
 
 Main menu
 
-- [ ] Must contain at least these options
+- [X] Must contain at least these options
     - [ ] Start the game
-    - [ ] Resume game (grayed out if not possible)
-    - [ ] Settings
-    - [ ] Quit the game
+    - [X] Resume game (grayed out if not possible)
+    - [X] Settings
+    - [X] Quit the game
 - [ ] The settings option must contain
-    - [ ] Sound and music volume options
+    - [X] Sound and music volume options
     - [ ] A window size and resolution options
 
 In game menu
@@ -91,7 +91,7 @@ In game menu
 - [X] Splash screen at the beginning
 - [ ] Command edit into the in game menu
 - [X] As much information as possible about the game should be stored in a configuration file.
-- [ ] The game should have an advanced collision system to manage complex fighting.
+- [X] The game should have an advanced collision system to manage complex fighting.
 - [ ] The game should contains simple particle system :
     - [ ] with at least 2 types of particle,
     - [ ] particle effects (changing colors, scaling, bouncing, fading) to simulate realistic environment (wind, fire, rain, snow. . . ).
