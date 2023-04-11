@@ -21,8 +21,8 @@
 	},
 	"player": {
 		"pos": {
-			"x": 305,
-			"y": 152
+			"x": 277,
+			"y": 239
 		},
 		"hp": 100,
 		"inventory": {
@@ -41,7 +41,8 @@
 			"npc"
 		],
 		"quests_in_progress": [
-			"quest"
+			"quest",
+			"go_to_annia"
 		],
 		"quests_completed": [
 			"quest"

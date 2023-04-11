@@ -209,6 +209,13 @@
         struct quest_s *next;
     } quest_t;
 
+    typedef struct devide_text_s {
+        sfVector2f pos;
+        char *text;
+        sfColor color;
+        int max_len;
+    } devide_text_t;
+
     typedef struct narative_s {
         sfText *text;
         char *str;
@@ -301,6 +308,8 @@
     void stop_quest(rpg_t *rpg, char *id);
     int quest_is_in_progress(rpg_t *rpg, char *quest_name);
     int quest_is_completed(rpg_t *rpg, char *quest_name);
+    void draw_quests_ig(rpg_t *rpg);
+    void draw_quests_inv(rpg_t *rpg);
 
     /* MAP */
     void load_maps(rpg_t *rpg);
@@ -349,7 +358,7 @@
 
     /* TEXT */
     void divide_a_sftext(sfText *text, sfVector2f pos, rpg_t *rpg);
-    void divide_a_text(rpg_t *rpg, char *str, sfVector2f pos, sfColor color);
+    void divide_a_text(rpg_t *rpg, devide_text_t *devide_text);
 
 
     /* CALL ACTIONS */

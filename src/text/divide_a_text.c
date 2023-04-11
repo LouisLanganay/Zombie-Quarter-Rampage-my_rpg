@@ -7,23 +7,23 @@
 
 #include "rpg.h"
 
-void divide_a_text(rpg_t *rpg, char *str, sfVector2f pos, sfColor color)
+void divide_a_text(rpg_t *rpg, devide_text_t *devide)
 {
-    int len = my_strlen(str);
-    int nb_text = len / 65 + 1;
+    int len = my_strlen(devide->text);
+    int nb_text = len / devide->max_len + 1;
     sfText *new_text = NULL;
-
 
     for (int i = 0; i < nb_text; i++) {
         new_text = sfText_create();
         sfText_setFont(new_text, gl_get_font(rpg->glib, CRYSTAL_FONT));
         sfText_setCharacterSize(new_text, 134);
         sfText_setScale(new_text, (sfVector2f){0.05, 0.05});
-        sfText_setString(new_text, my_strndup(str, 65));
-        sfText_setPosition(new_text, (sfVector2f){pos.x, pos.y + i * 10});
-        sfText_setColor(new_text, color);
+        sfText_setString(new_text, my_strndup(devide->text, devide->max_len));
+        sfText_setPosition(new_text,
+            (sfVector2f){devide->pos.x, devide->pos.y + i * 10});
+        sfText_setColor(new_text, devide->color);
         sfRenderWindow_drawText(rpg->glib->window->window, new_text, NULL);
         sfText_destroy(new_text);
-        str += 65;
+        devide->text += devide->max_len;
     }
 }

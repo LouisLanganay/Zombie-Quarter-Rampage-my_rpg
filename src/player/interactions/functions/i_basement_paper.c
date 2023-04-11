@@ -18,5 +18,7 @@ void i_basement_paper(rpg_t *rpg, sfVector2f pos)
         rpg->player->lore_text = my_strdup(get_language(rpg,
             "basement_paper", RSG));
         rpg->player->lore_open = 1;
+        start_quest(rpg, "basement_paper");
+        start_quest(rpg, "test");
     }
 }
