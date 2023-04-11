@@ -25,4 +25,10 @@ void e_key_pressed(window_t *window, void *main)
         save_player(rpg);
         save_game(rpg);
     }
+    if (rpg->glib->window->event.key.code == sfKeyI)
+        add_item_to_inventory(70, rpg);
+    if (rpg->glib->window->event.key.code == sfKeyM)
+        remove_item_to_inventory(rpg, 5);
+    if (rpg->glib->window->event.key.code == sfKeyL)
+        add_item_to_inventory_pos(rpg, 5, 70);
 }
