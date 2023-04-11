@@ -46,6 +46,7 @@ VPATH += src/map
 VPATH += src/menu
 VPATH += src/lore
 VPATH += src/sounds
+VPATH += src/sounds/functions
 VPATH += src/map/load
 VPATH += src/map/draw
 VPATH += src/utils
@@ -200,6 +201,11 @@ SRC += fade_sound.c
 SRC += init_game_sounds.c
 SRC += start_sound.c
 SRC += check_sounds.c
+SRC += check_sounds_interactions.c
+SRC += get_sounds_array.c
+SRC += s_basement.c
+SRC += s_house.c
+
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

@@ -41,17 +41,20 @@ void check_sounds(rpg_t *rpg)
 {
     sounds_t *sound = rpg->sounds;
     time_t time;
+    sfSoundStatus status;
     float seconds;
 
     while (sound != NULL) {
         time = sfClock_getElapsedTime(sound->fade).microseconds;
         seconds = time / 1000000.0;
-        if (sound->fade_time == 0) {
+        status = sfSound_getStatus(gl_get_sound(rpg->glib, sound->id)->sound);
+        if (status == sfStopped) {
+            remove_sound_from_linked_list(rpg, sound);
             sound = sound->next;
             continue;
         }
-        if (seconds >= sound->fade_time / 100)
-            change_sound_vol(rpg, sound);
+        if (sound->fade_time != 0)
+            if (seconds >= sound->fade_time / 100) change_sound_vol(rpg, sound);
         sound = sound->next;
     }
 }

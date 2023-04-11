@@ -14,7 +14,6 @@ void fade_sound(rpg_t *rpg, int id, float time)
     while (sound != NULL) {
         if (sound->id == id) {
             sound->fade_time = time;
-            sfClock_restart(sound->fade);
             return;
         }
         sound = sound->next;

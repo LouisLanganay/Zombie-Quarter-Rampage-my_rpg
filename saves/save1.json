@@ -41,7 +41,9 @@
 			"npc"
 		],
 		"quests_in_progress": [
-			"quest"
+			"quest",
+			"test_quest",
+			"test_quest"
 		]
 	}
 }

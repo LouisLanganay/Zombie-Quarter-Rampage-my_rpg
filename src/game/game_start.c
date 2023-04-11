@@ -14,6 +14,7 @@ void game_start(rpg_t *rpg)
         draw_splash_screen(rpg);
     } else {
         start_sound(rpg, MAIN_THEME_ID);
+        check_sounds(rpg);
         draw_menu(rpg);
     }
 }

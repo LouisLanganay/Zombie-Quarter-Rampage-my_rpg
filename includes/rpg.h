@@ -34,9 +34,10 @@
 
     #define XP_SOUND_PATH "resources/sounds/xp.ogg"
     #define XP_SOUND_ID 10
-
     #define MAIN_THEME_PATH "resources/sounds/main_theme_tlou.ogg"
     #define MAIN_THEME_ID 11
+    #define BASEMENT_SOUND_PATH "resources/sounds/basement.ogg"
+    #define BASEMENT_SOUND_ID 12
 
     #define RPA rpg->player->assets
     #define RGW rpg->glib->window
@@ -88,6 +89,7 @@
         int *data;
         char *color;
         struct tiled_object_s *objects;
+        struct tiled_object_s *sounds;
         sfSprite **sprites;
         struct layer_s *next;
     } layer_t;
@@ -252,6 +254,11 @@
         void (*func)(rpg_t *, sfVector2f pos);
     } interactions_t;
 
+    typedef struct sounds_arr_s {
+        char *name;
+        void (*func)(rpg_t *, sfVector2f pos);
+    } sounds_arr_t;
+
     int my_strcmp(char const *s1, char const *s2);
     char *my_strcat(char *dest, char const *src);
     char *my_strcpy(char *dest, char const *src);
@@ -350,11 +357,15 @@
     void fade_sound(rpg_t *rpg, int id, float time);
     void start_sound(rpg_t *rpg, int id);
     void check_sounds(rpg_t *rpg);
+    sounds_arr_t *get_sounds_array(void);
+    void check_sounds_interactions(rpg_t *rpg, map_t *map);
+    void s_house(rpg_t *rpg, sfVector2f pos);
 
     /* CALL ACTIONS */
     void go_to_annia(void *main);
     void i_pass_fence(rpg_t *rpg, sfVector2f pos);
     void npc_give_food(void*);
+    void s_basement(rpg_t *rpg, sfVector2f pos);
     void little_girl(rpg_t *rpg, sfVector2f pos);
     void i_house_basement(rpg_t *rpg, sfVector2f pos);
     void i_grocery_door(rpg_t *rpg, sfVector2f pos);
