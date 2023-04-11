@@ -7,12 +7,6 @@
 
 #include "rpg.h"
 
-
-void event_window_close(window_t *window)
-{
-    sfRenderWindow_close(window->window);
-}
-
 int main(int ac, char **av)
 {
     rpg_t *rpg = malloc(sizeof(rpg_t));
@@ -24,10 +18,8 @@ int main(int ac, char **av)
         sfRenderWindow_clear(rpg->glib->window->window, sfBlack);
         if (rpg->game_started == 1)
             game_loop(rpg);
-        else {
-            gl_check_events(rpg->glib->window, rpg->glib->events, rpg);
-            draw_splash_screen(rpg);
-        }
+        else
+            game_start(rpg);
         sfRenderWindow_display(rpg->glib->window->window);
         if (rpg->maps_loaded == 0)
             load_maps(rpg);

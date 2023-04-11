@@ -1,10 +1,10 @@
 {
     "little_girl": {
         "name": "Annia",
-        "map": "resources/maps/main_map.json",
+        "map": "resources/maps/grocery_store.json",
         "pos": {
-            "x": 1700,
-            "y": 750
+            "x": 160,
+            "y": 50
         },
         "texture_path": "resources/npc/annia.png",
         "default_dialog": "default",

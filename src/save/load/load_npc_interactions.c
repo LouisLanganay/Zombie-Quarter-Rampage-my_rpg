@@ -27,8 +27,7 @@ int load_npc_interactions(save_t *save, parsed_data_t *data)
 
     if (arr->value.p_str == NULL) return (0);
     for (int i = 0; i < size; i++) {
-        save->npc_interactions[i] =
-            my_strdup(arr->value.p_str);
+        save->npc_interactions[i] = my_strdup(arr->value.p_str);
         arr = arr->next;
     }
     save->npc_interactions[size] = NULL;

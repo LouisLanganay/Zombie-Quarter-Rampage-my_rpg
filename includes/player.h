@@ -17,6 +17,18 @@
     #define SPAWN_INTO_HOUSE_Y 17 * 16
     #define SPAWN_OUT_HOUSE_X 111 * 16
     #define SPAWN_OUT_HOUSE_Y 40 * 16
+    #define SPAWN_OUT_BASEMENT_X 8 * 16
+    #define SPAWN_OUT_BASEMENT_Y 9 * 16
+    #define SPAWN_IN_BASEMENT_X 8 * 16
+    #define SPAWN_IN_BASEMENT_Y 9 * 16
+    #define SPAWN_IN_GROCERY_X 16 * 16
+    #define SPAWN_IN_GROCERY_Y 11 * 16
+    #define SPAWN_OUT_GROCERY_X 60 * 16
+    #define SPAWN_OUT_GROCERY_Y 23 * 16
+    #define SPAWN_INTO_HOUSE1_X 18 * 16
+    #define SPAWN_INTO_HOUSE1_Y 20 * 16
+    #define SPAWN_OUT_HOUSE1_X 51 * 16
+    #define SPAWN_OUT_HOUSE1_Y 65 * 16
 
     #define PLAYER_SPRITE_PATH "resources/assets/player/player.png"
 
@@ -36,10 +48,15 @@
     #define PLAYER_KEYBOARD_PATH2 "resources/assets/keys/extras.png"
     #define PLAYER_GUI_PATH "resources/assets/gui/UI.png"
 
+    #define MAIN_MAP_PATH "resources/maps/main_map.json"
+    #define HOUSE_MAP_PATH "resources/maps/player_house.json"
+    #define BASEMENT_MAP_PATH "resources/maps/player_basement.json"
+    #define GROCERY_MAP_PATH "resources/maps/grocery_store.json"
+
     #define PLAYER_INTERACT_TEXT 613255
     #define PLAYER_SPRITE_WIDTH 16
     #define PLAYER_SPRITE_HEIGHT 35
-    #define PLAYER_SPEED 60
+    #define PLAYER_SPEED 200
 
     #define PLAYER_DIALOGUE_TEXT 613256
     #define PLAYER_DCHOICE_ONE_TEXT 613257
@@ -87,6 +104,12 @@
         p_key_t escape;
     } keys_t;
 
+    typedef struct quest_icons_s {
+        sfSprite *go_to;
+        sfSprite *collect;
+        sfSprite *talk;
+    } quest_icons_t;
+
     typedef struct player_assets_s {
         sfClock *clock;
         sfTexture **key_texture;
@@ -96,6 +119,9 @@
         sfSprite **key_choice1;
         sfSprite **key_choice2;
         sfSprite *dialog_box;
+        sfSprite *quests_box;
+        quest_icons_t *quest_icons;
+        sfSprite *lore_box;
         sfTexture *down_attack;
         sfTexture *down_idle;
         sfTexture *down_walk;
@@ -118,6 +144,8 @@
     typedef struct player_s {
         int hp;
         int in_dialogue;
+        int lore_open;
+        char *lore_text;
         inventory_t *inventory;
         sfRectangleShape *hitbox;
         sfVector2f pos;

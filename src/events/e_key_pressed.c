@@ -19,8 +19,6 @@ void e_key_pressed(window_t *window, void *main)
         rpg->player->keys->left.state = 1;
     if (rpg->glib->window->event.key.code == rpg->player->keys->right.key)
         rpg->player->keys->right.state = 1;
-    if (rpg->glib->window->event.key.code == sfKeyN)
-        start_game(rpg);
     if (rpg->glib->window->event.key.code == sfKeyB) {
         save_player(rpg);
         save_game(rpg);
@@ -31,4 +29,6 @@ void e_key_pressed(window_t *window, void *main)
         remove_item_to_inventory(rpg, 5);
     if (rpg->glib->window->event.key.code == sfKeyL)
         add_item_to_inventory_pos(rpg, 5, 70);
+    if (rpg->glib->window->event.key.code == sfKeyB)
+        save(rpg);
 }
