@@ -9,7 +9,6 @@
 
 static void draw_player_hitbox(rpg_t *rpg)
 {
-    printf("Player pos: %f, %f\n", rpg->player->pos.x, rpg->player->pos.y);
     sfRenderWindow_drawRectangleShape(
         rpg->glib->window->window,
         rpg->player->hitbox, NULL);

@@ -36,6 +36,10 @@
 
     #define XP_SOUND_PATH "resources/sounds/xp.ogg"
     #define XP_SOUND_ID 10
+    #define MAIN_THEME_PATH "resources/sounds/main_theme_tlou.ogg"
+    #define MAIN_THEME_ID 11
+    #define BASEMENT_SOUND_PATH "resources/sounds/basement.ogg"
+    #define BASEMENT_SOUND_ID 12
 
     #define RPA rpg->player->assets
     #define RGW rpg->glib->window
@@ -46,6 +50,8 @@
     #define RSNI rpg->save->npc_interactions
     #define RPAQ rpg->player->assets->quest_icons
     #define RM rpg->menu_key
+    #define RP rpg->player
+    #define RSV rpg->settings->volume
 
     #define GET_SAVE_GAMELANGUAGE my_strcmp(jp_search(data, \
         "game_language")->value.p_str, "fr") == 0 ? FR : EN;
@@ -86,6 +92,7 @@
         int *data;
         char *color;
         struct tiled_object_s *objects;
+        struct tiled_object_s *sounds;
         sfSprite **sprites;
         struct layer_s *next;
     } layer_t;
@@ -160,6 +167,10 @@
     typedef struct menu_s {
         sfTexture *settings_bg_texture;
         sfSprite *settings_bg_sprite;
+        sfSprite *slider_sprite;
+        sfTexture *slider_texture;
+        sfRectangleShape *slider_back;
+        int slider_val;
         bool active;
     } menu_t;
 
@@ -177,6 +188,7 @@
 
     typedef struct settings_s {
         language_type_t game_language;
+        int volume;
     } settings_t;
 
     typedef struct save_s {
@@ -205,6 +217,27 @@
         struct quest_s *next;
     } quest_t;
 
+    typedef struct sounds_s {
+        int id;
+        sfClock *start;
+        sfClock *fade;
+        float fade_time;
+        struct sounds_s *next;
+    } sounds_t;
+
+    typedef struct devide_text_s {
+        sfVector2f pos;
+        char *text;
+        sfColor color;
+        int max_len;
+    } devide_text_t;
+
+    typedef struct narative_s {
+        sfText *text;
+        char *str;
+        sfClock *clock;
+    } narative_t;
+
     typedef struct rpg_s {
         int debug;
         char *actual_map;
@@ -223,7 +256,10 @@
         save_t *save;
         splash_screen_t *splash_screen;
         quest_t *quests;
+        sounds_t *sounds;
+        narative_t *narative;
         char **quests_in_progress;
+        char **quests_completed;
     } rpg_t;
 
     typedef struct keyboard_images_s {
@@ -240,6 +276,7 @@
         char *name;
         void (*func)(rpg_t *, sfVector2f pos);
     } interactions_t;
+
 
     typedef struct bullets_s {
         float speed;
@@ -318,11 +355,18 @@
     void delete_zombie_status(zombies_t **list);
     #define sfc sfTexture_createFromFile
     #define sfs sfTime_asSeconds
+    
+    
+    typedef struct sounds_arr_s {
+        char *name;
+        void (*func)(rpg_t *, sfVector2f pos);
+    } sounds_arr_t;
 
     int my_strcmp(char const *s1, char const *s2);
     char *my_strcat(char *dest, char const *src);
     char *my_strcpy(char *dest, char const *src);
     char *my_strcat_malloc(char *dest, char const *src);
+    int my_atoi(char const *str);
     char *my_strdup(char *str);
     int my_strlen(char const *str);
     char *my_strndup(const char *str, int n);
@@ -350,11 +394,13 @@
     int load_player(player_t *player, parsed_data_t *data);
     void save_settings(rpg_t *rpg);
     int load_quests_in_progress(rpg_t *rpg, parsed_data_t *data);
-    void save_npc_interactions(rpg_t *rpg, npc_t *npc);
+    void save_npc_interactions(rpg_t *rpg);
     void save_game(rpg_t *rpg);
     void save_quests_in_progress(rpg_t *rpg);
     void save_player(rpg_t *rpg);
     void save(rpg_t *rpg);
+    int load_quests_completed(rpg_t *rpg, parsed_data_t *data);
+    void save_quests_completed(rpg_t *rpg);
 
     /* QUESTS */
     void start_quest(rpg_t *rpg, char *id);
@@ -363,6 +409,10 @@
     quests_func_t *get_quests_func_arr(void);
     quest_t *get_quest_by_id(rpg_t *rpg, char *id);
     void stop_quest(rpg_t *rpg, char *id);
+    int quest_is_in_progress(rpg_t *rpg, char *quest_name);
+    int quest_is_completed(rpg_t *rpg, char *quest_name);
+    void draw_quests_ig(rpg_t *rpg);
+    void draw_quests_inv(rpg_t *rpg);
 
     /* MAP */
     void load_maps(rpg_t *rpg);
@@ -400,6 +450,12 @@
     void check_interactions(player_t *player, map_t *map, rpg_t *rpg);
     keyboard_images_t *get_keyboard_array(void);
 
+    /* INVENTORY*/
+    int add_item_to_inventory(int id, rpg_t *rpg);
+    int remove_item_to_inventory(rpg_t *rpg, int pos);
+    int add_item_to_inventory_pos(rpg_t *rpg, int pos, int id);
+    void handle_inventory_system(rpg_t *rpg);
+
     /* NPC */
     npc_t *get_npc(map_t *map, char *name);
     void draw_npcs(map_t *map, rpg_t *rpg);
@@ -411,13 +467,23 @@
 
     /* TEXT */
     void divide_a_sftext(sfText *text, sfVector2f pos, rpg_t *rpg);
-    void divide_a_text(rpg_t *rpg, char *str, sfVector2f pos, sfColor color);
+    void divide_a_text(rpg_t *rpg, devide_text_t *devide_text);
 
+    /* SOUNDS */
+    void fade_sound(rpg_t *rpg, int id, float time);
+    void start_sound(rpg_t *rpg, int id);
+    void check_sounds(rpg_t *rpg);
+    sounds_arr_t *get_sounds_array(void);
+    void check_sounds_interactions(rpg_t *rpg, map_t *map);
+    void s_house(rpg_t *rpg, sfVector2f pos);
 
     /* CALL ACTIONS */
+    void i_soda(rpg_t *rpg, sfVector2f pos);
+    void i_paper_grocery(rpg_t *rpg, sfVector2f pos);
     void go_to_annia(void *main);
     void i_pass_fence(rpg_t *rpg, sfVector2f pos);
     void npc_give_food(void*);
+    void s_basement(rpg_t *rpg, sfVector2f pos);
     void little_girl(rpg_t *rpg, sfVector2f pos);
     void i_house_basement(rpg_t *rpg, sfVector2f pos);
     void i_grocery_door(rpg_t *rpg, sfVector2f pos);
@@ -449,11 +515,14 @@
     void init_saves_buttons(rpg_t *rpg);
     void draw_saves_menu(rpg_t *rpg);
     void init_saves_texts(rpg_t *rpg);
+    void draw_settings(rpg_t *rpg);
 
 
     /* LORE */
     void draw_popup_lore(rpg_t *rpg);
     void check_popup_lore(rpg_t *rpg);
+    void start_narative_popup(rpg_t *rpg);
+    void check_narative_popup(rpg_t *rpg);
 
 
     /* FPS */
@@ -482,6 +551,7 @@
     void init_player(rpg_t *rpg);
     void init_popup_dialogue(rpg_t *rpg);
     void init_glib(rpg_t *rpg);
+    void init_game_sounds(rpg_t *rpg);
     void init_npcs(map_t *map, char *path, rpg_t *rpg);
     void init_fonts(rpg_t *rpg);
     void init_player_textures(player_t *player);
@@ -491,6 +561,7 @@
     void init_sounds(GLib_t *glib);
     void init_language(rpg_t *rpg);
     void init_popup_lore(rpg_t *rpg);
+    void init_slider(rpg_t *rpg);
     void init_save(rpg_t *rpg);
     void init_events(rpg_t *rpg);
     void init_player_assets(player_t *player);

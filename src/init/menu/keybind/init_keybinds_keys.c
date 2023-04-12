@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-void init_keybinds_keys_up(rpg_t *rpg)
+static void init_keybinds_keys_up(rpg_t *rpg)
 {
     text_t *my_text = malloc(sizeof(text_t));
     my_text->id = SETTINGS_KEY_UP;
@@ -20,7 +20,7 @@ void init_keybinds_keys_up(rpg_t *rpg)
     gl_create_text(rpg->glib, my_text);
 }
 
-void init_keybinds_keys_down(rpg_t *rpg)
+static void init_keybinds_keys_down(rpg_t *rpg)
 {
     text_t *my_text = malloc(sizeof(text_t));
     my_text->id = SETTINGS_KEY_DOWN;
@@ -33,7 +33,7 @@ void init_keybinds_keys_down(rpg_t *rpg)
     gl_create_text(rpg->glib, my_text);
 }
 
-void init_keybinds_keys_left(rpg_t *rpg)
+static void init_keybinds_keys_left(rpg_t *rpg)
 {
     text_t *my_text = malloc(sizeof(text_t));
     my_text->id = SETTINGS_KEY_LEFT;
@@ -46,7 +46,7 @@ void init_keybinds_keys_left(rpg_t *rpg)
     gl_create_text(rpg->glib, my_text);
 }
 
-void init_keybinds_keys_right(rpg_t *rpg)
+static void init_keybinds_keys_right(rpg_t *rpg)
 {
     text_t *my_text = malloc(sizeof(text_t));
     my_text->id = SETTINGS_KEY_RIGHT;

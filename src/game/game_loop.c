@@ -14,6 +14,8 @@ void game_loop(rpg_t *rpg)
     gl_check_events(rpg->glib->window, rpg->glib->events, rpg);
     display_dialogue(rpg);
     draw_popup_lore(rpg);
-    draw_quests(rpg);
+    check_narative_popup(rpg);
     draw_inventory(rpg);
+    check_sounds(rpg);
+    draw_quests(rpg);
 }

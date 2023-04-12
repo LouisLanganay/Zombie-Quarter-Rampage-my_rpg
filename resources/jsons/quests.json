@@ -5,16 +5,16 @@
         "type": "go_to",
         "function": "go_to_annia"
     },
-    "test_quest": {
-        "name": "Test Quest",
-        "description": "This is a test quest.",
-        "type": "talk",
-        "function": null
-    },
-    "find_money": {
-        "name": "Find Money",
-        "description": "Find some money.",
+    "basement_paper": {
+        "name": "Find some food",
+        "description": "You need to find some food to eat. You can find some in the basement of the grocery store.",
         "type": "collect",
-        "function": null
+        "function": "basement_paper"
+    },
+    "test": {
+        "name": "Test",
+        "description": "Test",
+        "type": "talk",
+        "function": "test"
     }
 }

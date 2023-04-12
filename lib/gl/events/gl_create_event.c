@@ -26,7 +26,7 @@ int gl_create_event(
 )
 {
     if (gl_create_event_check_id(glib->events, id) != 0)
-        exit (84);
+        return 84;
 
     events_t *tmp = malloc(sizeof(*tmp));
     if (tmp == NULL)

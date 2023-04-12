@@ -14,10 +14,10 @@ static sfTexture **init_inventory_assets_objects(void)
     sfImage *items_image = sfTexture_copyToImage(items_texture);
     sfVector2u size = sfTexture_getSize(items_texture);
     sfIntRect *rect = malloc(sizeof(sfIntRect));
-    sfTexture **textures = malloc(sizeof(sfTexture *) * 112);
+    sfTexture **textures = malloc(sizeof(sfTexture *) * 114);
     *rect = (sfIntRect){0, 0, 24, 24};
 
-    for (int i = 0; i < 112; i++) {
+    for (int i = 0; i < 115; i++) {
         textures[i] = sfTexture_createFromImage(items_image, rect);
         if (rect->left + 24 >= (int)size.x) {
             rect->left = 0;
