@@ -52,7 +52,6 @@ static void check_sounds_objects(
     sfRectangleShape_destroy(col);
 }
 
-
 void check_sounds_interactions(rpg_t *rpg, map_t *map)
 {
     layer_t *tmp = map->layers;

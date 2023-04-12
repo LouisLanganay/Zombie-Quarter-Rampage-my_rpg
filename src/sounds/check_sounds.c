@@ -53,8 +53,8 @@ void check_sounds(rpg_t *rpg)
             sound = sound->next;
             continue;
         }
-        if (sound->fade_time != 0)
-            if (seconds >= sound->fade_time / 100) change_sound_vol(rpg, sound);
+        if (sound->fade_time != 0 && seconds >= sound->fade_time / 100)
+            change_sound_vol(rpg, sound);
         sound = sound->next;
     }
 }
