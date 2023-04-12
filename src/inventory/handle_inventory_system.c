@@ -24,7 +24,7 @@ static char *get_item_name(int id)
     return NULL;
 }
 
-static void display_item_data(rpg_t *rpg, char *name)
+static void display_item_data(rpg_t *rpg)
 {
     sfRenderWindow_drawSprite(rpg->glib->window->window,
     RP->inventory->items_data_sprite, NULL);
@@ -49,5 +49,5 @@ void handle_inventory_system(rpg_t *rpg)
     sfRenderWindow_drawSprite(rpg->glib->window->window,
     RP->inventory->select_sprite, NULL);
     if (rpg->player->inventory->is_data_open != 1 && name != NULL)
-        display_item_data(rpg, name);
+        display_item_data(rpg);
 }
