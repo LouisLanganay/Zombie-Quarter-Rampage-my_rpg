@@ -34,6 +34,10 @@
 
     #define XP_SOUND_PATH "resources/sounds/xp.ogg"
     #define XP_SOUND_ID 10
+    #define MAIN_THEME_PATH "resources/sounds/main_theme_tlou.ogg"
+    #define MAIN_THEME_ID 11
+    #define BASEMENT_SOUND_PATH "resources/sounds/basement.ogg"
+    #define BASEMENT_SOUND_ID 12
 
     #define RPA rpg->player->assets
     #define RGW rpg->glib->window
@@ -85,6 +89,7 @@
         int *data;
         char *color;
         struct tiled_object_s *objects;
+        struct tiled_object_s *sounds;
         sfSprite **sprites;
         struct layer_s *next;
     } layer_t;
@@ -209,6 +214,14 @@
         struct quest_s *next;
     } quest_t;
 
+    typedef struct sounds_s {
+        int id;
+        sfClock *start;
+        sfClock *fade;
+        float fade_time;
+        struct sounds_s *next;
+    } sounds_t;
+
     typedef struct devide_text_s {
         sfVector2f pos;
         char *text;
@@ -240,6 +253,7 @@
         save_t *save;
         splash_screen_t *splash_screen;
         quest_t *quests;
+        sounds_t *sounds;
         narative_t *narative;
         char **quests_in_progress;
         char **quests_completed;
@@ -259,6 +273,11 @@
         char *name;
         void (*func)(rpg_t *, sfVector2f pos);
     } interactions_t;
+
+    typedef struct sounds_arr_s {
+        char *name;
+        void (*func)(rpg_t *, sfVector2f pos);
+    } sounds_arr_t;
 
     int my_strcmp(char const *s1, char const *s2);
     char *my_strcat(char *dest, char const *src);
@@ -360,6 +379,13 @@
     void divide_a_sftext(sfText *text, sfVector2f pos, rpg_t *rpg);
     void divide_a_text(rpg_t *rpg, devide_text_t *devide_text);
 
+    /* SOUNDS */
+    void fade_sound(rpg_t *rpg, int id, float time);
+    void start_sound(rpg_t *rpg, int id);
+    void check_sounds(rpg_t *rpg);
+    sounds_arr_t *get_sounds_array(void);
+    void check_sounds_interactions(rpg_t *rpg, map_t *map);
+    void s_house(rpg_t *rpg, sfVector2f pos);
 
     /* CALL ACTIONS */
     void i_soda(rpg_t *rpg, sfVector2f pos);
@@ -367,6 +393,7 @@
     void go_to_annia(void *main);
     void i_pass_fence(rpg_t *rpg, sfVector2f pos);
     void npc_give_food(void*);
+    void s_basement(rpg_t *rpg, sfVector2f pos);
     void little_girl(rpg_t *rpg, sfVector2f pos);
     void i_house_basement(rpg_t *rpg, sfVector2f pos);
     void i_grocery_door(rpg_t *rpg, sfVector2f pos);
@@ -434,6 +461,7 @@
     void init_player(rpg_t *rpg);
     void init_popup_dialogue(rpg_t *rpg);
     void init_glib(rpg_t *rpg);
+    void init_game_sounds(rpg_t *rpg);
     void init_npcs(map_t *map, char *path, rpg_t *rpg);
     void init_fonts(rpg_t *rpg);
     void init_player_textures(player_t *player);

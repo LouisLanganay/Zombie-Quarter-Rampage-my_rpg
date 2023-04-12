@@ -16,5 +16,6 @@ void game_loop(rpg_t *rpg)
     draw_popup_lore(rpg);
     check_narative_popup(rpg);
     draw_inventory(rpg);
+    check_sounds(rpg);
     draw_quests(rpg);
 }
