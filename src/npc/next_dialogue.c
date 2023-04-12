@@ -27,7 +27,7 @@ static void change_texts(rpg_t *rpg, dialog_t *next)
         PLAYER_DCHOICE_TWO_TEXT);
     sfText *main_text = gl_get_text(rpg->glib, PLAYER_DIALOGUE_TEXT);
 
-    sfText_setString(main_text, next->text);
+    sfText_setString(main_text, get_language(rpg, next->text, RSG));
     if (next->options == NULL) {
         sfText_setString(choice_one_text, NULL);
         sfText_setString(choice_two_text, NULL);
