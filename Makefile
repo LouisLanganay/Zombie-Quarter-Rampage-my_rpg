@@ -59,6 +59,7 @@ VPATH += src/player/interactions
 VPATH += src/player/colisions
 VPATH += src/player/interactions/functions
 VPATH += src/player/interactions/functions/npc
+VPATH += src/combat
 
 vpath %.c $(VPATH)
 
@@ -180,6 +181,19 @@ SRC += get_quest_by_id.c
 SRC += go_to_annia.c
 SRC += draw_quests.c
 SRC += get_quest.c
+SRC += combat.c
+SRC += init_combat.c
+SRC += init_guy.c
+SRC += init_background.c
+SRC += insert_zombies.c
+SRC += draw_zombies.c
+SRC += move_player.c
+SRC += bullet_manager.c
+SRC += gun_manager.c
+SRC += move_zombies.c
+SRC += colision_with_rect.c
+SRC += zombie_hit.c
+SRC += animation_zombies.c
 SRC += i_house_basement.c
 SRC += i_grocery_door.c
 SRC += game_start.c
@@ -200,6 +214,12 @@ SRC += e_resume_btn.c
 SRC += e_save1.c
 SRC += e_save2.c
 SRC += e_save3.c
+SRC += delete_zombie_status.c
+SRC += insert_bullet.c
+SRC += draw_bullets.c
+SRC += move_bullets.c
+SRC += delete_outmap.c
+SRC += shot_angle.c
 SRC += handle_inventory_system.c
 SRC += fade_sound.c
 SRC += init_game_sounds.c
@@ -223,14 +243,15 @@ SRC += draw_quests_ig.c
 SRC += draw_quests_inv.c
 SRC += my_atoi.c
 
+
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl
 LIB_NAME1 	:= gl
 LIB_DIR2 	:= ./lib/jp
 LIB_NAME2 	:= jp
 
-CFLAGS = -iquote $(INC_DIR) -Wall -Wextra -Werror -g
-CFLAGS += -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio
+CFLAGS = -iquote $(INC_DIR) -g#-Wall -Wextra -Werror -g
+CFLAGS += -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm
 
 LIBFLAGS = -L$(LIB_DIR1) -l$(LIB_NAME1) -L$(LIB_DIR2) -l$(LIB_NAME2)
 

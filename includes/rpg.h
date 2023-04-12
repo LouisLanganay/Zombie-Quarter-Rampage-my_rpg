@@ -13,6 +13,8 @@
     #include "jp.h"
     #include "view.h"
     #include "player.h"
+    #include <time.h>
+    #include <math.h>
     #include <stdbool.h>
     #include "menu.h"
 
@@ -28,9 +30,9 @@
     #define EVENT_WINDOW_CLOSE 1
     #define EVENT_INVENTORY_OPEN 454545
     #define INVENTORY_SIZE 16
+    #define M_PI 3.14159265358979323846
 
     #define EVENT_DIALOGUE_CHOICE 651546
-
 
     #define XP_SOUND_PATH "resources/sounds/xp.ogg"
     #define XP_SOUND_ID 10
@@ -50,7 +52,6 @@
     #define RM rpg->menu_key
     #define RP rpg->player
     #define RSV rpg->settings->volume
-
 
     #define GET_SAVE_GAMELANGUAGE my_strcmp(jp_search(data, \
         "game_language")->value.p_str, "fr") == 0 ? FR : EN;
@@ -275,6 +276,86 @@
         char *name;
         void (*func)(rpg_t *, sfVector2f pos);
     } interactions_t;
+
+
+    typedef struct bullets_s {
+        float speed;
+        float angle;
+        int status;
+        sfVector2f pos;
+        sfVector2f scale;
+        sfIntRect rect;
+        sfTexture *texture;
+        sfSprite *sprite;
+        struct bullets_s *next;
+    } bullets_t;
+
+    typedef struct zombies_s {
+        sfVector2f pos;
+        int type;
+        int hp;
+        int damage;
+        float speed;
+        float attack_speed;
+        sfRectangleShape *hitbox;
+        struct zombies_s *next;
+        sfSprite *sprite;
+        sfTexture *texture;
+        sfIntRect rect;
+        sfVector2f scale;
+        sfClock *clock;
+        sfClock *attack_clock;
+        sfClock *clock_animation;
+        int animation;
+        int alive;
+        int direction;
+        int last_distance;
+    } zombies_t;
+    #define windoww rpg->glib->window->window
+    #define ZOMBIE_0 "resources/assets/combat/zombie_0.png"
+    #define ZOMBIE_1 "resources/assets/combat/zombie_1.png"
+    #define ZOMBIE_2 "resources/assets/combat/zombie_2.png"
+    #define ZOMBIE_3 "resources/assets/combat/zombie_3.png"
+    #define ZOMBIE_4 "resources/assets/combat/zombie_4.png"
+    #define ZOMBIE_5 "resources/assets/combat/zombie_5.png"
+    #define ZOMBIE_6 "resources/assets/combat/zombie_6.png"
+    #define ZOMBIE_7 "resources/assets/combat/zombie_7.png"
+    #define map_night "resources/assets/combat/map_night.jpg"
+    #define guy "resources/assets/combat/guy.png"
+    #define bullet "resources/assets/combat/bullet.png"
+    #define atkplayer attack_player(rpg,tmp->attack_clock, \
+    tmp->attack_speed,tmp->damage)
+
+    typedef struct combat_s {
+        zombies_t *zombies;
+        bullets_t *bullets;
+        sfClock *clock_move;
+        sfClock *clock_shoot;
+    } combat_t;
+
+    /* COMBAT */
+    void init_guy(rpg_t *rpg);
+    void init_background(rpg_t *rpg);
+    int combat(rpg_t *rpg);
+    combat_t *init_combat(void);
+    void move_player(rpg_t *rpg, sfClock *clock);
+    float shot_angle(sfVector2f pos, sfVector2i mouse);
+    void gun_manager(rpg_t *rpg, combat_t *combat);
+    void insert_zombies(rpg_t *rpg, zombies_t **list);
+    void draw_zombies(zombies_t *list, rpg_t *rpg);
+    int colision_with_rect(sfRectangleShape *rect, sfVector2f pos);
+    int colision_bullet_zombies(zombies_t *list, bullets_t *bullets);
+    void animation_zombie(zombies_t *list);
+    void delete_bullet_outmap(bullets_t **list);
+    void draw_bullets(bullets_t *bullets, rpg_t *rpg);
+    void insert_bullet(bullets_t **list, rpg_t *rpg);
+    void move_bullets(bullets_t *bullets, rpg_t *rpg);
+    void delete_bullet_status(bullets_t **list);
+    void move_zombies(zombies_t *list, rpg_t *rpg);
+    void delete_zombie_status(zombies_t **list);
+    #define sfc sfTexture_createFromFile
+    #define sfs sfTime_asSeconds
+
 
     typedef struct sounds_arr_s {
         char *name;
