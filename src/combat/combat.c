@@ -23,6 +23,12 @@ static void window_manager(rpg_t *rpg)
     gl_check_events(rpg->glib->window, rpg->glib->events, rpg);
 }
 
+// char **wave_zombie = {
+//     "...."
+// }
+
+// void wave 
+
 int combat(rpg_t *rpg)
 {
     srand(time(NULL));
