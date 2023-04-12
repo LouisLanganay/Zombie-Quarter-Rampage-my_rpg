@@ -355,8 +355,8 @@
     void delete_zombie_status(zombies_t **list);
     #define sfc sfTexture_createFromFile
     #define sfs sfTime_asSeconds
-    
-    
+
+
     typedef struct sounds_arr_s {
         char *name;
         void (*func)(rpg_t *, sfVector2f pos);
