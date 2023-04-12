@@ -38,6 +38,7 @@ void start_quest(rpg_t *rpg, char *id)
         quest = quest->next;
     }
     if (quest == NULL) return;
+    sfSound_setVolume(gl_get_sound(rpg->glib, XP_SOUND_ID)->sound, RSV);
     gl_play_sound(rpg->glib, XP_SOUND_ID);
     rpg->quests_in_progress = add_item_to_arr(rpg->quests_in_progress,
         quest->id);

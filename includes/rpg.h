@@ -49,6 +49,7 @@
     #define RPAQ rpg->player->assets->quest_icons
     #define RM rpg->menu_key
     #define RP rpg->player
+    #define RSV rpg->settings->volume
 
 
     #define GET_SAVE_GAMELANGUAGE my_strcmp(jp_search(data, \
