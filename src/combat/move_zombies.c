@@ -12,7 +12,8 @@ static int distance(sfVector2f pos1, sfVector2f pos2)
     return (sqrt(pow(pos1.x - pos2.x, 2) + pow(pos1.y - pos2.y, 2)));
 }
 
-static int attack_player(rpg_t *rpg, sfClock *attack_clock, float atk_speed, int dmg)
+static int attack_player(rpg_t *rpg, sfClock *attack_clock,
+float atk_speed, int dmg)
 {
     if (sfTime_asSeconds(sfClock_getElapsedTime(attack_clock)) > atk_speed) {
         sfClock_restart(attack_clock);
