@@ -7,6 +7,26 @@
 
 #include "rpg.h"
 
+static void e_key_pressed_select(rpg_t *rpg)
+{
+    if (rpg->glib->window->event.key.code == sfKeyUp &&
+    rpg->player->inventory->pos > 3)
+        rpg->player->inventory->pos -= 4;
+
+    if (rpg->glib->window->event.key.code == sfKeyLeft &&
+    rpg->player->inventory->pos > 0)
+        rpg->player->inventory->pos -= 1;
+
+    if (rpg->glib->window->event.key.code == sfKeyRight &&
+    rpg->player->inventory->pos < 15)
+        rpg->player->inventory->pos += 1;
+
+    if (rpg->glib->window->event.key.code == sfKeyDown &&
+    rpg->player->inventory->pos < 12)
+        rpg->player->inventory->pos += 4;
+
+}
+
 void e_key_pressed(window_t *window, void *main)
 {
     (void)window;
@@ -19,16 +39,7 @@ void e_key_pressed(window_t *window, void *main)
         rpg->player->keys->left.state = 1;
     if (rpg->glib->window->event.key.code == rpg->player->keys->right.key)
         rpg->player->keys->right.state = 1;
-    if (rpg->glib->window->event.key.code == sfKeyB) {
-        save_player(rpg);
-        save_game(rpg);
-    }
-    if (rpg->glib->window->event.key.code == sfKeyI)
-        add_item_to_inventory(70, rpg);
-    if (rpg->glib->window->event.key.code == sfKeyM)
-        remove_item_to_inventory(rpg, 5);
-    if (rpg->glib->window->event.key.code == sfKeyL)
-        add_item_to_inventory_pos(rpg, 5, 70);
+    e_key_pressed_select(rpg);
     if (rpg->glib->window->event.key.code == sfKeyB)
         save(rpg);
 }
