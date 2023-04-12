@@ -41,5 +41,4 @@ void start_quest(rpg_t *rpg, char *id)
     gl_play_sound(rpg->glib, XP_SOUND_ID);
     rpg->quests_in_progress = add_item_to_arr(rpg->quests_in_progress,
         quest->id);
-    save_quests_in_progress(rpg);
 }

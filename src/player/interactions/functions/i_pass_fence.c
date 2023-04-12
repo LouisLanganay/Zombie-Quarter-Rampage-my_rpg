@@ -10,7 +10,7 @@
 static void pass_fence(rpg_t *rpg)
 {
     if (rpg->player->pos.y > 275)
-        rpg->player->pos.y = 16 * 16 + 10;
+        rpg->player->pos.y = 16 * 16;
     if (rpg->player->pos.y < 256)
         rpg->player->pos.y = 18 * 16;
 }

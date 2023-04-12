@@ -6,7 +6,7 @@
 		"played": false
 	},
 	"settings": {
-		"game_language": "en",
+		"game_language": "fr",
 		"keys": {
 			"up": 25,
 			"down": 18,
@@ -21,8 +21,8 @@
 	},
 	"player": {
 		"pos": {
-			"x": 215,
-			"y": 236
+			"x": 277,
+			"y": 239
 		},
 		"hp": 100,
 		"inventory": {
@@ -34,16 +34,17 @@
 		}
 	},
 	"game": {
-		"actual_map": "resources/maps/house1.json"
+		"actual_map": "resources/maps/player_basement.json"
 	},
 	"game_timeline": {
 		"npc_interactions": [
 			"npc"
 		],
 		"quests_in_progress": [
-			"quest",
-			"test_quest",
-			"test_quest"
+			"quest"
+		],
+		"quests_completed": [
+			"quest"
 		]
 	}
 }

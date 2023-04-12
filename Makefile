@@ -205,7 +205,18 @@ SRC += check_sounds_interactions.c
 SRC += get_sounds_array.c
 SRC += s_basement.c
 SRC += s_house.c
-
+SRC += i_paper_grocery.c
+SRC += start_narative_popup.c
+SRC += check_narative_popup.c
+SRC += i_soda.c
+SRC += quest_is_in_progress.c
+SRC += load_quests_completed.c
+SRC += quest_is_completed.c
+SRC += save_quests_completed.c
+SRC += draw_settings.c
+SRC += init_slider.c
+SRC += draw_quests_ig.c
+SRC += draw_quests_inv.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

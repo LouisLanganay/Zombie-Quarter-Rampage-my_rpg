@@ -11,6 +11,7 @@ static void display_dialogue_box(rpg_t *rpg, sfVector2f view_pos)
 {
     sfText *main_text = gl_get_text(rpg->glib, PLAYER_DIALOGUE_TEXT);
     sfVector2f text_pos = (sfVector2f){view_pos.x - 29 * 3, view_pos.y + 93};
+
     sfSprite_setPosition(RPA->dialog_box,
         (sfVector2f){view_pos.x, view_pos.y + 75});
     sfRenderWindow_drawSprite(RGW->window, RPA->dialog_box, NULL);

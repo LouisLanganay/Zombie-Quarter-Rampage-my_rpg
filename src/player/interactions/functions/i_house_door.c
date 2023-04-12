@@ -13,6 +13,12 @@ static void change_map(rpg_t *rpg)
     char *main_map = "resources/maps/main_map.json";
 
     if (my_strcmp(rpg->actual_map, player_house) == 0) {
+        if (quest_is_in_progress(rpg, "go_to_annia") != 1 &&
+            quest_is_completed(rpg, "go_to_annia") != 1) {
+            rpg->narative->str = get_language(rpg, "house_cant_leave", RSG);
+            start_narative_popup(rpg);
+            return;
+        }
         rpg->actual_map = main_map;
         rpg->player->pos.x = SPAWN_OUT_HOUSE_X;
         rpg->player->pos.y = SPAWN_OUT_HOUSE_Y;

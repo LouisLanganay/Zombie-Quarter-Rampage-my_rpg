@@ -80,4 +80,5 @@ void init_main_menu(rpg_t *rpg)
     init_keybinds(rpg);
     init_saves_buttons(rpg);
     init_saves_texts(rpg);
+    init_slider(rpg);
 }

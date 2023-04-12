@@ -12,4 +12,7 @@ void save(rpg_t *rpg)
     save_settings(rpg);
     save_game(rpg);
     save_player(rpg);
+    save_quests_in_progress(rpg);
+    save_quests_completed(rpg);
+    save_npc_interactions(rpg);
 }
