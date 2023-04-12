@@ -18,7 +18,7 @@ static void start_dialogue_default(npc_t *npc, rpg_t *rpg)
         if (my_strcmp(dialog->name, npc->default_dialog) == 0) break;
         dialog = dialog->next;
     }
-    sfText_setString(main_text, dialog->text);
+    sfText_setString(main_text, get_language(rpg, dialog->text, RSG));
     sfText_setString(choice_one_text, NULL);
     sfText_setString(choice_two_text, NULL);
     rpg->player->in_dialogue = 1;
@@ -37,9 +37,11 @@ static void start_dialogue_discovery(npc_t *npc, rpg_t *rpg)
         if (my_strcmp(dialog->name, "discovery") == 0) break;
         dialog = dialog->next;
     }
-    sfText_setString(main_text, dialog->text);
-    sfText_setString(choice_one_text, dialog->options[0]->text);
-    sfText_setString(choice_two_text, dialog->options[1]->text);
+    sfText_setString(main_text, get_language(rpg, dialog->text, RSG));
+    sfText_setString(choice_one_text,
+        get_language(rpg, dialog->options[0]->text, RSG));
+    sfText_setString(choice_two_text,
+        get_language(rpg, dialog->options[1]->text, RSG));
     rpg->player->in_dialogue = 1;
     rpg->actual_dialog = dialog;
     rpg->actual_npc = npc;

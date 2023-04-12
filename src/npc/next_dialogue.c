@@ -33,8 +33,10 @@ static void change_texts(rpg_t *rpg, dialog_t *next)
         sfText_setString(choice_two_text, NULL);
         return;
     }
-    sfText_setString(choice_one_text, next->options[0]->text);
-    sfText_setString(choice_two_text, next->options[1]->text);
+    sfText_setString(choice_one_text,
+        get_language(rpg, next->options[0]->text, RSG));
+    sfText_setString(choice_two_text,
+        get_language(rpg, next->options[1]->text, RSG));
 }
 
 static char **get_new_arr(rpg_t *rpg, npc_t *npc)
