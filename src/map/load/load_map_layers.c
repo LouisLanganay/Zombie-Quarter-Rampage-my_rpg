@@ -18,7 +18,7 @@ static void load_layer_data_tilelayer_properties(
     if (properties == NULL)
         return;
     nb = jp_search(data, "properties[0].value")->value.p_str;
-    layer->z_index = atoi(nb);
+    layer->z_index = my_atoi(nb);
 }
 
 static void load_layer_data_objectgroup(

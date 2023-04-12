@@ -217,6 +217,7 @@ SRC += draw_settings.c
 SRC += init_slider.c
 SRC += draw_quests_ig.c
 SRC += draw_quests_inv.c
+SRC += my_atoi.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

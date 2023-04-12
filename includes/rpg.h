@@ -283,6 +283,7 @@
     char *my_strcat(char *dest, char const *src);
     char *my_strcpy(char *dest, char const *src);
     char *my_strcat_malloc(char *dest, char const *src);
+    int my_atoi(char const *str);
     char *my_strdup(char *str);
     int my_strlen(char const *str);
     char *my_strndup(const char *str, int n);
