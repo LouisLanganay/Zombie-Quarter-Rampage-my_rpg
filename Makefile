@@ -197,6 +197,7 @@ SRC += e_resume_btn.c
 SRC += e_save1.c
 SRC += e_save2.c
 SRC += e_save3.c
+SRC += handle_inventory_system.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl
