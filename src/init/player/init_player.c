@@ -54,6 +54,7 @@ void init_player(rpg_t *rpg)
     player->pos = (sfVector2f){SPAWN_X, SPAWN_Y};
     player->in_dialogue = 0;
     player->lore_open = 0;
+    player->lore_sound_played = 0;
     sfVector2f screen_size = (sfVector2f){
         rpg->glib->window->mode.width,
         rpg->glib->window->mode.height

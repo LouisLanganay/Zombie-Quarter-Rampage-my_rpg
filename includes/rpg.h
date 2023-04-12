@@ -40,6 +40,10 @@
     #define MAIN_THEME_ID 11
     #define BASEMENT_SOUND_PATH "resources/sounds/basement.ogg"
     #define BASEMENT_SOUND_ID 12
+    #define NATURE_SOUND_PATH "resources/sounds/nature.ogg"
+    #define NATURE_SOUND_ID 13
+    #define PAPER_SOUND_PATH "resources/sounds/paper.ogg"
+    #define PAPER_SOUND_ID 14
 
     #define RPA rpg->player->assets
     #define RGW rpg->glib->window
@@ -67,6 +71,8 @@
         int id;
         float height;
         float width;
+        int is_trigger;
+        int is_exit;
         sfVector2f pos;
         struct tiled_object_s *next;
     } tiled_object_t;
@@ -275,6 +281,7 @@
     typedef struct interactions_s {
         char *name;
         void (*func)(rpg_t *, sfVector2f pos);
+        void (*on_exit)(rpg_t *, sfVector2f pos);
     } interactions_t;
 
 
@@ -311,6 +318,7 @@
         int direction;
         int last_distance;
     } zombies_t;
+
     #define windoww rpg->glib->window->window
     #define ZOMBIE_0 "resources/assets/combat/zombie_0.png"
     #define ZOMBIE_1 "resources/assets/combat/zombie_1.png"
@@ -448,6 +456,7 @@
         rpg_t *rpg
     );
     void check_interactions(player_t *player, map_t *map, rpg_t *rpg);
+    void check_interactions_other_maps(rpg_t *rpg, player_t *player);
     keyboard_images_t *get_keyboard_array(void);
 
     /* INVENTORY*/
@@ -473,11 +482,13 @@
     void fade_sound(rpg_t *rpg, int id, float time);
     void start_sound(rpg_t *rpg, int id);
     void check_sounds(rpg_t *rpg);
-    sounds_arr_t *get_sounds_array(void);
-    void check_sounds_interactions(rpg_t *rpg, map_t *map);
     void s_house(rpg_t *rpg, sfVector2f pos);
+    void s_nature(rpg_t *rpg, sfVector2f pos);
 
     /* CALL ACTIONS */
+    void s_basement_exit(rpg_t *rpg, sfVector2f pos);
+    void s_nature(rpg_t *rpg, sfVector2f pos);
+    void s_nature_exit(rpg_t *rpg, sfVector2f pos);
     void i_soda(rpg_t *rpg, sfVector2f pos);
     void i_paper_grocery(rpg_t *rpg, sfVector2f pos);
     void go_to_annia(void *main);

@@ -155,6 +155,7 @@
         int hp;
         int in_dialogue;
         int lore_open;
+        int lore_sound_played;
         char *lore_text;
         inventory_t *inventory;
         sfRectangleShape *hitbox;

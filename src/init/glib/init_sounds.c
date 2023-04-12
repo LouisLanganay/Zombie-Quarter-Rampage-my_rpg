@@ -7,6 +7,19 @@
 
 #include "rpg.h"
 
+static void init_sounds_bis(GLib_t *glib, sound_t *my_sound)
+{
+    my_sound->id = NATURE_SOUND_ID;
+    my_sound->sound = sfSound_create();
+    my_sound->buffer = sfSoundBuffer_createFromFile(NATURE_SOUND_PATH);
+    gl_create_sound(glib, my_sound);
+
+    my_sound->id = PAPER_SOUND_ID;
+    my_sound->sound = sfSound_create();
+    my_sound->buffer = sfSoundBuffer_createFromFile(PAPER_SOUND_PATH);
+    gl_create_sound(glib, my_sound);
+}
+
 void init_sounds(GLib_t *glib)
 {
     glib->sounds = NULL;
@@ -25,4 +38,5 @@ void init_sounds(GLib_t *glib)
     my_sound->sound = sfSound_create();
     my_sound->buffer = sfSoundBuffer_createFromFile(BASEMENT_SOUND_PATH);
     gl_create_sound(glib, my_sound);
+    init_sounds_bis(glib, my_sound);
 }
