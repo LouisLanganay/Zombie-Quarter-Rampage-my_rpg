@@ -14,11 +14,12 @@ void i_house_paper(rpg_t *rpg, sfVector2f pos)
     draw_interaction_popup(rpg, pos2, RPK->interact.key, str);
 
     if (sfKeyboard_isKeyPressed(RPK->interact.key)) {
-        stop_quest(rpg, "go_to_annia");
         while (sfKeyboard_isKeyPressed(RPK->interact.key));
         rpg->player->lore_text = my_strdup(get_language(rpg,
             "house_paper", RSG));
         rpg->player->lore_open = 1;
-        start_quest(rpg, "test_quest");
+        if (quest_is_completed(rpg, "go_to_annia") == 1 ||
+            quest_is_in_progress(rpg, "go_to_annia") == 1) return;
+        start_quest(rpg, "go_to_annia");
     }
 }

@@ -12,6 +12,9 @@ void game_start(rpg_t *rpg)
     if (rpg->maps_loaded == 0) {
         gl_check_events(rpg->glib->window, rpg->glib->events, rpg);
         draw_splash_screen(rpg);
-    } else
+    } else {
+        start_sound(rpg, MAIN_THEME_ID);
+        check_sounds(rpg);
         draw_menu(rpg);
+    }
 }

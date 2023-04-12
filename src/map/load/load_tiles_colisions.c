@@ -40,7 +40,6 @@ static void create_tile(parsed_data_t *tmp_arr, map_t *map, int count)
     if (!tmp)
         return;
     tmp->id = jp_search(tmp_arr, "id")->value.p_int + count;
-    printf("Load tile %i %i\n", tmp->id, jp_search(tmp_arr, "id")->value.p_int);
     tmp->colisions = NULL;
     load_tile_specificity(tmp, tmp_arr);
     tmp->next = map->tiles;

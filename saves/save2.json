@@ -21,8 +21,8 @@
 	},
 	"player": {
 		"pos": {
-			"x": 1026,
-			"y": 1218
+			"x": 305,
+			"y": 152
 		},
 		"hp": 100,
 		"inventory": {
@@ -34,13 +34,16 @@
 		}
 	},
 	"game": {
-		"actual_map": "resources/maps/main_map.json"
+		"actual_map": "resources/maps/player_basement.json"
 	},
 	"game_timeline": {
 		"npc_interactions": [
 			"npc"
 		],
 		"quests_in_progress": [
+			"quest"
+		],
+		"quests_completed": [
 			"quest"
 		]
 	}
