@@ -10,6 +10,7 @@
 void init(rpg_t *rpg)
 {
     init_glib(rpg);
+    init_game_sounds(rpg);
     init_language(rpg);
     init_settings(rpg);
     init_player(rpg);

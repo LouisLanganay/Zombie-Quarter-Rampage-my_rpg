@@ -32,7 +32,7 @@ static void display_item_data(rpg_t *rpg)
 
 void handle_inventory_system(rpg_t *rpg)
 {
-    sfVector2f view_pos = sfView_getCenter(RP->view);
+    sfVector2f view_pos = sfView_getCenter(RP->view->view);
     sfVector2f pos_s = {view_pos.x - 74, view_pos.y - 102};
     int pos = RP->inventory->pos;
     char *name = get_item_name(RP->inventory->items[RP->inventory->pos]);

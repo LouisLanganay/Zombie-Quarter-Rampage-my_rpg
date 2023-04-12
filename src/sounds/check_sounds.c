@@ -7,19 +7,30 @@
 
 #include "rpg.h"
 
+static void remove_sound_from_linked_list_id(
+    sounds_t *prev,
+    sounds_t *tmp,
+    rpg_t *rpg
+)
+{
+    if (prev == NULL)
+        rpg->sounds = tmp->next;
+    else
+        prev->next = tmp->next;
+    free(tmp);
+}
+
 static void remove_sound_from_linked_list(rpg_t *rpg, sounds_t *sound)
 {
     sounds_t *tmp = rpg->sounds;
+    sounds_t *prev = NULL;
 
-    if (tmp == sound) {
-        rpg->sounds = tmp->next;
-        free(tmp);
-        return;
-    }
-    while (tmp->next != sound)
+    while (tmp) {
+        if (tmp->id == sound->id)
+            return remove_sound_from_linked_list_id(prev, tmp, rpg);
+        prev = tmp;
         tmp = tmp->next;
-    tmp->next = sound->next;
-    free(sound);
+    }
 }
 
 static void change_sound_vol(rpg_t *rpg, sounds_t *sound)

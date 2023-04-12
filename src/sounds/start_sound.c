@@ -21,7 +21,7 @@ static int check_if_sound_is_already_playing(rpg_t *rpg, int id)
 
 static void add_sound_to_linked_list(rpg_t *rpg, int id)
 {
-    sounds_t *tmp = malloc(sizeof(*tmp));
+    sounds_t *tmp = malloc(sizeof(sound_t));
     tmp->id = id;
     tmp->start = sfClock_create();
     tmp->fade = sfClock_create();

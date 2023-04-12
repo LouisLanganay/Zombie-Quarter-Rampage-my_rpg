@@ -9,8 +9,8 @@
 
 static void draw_quest_box(rpg_t *rpg)
 {
-    sfVector2f view_pos = sfView_getCenter(rpg->player->view);
-    sfVector2f view_size = sfView_getSize(rpg->player->view);
+    sfVector2f view_pos = sfView_getCenter(rpg->player->view->view);
+    sfVector2f view_size = sfView_getSize(rpg->player->view->view);
 
     sfSprite_setPosition(RPA->quests_box,
         (sfVector2f){view_pos.x + view_size.x / 2 - 10,

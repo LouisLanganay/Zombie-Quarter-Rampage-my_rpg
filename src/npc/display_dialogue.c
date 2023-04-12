@@ -89,7 +89,7 @@ static void display_dialogue_escape(
 
 void display_dialogue(rpg_t *rpg)
 {
-    sfVector2f view_pos = sfView_getCenter(rpg->player->view);
+    sfVector2f view_pos = sfView_getCenter(rpg->player->view->view);
 
     if (rpg->player->in_dialogue == 0)
         return;
