@@ -48,6 +48,7 @@
     #define RSNI rpg->save->npc_interactions
     #define RPAQ rpg->player->assets->quest_icons
     #define RM rpg->menu_key
+    #define RP rpg->player
 
 
     #define GET_SAVE_GAMELANGUAGE my_strcmp(jp_search(data, \
@@ -366,6 +367,12 @@
     );
     void check_interactions(player_t *player, map_t *map, rpg_t *rpg);
     keyboard_images_t *get_keyboard_array(void);
+
+    /* INVENTORY*/
+    int add_item_to_inventory(int id, rpg_t *rpg);
+    int remove_item_to_inventory(rpg_t *rpg, int pos);
+    int add_item_to_inventory_pos(rpg_t *rpg, int pos, int id);
+    void handle_inventory_system(rpg_t *rpg);
 
     /* NPC */
     npc_t *get_npc(map_t *map, char *name);

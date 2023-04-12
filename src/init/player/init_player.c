@@ -30,17 +30,19 @@ static void init_player_keys(player_t *player)
     player->keys->choice_one = (p_key_t){0, sfKeyU};
     player->keys->choice_two = (p_key_t){0, sfKeyI};
     player->keys->inventory = (p_key_t){0, sfKeyA};
+    player->keys->enter = (p_key_t){0, sfKeyEnter};
     player->keys->last_direction = UP;
 }
 
 static void init_player_inventory(player_t *player)
 {
     player->inventory = malloc(sizeof(inventory_t));
-    player->inventory->items = malloc(sizeof(int) * 12);
+    player->inventory->items = malloc(sizeof(int) * 16);
 
-    for (int i = 0; i < 12; i++)
-        player->inventory->items[i] = i;
+    for (int i = 0; i < 16; i++)
+        player->inventory->items[i] = -1;
     player->inventory->is_open = 0;
+    player->inventory->is_data_open = 1;
     player->keys->escape = (p_key_t){0, sfKeyEscape};
     player->keys->last_direction = DOWN;
 }

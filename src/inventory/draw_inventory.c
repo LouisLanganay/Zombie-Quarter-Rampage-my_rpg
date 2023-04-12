@@ -18,5 +18,8 @@ void draw_inventory(rpg_t *rpg)
     (sfVector2f){view_pos.x - width / 2, view_pos.y - height / 2});
     sfRenderWindow_drawRectangleShape(rpg->glib->window->window,
     rpg->player->inventory->background, NULL);
+    sfSprite_setPosition(RP->inventory->items_data_sprite,
+    (sfVector2f) {view_pos.x - 74, view_pos.y + 40});
     draw_items(rpg);
+    handle_inventory_system(rpg);
 }
