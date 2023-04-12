@@ -6,7 +6,7 @@
             "x": 160,
             "y": 50
         },
-        "texture_path": "resources/assets/npc/Female1.png",
+        "texture_path": "resources/assets/npc/annia.png",
         "default_dialog": "default",
         "one_time": true,
         "dialogues": [
