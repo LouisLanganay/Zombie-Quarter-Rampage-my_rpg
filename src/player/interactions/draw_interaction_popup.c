@@ -26,10 +26,10 @@ void draw_interaction_popup(
     if (id != -1) {
         if (RSG == EN)
             sfSprite_setPosition(RPA->key_sprite[id],
-                (sfVector2f) {pos.x + 85, pos.y - 25});
+                (sfVector2f) {pos.x + 87, pos.y - 25});
         if (RSG == FR)
             sfSprite_setPosition(RPA->key_sprite[id],
-                (sfVector2f) {pos.x + 107, pos.y - 25});
+                (sfVector2f) {pos.x + 109, pos.y - 25});
         sfRenderWindow_drawSprite(RGW->window, RPA->key_sprite[id], NULL);
     }
 }

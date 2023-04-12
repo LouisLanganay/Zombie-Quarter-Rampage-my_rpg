@@ -19,20 +19,15 @@ static dialog_t *get_dialogue(dialog_t *tmp, dialog_t *actual, int choice)
     return NULL;
 }
 
-static void change_main_text(rpg_t *rpg, dialog_t *next)
-{
-    sfText *main_text = gl_get_text(rpg->glib, PLAYER_DIALOGUE_TEXT);
-
-    sfText_setString(main_text, next->text);
-}
-
-static void change_choice_text(rpg_t *rpg, dialog_t *next)
+static void change_texts(rpg_t *rpg, dialog_t *next)
 {
     sfText *choice_one_text = gl_get_text(rpg->glib,
         PLAYER_DCHOICE_ONE_TEXT);
     sfText *choice_two_text = gl_get_text(rpg->glib,
         PLAYER_DCHOICE_TWO_TEXT);
+    sfText *main_text = gl_get_text(rpg->glib, PLAYER_DIALOGUE_TEXT);
 
+    sfText_setString(main_text, next->text);
     if (next->options == NULL) {
         sfText_setString(choice_one_text, NULL);
         sfText_setString(choice_two_text, NULL);
@@ -42,25 +37,34 @@ static void change_choice_text(rpg_t *rpg, dialog_t *next)
     sfText_setString(choice_two_text, next->options[1]->text);
 }
 
+static char **get_new_arr(rpg_t *rpg, npc_t *npc)
+{
+    int size = my_arrlen(rpg->save->npc_interactions);
+    char **new_arr = malloc(sizeof(char *) * (size + 2));
+
+    for (int i = 0; i < size; i++)
+        new_arr[i] = my_strdup(rpg->save->npc_interactions[i]);
+    new_arr[size] = my_strdup(npc->name);
+    new_arr[size + 1] = NULL;
+
+    return new_arr;
+}
+
 void next_dialogue(rpg_t *rpg, int choice)
 {
     npc_t *npc = rpg->actual_npc;
     dialog_t *tmp = rpg->actual_npc->dialogs;
     dialog_t *actual = rpg->actual_dialog;
     dialog_t *next = get_dialogue(tmp, actual, choice);
-    parsed_data_t *data = NULL;
 
     if (next == NULL) {
         if (my_strcmp(actual->name, "default") != 0)
-            save_npc_interactions(rpg, npc);
-        data = jp_parse(rpg->save->path);
-        load_npc_interactions(rpg->save, jp_search(data, "game_timeline"));
+            rpg->save->npc_interactions = get_new_arr(rpg, npc);
         check_dialogue_function(rpg, actual);
         rpg->player->in_dialogue = 0;
         return;
     }
-    change_main_text(rpg, next);
-    change_choice_text(rpg, next);
+    change_texts(rpg, next);
     rpg->actual_dialog = next;
 
 }

@@ -12,6 +12,9 @@ int get_mid_char(const char *str)
     int i = 0;
     int len = 0;
 
+    if (str == NULL)
+        return (0);
+
     for (; str[i] != '\0'; i++)
         len++;
     return (len / 2);
