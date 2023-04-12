@@ -11,5 +11,4 @@ void go_to_annia(void *main)
 {
     (void)(main);
 
-    printf("go_to_annia\n");
 }

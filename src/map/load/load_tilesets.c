@@ -49,7 +49,7 @@ static void reverse_linked_list_tilesets(map_t *map)
 void load_tilesets(parsed_data_t *data, map_t *map)
 {
     parsed_data_t *tmp_arr = jp_search(data, "tilesets")->value.p_arr;
-    printf("Load TILESETS\n");
+    
     while (tmp_arr) {
         create_tileset(tmp_arr->value.p_obj, map);
         tmp_arr = tmp_arr->next;

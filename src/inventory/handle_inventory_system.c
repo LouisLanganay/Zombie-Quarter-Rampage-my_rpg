@@ -26,8 +26,6 @@ static char *get_item_name(int id)
 
 static void display_item_data(rpg_t *rpg, char *name)
 {
-    printf("%s\n", name);
-
     sfRenderWindow_drawSprite(rpg->glib->window->window,
     RP->inventory->items_data_sprite, NULL);
 }
