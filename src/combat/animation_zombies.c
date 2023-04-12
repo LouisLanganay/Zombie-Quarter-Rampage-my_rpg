@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-void animation_zombie1(zombies_t *l)
+static void animation_zombie1(zombies_t *l)
 {
     if (l->animation == 8)
         l->animation = 0;

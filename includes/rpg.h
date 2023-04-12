@@ -286,6 +286,7 @@
     #define map_night "resources/assets/combat/map_night.jpg"
     #define guy "resources/assets/combat/guy.png"
     #define bullet "resources/assets/combat/bullet.png"
+    #define atkplayer attack_player(rpg,tmp->attack_clock,tmp->attack_speed,tmp->damage)
 
     typedef struct combat_s {
         zombies_t *zombies;

@@ -7,13 +7,7 @@
 
 #include "rpg.h"
 
-float shot_angle(sfVector2f pos, sfVector2i mouse)
-{
-    float angle = atan2(mouse.y - pos.y, mouse.x - pos.x) * 180 / M_PI;
-    return angle;
-}
-
-void use_gun(rpg_t *rpg, sfClock *clock_shoot, bullets_t **bullets)
+static void use_gun(rpg_t *rpg, sfClock *clock_shoot, bullets_t **bullets)
 {
     if (sfMouse_isButtonPressed(sfMouseLeft) &&
     sfClock_getElapsedTime(clock_shoot).microseconds / 200000.0 > 1) {

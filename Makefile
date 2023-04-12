@@ -208,6 +208,12 @@ SRC += e_resume_btn.c
 SRC += e_save1.c
 SRC += e_save2.c
 SRC += e_save3.c
+SRC += delete_zombie_status.c
+SRC += insert_bullet.c
+SRC += draw_bullets.c
+SRC += move_bullets.c
+SRC += delete_outmap.c
+SRC += shot_angle.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

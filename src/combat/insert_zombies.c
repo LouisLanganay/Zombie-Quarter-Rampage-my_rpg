@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-void set_zombies(zombies_t *new_node)
+static void set_zombies(zombies_t *new_node)
 {
     new_node->clock_animation = sfClock_create();
     sfRectangleShape_setPosition(new_node->hitbox, new_node->pos);

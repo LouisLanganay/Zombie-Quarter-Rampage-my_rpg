@@ -7,14 +7,14 @@
 
 #include "rpg.h"
 
-void fill_combat_rpg(rpg_t *rpg)
+static void fill_combat_rpg(rpg_t *rpg)
 {
     init_guy(rpg);
     init_background(rpg);
     gl_create_event(rpg->glib, 50, sfEvtClosed, e_close);
 }
 
-void window_manager(rpg_t *rpg)
+static void window_manager(rpg_t *rpg)
 {
     print_framerate();
     sfRenderWindow_clear(rpg->glib->window->window, sfBlack);

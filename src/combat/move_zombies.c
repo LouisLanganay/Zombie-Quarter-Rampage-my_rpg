@@ -7,12 +7,12 @@
 
 #include "rpg.h"
 
-int distance(sfVector2f pos1, sfVector2f pos2)
+static int distance(sfVector2f pos1, sfVector2f pos2)
 {
     return (sqrt(pow(pos1.x - pos2.x, 2) + pow(pos1.y - pos2.y, 2)));
 }
 
-void attack_player(rpg_t *rpg, sfClock *attack_clock, float atk_speed, int dmg)
+static int attack_player(rpg_t *rpg, sfClock *attack_clock, float atk_speed, int dmg)
 {
     if (sfTime_asSeconds(sfClock_getElapsedTime(attack_clock)) > atk_speed) {
         sfClock_restart(attack_clock);
@@ -22,7 +22,7 @@ void attack_player(rpg_t *rpg, sfClock *attack_clock, float atk_speed, int dmg)
     }
 }
 
-void move_y_zombie(int distance_player, zombies_t *tmp, sfVector2f pos)
+static void move_y_zombie(int distance_player, zombies_t *tmp, sfVector2f pos)
 {
     if (distance_player < 600)
         if (tmp->pos.y > pos.y) {
@@ -34,7 +34,7 @@ void move_y_zombie(int distance_player, zombies_t *tmp, sfVector2f pos)
         }
 }
 
-void move_x_zombie(int distance_player, zombies_t *tmp, sfVector2f pos)
+static void move_x_zombie(int distance_player, zombies_t *tmp, sfVector2f pos)
 {
     if (tmp->pos.x > pos.x) {
         tmp->pos.x -= tmp->speed;
