@@ -30,6 +30,8 @@
     #define TXT_SAVE2 19
     #define TXT_SAVE3 20
 
+    #define SETTINGS_VOLUME_TEXT 21
+
     #define SETTINGS_KEY_UP 56445
     #define SETTINGS_KEY_DOWN 564445
     #define SETTINGS_KEY_LEFT 5645

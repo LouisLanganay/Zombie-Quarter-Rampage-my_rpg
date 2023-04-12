@@ -24,4 +24,5 @@ int main(int ac, char **av)
         if (rpg->maps_loaded == 0)
             load_maps(rpg);
     }
+    sfRenderWindow_destroy(rpg->glib->window->window);
 }

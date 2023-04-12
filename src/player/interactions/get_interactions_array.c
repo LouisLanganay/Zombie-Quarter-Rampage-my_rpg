@@ -15,8 +15,9 @@ interactions_t *get_interactions_array(void)
         { "i_grocery_door", i_grocery_door }, { "i_pass_fence", i_pass_fence },
         { "i_end_map_top", i_end_map_top }, { "i_paper_music", i_paper_music },
         { "i_paper_resources", i_paper_resources },
-        { "i_basement_paper", i_basement_paper },
+        { "i_basement_paper", i_basement_paper }, { "i_soda", i_soda },
         { "i_house1_door", i_house1_door }, {"i_end_map_down", i_end_map_down },
+        { "i_paper_grocery", i_paper_grocery},
         { NULL, NULL }
     };
     interactions_t *inte = malloc(sizeof(interactions_t) *

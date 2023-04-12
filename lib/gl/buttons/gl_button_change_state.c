@@ -7,6 +7,19 @@
 
 #include "../gl.h"
 
+static void gl_button_change_state_change_rect(buttons_t *tmp)
+{
+    if (tmp->disabled == sfTrue) {
+        tmp->rect.left = tmp->rect.width * 2;
+        return;
+    }
+    if (tmp->hovered == sfTrue) {
+        tmp->rect.left = tmp->rect.width;
+        return;
+    }
+    tmp->rect.left = 0;
+}
+
 void gl_button_change_state(int id, buttons_t *buttons, sfBool state)
 {
     buttons_t *tmp = buttons;
@@ -14,6 +27,7 @@ void gl_button_change_state(int id, buttons_t *buttons, sfBool state)
         if (tmp->id == id) {
             tmp->disabled = state;
             tmp->rect.left = tmp->rect.width * 2;
+            gl_button_change_state_change_rect(tmp);
             return;
         }
         tmp = tmp->next;
