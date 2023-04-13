@@ -27,6 +27,8 @@ int load_settings(rpg_t *rpg, parsed_data_t *data)
 {
     data = data->value.p_obj;
     rpg->settings->game_language = GET_SAVE_GAMELANGUAGE;
+    rpg->settings->window_mode = jp_search(data, "window_mode")->value.p_int;
+    change_window_mode(rpg, rpg->settings->window_mode);
     load_settings_key(rpg, jp_search(data, "keys")->value.p_obj);
     return (0);
 }

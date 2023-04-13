@@ -55,6 +55,7 @@ VPATH += src/view
 VPATH += src/events
 VPATH += src/inventory
 VPATH += src/player
+VPATH += src/window
 VPATH += src/player/moovment
 VPATH += src/player/interactions
 VPATH += src/player/colisions
@@ -251,6 +252,7 @@ SRC += s_grocery.c
 SRC += s_grocery_exit.c
 SRC += init_hud.c
 SRC += draw_hud.c
+SRC += change_window_mode.c
 
 
 INC_DIR 	:= includes

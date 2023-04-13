@@ -185,6 +185,11 @@
         bool active;
     } menu_t;
 
+    typedef enum wmode_e {
+        FSCREEN,
+        WINDOWED
+    } wmode_t;
+
     typedef struct menu_save_s {
         sfTexture *bg_texture;
         sfSprite *bg_sprite;
@@ -200,6 +205,7 @@
     typedef struct settings_s {
         language_type_t game_language;
         int volume;
+        wmode_t window_mode;
     } settings_t;
 
     typedef struct save_s {
@@ -491,6 +497,9 @@
     /* TEXT */
     void divide_a_sftext(sfText *text, sfVector2f pos, rpg_t *rpg);
     void divide_a_text(rpg_t *rpg, devide_text_t *devide_text);
+
+    /* WINDOW */
+    void change_window_mode(rpg_t *rpg, wmode_t mode);
 
     /* SOUNDS */
     void fade_sound(rpg_t *rpg, int id, float time);
