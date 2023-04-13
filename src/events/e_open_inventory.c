@@ -7,6 +7,20 @@
 
 #include "rpg.h"
 
+static void handle_selection_inv(rpg_t *rpg)
+{
+    if (rpg->glib->window->event.key.code == sfKeyUp ||
+    rpg->glib->window->event.key.code == sfKeyDown ||
+    rpg->glib->window->event.key.code == sfKeyRight ||
+    rpg->glib->window->event.key.code == sfKeyLeft)
+        rpg->player->inventory->is_data_open = 1;
+    if (sfKeyboard_isKeyPressed(rpg->player->keys->choice_one.key) == sfTrue
+    && rpg->player->inventory->is_data_open == 0) {
+        rpg->player->inventory->is_data_open = 1;
+        remove_item_to_inventory(rpg, RP->inventory->pos);
+    }
+}
+
 void e_open_inventory(window_t *window, void *main)
 {
     (void)window;
@@ -24,14 +38,5 @@ void e_open_inventory(window_t *window, void *main)
         else
             rpg->player->inventory->is_data_open = 0;
     }
-    if (rpg->glib->window->event.key.code == sfKeyUp ||
-    rpg->glib->window->event.key.code == sfKeyDown ||
-    rpg->glib->window->event.key.code == sfKeyRight ||
-    rpg->glib->window->event.key.code == sfKeyLeft)
-        rpg->player->inventory->is_data_open = 1;
-    if (sfKeyboard_isKeyPressed(rpg->player->keys->choice_one.key) == sfTrue
-    && rpg->player->inventory->is_data_open == 0) {
-        rpg->player->inventory->is_data_open = 1;
-        remove_item_to_inventory(rpg, RP->inventory->pos);
-    }
+    handle_selection_inv(rpg);
 }

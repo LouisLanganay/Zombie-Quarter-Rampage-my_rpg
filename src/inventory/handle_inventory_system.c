@@ -28,7 +28,8 @@ static void display_item_data(rpg_t *rpg, char *name)
 {
     devide_text_t *devide = malloc(sizeof(devide_text_t));
     sfVector2f view_pos = sfView_getCenter(RP->view);
-    char *description = get_description(RP->inventory->items[RP->inventory->pos]);
+    char *description = get_description(RP->inventory->items
+    [RP->inventory->pos]);
 
     sfRenderWindow_drawSprite(rpg->glib->window->window,
     RP->inventory->items_data_sprite, NULL);
