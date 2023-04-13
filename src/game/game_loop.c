@@ -18,4 +18,5 @@ void game_loop(rpg_t *rpg)
     draw_inventory(rpg);
     check_sounds(rpg);
     draw_quests(rpg);
+    draw_hud(rpg);
 }
