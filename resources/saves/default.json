@@ -15,7 +15,7 @@
 			"interact": 4,
 			"choice1": 24,
 			"choice2": 20,
-			"inventory": 8,
+			"inventory": 0,
 			"escape": 36
 		}
 	},
