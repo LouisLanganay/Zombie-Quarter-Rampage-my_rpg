@@ -21,8 +21,8 @@
 	},
 	"player": {
 		"pos": {
-			"x": 277,
-			"y": 239
+			"x": 224,
+			"y": 126
 		},
 		"hp": 100,
 		"inventory": {
@@ -34,14 +34,15 @@
 		}
 	},
 	"game": {
-		"actual_map": "resources/maps/player_basement.json"
+		"actual_map": "resources/maps/grocery_store.json"
 	},
 	"game_timeline": {
 		"npc_interactions": [
 			"npc"
 		],
 		"quests_in_progress": [
-			"quest"
+			"quest",
+			"go_to_annia"
 		],
 		"quests_completed": [
 			"quest"

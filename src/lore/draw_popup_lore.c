@@ -17,7 +17,7 @@ static void draw_popup_lore_play_sound(rpg_t *rpg)
 
 void draw_popup_lore(rpg_t *rpg)
 {
-    sfVector2f view_pos = sfView_getCenter(rpg->player->view);
+    sfVector2f view_pos = sfView_getCenter(rpg->player->view->view);
     devide_text_t *devide = NULL;
     if (rpg->player->lore_open != 1) return;
     draw_popup_lore_play_sound(rpg);

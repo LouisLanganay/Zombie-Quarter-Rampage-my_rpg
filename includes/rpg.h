@@ -442,6 +442,7 @@
 
     /* VIEW */
     void set_view_on_player(rpg_t *rpg);
+    void zoom_view(rpg_t *rpg, float value, float time);
 
     /* PLAYER */
     int get_key_id(sfKeyCode key, rpg_t *rpg);

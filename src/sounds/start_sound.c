@@ -9,23 +9,24 @@
 
 static int check_if_sound_is_already_playing(rpg_t *rpg, int id)
 {
-    sounds_t *sound = rpg->sounds;
+    sounds_t *tmp = rpg->sounds;
 
-    while (sound != NULL) {
-        if (sound->id == id)
+    while (tmp != NULL) {
+        if (tmp->id == id)
             return 1;
-        sound = sound->next;
+        tmp = tmp->next;
     }
     return 0;
 }
 
 static void add_sound_to_linked_list(rpg_t *rpg, int id)
 {
-    sounds_t *tmp = malloc(sizeof(*tmp));
+    sounds_t *tmp = malloc(sizeof(sounds_t));
+
     tmp->id = id;
     tmp->start = sfClock_create();
     tmp->fade = sfClock_create();
-    tmp->fade_time = 0;
+    tmp->fade_time = (float)0;
 
     tmp->next = rpg->sounds;
     rpg->sounds = tmp;

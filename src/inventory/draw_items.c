@@ -9,7 +9,7 @@
 
 static void draw_ui(rpg_t *rpg)
 {
-    sfVector2f view_pos = sfView_getCenter(RP->view);
+    sfVector2f view_pos = sfView_getCenter(RP->view->view);
     sfVector2f items_pos = {view_pos.x - 74, view_pos.y - 101};
 
     sfSprite_setTexture(RP->inventory->bg_items_sprite,
@@ -24,7 +24,7 @@ static void draw_ui(rpg_t *rpg)
 
 void draw_items(rpg_t *rpg)
 {
-    sfVector2f view_pos = sfView_getCenter(RP->view);
+    sfVector2f view_pos = sfView_getCenter(RP->view->view);
     sfVector2f items_pos = {view_pos.x - 70, view_pos.y - 100};
 
     draw_ui(rpg);

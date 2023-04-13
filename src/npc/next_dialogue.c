@@ -64,6 +64,7 @@ void next_dialogue(rpg_t *rpg, int choice)
             rpg->save->npc_interactions = get_new_arr(rpg, npc);
         check_dialogue_function(rpg, actual);
         rpg->player->in_dialogue = 0;
+        zoom_view(rpg, 1.001, 20);
         return;
     }
     change_texts(rpg, next);

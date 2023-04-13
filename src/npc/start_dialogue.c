@@ -50,6 +50,7 @@ static void start_dialogue_discovery(npc_t *npc, rpg_t *rpg)
 void start_dialogue(rpg_t *rpg, npc_t *npc)
 {
     if (rpg->player->in_dialogue != 0) return;
+    zoom_view(rpg, 0.999, 20);
     if (npc->one_time == 1 && my_arr_contains(RSNI, npc->name) == 1)
         start_dialogue_default(npc, rpg);
     else

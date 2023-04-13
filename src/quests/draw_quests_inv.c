@@ -10,8 +10,8 @@
 static void draw_quest_text(char *quest_id, rpg_t *rpg, int i, int nb_text)
 {
     quest_t *quest = get_quest(rpg, quest_id);
-    sfVector2f vp = sfView_getCenter(rpg->player->view);
-    sfVector2f vs = sfView_getSize(rpg->player->view);
+    sfVector2f vp = sfView_getCenter(rpg->player->view->view);
+    sfVector2f vs = sfView_getSize(rpg->player->view->view);
     sfVector2f pos = (sfVector2f){vp.x + vs.x / 5 + 5, vp.y - vs.y / 2 + 40};
     sfText *text = sfText_create();
 
@@ -28,8 +28,8 @@ static void draw_quest_text(char *quest_id, rpg_t *rpg, int i, int nb_text)
 static void draw_quest_icon(char *quest_id, rpg_t *rpg, int i, int nb_text)
 {
     quest_t *quest = get_quest(rpg, quest_id);
-    sfVector2f vp = sfView_getCenter(rpg->player->view);
-    sfVector2f vs = sfView_getSize(rpg->player->view);
+    sfVector2f vp = sfView_getCenter(rpg->player->view->view);
+    sfVector2f vs = sfView_getSize(rpg->player->view->view);
     sfVector2f pos = (sfVector2f){vp.x + vs.x / 5 - 7, vp.y - vs.y / 2 + 40};
 
     if (my_strcmp(quest->type, "go_to") == 0) {
@@ -52,8 +52,8 @@ static void draw_quest_icon(char *quest_id, rpg_t *rpg, int i, int nb_text)
 void draw_quests_inv(rpg_t *rpg)
 {
     quest_t *quest = NULL;
-    sfVector2f vp = sfView_getCenter(rpg->player->view);
-    sfVector2f vs = sfView_getSize(rpg->player->view);
+    sfVector2f vp = sfView_getCenter(rpg->player->view->view);
+    sfVector2f vs = sfView_getSize(rpg->player->view->view);
     sfVector2f pos = (sfVector2f){vp.x + vs.x / 5 - 7, vp.y - vs.y / 2 + 40};
     devide_text_t *devide = malloc(sizeof(devide_text_t));
     int nb_text = 0;

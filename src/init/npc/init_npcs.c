@@ -19,6 +19,8 @@ static void init_npc_interaction(npc_t *npc, map_t *map)
             tmp->width = 100;
             tmp->height = 100;
             tmp->name = my_strdup(npc->name);
+            tmp->is_exit = 0;
+            tmp->is_trigger = 0;
             tmp->next = layer->objects;
             layer->objects = tmp;
             return;
