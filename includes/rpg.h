@@ -185,6 +185,11 @@
         bool active;
     } menu_t;
 
+    typedef enum wmode_e {
+        FSCREEN,
+        WINDOWED
+    } wmode_t;
+
     typedef struct menu_save_s {
         sfTexture *bg_texture;
         sfSprite *bg_sprite;
@@ -200,6 +205,7 @@
     typedef struct settings_s {
         language_type_t game_language;
         int volume;
+        wmode_t window_mode;
     } settings_t;
 
     typedef struct save_s {
@@ -249,11 +255,19 @@
         sfClock *clock;
     } narative_t;
 
+    typedef struct hud_s {
+        sfRectangleShape *hp_bar;
+        sfRectangleShape *hp_bar_back;
+        sfRectangleShape *hunger_bar;
+        sfRectangleShape *hunger_bar_back;
+    } hud_t;
+
     typedef struct rpg_s {
         int debug;
         char *actual_map;
         int game_started;
         int maps_loaded;
+        hud_t *hud;
         dialog_t *actual_dialog;
         npc_t *actual_npc;
         map_t *maps;
@@ -484,6 +498,9 @@
     void divide_a_sftext(sfText *text, sfVector2f pos, rpg_t *rpg);
     void divide_a_text(rpg_t *rpg, devide_text_t *devide_text);
 
+    /* WINDOW */
+    void change_window_mode(rpg_t *rpg, wmode_t mode);
+
     /* SOUNDS */
     void fade_sound(rpg_t *rpg, int id, float time);
     void start_sound(rpg_t *rpg, int id);
@@ -539,6 +556,10 @@
     void init_saves_texts(rpg_t *rpg);
     void draw_settings(rpg_t *rpg);
 
+    /* HUD */
+    void draw_hud(rpg_t *rpg);
+
+
 
     /* LORE */
     void draw_popup_lore(rpg_t *rpg);
@@ -583,6 +604,7 @@
     void init_sounds(GLib_t *glib);
     void init_language(rpg_t *rpg);
     void init_popup_lore(rpg_t *rpg);
+    void init_hud(rpg_t *rpg);
     void init_slider(rpg_t *rpg);
     void init_save(rpg_t *rpg);
     void init_events(rpg_t *rpg);

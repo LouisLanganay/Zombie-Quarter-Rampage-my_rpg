@@ -7,6 +7,7 @@
 	},
 	"settings": {
 		"game_language": "fr",
+		"window_mode": 1,
 		"keys": {
 			"up": 25,
 			"down": 18,
@@ -24,7 +25,8 @@
 			"x": 2161,
 			"y": 263
 		},
-		"hp": 100,
+		"hp": 20,
+		"hunger": 100,
 		"inventory": {
 			"items": [
 				1,
@@ -41,8 +43,7 @@
 			"npc"
 		],
 		"quests_in_progress": [
-			"quest",
-			"go_to_annia"
+			"quest"
 		],
 		"quests_completed": [
 			"quest"

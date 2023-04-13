@@ -160,6 +160,7 @@
 
     typedef struct player_s {
         int hp;
+        int hunger;
         int in_dialogue;
         int lore_open;
         int lore_sound_played;
