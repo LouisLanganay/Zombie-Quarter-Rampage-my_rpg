@@ -125,7 +125,7 @@
     },
     "annia_help_give_food": {
         "en": "Thank you for this food! I'm so hungry! I have this in my bag. It's a gun. It's for you.",
-        "fr": "Merci pour cette nourriture! J'ai tellement faim! J'ai ça dans mon sac. C'est un pistolet. C'est pour toi."
+        "fr": "Merci pour cette nourriture! J'ai tellement faim! J'ai ca dans mon sac. C'est un pistolet. C'est pour toi."
     },
     "annia_help_next_ignore": {
         "fr": "Ne pas prendre l'arme.",
@@ -160,7 +160,7 @@
         "fr": "Enclume"
     },
     "anvil_description": {
-        "fr": "un outil en métal lourd utilisé pour façonner ou marteler des objets métalliques.",
+        "fr": "un outil en metal lourd utilise pour faconner ou marteler des objets metalliques.",
         "en": "A heavy metal tool used to shape or hammer metal objects."
     },
     "c4_name": {
@@ -176,7 +176,7 @@
         "fr": "Batteries"
     },
     "batteries_description": {
-        "fr": "un dispositif de stockage d'énergie électrique qui alimente différents types d'appareils électriques.",
+        "fr": "un dispositif de stockage d'energie electrique qui alimente differents types d'appareils electriques.",
         "en": "A device for storing electrical energy that powers different types of electrical devices."
     },
     "tournevis_name": {
@@ -184,7 +184,7 @@
         "fr": "Tournevis"
     },
     "tournevis_description": {
-        "fr": "un outil utilisé pour serrer ou desserrer les vis et les boulons",
+        "fr": "un outil utilise pour serrer ou desserrer les vis et les boulons",
         "en": "A tool used to tighten or loosen screws and bolts"
     },
     "coton_name": {
@@ -192,7 +192,7 @@
         "fr": "Coton"
     },
     "coton_description": {
-        "fr": "un tissu léger et doux, utilisé pour faire des vêtements et des draps.",
+        "fr": "un tissu leger et doux, utilise pour faire des vetements et des draps.",
         "en": "A light and soft fabric, used to make clothes and sheets."
     },
     "cle_de_porte_name": {
@@ -216,7 +216,7 @@
         "fr": "Pile"
     },
     "pile_description": {
-        "fr": "un dispositif électrique qui convertit l'énergie chimique en énergie électrique pour alimenter différents types d'appareils.",
+        "fr": "un dispositif electrique qui convertit l'energie chimique en energie electrique pour alimenter differents types d'appareils.",
         "en": "an electrical device that converts chemical energy into electrical energy to power various types of devices."
     },
     "lampe_torche_name": {
@@ -224,7 +224,7 @@
         "fr": "Lampe torche"
     },
     "lampe_torche_description": {
-        "fr": "un dispositif portable qui produit de la lumière à partir d'une source d'énergie électrique.",
+        "fr": "un dispositif portable qui produit de la lumière a partir d'une source d'energie electrique.",
         "en": "A portable device that produces light from an electrical power source."
     },
     "sac_name": {
@@ -244,7 +244,7 @@
         "fr": "Carte d'acces 1"
     },
     "carte_acces_1_description": {
-        "fr": "Une carte qui permet d'ouvrir une porte sécurisé.",
+        "fr": "Une carte qui permet d'ouvrir une porte securise.",
         "en": "A card that allows you to open a securised door."
     },
     "boite_a_outils_name": {
@@ -268,7 +268,7 @@
         "fr": "Scie"
     },
     "scie_description": {
-        "fr": "un outil utilisé pour couper des matériaux durs.",
+        "fr": "un outil utilise pour couper des materiaux durs.",
         "en": "A tool used to cut hard materials."
     },
     "marteau_name": {
@@ -276,7 +276,7 @@
         "fr": "Marteau"
     },
     "marteau_description": {
-        "fr": "un outil utilisé pour frapper des clous et des clous.",
+        "fr": "un outil utilise pour frapper des clous et des clous.",
         "en": "A tool used to hit nails and nails."
     },
     "charbon_name": {
@@ -284,7 +284,7 @@
         "fr": "Charbon"
     },
     "charbon_description": {
-        "fr": "un combustible fossile utilisé pour produire de l'énergie.",
+        "fr": "un combustible fossile utilise pour produire de l'energie.",
         "en": "A fossil fuel used to produce energy."
     },
     "cadenas_name": {
@@ -316,7 +316,7 @@
         "fr": "Talkie walkie"
     },
     "talkie_walkie_description": {
-        "fr": "un dispositif qui permet de communiquer à distance.",
+        "fr": "un dispositif qui permet de communiquer a distance.",
         "en": "A device that allows you to communicate at a distance."
     },
     "carte": {
@@ -324,7 +324,7 @@
         "fr": "carte"
     },
     "carte_description": {
-        "fr": "Une carte qui permet de se repérer dans un lieu.",
+        "fr": "Une carte qui permet de se reperer dans un lieu.",
         "en": "A card that allows you to find your way around a place."
     },
     "tente_name": {
@@ -340,7 +340,7 @@
         "fr": "Carte d'acces 2"
     },
     "carte_acces_2_description": {
-        "fr": "Une carte qui permet d'ouvrir une porte super sécurisé.",
+        "fr": "Une carte qui permet d'ouvrir une porte super securise.",
         "en": "A card that allows you to open a super securised door."
     },
     "pince_name": {
@@ -348,7 +348,7 @@
         "fr": "Pince"
     },
     "pince_description": {
-        "fr": "un outil utilisé pour serrer et couper des objets.",
+        "fr": "un outil utilise pour serrer et couper des objets.",
         "en": "A tool used to squeeze and cut objects."
     },
     "cutter_name": {
@@ -356,7 +356,7 @@
         "fr": "Cutter"
     },
     "cutter_description": {
-        "fr": "un outil utilisé pour couper des objets.",
+        "fr": "un outil utilise pour couper des objets.",
         "en": "A tool used to cut objects."
     },
     "pelle_name": {
@@ -364,7 +364,7 @@
         "fr": "Pelle"
     },
     "pelle_description": {
-        "fr": "un outil utilisé pour creuser.",
+        "fr": "un outil utilise pour creuser.",
         "en": "A tool used to dig."
     },
     "hache_name": {
@@ -372,7 +372,7 @@
         "fr": "Hache"
     },
     "hache_description": {
-        "fr": "un outil utilisé pour couper des arbres.",
+        "fr": "un outil utilise pour couper des arbres.",
         "en": "A tool used to cut trees."
     },
     "cailloux_name": {
@@ -380,7 +380,7 @@
         "fr": "Cailloux"
     },
     "cailloux_description": {
-        "fr": "un objet naturel utilisé pour casser des choses.",
+        "fr": "un objet naturel utilise pour casser des choses.",
         "en": "A natural object used to break things."
     },
     "cadenas_rouille_name": {
@@ -412,7 +412,7 @@
         "fr": "Compas"
     },
     "compas_description": {
-        "fr": "un outil qui permet de se repérer dans un lieu.",
+        "fr": "un outil qui permet de se reperer dans un lieu.",
         "en": "A tool that allows you to find your way around a place."
     },
     "note_name": {
@@ -444,7 +444,7 @@
         "fr": "Marteau de fer"
     },
     "marteau_de_fer_description": {
-        "fr": "un outil utilisé pour casser des choses.",
+        "fr": "un outil utilise pour casser des choses.",
         "en": "A tool used to break things."
     },
     "cle_outil_name": {
@@ -460,7 +460,7 @@
         "fr": "Pioche"
     },
     "pioche_description": {
-        "fr": "un outil utilisé pour creuser la pierre.",
+        "fr": "un outil utilise pour creuser la pierre.",
         "en": "A tool used to dig down."
     },
     "couteau_pliant_name": {
@@ -468,7 +468,7 @@
         "fr": "Couteau pliant"
     },
     "couteau_pliant_description": {
-        "fr": "un outil utilisé pour couper des objets.",
+        "fr": "un outil utilise pour couper des objets.",
         "en": "A tool used to cut objects."
     },
     "piege_name": {
@@ -508,7 +508,7 @@
         "fr": "Comprimes"
     },
     "compresse_description": {
-        "fr": "Une compresse qui peut être utilisée pour soigner des blessures.",
+        "fr": "Une compresse qui peut etre utilisee pour soigner des blessures.",
         "en": "A compress that can be used to treat wounds."
     },
     "tome_bleu_name": {
@@ -540,7 +540,7 @@
         "fr": "Hachoir"
     },
     "hachoir_description": {
-        "fr": "un outil utilisé pour couper des objets.",
+        "fr": "un outil utilise pour couper des objets.",
         "en": "A tool used to cut objects."
     },
     "couteau_de_chasse_name": {
@@ -548,7 +548,7 @@
         "fr": "Couteau de chasse"
     },
     "couteau_de_chasse_description": {
-        "fr": "un outil utilisé pour couper.",
+        "fr": "un outil utilise pour couper.",
         "en": "A tool used to cut."
     },
     "couteau_suisse_name": {
@@ -556,7 +556,7 @@
         "fr": "Couteau suisse"
     },
     "couteau_suisse_description": {
-        "fr": "un outil utilisé pour couper.",
+        "fr": "un outil utilise pour couper.",
         "en": "A tool used to cut."
     },
     "dynamite_name": {
@@ -564,7 +564,7 @@
         "fr": "Dynamite"
     },
     "dynamite_description": {
-        "fr": "un explosif qui peut être utilisé pour creuser.",
+        "fr": "un explosif qui peut etre utilise pour creuser.",
         "en": "an explosive that can be used to dig down."
     },
     "conserve_name": {
@@ -604,7 +604,7 @@
         "fr": "Medicaments"
     },
     "medicaments_description": {
-        "fr": "des medicaments qui peuvent être utilisés pour soigner des blessures.",
+        "fr": "des medicaments qui peuvent etre utilises pour soigner des blessures.",
         "en": "medicines that can be used to treat wounds."
     },
     "pansement_name": {
@@ -612,7 +612,7 @@
         "fr": "Pansement"
     },
     "pansement_description": {
-        "fr": "un pansement qui peut être utilisé pour soigner des blessures.",
+        "fr": "un pansement qui peut etre utilise pour soigner des blessures.",
         "en": "A bandage that can be used to treat wounds."
     },
     "sauce_ketchup_name": {
@@ -620,7 +620,7 @@
         "fr": "Sauce ketchup"
     },
     "sauce_ketchup_description": {
-        "fr": "Une sauce qui peut être utilisée pour manger.",
+        "fr": "Une sauce qui peut etre utilisee pour manger.",
         "en": "A sauce that can be used to eat."
     },
     "acide_sulfurique_name": {
@@ -628,7 +628,7 @@
         "fr": "Acide sulfurique"
     },
     "acide_sulfurique_description": {
-        "fr": "un acide qui peut être utilisé pour creuser.",
+        "fr": "un acide qui peut etre utilise pour creuser.",
         "en": "an acid that can be used to dig down."
     },
     "couteau_name": {
@@ -636,7 +636,7 @@
         "fr": "Couteau"
     },
     "couteau_description": {
-        "fr": "un outil utilisé pour couper.",
+        "fr": "un outil utilise pour couper.",
         "en": "A tool used to cut."
     },
     "grenade_verte_name": {
@@ -660,7 +660,7 @@
         "fr": "Boite d'allumettes"
     },
     "boite_allumettes_description": {
-        "fr": "Une boite d'allumettes qui peut être utilisée pour allumer des feux.",
+        "fr": "Une boite d'allumettes qui peut etre utilisee pour allumer des feux.",
         "en": "A box of matches that can be used to light fires."
     },
     "thon_name": {
@@ -668,7 +668,7 @@
         "fr": "Thon"
     },
     "thon_description": {
-        "fr": "un poisson qui peut être utilisé pour manger.",
+        "fr": "un poisson qui peut etre utilise pour manger.",
         "en": "A fish that can be used to eat."
     },
     "tablette_chocolat_name": {
@@ -676,7 +676,7 @@
         "fr": "Tablette de chocolat"
     },
     "tablette_chocolat_description": {
-        "fr": "Une tablette de chocolat qui peut être utilisée pour manger.",
+        "fr": "Une tablette de chocolat qui peut etre utilisee pour manger.",
         "en": "A chocolate bar that can be used to eat."
     },
     "oeufs_name": {
@@ -684,7 +684,7 @@
         "fr": "Oeufs"
     },
     "oeufs_description": {
-        "fr": "des oeufs qui peuvent être utilisés pour manger.",
+        "fr": "des oeufs qui peuvent etre utilises pour manger.",
         "en": "eggs that can be used to eat."
     },
     "patate_crue_name": {
@@ -692,7 +692,7 @@
         "fr": "Patate crue"
     },
     "patate_crue_description": {
-        "fr": "Une patate qui peut être utilisée pour manger.",
+        "fr": "Une patate qui peut etre utilisee pour manger.",
         "en": "A potato that can be used to eat."
     },
     "conserve_pate_name": {
@@ -708,7 +708,7 @@
         "fr": "Caisse"
     },
     "caisse_description": {
-        "fr": "Une caisse qui peut être utilisée pour stocker des objets.",
+        "fr": "Une caisse qui peut etre utilisee pour stocker des objets.",
         "en": "A crate that can be used to store items."
     },
     "desincfectant_name": {
@@ -716,7 +716,7 @@
         "fr": "Desinfectant"
     },
     "desincfectant_description": {
-        "fr": "un desinfectant qui peut être utilisé pour nettoyer des blessures.",
+        "fr": "un desinfectant qui peut etre utilise pour nettoyer des blessures.",
         "en": "A disinfectant that can be used to clean wounds."
     },
     "acide_nitrique_name": {
@@ -724,7 +724,7 @@
         "fr": "Acide nitrique"
     },
     "acide_nitrique_description": {
-        "fr": "un acide qui peut être utilisé sur les gens.",
+        "fr": "un acide qui peut etre utilise sur les gens.",
         "en": "an acid that can be used on people."
     },
     "pistolet_barillet_name": {
@@ -732,7 +732,7 @@
         "fr": "Pistolet a barillet"
     },
     "pistolet_barillet_description": {
-        "fr": "un pistolet qui peut être utilisé pour tirer.",
+        "fr": "un pistolet qui peut etre utilise pour tirer.",
         "en": "A pistol that can be used to shoot."
     },
     "pistolet_name": {
@@ -740,7 +740,7 @@
         "fr": "Pistolet"
     },
     "pistolet_description": {
-        "fr": "un pistolet qui peut être utilisé pour tirer.",
+        "fr": "un pistolet qui peut etre utilise pour tirer.",
         "en": "A pistol that can be used to shoot."
     },
     "fusil_pompe_name": {
@@ -748,7 +748,7 @@
         "fr": "Fusil a pompe"
     },
     "fusil_pompe_description": {
-        "fr": "un fusil a pompe qui peut être utilisé pour tirer.",
+        "fr": "un fusil a pompe qui peut etre utilise pour tirer.",
         "en": "A shotgun that can be used to shoot."
     },
     "briquet_name": {
@@ -756,7 +756,7 @@
         "fr": "Briquet"
     },
     "briquet_description": {
-        "fr": "un briquet qui peut être utilisé pour allumer des feux.",
+        "fr": "un briquet qui peut etre utilise pour allumer des feux.",
         "en": "A lighter that can be used to light fires."
     },
     "sac_main_name": {
@@ -764,7 +764,7 @@
         "fr": "Sac a main"
     },
     "sac_main_description": {
-        "fr": "un sac a main qui peut être utilisé pour stocker des objets.",
+        "fr": "un sac a main qui peut etre utilise pour stocker des objets.",
         "en": "A backpack that can be used to store items."
     },
     "conserve_rose_name": {
@@ -780,7 +780,7 @@
         "fr": "Citron vert"
     },
     "citron_vert_description": {
-        "fr": "un citron qui peut être utilisé pour manger.",
+        "fr": "un citron qui peut etre utilise pour manger.",
         "en": "A lemon that can be used to eat."
     },
     "gigot_cru_name": {
@@ -788,7 +788,7 @@
         "fr": "Gigot de mouton cru"
     },
     "gigot_cru_description": {
-        "fr": "un gigot de mouton qui peut être utilisé pour manger, mais peu faire mal au ventre.",
+        "fr": "un gigot de mouton qui peut etre utilise pour manger, mais peu faire mal au ventre.",
         "en": "A leg of lamb that can be used to eat, but be careful that can make you sick."
     },
     "gigot_name": {
@@ -796,7 +796,7 @@
         "fr": "Gigot de mouton"
     },
     "gigot_description": {
-        "fr": "un gigot de mouton qui peut être utilisé pour manger.",
+        "fr": "un gigot de mouton qui peut etre utilise pour manger.",
         "en": "A leg of lamb that can be used to eat."
     },
     "pilule_violette_name": {
@@ -804,7 +804,7 @@
         "fr": "Pilule violette"
     },
     "pilule_violette_description": {
-        "fr": "Une pilule qui peut être utilisée pour se soigner.",
+        "fr": "Une pilule qui peut etre utilisee pour se soigner.",
         "en": "A pill that can be used to heal."
     },
     "medikit_name": {
@@ -812,7 +812,7 @@
         "fr": "Medikit"
     },
     "medikit_description": {
-        "fr": "un medikit qui peut être utilisé pour se soigner.",
+        "fr": "un medikit qui peut etre utilise pour se soigner.",
         "en": "A medikit that can be used to heal."
     },
     "seringue_name": {
@@ -820,7 +820,7 @@
         "fr": "Seringue"
     },
     "seringue_description": {
-        "fr": "Une seringue qui peut être utilisée pour se soigner.",
+        "fr": "Une seringue qui peut etre utilisee pour se soigner.",
         "en": "A syringe that can be used to heal."
     },
     "balle_barillet_name": {
@@ -828,7 +828,7 @@
         "fr": "Balle a barillet"
     },
     "balle_barillet_description": {
-        "fr": "Une balle qui peut être utilisée pour tirer.",
+        "fr": "Une balle qui peut etre utilisee pour tirer.",
         "en": "A bullet that can be used to shoot."
     },
     "chargeur_pistolet_name": {
@@ -836,7 +836,7 @@
         "fr": "Chargeur de pistolet"
     },
     "chargeur_pistolet_description": {
-        "fr": "un chargeur de pistolet qui peut être utilisé pour recharger un pistolet.",
+        "fr": "un chargeur de pistolet qui peut etre utilise pour recharger un pistolet.",
         "en": "A pistol magazine that can be used to reload a pistol."
     },
     "cartouche_pompe_name": {
@@ -844,7 +844,7 @@
         "fr": "Cartouche de fusil a pompe"
     },
     "cartouche_pompe_description": {
-        "fr": "Une cartouche de fusil a pompe qui peut être utilisée pour recharger un fusil a pompe.",
+        "fr": "Une cartouche de fusil a pompe qui peut etre utilisee pour recharger un fusil a pompe.",
         "en": "A shotgun cartridge that can be used to reload a shotgun."
     },
     "bidon_essence_name": {
@@ -852,7 +852,7 @@
         "fr": "Bidon d'essence"
     },
     "bidon_essence_description": {
-        "fr": "un bidon d'essence qui peut être utilisé pour faire des feux.",
+        "fr": "un bidon d'essence qui peut etre utilise pour faire des feux.",
         "en": "A gas can that can be used to make fires."
     },
     "feu_de_camp_name": {
@@ -860,7 +860,7 @@
         "fr": "Feu de camp"
     },
     "feu_de_camp_description": {
-        "fr": "un feu de camp qui peut être utilisé pour se réchauffer.",
+        "fr": "un feu de camp qui peut etre utilise pour se rechauffer.",
         "en": "A campfire that can be used to warm up."
     },
     "chocolat_poudre_name": {
@@ -868,7 +868,7 @@
         "fr": "Chocolat en poudre"
     },
     "chocolat_poudre_description": {
-        "fr": "du chocolat en poudre qui peut être utilisé pour manger.",
+        "fr": "du chocolat en poudre qui peut etre utilise pour manger.",
         "en": "chocolate powder that can be used to eat."
     },
     "fil_a_tisser_name": {
@@ -876,7 +876,7 @@
         "fr": "Fil a tisser"
     },
     "fil_a_tisser_description": {
-        "fr": "un fil a tisser qui peut être utilisé pour coudre.",
+        "fr": "un fil a tisser qui peut etre utilise pour coudre.",
         "en": "A spool of thread that can be used to sew."
     },
     "poisson_cru_name": {
@@ -884,7 +884,7 @@
         "fr": "Poisson cru"
     },
     "poisson_cru_description": {
-        "fr": "un poisson qui peut être utilisé pour manger, mais peu faire mal au ventre.",
+        "fr": "un poisson qui peut etre utilise pour manger, mais peu faire mal au ventre.",
         "en": "A fish that can be used to eat, but be careful that can make you sick."
     },
     "poisson_name": {
@@ -892,7 +892,7 @@
         "fr": "Poisson"
     },
     "poisson_description": {
-        "fr": "un poisson qui peut être utilisé pour manger.",
+        "fr": "un poisson qui peut etre utilise pour manger.",
         "en": "A fish that can be used to eat."
     },
     "pilule_rouge_name": {
@@ -900,7 +900,7 @@
         "fr": "Pilule rouge"
     },
     "pilule_rouge_description": {
-        "fr": "Une pilule qui peut être utilisée pour se soigner.",
+        "fr": "Une pilule qui peut etre utilisee pour se soigner.",
         "en": "A pill that can be used to heal."
     },
     "kit_endurance_name": {
@@ -908,7 +908,7 @@
         "fr": "Kit d'endurance"
     },
     "kit_endurance_description": {
-        "fr": "un kit d'endurance qui peut être utilisé pour régénérer l'endurance.",
+        "fr": "un kit d'endurance qui peut etre utilise pour regenerer l'endurance.",
         "en": "an endurance kit that can be used to heal your endurance."
     },
     "seringue_endurance_name": {
@@ -916,7 +916,7 @@
         "fr": "Seringue d'endurance"
     },
     "seringue_endurance_description": {
-        "fr": "Une seringue d'endurance qui peut être utilisée pour régénérer l'endurance.",
+        "fr": "Une seringue d'endurance qui peut etre utilisee pour regenerer l'endurance.",
         "en": "an endurance syringe that can be used to heal your endurance."
     },
     "tesson_bouteille_name": {
@@ -924,7 +924,7 @@
         "fr": "Tesson de bouteille"
     },
     "tesson_bouteille_description": {
-        "fr": "un tesson de bouteille qui peut être utilisé pour casser des choses.",
+        "fr": "un tesson de bouteille qui peut etre utilise pour casser des choses.",
         "en": "A bottle shard that can be used to break things."
     },
     "bouteille_vide_name": {
@@ -932,7 +932,7 @@
         "fr": "Bouteille vide"
     },
     "bouteille_vide_description": {
-        "fr": "Une bouteille vide qui peut être utilisée pour faire des feux.",
+        "fr": "Une bouteille vide qui peut etre utilisee pour faire des feux.",
         "en": "an empty bottle that can be used to make fires."
     },
     "cocktail_molotov_name": {
@@ -940,7 +940,7 @@
         "fr": "Cocktail Molotov"
     },
     "cocktail_molotov_description": {
-        "fr": "un cocktail Molotov qui peut être utilisé pour faire des feux.",
+        "fr": "un cocktail Molotov qui peut etre utilise pour faire des feux.",
         "en": "A Molotov cocktail that can be used to make fires."
     },
     "tissu_soie_name": {
@@ -948,7 +948,7 @@
         "fr": "Tissu de soie"
     },
     "tissu_soie_description": {
-        "fr": "un tissu fabriqué à partir de la fibre naturelle de la soie, il est souvent utilisé dans l'industrie textile pour fabriquer des vêtements de haute qualité.",
+        "fr": "un tissu fabrique a partir de la fibre naturelle de la soie, il est souvent utilise dans l'industrie textile pour fabriquer des vetements de haute qualite.",
         "en": "A cloth made from the natural fiber of silk, it is often used in the textile industry to make high-quality clothing."
     },
     "coca_cola_name": {
@@ -956,7 +956,7 @@
         "fr": "Coca-Cola"
     },
     "coca_cola_description": {
-        "fr": "Une boisson gazeuse qui peut être utilisée pour se désaltérer.",
+        "fr": "Une boisson gazeuse qui peut etre utilisee pour se desalterer.",
         "en": "A carbonated beverage that can be used to quench your thirst."
     },
     "chips_name": {
@@ -964,15 +964,15 @@
         "fr": "Chips"
     },
     "chips_description": {
-        "fr": "des chips qui peuvent être utilisées pour manger.",
+        "fr": "des chips qui peuvent etre utilisees pour manger.",
         "en": "chips that can be used to eat."
     },
     "hamecon_name": {
         "en": "Hook",
-        "fr": "Hameçon"
+        "fr": "Hamecon"
     },
     "hamecon_description": {
-        "fr": "un hameçon qui peut être utilisé pour pêcher.",
+        "fr": "un hamecon qui peut etre utilise pour pecher.",
         "en": "A hook that can be used to fish."
     },
     "steak_cru_name": {
@@ -980,7 +980,7 @@
         "fr": "Steak cru"
     },
     "steak_cru_description": {
-        "fr": "un morceau de viande de boeuf cru, généralement utilisé pour faire cuire un steak à la poêle, au barbecue ou au grill.",
+        "fr": "un morceau de viande de boeuf cru, generalement utilise pour faire cuire un steak a la poele, au barbecue ou au grill.",
         "en": "A piece of raw beef, usually used to cook a steak in a pan, on a barbecue or on a grill."
     },
     "steak_cuit_name": {
@@ -988,15 +988,15 @@
         "fr": "Steak cuit"
     },
     "steak_cuit_description": {
-        "fr": "un morceau de viande de boeuf cuit, généralement utilisé pour manger.",
+        "fr": "un morceau de viande de boeuf cuit, generalement utilise pour manger.",
         "en": "A piece of cooked beef, usually used to eat."
     },
     "boite_medoc_name": {
         "en": "Medicine box",
-        "fr": "Boite de médicaments"
+        "fr": "Boite de medicaments"
     },
     "boite_medoc_description": {
-        "fr": "Une boite de médicaments qui peut être utilisée pour se soigner.",
+        "fr": "Une boite de medicaments qui peut etre utilisee pour se soigner.",
         "en": "A medicine box that can be used to heal."
     },
     "bandage_name": {
@@ -1004,7 +1004,7 @@
         "fr": "Bandage"
     },
     "bandage_description": {
-        "fr": "un bandage qui peut être utilisé pour se soigner.",
+        "fr": "un bandage qui peut etre utilise pour se soigner.",
         "en": "A bandage that can be used to heal."
     },
     "seringue_vide_name": {
@@ -1012,7 +1012,7 @@
         "fr": "Seringue vide"
     },
     "seringue_vide_description": {
-        "fr": "Une seringue vide qui peut être utilisée pour se soigner.",
+        "fr": "Une seringue vide qui peut etre utilisee pour se soigner.",
         "en": "an empty syringe that can be used to heal."
     },
     "scotch_name": {
@@ -1020,23 +1020,23 @@
         "fr": "Scotch"
     },
     "scotch_description": {
-        "fr": "un scotch qui peut être utilisé pour se soigner.",
+        "fr": "un scotch qui peut etre utilise pour se soigner.",
         "en": "A scotch that can be used to heal."
     },
     "cle_porte_rouille_name": {
         "en": "Rusty key",
-        "fr": "Clé rouillée"
+        "fr": "Cle rouillee"
     },
     "cle_porte_rouille_description": {
-        "fr": "Une clé rouillée qui peut être utilisée pour ouvrir une porte.",
+        "fr": "Une cle rouillee qui peut etre utilisee pour ouvrir une porte.",
         "en": "A rusty key that can be used to open a door."
     },
     "cle_porte_name": {
         "en": "Key",
-        "fr": "Clé"
+        "fr": "Cle"
     },
     "cle_porte_description": {
-        "fr": "Une clé qui peut être utilisée pour ouvrir une porte.",
+        "fr": "Une cle qui peut etre utilisee pour ouvrir une porte.",
         "en": "A key that can be used to open a door."
     },
     "corde_name": {
@@ -1044,7 +1044,7 @@
         "fr": "Corde"
     },
     "corde_description": {
-        "fr": "Une corde qui peut être utilisée pour faire des noeuds.",
+        "fr": "Une corde qui peut etre utilisee pour faire des noeuds.",
         "en": "A rope that can be used to make knots."
     },
     "super_lampe_torche_name": {
@@ -1052,7 +1052,7 @@
         "fr": "Super lampe torche"
     },
     "super_lampe_torche_description": {
-        "fr": "Une lampe torche qui peut être utilisée pour éclairer les zones sombres.",
+        "fr": "Une lampe torche qui peut etre utilisee pour eclairer les zones sombres.",
         "en": "A flashlight that can be used to light up dark areas."
     },
     "cacahouète_name": {
@@ -1060,7 +1060,7 @@
         "fr": "Cacahouète"
     },
     "cacahouète_description": {
-        "fr": "Une cacahouète qui peut être utilisée pour manger.",
+        "fr": "Une cacahouète qui peut etre utilisee pour manger.",
         "en": "A peanut that can be used to eat."
     },
     "billets_name": {
@@ -1068,7 +1068,15 @@
         "fr": "Billets"
     },
     "billets_description": {
-        "fr": "des billets qui peuvent être utilisés pour acheter des choses.",
+        "fr": "des billets qui peuvent etre utilises pour acheter des choses.",
         "en": "bills that can be used to buy things."
+    },
+    "destroy_name": {
+        "en": "Destroy",
+        "fr": "Detruire"
+    },
+    "use_name": {
+        "en": "Use",
+        "fr": "Utiliser"
     }
 }

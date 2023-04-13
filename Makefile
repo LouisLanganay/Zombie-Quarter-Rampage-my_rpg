@@ -222,6 +222,9 @@ SRC += init_slider.c
 SRC += draw_quests_ig.c
 SRC += draw_quests_inv.c
 SRC += my_atoi.c
+SRC += handle_drop_use_button.c
+SRC += get_item_name.c
+SRC += swap_items_in_inventory.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl
