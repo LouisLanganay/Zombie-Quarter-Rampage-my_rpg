@@ -53,6 +53,7 @@ VPATH += src/view
 VPATH += src/events
 VPATH += src/inventory
 VPATH += src/player
+VPATH += src/window
 VPATH += src/player/moovment
 VPATH += src/player/interactions
 VPATH += src/player/colisions
@@ -247,6 +248,7 @@ SRC += s_radiation.c
 SRC += s_radiation_exit.c
 SRC += s_grocery.c
 SRC += s_grocery_exit.c
+SRC += change_window_mode.c
 
 
 INC_DIR 	:= includes
