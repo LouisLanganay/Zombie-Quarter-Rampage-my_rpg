@@ -154,5 +154,29 @@
     "annia_ignore_ignore": {
         "en": "Ignore her",
         "fr": "L'ignorer"
+    },
+    "jack_interact": {
+        "en": "talk to him.",
+        "fr": "lui parler."
+    },
+    "jack_discovery": {
+        "fr": "Salut, étranger. Bienvenue dans mon humble camp. Tu aimes la musique ?",
+        "en": "Hi, stranger. Welcome to my humble camp. Do you like music?"
+    },
+    "discovery_yes": {
+        "fr": "Heuu, oui, je suppose.",
+        "en": "Heuu, yes, I guess."
+    },
+    "discovery_no": {
+        "fr": "Pas vraiment.",
+        "en": "Not really."
+    },
+    "jack_discovery_yes": {
+        "fr": "Oh, c'est génial ! La musique est l'une des seules choses qui me reste dans ce monde pour survivre. J'ai vu beaucoup de choses horribles, je n'ai plus le moral ni l'envie de vivre mais jouer m'aide à garder espoir. Tu es là pour m'écouter ou pour autre chose ?",
+        "en": "Oh, that's great! Music is one of the only things that remains to me in this world to survive. I've seen a lot of horrible things, I have no more morale or desire to live but playing helps me to keep hope. Are you here to listen to me or for something else?"
+    },
+    "jack_discovery_no": {
+        "fr": "Oh, c'est dommage. La musique est l'une des seules choses qui me reste dans ce monde pour survivre. J'ai vu beaucoup de choses horribles, je n'ai plus le moral ni l'envie de vivre mais jouer m'aide à garder espoir. Tu es là pour m'écouter ou pour autre chose ?",
+        "en": "Oh, that's a shame. Music is one of the only things that remains to me in this world to survive. I've seen a lot of horrible things, I have no more morale or desire to live but playing helps me to keep hope. Are you here to listen to me or for something else?"
     }
 }

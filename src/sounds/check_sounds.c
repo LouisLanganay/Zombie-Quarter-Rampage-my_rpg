@@ -60,7 +60,7 @@ void check_sounds(rpg_t *rpg)
         seconds = time / 1000000.0;
         status = sfSound_getStatus(gl_get_sound(rpg->glib, sound->id)->sound);
         if (status == sfStopped)
-            return remove_sound_from_linked_list(rpg, sound);
+            remove_sound_from_linked_list(rpg, sound);
         if (sound->fade_time == 0)
             sfSound_setVolume(gl_get_sound(rpg->glib, sound->id)->sound, RSV);
         if (sound->fade_time != 0 && seconds >= sound->fade_time / 100)

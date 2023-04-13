@@ -9,6 +9,7 @@
 
 void init(rpg_t *rpg)
 {
+    rpg->maps = NULL;
     init_glib(rpg);
     init_game_sounds(rpg);
     init_language(rpg);

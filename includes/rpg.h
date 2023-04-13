@@ -509,6 +509,7 @@
     void s_nature(rpg_t *rpg, sfVector2f pos);
 
     /* CALL ACTIONS */
+    void jack(rpg_t *rpg, sfVector2f pos);
     void s_radiation(rpg_t *rpg, sfVector2f pos);
     void s_radiation_exit(rpg_t *rpg, sfVector2f pos);
     void s_grocery(rpg_t *rpg, sfVector2f pos);

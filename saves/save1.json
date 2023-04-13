@@ -22,8 +22,8 @@
 	},
 	"player": {
 		"pos": {
-			"x": 210,
-			"y": 137
+			"x": 2161,
+			"y": 263
 		},
 		"hp": 20,
 		"hunger": 100,
@@ -36,7 +36,7 @@
 		}
 	},
 	"game": {
-		"actual_map": "resources/maps/grocery_store.json"
+		"actual_map": "resources/maps/main_map.json"
 	},
 	"game_timeline": {
 		"npc_interactions": [

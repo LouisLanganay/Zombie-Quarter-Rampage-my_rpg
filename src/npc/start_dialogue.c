@@ -38,10 +38,12 @@ static void start_dialogue_discovery(npc_t *npc, rpg_t *rpg)
         dialog = dialog->next;
     }
     sfText_setString(main_text, get_language(rpg, dialog->text, RSG));
-    sfText_setString(choice_one_text,
-        get_language(rpg, dialog->options[0]->text, RSG));
-    sfText_setString(choice_two_text,
-        get_language(rpg, dialog->options[1]->text, RSG));
+    if (dialog->options != NULL) {
+        sfText_setString(choice_one_text,
+            get_language(rpg, dialog->options[0]->text, RSG));
+        sfText_setString(choice_two_text,
+            get_language(rpg, dialog->options[1]->text, RSG));
+    }
     rpg->player->in_dialogue = 1;
     rpg->actual_dialog = dialog;
     rpg->actual_npc = npc;
