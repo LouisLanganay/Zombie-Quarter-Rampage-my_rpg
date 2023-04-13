@@ -27,6 +27,8 @@ void save_settings(rpg_t *rpg)
 {
     parsed_data_t *data = jp_parse(rpg->save->path);
     save_settings_keys(rpg, jp_search(data, "settings.keys")->value.p_obj);
+    jp_search(data, "settings.window_mode")
+        ->value.p_int = rpg->settings->window_mode;
     jp_search(data, "settings.game_language")
         ->value.p_str = SAVE_GAMELANGUAGE;
     jp_write(rpg->save->path, data);
