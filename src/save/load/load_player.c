@@ -25,6 +25,7 @@ int load_player(player_t *player, parsed_data_t *data)
     player->pos.x = jp_search(data, "pos.x")->value.p_int;
     player->pos.y = jp_search(data, "pos.y")->value.p_int;
     player->hp = jp_search(data, "hp")->value.p_int;
+    player->hunger = jp_search(data, "hunger")->value.p_int;
     load_player_inventory(player, jp_search(data, "inventory"));
     return 0;
 }

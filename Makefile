@@ -24,6 +24,7 @@ VPATH += src/init/popup/interaction
 VPATH += src/init/popup/lore
 VPATH += src/init/languages
 VPATH += src/init/npc
+VPATH += src/init/hud
 VPATH += src/init/sounds
 VPATH += src/init/settings
 VPATH += src/init/menu
@@ -36,6 +37,7 @@ VPATH += src/save
 VPATH += src/save/save
 VPATH += src/save/load
 VPATH += src/npc
+VPATH += src/hud
 VPATH += src/npc/functions
 VPATH += src/game
 VPATH += src/splash_screen
@@ -247,6 +249,8 @@ SRC += s_radiation.c
 SRC += s_radiation_exit.c
 SRC += s_grocery.c
 SRC += s_grocery_exit.c
+SRC += init_hud.c
+SRC += draw_hud.c
 
 
 INC_DIR 	:= includes

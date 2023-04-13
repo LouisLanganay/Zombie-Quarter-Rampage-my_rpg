@@ -23,4 +23,5 @@ void init(rpg_t *rpg)
     init_main_menu(rpg);
     init_quests(rpg);
     init_quest_assets(rpg);
+    init_hud(rpg);
 }

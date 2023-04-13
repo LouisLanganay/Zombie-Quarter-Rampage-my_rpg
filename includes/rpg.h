@@ -249,11 +249,19 @@
         sfClock *clock;
     } narative_t;
 
+    typedef struct hud_s {
+        sfRectangleShape *hp_bar;
+        sfRectangleShape *hp_bar_back;
+        sfRectangleShape *hunger_bar;
+        sfRectangleShape *hunger_bar_back;
+    } hud_t;
+
     typedef struct rpg_s {
         int debug;
         char *actual_map;
         int game_started;
         int maps_loaded;
+        hud_t *hud;
         dialog_t *actual_dialog;
         npc_t *actual_npc;
         map_t *maps;
@@ -538,6 +546,10 @@
     void init_saves_texts(rpg_t *rpg);
     void draw_settings(rpg_t *rpg);
 
+    /* HUD */
+    void draw_hud(rpg_t *rpg);
+
+
 
     /* LORE */
     void draw_popup_lore(rpg_t *rpg);
@@ -582,6 +594,7 @@
     void init_sounds(GLib_t *glib);
     void init_language(rpg_t *rpg);
     void init_popup_lore(rpg_t *rpg);
+    void init_hud(rpg_t *rpg);
     void init_slider(rpg_t *rpg);
     void init_save(rpg_t *rpg);
     void init_events(rpg_t *rpg);
