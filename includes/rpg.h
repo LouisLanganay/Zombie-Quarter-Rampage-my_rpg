@@ -375,6 +375,9 @@
     void handle_inventory_system(rpg_t *rpg);
     item_func_t *get_items_functions_arr(void);
     void exec_item_func(rpg_t *rpg, int id);
+    void handle_drop_use_button(rpg_t *rpg);
+    char *get_item_name(int id);
+    void swap_items_in_inventory(int id_1, int id_2);
 
     /* NPC */
     npc_t *get_npc(map_t *map, char *name);
