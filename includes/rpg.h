@@ -373,6 +373,8 @@
     int remove_item_to_inventory(rpg_t *rpg, int pos);
     int add_item_to_inventory_pos(rpg_t *rpg, int pos, int id);
     void handle_inventory_system(rpg_t *rpg);
+    item_func_t *get_items_functions_arr(void);
+    void exec_item_func(rpg_t *rpg, int id);
 
     /* NPC */
     npc_t *get_npc(map_t *map, char *name);
@@ -396,6 +398,7 @@
     void s_house(rpg_t *rpg, sfVector2f pos);
 
     /* CALL ACTIONS */
+    void bandage(void*);
     void i_soda(rpg_t *rpg, sfVector2f pos);
     void i_paper_grocery(rpg_t *rpg, sfVector2f pos);
     void go_to_annia(void *main);

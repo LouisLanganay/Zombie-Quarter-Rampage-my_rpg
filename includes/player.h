@@ -138,6 +138,11 @@
         sfTexture *side_walk;
     } player_assets_t;
 
+    typedef struct item_func_s {
+        int id;
+        void (*func)(void *);
+    } item_func_t;
+
     typedef struct inventory_s {
         int is_open;
         int is_data_open;
