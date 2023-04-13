@@ -101,5 +101,51 @@
                 "function": null
             }
         ]
+    },
+    "musician": {
+        "name": "Jack",
+        "map": "resources/maps/main_map.json",
+        "pos": {
+            "x": 2202,
+            "y": 178
+        },
+        "texture_path": "resources/assets/npc/jack.png",
+        "default_dialog": "default",
+        "one_time": false,
+        "dialogues": [
+            {
+                "name": "default",
+                "text": "annia_default",
+                "options": null,
+                "function": null
+            },
+            {
+                "name": "discovery",
+                "text": "jack_discovery",
+                "options": [
+                    {
+                        "text": "discovery_yes",
+                        "next": "discovery_yes"
+                    },
+                    {
+                        "text": "discovery_no",
+                        "next": "discovery_no"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "discovery_yes",
+                "text": "jack_discovery_yes",
+                "options": null,
+                "function": null
+            },
+            {
+                "name": "discovery_no",
+                "text": "jack_discovery_no",
+                "options": null,
+                "function": null
+            }
+        ]
     }
 }

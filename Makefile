@@ -247,6 +247,7 @@ SRC += s_radiation.c
 SRC += s_radiation_exit.c
 SRC += s_grocery.c
 SRC += s_grocery_exit.c
+SRC += jack.c
 
 
 INC_DIR 	:= includes
