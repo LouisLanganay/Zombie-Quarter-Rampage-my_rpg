@@ -4,7 +4,7 @@
         "map": "resources/maps/grocery_store.json",
         "pos": {
             "x": 160,
-            "y": 50
+            "y": 65
         },
         "texture_path": "resources/assets/npc/annia.png",
         "default_dialog": "default",

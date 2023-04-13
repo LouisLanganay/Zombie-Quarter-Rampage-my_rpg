@@ -44,6 +44,10 @@
     #define NATURE_SOUND_ID 13
     #define PAPER_SOUND_PATH "resources/sounds/paper.ogg"
     #define PAPER_SOUND_ID 14
+    #define RADIATION_SOUND_PATH "resources/sounds/radiations.ogg"
+    #define RADIATION_SOUND_ID 15
+    #define GROCERY_SOUND_PATH "resources/sounds/grocery.ogg"
+    #define GROCERY_SOUND_ID 16
 
     #define RPA rpg->player->assets
     #define RGW rpg->glib->window
@@ -140,6 +144,7 @@
         sfTexture *texture;
         sfIntRect rect;
         dialog_t *dialogs;
+        sfClock *clock;
         struct npc_s *next;
     } npc_t;
 
@@ -468,7 +473,7 @@
 
     /* NPC */
     npc_t *get_npc(map_t *map, char *name);
-    void draw_npcs(map_t *map, rpg_t *rpg);
+    void draw_npc(rpg_t *rpg, npc_t *npc);
     void start_dialogue(rpg_t *rpg, npc_t *npc);
     void next_dialogue(rpg_t *rpg, int choice);
     void display_dialogue(rpg_t *rpg);
@@ -487,6 +492,10 @@
     void s_nature(rpg_t *rpg, sfVector2f pos);
 
     /* CALL ACTIONS */
+    void s_radiation(rpg_t *rpg, sfVector2f pos);
+    void s_radiation_exit(rpg_t *rpg, sfVector2f pos);
+    void s_grocery(rpg_t *rpg, sfVector2f pos);
+    void s_grocery_exit(rpg_t *rpg, sfVector2f pos);
     void s_basement_exit(rpg_t *rpg, sfVector2f pos);
     void s_nature(rpg_t *rpg, sfVector2f pos);
     void s_nature_exit(rpg_t *rpg, sfVector2f pos);

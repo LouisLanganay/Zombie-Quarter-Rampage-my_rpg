@@ -243,6 +243,10 @@ SRC += s_nature_exit.c
 SRC += check_interactions_other_maps.c
 SRC += s_basement_exit.c
 SRC += zoom_view.c
+SRC += s_radiation.c
+SRC += s_radiation_exit.c
+SRC += s_grocery.c
+SRC += s_grocery_exit.c
 
 
 INC_DIR 	:= includes
