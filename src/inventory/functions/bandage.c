@@ -10,10 +10,8 @@
 void bandage(void *main)
 {
     rpg_t *rpg = (rpg_t *)main;
-    printf("You used a bandage\n");
     rpg->player->hp += 10;
     if (rpg->player->hp > 100)
         rpg->player->hp = 100;
-    printf("Your hp is now %d\n", rpg->player->hp);
     remove_item_to_inventory(rpg, RP->inventory->pos);
 }

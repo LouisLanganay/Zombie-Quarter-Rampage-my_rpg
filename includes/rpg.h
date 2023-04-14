@@ -31,7 +31,6 @@
 
     #define EVENT_DIALOGUE_CHOICE 651546
 
-
     #define XP_SOUND_PATH "resources/sounds/xp.ogg"
     #define XP_SOUND_ID 10
     #define MAIN_THEME_PATH "resources/sounds/main_theme_tlou.ogg"
