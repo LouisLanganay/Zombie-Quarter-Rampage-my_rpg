@@ -16,8 +16,14 @@ static void handle_selection_inv(rpg_t *rpg)
         rpg->player->inventory->is_data_open = 1;
     if (sfKeyboard_isKeyPressed(rpg->player->keys->choice_one.key) == sfTrue
     && rpg->player->inventory->is_data_open == 0) {
+        gl_play_sound(rpg->glib, DROP_SOUND_ID);
         rpg->player->inventory->is_data_open = 1;
         remove_item_to_inventory(rpg, RP->inventory->pos);
+    }
+    if (sfKeyboard_isKeyPressed(rpg->player->keys->choice_two.key) == sfTrue
+    && rpg->player->inventory->is_data_open == 0) {
+        rpg->player->inventory->is_data_open = 1;
+        exec_item_func(rpg, RP->inventory->items[RP->inventory->pos]);
     }
 }
 
@@ -27,6 +33,7 @@ void e_open_inventory(window_t *window, void *main)
     rpg_t *rpg = (rpg_t *)main;
 
     if (sfKeyboard_isKeyPressed(rpg->player->keys->inventory.key) == sfTrue) {
+        gl_play_sound(rpg->glib, INV_SOUND_ID);
         if (rpg->player->inventory->is_open == 0)
             rpg->player->inventory->is_open = 1;
         else
