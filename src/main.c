@@ -16,6 +16,7 @@ int main(int ac, char **av)
     while (sfRenderWindow_isOpen(rpg->glib->window->window)) {
         print_framerate();
         sfRenderWindow_clear(rpg->glib->window->window, sfBlack);
+        gl_buttons_hovered(rpg->glib->buttons, rpg->glib->window, rpg);
         if (rpg->game_started == 1)
             game_loop(rpg);
         else

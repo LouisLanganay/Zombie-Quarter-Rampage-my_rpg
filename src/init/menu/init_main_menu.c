@@ -7,7 +7,6 @@
 
 #include "rpg.h"
 
-
 static void init_main_menu_quit(rpg_t *rpg)
 {
     buttons_t *my_btn = malloc(sizeof(buttons_t));
@@ -72,6 +71,10 @@ void init_main_menu(rpg_t *rpg)
 {
     rpg->menu = malloc(sizeof(menu_t));
     rpg->menu_key = malloc(sizeof(menu_t));
+    init_main_menu_fr(rpg);
+    init_main_menu_en(rpg);
+    init_button_en(rpg);
+    init_button_fr(rpg);
     init_main_menu_quit(rpg);
     init_main_menu_start(rpg);
     init_main_menu_resume(rpg);
