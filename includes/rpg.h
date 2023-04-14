@@ -356,6 +356,16 @@
     #define ZOMBIE_ATK4 "resources/assets/combat/z_naked_melee_04.png"
     #define ZOMBIE_ATK5 "resources/assets/combat/z_naked_melee_05.png"
     #define ZOMBIE_ATK6 "resources/assets/combat/z_naked_melee_06.png"
+    #define ZOMBIE_DEATH0 "resources/assets/combat/z_naked_death_00.png"
+    #define ZOMBIE_DEATH1 "resources/assets/combat/z_naked_death_01.png"
+    #define ZOMBIE_DEATH2 "resources/assets/combat/z_naked_death_02.png"
+    #define ZOMBIE_DEATH3 "resources/assets/combat/z_naked_death_03.png"
+    #define ZOMBIE_DEATH4 "resources/assets/combat/z_naked_death_04.png"
+    #define ZOMBIE_DEATH5 "resources/assets/combat/z_naked_death_05.png"
+    #define ZOMBIE_DEATH6 "resources/assets/combat/z_naked_death_06.png"
+    #define ZOMBIE_DEATH7 "resources/assets/combat/z_naked_death_07.png"
+    #define ZOMBIE_DEATH8 "resources/assets/combat/z_naked_death_08.png"
+
     #define map_night "resources/assets/combat/map_night.jpg"
     #define guy "resources/assets/combat/guy.png"
     #define bullet "resources/assets/combat/bullet.png"
@@ -399,7 +409,9 @@
     void cbt_change_player_rect(player_t *player);
     void wave(char **wave, rpg_t *rpg, zombies_t **zombies);
     void insert_zombies_coord(rpg_t *rpg, zombies_t **list, sfVector2f pos);
-
+    void swap_status_anim_cbt(zombies_t *l);
+    void swap_status_anim_move(zombies_t *l);
+    void swap_status_anim_dead(zombies_t *l);
 
     typedef struct sounds_arr_s {
         char *name;

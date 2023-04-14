@@ -260,6 +260,7 @@ SRC += init_hud.c
 SRC += draw_hud.c
 SRC += change_window_mode.c
 SRC += jack_start_quest.c
+SRC += swap_status_anim.c
 
 
 INC_DIR 	:= includes

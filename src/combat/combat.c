@@ -33,12 +33,12 @@ int combat(rpg_t *rpg)
     wave(wave_zombie1(), rpg, &combat->zombies);
     while (condition_window) {
         window_manager(rpg);
+        animation_zombie(combat->zombies);
+        delete_zombie_status(&combat->zombies);
         move_player(rpg, combat->clock_move);
         move_zombies(combat->zombies, rpg);
         colision_bullet_zombies(combat->zombies, combat->bullets);
-        delete_zombie_status(&combat->zombies);
         delete_bullet_status(&combat->bullets);
-        animation_zombie(combat->zombies);
         draw_zombies(combat->zombies, rpg);
         gun_manager(rpg, combat);
         cbt_draw_player(rpg);
