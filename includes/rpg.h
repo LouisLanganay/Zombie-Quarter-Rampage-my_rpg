@@ -367,6 +367,10 @@
     void delete_zombie_status(zombies_t **list);
     #define sfc sfTexture_createFromFile
     #define sfs sfTime_asSeconds
+    void cbt_draw_player(rpg_t *rpg);
+    void cbt_change_player_rect(player_t *player);
+    void wave(char **wave, rpg_t *rpg, zombies_t **zombies);
+    void insert_zombies_coord(rpg_t *rpg, zombies_t **list, sfVector2f pos);
 
 
     typedef struct sounds_arr_s {

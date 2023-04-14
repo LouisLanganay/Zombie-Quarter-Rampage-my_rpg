@@ -245,6 +245,9 @@ SRC += my_atoi.c
 SRC += number_zombies.c
 SRC += map_zombies.c
 SRC += wave.c
+SRC += cbt_draw_player.c
+SRC += cbt_change_player_rect.c
+
 
 
 INC_DIR 	:= includes
