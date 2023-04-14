@@ -7,6 +7,14 @@
         "en": "read the paper.",
         "fr": "lire le papier."
     },
+    "basement_paper_name": {
+        "en": "Find some food",
+        "fr": "Trouver de la nourriture"
+    },
+    "basement_paper_description": {
+        "en": "You need to find some food to eat. You can find some in the basement of the grocery store.",
+        "fr": "Vous devez trouver de la nourriture a manger. Vous pouvez en trouver dans le sous-sol de l'epicerie."
+    },
     "close_paper": {
         "en": "close the paper.",
         "fr": "fermer le papier."

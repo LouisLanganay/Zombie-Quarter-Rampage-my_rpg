@@ -6,16 +6,10 @@
         "function": "go_to_annia"
     },
     "basement_paper": {
-        "name": "Find some food",
-        "description": "You need to find some food to eat. You can find some in the basement of the grocery store.",
-        "type": "collect",
-        "function": "basement_paper"
-    },
-    "test": {
-        "name": "Test",
-        "description": "Test",
+        "name": "basement_paper_name",
+        "description": "basement_paper_description",
         "type": "talk",
-        "function": "test"
+        "function": "jack_quest"
     },
     "jack_quest": {
         "name": "jack_quest_name",

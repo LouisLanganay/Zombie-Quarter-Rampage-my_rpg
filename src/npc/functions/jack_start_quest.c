@@ -9,7 +9,6 @@
 
 void jack_start_quest(void *main)
 {
-    (void)(main);
     rpg_t *rpg = (rpg_t *)main;
     start_quest(rpg, "jack_quest");
 }

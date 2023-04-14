@@ -20,6 +20,8 @@ static void draw_quest_text(char *quest_id, rpg_t *rpg, int i)
     devide->color = sfWhite;
     devide->max_len = 18;
     devide->line_spaces = 6;
+    if (devide->text == NULL)
+        return;
     divide_a_text(rpg, devide);
 }
 
