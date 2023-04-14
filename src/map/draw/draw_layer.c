@@ -9,8 +9,8 @@
 
 void draw_layer(rpg_t *rpg, layer_t *layer)
 {
-    sfVector2f center = sfView_getCenter(rpg->player->view);
-    sfVector2f size = sfView_getSize(rpg->player->view);
+    sfVector2f center = sfView_getCenter(rpg->player->view->view);
+    sfVector2f size = sfView_getSize(rpg->player->view->view);
     sfFloatRect rect = {
         (center.x - size.x / 2) - 16, (center.y - size.y / 2) - 16,
         size.x + 16, size.y + 16

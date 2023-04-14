@@ -13,6 +13,8 @@
     #include "jp.h"
     #include "view.h"
     #include "player.h"
+    #include <time.h>
+    #include <math.h>
     #include <stdbool.h>
     #include "menu.h"
 
@@ -28,6 +30,7 @@
     #define EVENT_WINDOW_CLOSE 1
     #define EVENT_INVENTORY_OPEN 454545
     #define INVENTORY_SIZE 16
+    #define M_PI 3.14159265358979323846
 
     #define EVENT_DIALOGUE_CHOICE 651546
 
@@ -41,6 +44,14 @@
     #define INV_SOUND_ID 13
     #define DROP_SOUND_PATH "resources/sounds/drop_sound.ogg"
     #define DROP_SOUND_ID 14
+    #define NATURE_SOUND_PATH "resources/sounds/nature.ogg"
+    #define NATURE_SOUND_ID 15
+    #define PAPER_SOUND_PATH "resources/sounds/paper.ogg"
+    #define PAPER_SOUND_ID 16
+    #define RADIATION_SOUND_PATH "resources/sounds/radiations.ogg"
+    #define RADIATION_SOUND_ID 17
+    #define GROCERY_SOUND_PATH "resources/sounds/grocery.ogg"
+    #define GROCERY_SOUND_ID 18
 
     #define RPA rpg->player->assets
     #define RGW rpg->glib->window
@@ -52,7 +63,7 @@
     #define RPAQ rpg->player->assets->quest_icons
     #define RM rpg->menu_key
     #define RP rpg->player
-
+    #define RSV rpg->settings->volume
 
     #define GET_SAVE_GAMELANGUAGE my_strcmp(jp_search(data, \
         "game_language")->value.p_str, "fr") == 0 ? FR : EN;
@@ -68,6 +79,8 @@
         int id;
         float height;
         float width;
+        int is_trigger;
+        int is_exit;
         sfVector2f pos;
         struct tiled_object_s *next;
     } tiled_object_t;
@@ -135,6 +148,7 @@
         sfTexture *texture;
         sfIntRect rect;
         dialog_t *dialogs;
+        sfClock *clock;
         struct npc_s *next;
     } npc_t;
 
@@ -175,6 +189,11 @@
         bool active;
     } menu_t;
 
+    typedef enum wmode_e {
+        FSCREEN,
+        WINDOWED
+    } wmode_t;
+
     typedef struct menu_save_s {
         sfTexture *bg_texture;
         sfSprite *bg_sprite;
@@ -190,6 +209,7 @@
     typedef struct settings_s {
         language_type_t game_language;
         int volume;
+        wmode_t window_mode;
     } settings_t;
 
     typedef struct save_s {
@@ -231,6 +251,7 @@
         char *text;
         sfColor color;
         int max_len;
+        int line_spaces;
     } devide_text_t;
 
     typedef struct narative_s {
@@ -239,11 +260,19 @@
         sfClock *clock;
     } narative_t;
 
+    typedef struct hud_s {
+        sfRectangleShape *hp_bar;
+        sfRectangleShape *hp_bar_back;
+        sfRectangleShape *hunger_bar;
+        sfRectangleShape *hunger_bar_back;
+    } hud_t;
+
     typedef struct rpg_s {
         int debug;
         char *actual_map;
         int game_started;
         int maps_loaded;
+        hud_t *hud;
         dialog_t *actual_dialog;
         npc_t *actual_npc;
         map_t *maps;
@@ -276,7 +305,105 @@
     typedef struct interactions_s {
         char *name;
         void (*func)(rpg_t *, sfVector2f pos);
+        void (*on_exit)(rpg_t *, sfVector2f pos);
     } interactions_t;
+
+
+    typedef struct bullets_s {
+        float speed;
+        float angle;
+        int status;
+        sfVector2f pos;
+        sfVector2f scale;
+        sfIntRect rect;
+        sfTexture *texture;
+        sfSprite *sprite;
+        struct bullets_s *next;
+    } bullets_t;
+
+    typedef struct zombies_s {
+        sfVector2f pos;
+        int type;
+        int hp;
+        int damage;
+        float speed;
+        float attack_speed;
+        sfRectangleShape *hitbox;
+        struct zombies_s *next;
+        sfSprite *sprite;
+        sfTexture *texture;
+        sfIntRect rect;
+        sfVector2f scale;
+        sfClock *clock;
+        sfClock *attack_clock;
+        sfClock *clock_animation;
+        int animation;
+        int alive;
+        int direction;
+        int last_distance;
+        int status_anim;
+    } zombies_t;
+
+    #define windoww rpg->glib->window->window
+    #define ZOMBIE_0 "resources/assets/combat/zombie_0.png"
+    #define ZOMBIE_1 "resources/assets/combat/zombie_1.png"
+    #define ZOMBIE_2 "resources/assets/combat/zombie_2.png"
+    #define ZOMBIE_3 "resources/assets/combat/zombie_3.png"
+    #define ZOMBIE_4 "resources/assets/combat/zombie_4.png"
+    #define ZOMBIE_5 "resources/assets/combat/zombie_5.png"
+    #define ZOMBIE_6 "resources/assets/combat/zombie_6.png"
+    #define ZOMBIE_7 "resources/assets/combat/zombie_7.png"
+    #define ZOMBIE_ATK0 "resources/assets/combat/z_naked_melee_00.png"
+    #define ZOMBIE_ATK1 "resources/assets/combat/z_naked_melee_01.png"
+    #define ZOMBIE_ATK2 "resources/assets/combat/z_naked_melee_02.png"
+    #define ZOMBIE_ATK3 "resources/assets/combat/z_naked_melee_03.png"
+    #define ZOMBIE_ATK4 "resources/assets/combat/z_naked_melee_04.png"
+    #define ZOMBIE_ATK5 "resources/assets/combat/z_naked_melee_05.png"
+    #define ZOMBIE_ATK6 "resources/assets/combat/z_naked_melee_06.png"
+    #define map_night "resources/assets/combat/map_night.jpg"
+    #define guy "resources/assets/combat/guy.png"
+    #define bullet "resources/assets/combat/bullet.png"
+    #define atkplayer attack_player(rpg,tmp->attack_clock, \
+    tmp->attack_speed,tmp->damage)
+    #define condition_window sfRenderWindow_isOpen\
+    (rpg->glib->window->window) && number_zombies(combat->zombies) > 0
+    int number_zombies(zombies_t *zombies);
+    char **wave_zombie1(void);
+
+    typedef struct combat_s {
+        zombies_t *zombies;
+        bullets_t *bullets;
+        sfClock *clock_move;
+        sfClock *clock_shoot;
+    } combat_t;
+
+    /* COMBAT */
+    void init_guy(rpg_t *rpg);
+    void init_background(rpg_t *rpg);
+    int combat(rpg_t *rpg);
+    combat_t *init_combat(void);
+    void move_player(rpg_t *rpg, sfClock *clock);
+    float shot_angle(sfVector2f pos, sfVector2i mouse);
+    void gun_manager(rpg_t *rpg, combat_t *combat);
+    void insert_zombies(rpg_t *rpg, zombies_t **list);
+    void draw_zombies(zombies_t *list, rpg_t *rpg);
+    int colision_with_rect(sfRectangleShape *rect, sfVector2f pos);
+    int colision_bullet_zombies(zombies_t *list, bullets_t *bullets);
+    void animation_zombie(zombies_t *list);
+    void delete_bullet_outmap(bullets_t **list);
+    void draw_bullets(bullets_t *bullets, rpg_t *rpg);
+    void insert_bullet(bullets_t **list, rpg_t *rpg);
+    void move_bullets(bullets_t *bullets, rpg_t *rpg);
+    void delete_bullet_status(bullets_t **list);
+    void move_zombies(zombies_t *list, rpg_t *rpg);
+    void delete_zombie_status(zombies_t **list);
+    #define sfc sfTexture_createFromFile
+    #define sfs sfTime_asSeconds
+    void cbt_draw_player(rpg_t *rpg);
+    void cbt_change_player_rect(player_t *player);
+    void wave(char **wave, rpg_t *rpg, zombies_t **zombies);
+    void insert_zombies_coord(rpg_t *rpg, zombies_t **list, sfVector2f pos);
+
 
     typedef struct sounds_arr_s {
         char *name;
@@ -324,6 +451,7 @@
     void save_quests_completed(rpg_t *rpg);
 
     /* QUESTS */
+    void start_dialogue_default(npc_t *npc, rpg_t *rpg);
     void start_quest(rpg_t *rpg, char *id);
     quest_t *get_quest(rpg_t *rpg, char *id);
     void draw_quests(rpg_t *rpg);
@@ -355,6 +483,7 @@
 
     /* VIEW */
     void set_view_on_player(rpg_t *rpg);
+    void zoom_view(rpg_t *rpg, float value, float time);
 
     /* PLAYER */
     int get_key_id(sfKeyCode key, rpg_t *rpg);
@@ -369,6 +498,7 @@
         rpg_t *rpg
     );
     void check_interactions(player_t *player, map_t *map, rpg_t *rpg);
+    void check_interactions_other_maps(rpg_t *rpg, player_t *player);
     keyboard_images_t *get_keyboard_array(void);
 
     /* INVENTORY*/
@@ -383,7 +513,7 @@
 
     /* NPC */
     npc_t *get_npc(map_t *map, char *name);
-    void draw_npcs(map_t *map, rpg_t *rpg);
+    void draw_npc(rpg_t *rpg, npc_t *npc);
     void start_dialogue(rpg_t *rpg, npc_t *npc);
     void next_dialogue(rpg_t *rpg, int choice);
     void display_dialogue(rpg_t *rpg);
@@ -394,19 +524,31 @@
     void divide_a_sftext(sfText *text, sfVector2f pos, rpg_t *rpg);
     void divide_a_text(rpg_t *rpg, devide_text_t *devide_text);
 
+    /* WINDOW */
+    void change_window_mode(rpg_t *rpg, wmode_t mode);
+
     /* SOUNDS */
     void fade_sound(rpg_t *rpg, int id, float time);
     void start_sound(rpg_t *rpg, int id);
     void check_sounds(rpg_t *rpg);
-    sounds_arr_t *get_sounds_array(void);
-    void check_sounds_interactions(rpg_t *rpg, map_t *map);
     void s_house(rpg_t *rpg, sfVector2f pos);
+    void s_nature(rpg_t *rpg, sfVector2f pos);
 
     /* CALL ACTIONS */
     void bandage(void*);
+    void annia_give_heal(void *main);
+    void jack(rpg_t *rpg, sfVector2f pos);
+    void s_radiation(rpg_t *rpg, sfVector2f pos);
+    void s_radiation_exit(rpg_t *rpg, sfVector2f pos);
+    void s_grocery(rpg_t *rpg, sfVector2f pos);
+    void s_grocery_exit(rpg_t *rpg, sfVector2f pos);
+    void s_basement_exit(rpg_t *rpg, sfVector2f pos);
+    void s_nature(rpg_t *rpg, sfVector2f pos);
+    void s_nature_exit(rpg_t *rpg, sfVector2f pos);
     void i_soda(rpg_t *rpg, sfVector2f pos);
     void i_paper_grocery(rpg_t *rpg, sfVector2f pos);
     void go_to_annia(void *main);
+    void jack_start_quest(void *main);
     void i_pass_fence(rpg_t *rpg, sfVector2f pos);
     void npc_give_food(void*);
     void s_basement(rpg_t *rpg, sfVector2f pos);
@@ -442,6 +584,10 @@
     void draw_saves_menu(rpg_t *rpg);
     void init_saves_texts(rpg_t *rpg);
     void draw_settings(rpg_t *rpg);
+
+    /* HUD */
+    void draw_hud(rpg_t *rpg);
+
 
 
     /* LORE */
@@ -487,6 +633,7 @@
     void init_sounds(GLib_t *glib);
     void init_language(rpg_t *rpg);
     void init_popup_lore(rpg_t *rpg);
+    void init_hud(rpg_t *rpg);
     void init_slider(rpg_t *rpg);
     void init_save(rpg_t *rpg);
     void init_events(rpg_t *rpg);

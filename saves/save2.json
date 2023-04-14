@@ -7,6 +7,7 @@
 	},
 	"settings": {
 		"game_language": "en",
+		"window_mode": 1,
 		"keys": {
 			"up": 25,
 			"down": 18,
@@ -21,10 +22,11 @@
 	},
 	"player": {
 		"pos": {
-			"x": 305,
-			"y": 152
+			"x": 189,
+			"y": 191
 		},
-		"hp": 100,
+		"hp": 20,
+		"hunger": 100,
 		"inventory": {
 			"items": [
 				1,
@@ -34,7 +36,7 @@
 		}
 	},
 	"game": {
-		"actual_map": "resources/maps/player_basement.json"
+		"actual_map": "resources/maps/player_house.json"
 	},
 	"game_timeline": {
 		"npc_interactions": [

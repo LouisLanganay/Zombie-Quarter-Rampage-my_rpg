@@ -1,7 +1,7 @@
 {
     "house_paper": {
-        "en": "Bla bla blaaaa",
-        "fr": "Bla bla blaaaa"
+        "fr": "       |________________________________________________|               |  Survivant(e)s de l'apocalypse, vous cherchez  |               |   des vivres pour vous aider a tenir ? Ne      |               | cherchez plus ! L'epicerie situee a gauche de  |               |   votre maison a tout ce dont vous avez besoin |               |   pour survivre.                               |               |________________________________________________|               |                                                |               | Nous avons une variete de produits alimentaires|               |en conserve, seches ou frais, qui vous donneront|               | l'energie necessaire pour affronter les defis  |               | du monde post-apocalyptique. Que vous cherchiez|               |  des fruits, des legumes, de la viande, du     |               |  poisson ou des produits laitiers, nous avons  |               |  tout ce qu'il vous faut.                      |               |________________________________________________|",
+        "en": "       |________________________________________________|               |  Survivors of the apocalypse, you are looking  |               |   for food to help you survive? Look no more!  |               | The grocery store located to the left of your  |               |   house has everything you need to survive.    |               |                                                |               | We have a variety of canned, dried or fresh    |               |   foods that will give you the energy you need |               |  to face the challenges of the post-apocalyptic|               |   world. Whether you are looking for fruits,   |               |   vegetables, meat, fish or dairy products,    |               |   we have everything you need.                 |               |________________________________________________|"
     },
     "paper_interact": {
         "en": "read the paper.",
@@ -12,8 +12,8 @@
         "fr": "fermer le papier."
     },
     "basement_paper": {
-        "en": "Bla bla blaaaa",
-        "fr": "Bla bla blaaaa"
+        "fr": "19 Juin 2020 - Cours de biologie                                 Les champignons sont des organismes eucaryotes qui se nourrissent en decomposant la matiere organique, tels que les feuilles mortes et les arbres. Ils sont divises en deux groupes principaux: les champignons a spores et les champignons a mycelium. Les champignons a spores produisent des spores pour se reproduire, tandis que les champignons a mycelium se reproduisent en developpant des reseaux de filaments appeles hyphes. Dans un environnement apocalyptique, il est possible que les champignons jouent un role important dans la survie du joueur. Les champignons comestibles peuvent etre une source de nourriture, tandis que les champignons toxiques ou infectieux peuvent representer un danger pour la sante. Les champignons peuvent egalement etre utilises pour creer des medicaments ou des produits chimiques, en raison de leurs proprietes biologiques uniques.",
+        "en": "June 19, 2020 - Biology class                                 Mushrooms are eukaryotic organisms that feed on decomposing organic matter, such as dead leaves and trees. They are divided into two main groups: spore-bearing mushrooms and mycelium-bearing mushrooms. Spore-bearing mushrooms produce spores to reproduce, while mycelium-bearing mushrooms reproduce by developing networks of filaments called hyphae. In an apocalyptic environment, it is possible that mushrooms play an important role in the player's survival. Edible mushrooms can be a source of food, while toxic or infectious mushrooms can represent a danger to health. Mushrooms can also be used to create medicines or chemicals, due to their unique biological properties."
     },
     "grocery_paper": {
         "en": "Hi sweetie, I hope you don't read this letter, if you do it will already be too late for your dad and me. As I write this I am still in our grocery store with your dad. We have little food left, I would say for 3-4 days maximum. I'm taking care of your father, he was injured while fighting with survivors, he is losing a lot of blood and can't even stand up. I found some bandages to heal him but I don't have any medicine and care in stock in the grocery store, the delivery was supposed to arrive last week but with what's happening, all the streets are infected with zombies we couldn't get it delivered. I don't know how long he has to live and neither do I. I hope you are safe. Never forget that we love you and that you are a strong and resourceful girl. To Annia, your mom who loves you very much.",
@@ -108,16 +108,16 @@
         "en": "Ignore her"
     },
     "annia_help": {
-        "en": "Thank you! I lost my parents and here that was their grocery store. I'm so scared.",
-        "fr": "Merci! J'ai perdu mes parents et ici c'etait leur epicerie. Je suis tellement effrayee."
+        "fr": "J'ai perdu mes parents et ici c'etait leur epicerie. Je suis tellement effrayee, je ne sais pas quoi faire.",
+        "en": "I lost my parents and here it was their grocery store. I'm so scared, I don't know what to do."
     },
     "annia_help_help": {
-        "en": "Give food",
-        "fr": "Donner de la nourriture"
+        "en": "Help her",
+        "fr": "L'aider"
     },
     "annia_help_ignore": {
-        "en": "Talk about something else",
-        "fr": "Parler de quelque chose d'autre"
+        "en": "Ignore her",
+        "fr": "L'ignorer"
     },
     "annia_help_next": {
         "fr": "J'ai un sac avec de la nourriture et une arme dedans. Je peux vous donner l'arme si vous m'aidez.",
@@ -135,6 +135,22 @@
         "fr": "Prendre l'arme.",
         "en": "Take the gun."
     },
+    "annia_help_next_nothing_see": {
+        "fr": "Accepter",
+        "en": "Accept"
+    },
+    "annia_help_next_nothing_heal": {
+        "fr": "C'est une trousse de soin pour les blessures. Elle est a toi, prends-la. Elle te sera plus utile que moi.",
+        "en": "It's a first aid kit for wounds. It's yours, take it. It will be more useful to you than me."
+    },
+    "annia_help_next_nothing_wait": {
+        "fr": "...",
+        "en": "..."
+    },
+    "annia_help_next_nothing": {
+        "fr": "Bon d'accord, je pensais que c'etait une bonne idee. J'ai autre chose sinon. Tu veux voir ?",
+        "en": "Okay, I thought it was a good idea. I have something else otherwise. Do you want to see?"
+    },
     "annia_give_food": {
         "en": "Thank you for this food! I'm so hungry!",
         "fr": "Merci pour cette nourriture! J'ai tellement faim!"
@@ -142,6 +158,18 @@
     "annia_give_nothing": {
         "fr": "Oh, d'accord. Je vais partir alors. Aurevoir!",
         "en": "Oh, okay. I'm going then. Goodbye!"
+    },
+    "annia_give_nothing_back": {
+        "fr": "Lui parler.",
+        "en": "Talk to her."
+    },
+    "annia_give_nothing_ignore": {
+        "fr": "...",
+        "en": "..."
+    },
+    "annia_ignore_end": {
+        "fr": "*Soupir*... Aurevoir!",
+        "en": "*Sigh*... Goodbye!"
     },
     "annia_ignore": {
         "fr": "Attendez ! Ne me laissez pas ici toute seule, s'il vous plait !",
@@ -1078,5 +1106,101 @@
     "use_name": {
         "en": "Use",
         "fr": "Utiliser"
+    },
+    "jack_interact": {
+        "en": "talk to him.",
+        "fr": "lui parler."
+    },
+    "jack_discovery": {
+        "fr": "Salut, etranger. Bienvenue dans mon humble camp. Tu aimes la musique ?",
+        "en": "Hi, stranger. Welcome to my humble camp. Do you like music?"
+    },
+    "discovery_yes": {
+        "fr": "Oui, je suppose.",
+        "en": "Yes, I guess."
+    },
+    "discovery_no": {
+        "fr": "Pas vraiment.",
+        "en": "Not really."
+    },
+    "jack_discovery_yes": {
+        "fr": "Oh, c'est genial ! La musique est l'une des seules choses qui me reste dans ce monde pour survivre. J'ai vu beaucoup de choses horribles, je n'ai plus le moral ni l'envie de vivre mais jouer m'aide a garder espoir.",
+        "en": "Oh, that's great! Music is one of the only things that remains to me in this world to survive. I've seen a lot of horrible things, I have no more morale or desire to live but playing helps me to keep hope. Are you here to listen to me or for something else?"
+    },
+    "jack_discovery_no": {
+        "fr": "Oh, c'est dommage. La musique est l'une des seules choses qui me reste dans ce monde pour survivre. J'ai vu beaucoup de choses horribles, je n'ai plus le moral ni l'envie de vivre mais jouer m'aide a garder espoir.",
+        "en": "Oh, that's a shame. Music is one of the only things that remains to me in this world to survive. I've seen a lot of horrible things, I have no more morale or desire to live but playing helps me to keep hope. Are you here to listen to me or for something else?"
+    },
+    "discovery_listen": {
+        "fr": "L'ecouter",
+        "en": "Listen to him"
+    },
+    "discovery_notlisten": {
+        "fr": "Proposer de l'aide",
+        "en": "Offer help"
+    },
+    "jack_discovery_listen": {
+        "fr": "Je pourrais peut-etre t'aider a trouver quelque chose, mais je vais avoir besoin d'un petit service en echange.",
+        "en": "I could maybe help you to find something, but I'm going to need a little service in exchange."
+    },
+    "jack_discovery_nolisten": {
+        "fr": "Merci, mais je vais bien pour l'instant. J'ai trouve cet endroit calme et sur, je peux jouer ma musique en paix. Mais si tu cherches de l'aide, peut-etre que je peux te donner des informations utiles. Que cherches-tu ?",
+        "en": "Thank you, but I'm fine for now. I found this quiet and safe place, I can play my music in peace. But if you're looking for help, maybe I can give you some useful information. What are you looking for?"
+    },
+    "discovery_nolisten_no": {
+        "fr": "Refuser l'offre",
+        "en": "Refuse the offer"
+    },
+    "jack_discovery_nolisten_no": {
+        "fr": "Eh bien, desole de t'avoir derange je vois que tu m'as pas l'air tres interesse… J'espre que tu trouveras ce que tu cherches. Si jamais tu as besoin d'aide, je suis la pour toi.",
+        "en": "Well, sorry to bother you I see you're not very interested... I hope you find what you're looking for. If you ever need help, I'm here for you."
+    },
+    "discovery_listen_yes": {
+        "fr": "Ecouter",
+        "en": "Listen"
+    },
+    "discovery_listen_no": {
+        "fr": "Se mefier",
+        "en": "Be suspicious"
+    },
+    "jack_discovery_listen_no": {
+        "fr": "Je comprends que tu sois mefiant avec tout ce qu'il se passe, mais je peux te promettre que je ne te veux pas de mal. Je te propose juste de faire affaire, que tu ailles chercher quelque chose que j'ai perdu en me battant.",
+        "en": "I understand that you are suspicious with everything that happens, but I can promise you that I don't want you any harm. I just propose to do business, that you go find something that I lost while fighting."
+    },
+    "jack_discovery_listen_bis": {
+        "fr": "J'ai perdu il y a quelques temps des effets personnels en explorant une maison abandonnee au sud-ouest, et je suis sur que tu pourrais y trouver un masque a gaz que j'ai perdu. Si tu le retrouve, je pourrais te donner quelque chose en echange.",
+        "en": "I lost some personal effects while exploring an abandoned house to the southwest some time ago, and I'm sure you could find a gas mask there that I lost. If you find him, I could give you something in exchange."
+    },
+    "discovery_listen_bis_yes": {
+        "fr": "Accepter",
+        "en": "Accept"
+    },
+    "discovery_listen_bis_no": {
+        "fr": "Refuser",
+        "en": "Refuse"
+    },
+    "jack_discovery_nolisten_yes": {
+        "fr": "Merci beaucoup ! Tu ne sais pas a quel point cela signifie pour moi, je n'ai pas recu d'aide depuis bien longtemps. Une fois le masque en ta possession va voir mon pote pres du barage militaire.",
+        "en": "Thank you very much! You don't know how much it means to me, I haven't received any help for a long time. Once the mask is in your possession go see my friend near the military dam."
+    },
+    "go_to_annia_name": {
+        "en": "Explore",
+        "fr": "Explorer"
+    },
+    "go_to_annia_description": {
+        "en": "Go to the grocery store to the left of your house.",
+        "fr": "Allez au magasin d'alimentation a gauche de votre maison."
+    },
+    "jack_quest_name": {
+        "en": "Jack's stuff",
+        "fr": "Les affaires de Jack"
+    },
+    "jack_quest_description": {
+        "fr": "Apporter au pote de Jack le masque a gaz qu'il a perdu dans la maison abandonee au SO. Son pote est au sud de la ville, pres du barage militaire.",
+        "en": "Bring the gas mask that Jack lost in the abandoned house to the SW to his friend. His friend is south of the city, near the military dam."
+    },
+    "jack_default": {
+        "fr": "Ecoute moi ce doux air de musique, ca me rappelle les bons moments avec ma femme.",
+        "en": "Listen to me this sweet music, it reminds me of the good times I spent with my wife."
     }
 }

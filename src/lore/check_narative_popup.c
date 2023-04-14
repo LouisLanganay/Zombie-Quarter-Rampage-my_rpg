@@ -11,7 +11,7 @@ void check_narative_popup(rpg_t *rpg)
 {
     time_t time = sfClock_getElapsedTime(rpg->narative->clock).microseconds;
     float seconds = time / 1000000.0;
-    sfVector2f pos = sfView_getCenter(rpg->player->view);
+    sfVector2f pos = sfView_getCenter(rpg->player->view->view);
     int mid_char = get_mid_char(rpg->narative->str);
 
     if (rpg->narative->str == NULL)

@@ -67,7 +67,6 @@ static int create_layer(parsed_data_t *tmp_arr, map_t *map)
         return write(2, "Error: malloc failed\n", 21);
     char *layer_type = jp_search(tmp_arr, "type")->value.p_str;
 
-    printf("Load layer %s\n", layer_type);
     if (my_strcmp(layer_type, "objectgroup") == 0)
         load_layer_data_objectgroup(tmp, tmp_arr);
     else if (my_strcmp(layer_type, "tilelayer") == 0)

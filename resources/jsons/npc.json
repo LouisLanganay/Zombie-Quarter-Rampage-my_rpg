@@ -4,9 +4,9 @@
         "map": "resources/maps/grocery_store.json",
         "pos": {
             "x": 160,
-            "y": 50
+            "y": 65
         },
-        "texture_path": "resources/assets/npc/Female1.png",
+        "texture_path": "resources/assets/npc/annia.png",
         "default_dialog": "default",
         "one_time": true,
         "dialogues": [
@@ -56,10 +56,31 @@
                     },
                     {
                         "text": "annia_help_next_ignore",
-                        "next": "help_give_nothing"
+                        "next": "help_next_nothing"
                     }
                 ],
                 "function": null
+            },
+            {
+                "name": "help_next_nothing",
+                "text": "annia_help_next_nothing",
+                "options": [
+                    {
+                        "text": "annia_help_next_nothing_see",
+                        "next": "help_next_nothing_heal"
+                    },
+                    {
+                        "text": "annia_help_next_nothing_wait",
+                        "next": "help_next_nothing_heal"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "help_next_nothing_heal",
+                "text": "annia_help_next_nothing_heal",
+                "options": null,
+                "function": "annia_give_heal"
             },
             {
                 "name": "help_give_food",
@@ -76,7 +97,16 @@
             {
                 "name": "help_give_nothing",
                 "text": "annia_give_nothing",
-                "options": null,
+                "options": [
+                    {
+                        "text": "annia_give_nothing_ignore",
+                        "next": "ignore_end"
+                    },
+                    {
+                        "text": "annia_give_nothing_back",
+                        "next": "help"
+                    }
+                ],
                 "function": null
             },
             {
@@ -84,14 +114,20 @@
                 "text": "annia_ignore",
                 "options": [
                     {
-                        "text": "annia_ignore_help",
-                        "next": "help"
+                        "text": "annia_give_nothing_ignore",
+                        "next": "ignore_end"
                     },
                     {
-                        "text": "annia_ignore_ignore",
-                        "next": "ignore_give_nothing"
+                        "text": "annia_give_nothing_back",
+                        "next": "help"
                     }
                 ],
+                "function": null
+            },
+            {
+                "name": "ignore_end",
+                "text": "annia_ignore_end",
+                "options": null,
                 "function": null
             },
             {
@@ -99,6 +135,142 @@
                 "text": "annia_give_nothing",
                 "options": null,
                 "function": null
+            }
+        ]
+    },
+    "musician": {
+        "name": "Jack",
+        "map": "resources/maps/main_map.json",
+        "pos": {
+            "x": 2202,
+            "y": 178
+        },
+        "texture_path": "resources/assets/npc/jack.png",
+        "default_dialog": "default",
+        "one_time": true,
+        "dialogues": [
+            {
+                "name": "default",
+                "text": "jack_default",
+                "options": null,
+                "function": null
+            },
+            {
+                "name": "discovery",
+                "text": "jack_discovery",
+                "options": [
+                    {
+                        "text": "discovery_yes",
+                        "next": "discovery_yes"
+                    },
+                    {
+                        "text": "discovery_no",
+                        "next": "discovery_no"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "discovery_yes",
+                "text": "jack_discovery_yes",
+                "options": [
+                    {
+                        "text": "discovery_listen",
+                        "next": "discovery_listen"
+                    },
+                    {
+                        "text": "discovery_notlisten",
+                        "next": "discovery_nolisten"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "discovery_no",
+                "text": "jack_discovery_no",
+                "options": [
+                    {
+                        "text": "discovery_listen",
+                        "next": "discovery_listen"
+                    },
+                    {
+                        "text": "discovery_notlisten",
+                        "next": "discovery_nolisten"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "discovery_listen",
+                "text": "jack_discovery_listen",
+                "options": [
+                    {
+                        "text": "discovery_listen_yes",
+                        "next": "jack_discovery_listen_bis"
+                    },
+                    {
+                        "text": "discovery_listen_no",
+                        "next": "jack_discovery_listen_no"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "discovery_nolisten",
+                "text": "jack_discovery_nolisten",
+                "options": [
+                    {
+                        "text": "discovery_listen",
+                        "next": "discovery_listen"
+                    },
+                    {
+                        "text": "discovery_nolisten_no",
+                        "next": "discovery_nolisten_no"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "discovery_nolisten_no",
+                "text": "jack_discovery_nolisten_no",
+                "options": null,
+                "function": null
+            },
+            {
+                "name": "jack_discovery_listen_bis",
+                "text": "jack_discovery_listen_bis",
+                "options": [
+                    {
+                        "text": "discovery_listen_bis_yes",
+                        "next": "jack_discovery_nolisten_yes"
+                    },
+                    {
+                        "text": "discovery_listen_bis_no",
+                        "next": "jack_discovery_nolisten_no"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "jack_discovery_listen_no",
+                "text": "jack_discovery_listen_no",
+                "options": [
+                    {
+                        "text": "discovery_listen",
+                        "next": "discovery_listen"
+                    },
+                    {
+                        "text": "discovery_nolisten_no",
+                        "next": "discovery_nolisten_no"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "jack_discovery_nolisten_yes",
+                "text": "jack_discovery_nolisten_yes",
+                "options": null,
+                "function": "jack_start_quest"
             }
         ]
     }

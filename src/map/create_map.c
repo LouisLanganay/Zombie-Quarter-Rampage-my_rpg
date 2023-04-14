@@ -36,8 +36,6 @@ int create_map(rpg_t *rpg, char *json_path)
         return write(2, "Error: malloc failed\n", 21);
     parsed_data_t *data = jp_parse(json_path);
 
-    printf("Create map: %s\n", json_path);
-
     init_values(tmp, data, json_path, rpg);
 
     tmp->next = rpg->maps;

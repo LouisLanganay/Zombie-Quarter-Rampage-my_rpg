@@ -9,7 +9,9 @@
 
 void init(rpg_t *rpg)
 {
+    rpg->maps = NULL;
     init_glib(rpg);
+    init_game_sounds(rpg);
     init_language(rpg);
     init_settings(rpg);
     init_player(rpg);
@@ -22,4 +24,5 @@ void init(rpg_t *rpg)
     init_main_menu(rpg);
     init_quests(rpg);
     init_quest_assets(rpg);
+    init_hud(rpg);
 }

@@ -16,13 +16,13 @@ static void display_dialogue_box(rpg_t *rpg, sfVector2f view_pos)
         (sfVector2f){view_pos.x, view_pos.y + 75});
     sfRenderWindow_drawSprite(RGW->window, RPA->dialog_box, NULL);
 
-    if (my_strlen(sfText_getString(main_text)) > 53) {
-        divide_a_sftext(main_text, text_pos, rpg);
-    } else {
-        sfText_setPosition(main_text, text_pos);
-        sfRenderWindow_drawText(RGW->window, main_text, NULL);
-    }
-
+    devide_text_t *divide = malloc(sizeof(devide_text_t));
+    divide->pos = text_pos;
+    divide->text = get_language(rpg, rpg->actual_dialog->text, RSG);
+    divide->color = sfBlack;
+    divide->max_len = 57;
+    divide->line_spaces = 8;
+    divide_a_text(rpg, divide);
 }
 
 static void display_dialogue_choice_one(
@@ -89,7 +89,7 @@ static void display_dialogue_escape(
 
 void display_dialogue(rpg_t *rpg)
 {
-    sfVector2f view_pos = sfView_getCenter(rpg->player->view);
+    sfVector2f view_pos = sfView_getCenter(rpg->player->view->view);
 
     if (rpg->player->in_dialogue == 0)
         return;

@@ -47,6 +47,19 @@ static void init_player_inventory(player_t *player)
     player->keys->last_direction = DOWN;
 }
 
+static void init_player_view(player_t *player, rpg_t *rpg)
+{
+    sfVector2f screen_size = (sfVector2f){
+        rpg->glib->window->mode.width,
+        rpg->glib->window->mode.height
+    };
+    player->view = malloc(sizeof(view_t));
+    player->view->view = init_view(screen_size, 0.3, 3);
+    player->view->clock = sfClock_create();
+    player->view->zoom = 0;
+    player->view->time = 0;
+}
+
 void init_player(rpg_t *rpg)
 {
     player_t *player = malloc(sizeof(player_t));
@@ -54,11 +67,8 @@ void init_player(rpg_t *rpg)
     player->pos = (sfVector2f){SPAWN_X, SPAWN_Y};
     player->in_dialogue = 0;
     player->lore_open = 0;
-    sfVector2f screen_size = (sfVector2f){
-        rpg->glib->window->mode.width,
-        rpg->glib->window->mode.height
-    };
-    player->view = init_view(screen_size, 0.3, 3);
+    player->lore_sound_played = 0;
+    init_player_view(player, rpg);
     init_player_assets(player);
     init_player_textures(player);
     init_player_keys(player);

@@ -20,6 +20,8 @@ static void create_object(parsed_data_t *tmp_arr, layer_t *layer)
     tmp->width = jp_search(tmp_arr, "width")->value.p_float;
     tmp->height = jp_search(tmp_arr, "height")->value.p_float;
     tmp->name = jp_search(tmp_arr, "name")->value.p_str;
+    tmp->is_exit = 0;
+    tmp->is_trigger = 0;
     tmp->next = layer->objects;
     layer->objects = tmp;
 }

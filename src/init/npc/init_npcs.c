@@ -19,6 +19,8 @@ static void init_npc_interaction(npc_t *npc, map_t *map)
             tmp->width = 100;
             tmp->height = 100;
             tmp->name = my_strdup(npc->name);
+            tmp->is_exit = 0;
+            tmp->is_trigger = 0;
             tmp->next = layer->objects;
             layer->objects = tmp;
             return;
@@ -33,6 +35,7 @@ static void init_npc_sprite(npc_t *npc)
     npc->sprite = sfSprite_create();
     sfSprite_setTexture(npc->sprite, npc->texture, sfTrue);
     npc->rect = (sfIntRect){0, 0, PLAYER_SPRITE_WIDTH, PLAYER_SPRITE_HEIGHT};
+    npc->rect.left = npc->rect.width * 4;
     sfSprite_setTextureRect(npc->sprite, npc->rect);
     sfSprite_setPosition(npc->sprite, npc->pos);
 }
@@ -41,6 +44,7 @@ static void add_npc_to_linked_list(map_t *map, parsed_data_t *data, rpg_t *rpg)
 {
     npc_t *npc = malloc(sizeof(npc_t));
     npc->name = my_strdup(jp_search(data, "name")->value.p_str);
+    npc->clock = sfClock_create();
     npc->pos.x = jp_search(data, "pos.x")->value.p_int;
     npc->pos.y = jp_search(data, "pos.y")->value.p_int;
     npc->one_time = jp_search(data, "one_time")->value.p_bool;

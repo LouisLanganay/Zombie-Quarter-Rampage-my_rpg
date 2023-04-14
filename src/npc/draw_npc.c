@@ -7,12 +7,20 @@
 
 #include "rpg.h"
 
-void draw_npcs(map_t *map, rpg_t *rpg)
+static void change_npc_rect_annimate(rpg_t *rpg, npc_t *npc)
 {
-    npc_t *npc = map->npcs;
+    time_t time = sfClock_getElapsedTime(npc->clock).microseconds;
+    float seconds = time / 1000000.0;
+    if (seconds < 0.30) return;
+    npc->rect.top += PLAYER_SPRITE_HEIGHT;
+    if (npc->rect.top >= PLAYER_SPRITE_HEIGHT * 6)
+        npc->rect.top = 0;
+    sfClock_restart(npc->clock);
+}
 
-    while (npc) {
-        sfRenderWindow_drawSprite(RGW->window, npc->sprite, NULL);
-        npc = npc->next;
-    }
+void draw_npc(rpg_t *rpg, npc_t *npc)
+{
+    change_npc_rect_annimate(rpg, npc);
+    sfSprite_setTextureRect(npc->sprite, npc->rect);
+    sfRenderWindow_drawSprite(RGW->window, npc->sprite, NULL);
 }
