@@ -22,8 +22,8 @@
 	},
 	"player": {
 		"pos": {
-			"x": 2161,
-			"y": 263
+			"x": 189,
+			"y": 191
 		},
 		"hp": 20,
 		"hunger": 100,
@@ -36,7 +36,7 @@
 		}
 	},
 	"game": {
-		"actual_map": "resources/maps/main_map.json"
+		"actual_map": "resources/maps/player_house.json"
 	},
 	"game_timeline": {
 		"npc_interactions": [

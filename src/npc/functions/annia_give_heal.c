@@ -2,12 +2,13 @@
 ** EPITECH PROJECT, 2023
 ** B-MUL-200-REN-2-1-myrpg-louis.langanay
 ** File description:
-** s_radiation
+** annia_give_heal
 */
 
 #include "rpg.h"
 
-void s_radiation_exit(rpg_t *rpg, sfVector2f pos)
+void annia_give_heal(void *main)
 {
-    fade_sound(rpg, RADIATION_SOUND_ID, 3);
+    (void)(main);
+    printf("Give heal from annia\n");
 }

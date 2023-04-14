@@ -56,10 +56,31 @@
                     },
                     {
                         "text": "annia_help_next_ignore",
-                        "next": "help_give_nothing"
+                        "next": "help_next_nothing"
                     }
                 ],
                 "function": null
+            },
+            {
+                "name": "help_next_nothing",
+                "text": "annia_help_next_nothing",
+                "options": [
+                    {
+                        "text": "annia_help_next_nothing_see",
+                        "next": "help_next_nothing_heal"
+                    },
+                    {
+                        "text": "annia_help_next_nothing_wait",
+                        "next": "help_next_nothing_heal"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "help_next_nothing_heal",
+                "text": "annia_help_next_nothing_heal",
+                "options": null,
+                "function": "annia_give_heal"
             },
             {
                 "name": "help_give_food",
@@ -76,7 +97,16 @@
             {
                 "name": "help_give_nothing",
                 "text": "annia_give_nothing",
-                "options": null,
+                "options": [
+                    {
+                        "text": "annia_give_nothing_ignore",
+                        "next": "ignore_end"
+                    },
+                    {
+                        "text": "annia_give_nothing_back",
+                        "next": "help"
+                    }
+                ],
                 "function": null
             },
             {
@@ -84,14 +114,20 @@
                 "text": "annia_ignore",
                 "options": [
                     {
-                        "text": "annia_ignore_help",
-                        "next": "help"
+                        "text": "annia_give_nothing_ignore",
+                        "next": "ignore_end"
                     },
                     {
-                        "text": "annia_ignore_ignore",
-                        "next": "ignore_give_nothing"
+                        "text": "annia_give_nothing_back",
+                        "next": "help"
                     }
                 ],
+                "function": null
+            },
+            {
+                "name": "ignore_end",
+                "text": "annia_ignore_end",
+                "options": null,
                 "function": null
             },
             {
@@ -111,11 +147,11 @@
         },
         "texture_path": "resources/assets/npc/jack.png",
         "default_dialog": "default",
-        "one_time": false,
+        "one_time": true,
         "dialogues": [
             {
                 "name": "default",
-                "text": "annia_default",
+                "text": "jack_default",
                 "options": null,
                 "function": null
             },

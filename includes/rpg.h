@@ -431,6 +431,7 @@
     void save_quests_completed(rpg_t *rpg);
 
     /* QUESTS */
+    void start_dialogue_default(npc_t *npc, rpg_t *rpg);
     void start_quest(rpg_t *rpg, char *id);
     quest_t *get_quest(rpg_t *rpg, char *id);
     void draw_quests(rpg_t *rpg);
@@ -510,6 +511,7 @@
     void s_nature(rpg_t *rpg, sfVector2f pos);
 
     /* CALL ACTIONS */
+    void annia_give_heal(void *main);
     void jack(rpg_t *rpg, sfVector2f pos);
     void s_radiation(rpg_t *rpg, sfVector2f pos);
     void s_radiation_exit(rpg_t *rpg, sfVector2f pos);

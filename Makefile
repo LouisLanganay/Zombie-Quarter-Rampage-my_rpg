@@ -255,6 +255,8 @@ SRC += init_hud.c
 SRC += draw_hud.c
 SRC += change_window_mode.c
 SRC += jack_start_quest.c
+SRC += start_dialogue_default.c
+SRC += annia_give_heal.c
 
 
 INC_DIR 	:= includes
