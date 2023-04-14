@@ -23,23 +23,14 @@ static void window_manager(rpg_t *rpg)
     gl_check_events(rpg->glib->window, rpg->glib->events, rpg);
 }
 
-// char **wave_zombie = {
-//     "...."
-// }
-
-// void wave 
-
 int combat(rpg_t *rpg)
 {
     srand(time(NULL));
     fill_combat_rpg(rpg);
     combat_t *combat = init_combat();
     sfClock *clock = sfClock_create();
-    insert_zombies(rpg, &combat->zombies);
-
-    rpg->player->hp = 100;
-
-    while (sfRenderWindow_isOpen(rpg->glib->window->window)) {
+    wave(wave_zombie1(), rpg, &combat->zombies);
+    while (condition_window) {
         window_manager(rpg);
         gun_manager(rpg, combat);
         move_player(rpg, combat->clock_move);
