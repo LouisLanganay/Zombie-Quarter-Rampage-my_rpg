@@ -10,7 +10,7 @@
 
 static void draw_text_use(rpg_t *rpg)
 {
-    sfVector2f view_pos = sfView_getCenter(RP->view);
+    sfVector2f view_pos = sfView_getCenter(RP->view->view);
     devide_text_t *devide = malloc(sizeof(devide_text_t));
 
     devide->text = get_language(rpg, "use_name", RSG);
@@ -23,7 +23,7 @@ static void draw_text_use(rpg_t *rpg)
 
 static void draw_text_destroy(rpg_t *rpg)
 {
-    sfVector2f view_pos = sfView_getCenter(RP->view);
+    sfVector2f view_pos = sfView_getCenter(RP->view->view);
     devide_text_t *devide = malloc(sizeof(devide_text_t));
 
     devide->text = get_language(rpg, "destroy_name", RSG);
@@ -38,7 +38,7 @@ void handle_drop_use_button(rpg_t *rpg)
 {
     int id = get_key_id(RPK->choice_two.key, rpg);
     int id1 = get_key_id(RPK->choice_one.key, rpg);
-    sfVector2f view_pos = sfView_getCenter(RP->view);
+    sfVector2f view_pos = sfView_getCenter(RP->view->view);
 
     if (id != -1) {
         sfSprite_setPosition(RPA->key_sprite[id],

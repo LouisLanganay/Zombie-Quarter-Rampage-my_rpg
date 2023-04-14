@@ -10,7 +10,7 @@
 item_func_t *get_items_functions_arr(void)
 {
     item_func_t inte_array[] = {
-        { 106, bandage },
+        { 106, bandage},
         { -1, NULL }
     };
     item_func_t *inte = malloc(sizeof(item_func_t) *
