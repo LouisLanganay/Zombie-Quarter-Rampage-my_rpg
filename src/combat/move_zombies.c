@@ -63,10 +63,12 @@ void move_zombies(zombies_t *list, rpg_t *rpg)
         distance_player = distance(pos, tmp->pos);
         if (distance_player <= 30 || (distance_player == 31 &&
         tmp->last_distance == 30)) {
+            tmp->status_anim = 1;
             attack_player(rpg,tmp->attack_clock,tmp->attack_speed,tmp->damage);
             tmp = tmp->next;
             continue;
         }
+        tmp->status_anim = 0;
         move_x_zombie(distance_player, tmp, pos);
         move_y_zombie(distance_player, tmp, pos);
         tmp->last_distance = distance_player;
