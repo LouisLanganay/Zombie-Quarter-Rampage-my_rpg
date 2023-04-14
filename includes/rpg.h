@@ -38,6 +38,10 @@
     #define MAIN_THEME_ID 11
     #define BASEMENT_SOUND_PATH "resources/sounds/basement.ogg"
     #define BASEMENT_SOUND_ID 12
+    #define INV_SOUND_PATH "resources/sounds/open-bag-sound.ogg"
+    #define INV_SOUND_ID 13
+    #define DROP_SOUND_PATH "resources/sounds/drop_sound.ogg"
+    #define DROP_SOUND_ID 14
 
     #define RPA rpg->player->assets
     #define RGW rpg->glib->window
@@ -377,7 +381,6 @@
     void exec_item_func(rpg_t *rpg, int id);
     void handle_drop_use_button(rpg_t *rpg);
     char *get_item_name(int id);
-    void swap_items_in_inventory(int id_1, int id_2);
 
     /* NPC */
     npc_t *get_npc(map_t *map, char *name);
