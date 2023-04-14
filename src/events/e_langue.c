@@ -13,10 +13,3 @@ void e_langue_fr(int id, void *main)
     rpg_t *rpg = (rpg_t *)main;
     rpg->settings->game_language = FR;
 }
-
-void e_langue_en(int id, void *main)
-{
-    (void)id;
-    rpg_t *rpg = (rpg_t *)main;
-    rpg->settings->game_language = EN;
-}
