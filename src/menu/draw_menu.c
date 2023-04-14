@@ -60,6 +60,8 @@ static void draw_buttons(rpg_t *rpg)
 
 void draw_menu(rpg_t *rpg)
 {
+    sfRenderWindow_drawSprite(rpg->glib->window->window,
+    rpg->background->background_menu_s, NULL);
     if (rpg->menu->active == false) {
             gl_draw_button(BTN_QUIT, rpg->glib->buttons, rpg->glib->window);
             gl_draw_button(BTN_START, rpg->glib->buttons,rpg->glib->window);
