@@ -10,6 +10,8 @@
 static void set_zombies(zombies_t *new_node)
 {
     new_node->clock_animation = sfClock_create();
+    new_node->status_anim = 0;
+    new_node->alive = 0;
     sfRectangleShape_setPosition(new_node->hitbox, new_node->pos);
     sfRectangleShape_setSize(new_node->hitbox, (sfVector2f){60, 110});
     sfRectangleShape_setFillColor(new_node->hitbox, sfTransparent);
@@ -23,10 +25,10 @@ static void set_zombies(zombies_t *new_node)
     sfSprite_setPosition(new_node->sprite, new_node->pos);
 }
 
-void insert_zombies(rpg_t *rpg, zombies_t **list)
+void insert_zombies_coord(rpg_t *rpg, zombies_t **list, sfVector2f pos)
 {
     zombies_t *new_node = malloc(sizeof(zombies_t));
-    new_node->pos = (sfVector2f){1920 + rand() % 500, 620 - rand() % 420};
+    new_node->pos = pos;
     new_node->type = 1;
     new_node->hp = 100;
     new_node->damage = 5;
