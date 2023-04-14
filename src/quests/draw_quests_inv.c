@@ -15,7 +15,7 @@ static void draw_quest_text(char *quest_id, rpg_t *rpg, int i, int nb_text)
     sfVector2f pos = (sfVector2f){vp.x + vs.x / 5 + 5, vp.y - vs.y / 2 + 40};
     sfText *text = sfText_create();
 
-    sfText_setString(text, quest->name);
+    sfText_setString(text, get_language(rpg, quest->name, RSG));
     sfText_setFont(text, gl_get_font(rpg->glib, MINECRAFT_FONT));
     sfText_setScale(text, (sfVector2f){0.1, 0.1});
     sfText_setCharacterSize(text, 70);
@@ -63,10 +63,11 @@ void draw_quests_inv(rpg_t *rpg)
         quest = get_quest(rpg, rpg->quests_in_progress[i]);
         draw_quest_text(rpg->quests_in_progress[i], rpg, i - 1, count);
         draw_quest_icon(rpg->quests_in_progress[i], rpg, i - 1, count);
-        devide->text = quest->description;
+        devide->text = get_language(rpg, quest->description, RSG);
         devide->pos = (sfVector2f){pos.x, pos.y + 15 * i + (12 * count)};
         devide->color = sfWhite;
         devide->max_len = 43;
+        devide->line_spaces = 10;
         divide_a_text(rpg, devide);
         nb_text = my_strlen(quest->description) / devide->max_len + 1;
         count += nb_text;

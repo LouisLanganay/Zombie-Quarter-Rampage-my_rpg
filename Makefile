@@ -254,6 +254,7 @@ SRC += jack.c
 SRC += init_hud.c
 SRC += draw_hud.c
 SRC += change_window_mode.c
+SRC += jack_start_quest.c
 
 
 INC_DIR 	:= includes

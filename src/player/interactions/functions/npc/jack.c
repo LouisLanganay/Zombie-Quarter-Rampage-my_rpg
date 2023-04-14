@@ -16,7 +16,7 @@ void jack(rpg_t *rpg, sfVector2f pos)
         npc->default_dialog == NULL)
         return;
     draw_interaction_popup(rpg,
-        (sfVector2f){pos.x - 35, pos.y + 20},
+        (sfVector2f){pos.x - 40, pos.y + 20},
         RPK->interact.key, get_language(rpg, "jack_interact", RSG));
     if (sfKeyboard_isKeyPressed(RPK->interact.key) == sfTrue)
         start_dialogue(rpg, npc);

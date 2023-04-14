@@ -31,6 +31,7 @@ void draw_popup_lore(rpg_t *rpg)
     devide->max_len = 65;
     devide->pos = (sfVector2f){view_pos.x - 105, view_pos.y - 70};
     devide->color = sfBlack;
+    devide->line_spaces = 10;
     divide_a_text(rpg, devide);
     free(devide);
     check_popup_lore(rpg);

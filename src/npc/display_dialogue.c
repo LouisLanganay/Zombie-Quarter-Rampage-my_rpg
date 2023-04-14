@@ -21,7 +21,7 @@ static void display_dialogue_box(rpg_t *rpg, sfVector2f view_pos)
     divide->text = get_language(rpg, rpg->actual_dialog->text, RSG);
     divide->color = sfBlack;
     divide->max_len = 57;
-
+    divide->line_spaces = 8;
     divide_a_text(rpg, divide);
 }
 

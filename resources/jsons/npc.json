@@ -137,14 +137,104 @@
             {
                 "name": "discovery_yes",
                 "text": "jack_discovery_yes",
-                "options": null,
+                "options": [
+                    {
+                        "text": "discovery_listen",
+                        "next": "discovery_listen"
+                    },
+                    {
+                        "text": "discovery_notlisten",
+                        "next": "discovery_nolisten"
+                    }
+                ],
                 "function": null
             },
             {
                 "name": "discovery_no",
                 "text": "jack_discovery_no",
+                "options": [
+                    {
+                        "text": "discovery_listen",
+                        "next": "discovery_listen"
+                    },
+                    {
+                        "text": "discovery_notlisten",
+                        "next": "discovery_nolisten"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "discovery_listen",
+                "text": "jack_discovery_listen",
+                "options": [
+                    {
+                        "text": "discovery_listen_yes",
+                        "next": "jack_discovery_listen_bis"
+                    },
+                    {
+                        "text": "discovery_listen_no",
+                        "next": "jack_discovery_listen_no"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "discovery_nolisten",
+                "text": "jack_discovery_nolisten",
+                "options": [
+                    {
+                        "text": "discovery_listen",
+                        "next": "discovery_listen"
+                    },
+                    {
+                        "text": "discovery_nolisten_no",
+                        "next": "discovery_nolisten_no"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "discovery_nolisten_no",
+                "text": "jack_discovery_nolisten_no",
                 "options": null,
                 "function": null
+            },
+            {
+                "name": "jack_discovery_listen_bis",
+                "text": "jack_discovery_listen_bis",
+                "options": [
+                    {
+                        "text": "discovery_listen_bis_yes",
+                        "next": "jack_discovery_nolisten_yes"
+                    },
+                    {
+                        "text": "discovery_listen_bis_no",
+                        "next": "jack_discovery_nolisten_no"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "jack_discovery_listen_no",
+                "text": "jack_discovery_listen_no",
+                "options": [
+                    {
+                        "text": "discovery_listen",
+                        "next": "discovery_listen"
+                    },
+                    {
+                        "text": "discovery_nolisten_no",
+                        "next": "discovery_nolisten_no"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "jack_discovery_nolisten_yes",
+                "text": "jack_discovery_nolisten_yes",
+                "options": null,
+                "function": "jack_start_quest"
             }
         ]
     }

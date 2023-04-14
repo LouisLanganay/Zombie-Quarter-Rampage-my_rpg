@@ -247,6 +247,7 @@
         char *text;
         sfColor color;
         int max_len;
+        int line_spaces;
     } devide_text_t;
 
     typedef struct narative_s {
@@ -520,6 +521,7 @@
     void i_soda(rpg_t *rpg, sfVector2f pos);
     void i_paper_grocery(rpg_t *rpg, sfVector2f pos);
     void go_to_annia(void *main);
+    void jack_start_quest(void *main);
     void i_pass_fence(rpg_t *rpg, sfVector2f pos);
     void npc_give_food(void*);
     void s_basement(rpg_t *rpg, sfVector2f pos);

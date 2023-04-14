@@ -20,7 +20,7 @@ void divide_a_text(rpg_t *rpg, devide_text_t *devide)
         sfText_setScale(new_text, (sfVector2f){0.05, 0.05});
         sfText_setString(new_text, my_strndup(devide->text, devide->max_len));
         sfText_setPosition(new_text,
-            (sfVector2f){devide->pos.x, devide->pos.y + i * 10});
+        (sfVector2f){devide->pos.x, devide->pos.y + i * devide->line_spaces});
         sfText_setColor(new_text, devide->color);
         sfRenderWindow_drawText(rpg->glib->window->window, new_text, NULL);
         sfText_destroy(new_text);

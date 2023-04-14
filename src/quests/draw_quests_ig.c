@@ -16,7 +16,7 @@ static void draw_quest_text(char *quest_id, rpg_t *rpg, int i)
         view_pos.y - view_size.y / 2 + 25};
     sfText *text = sfText_create();
 
-    sfText_setString(text, quest->name);
+    sfText_setString(text, get_language(rpg, quest->name, RSG));
     sfText_setFont(text, gl_get_font(rpg->glib, MINECRAFT_FONT));
     sfText_setScale(text, (sfVector2f){0.1, 0.1});
     sfText_setCharacterSize(text, 70);
