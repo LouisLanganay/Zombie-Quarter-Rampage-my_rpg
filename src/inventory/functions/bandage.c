@@ -15,4 +15,5 @@ void bandage(void *main)
     if (rpg->player->hp > 100)
         rpg->player->hp = 100;
     printf("Your hp is now %d\n", rpg->player->hp);
+    remove_item_to_inventory(rpg, RP->inventory->pos);
 }
