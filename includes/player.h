@@ -151,15 +151,24 @@
         sfRectangleShape *background;
     } inventory_t;
 
+    typedef struct view_s {
+        sfView *view;
+        sfClock *clock;
+        float zoom;
+        float time;
+    } view_t;
+
     typedef struct player_s {
         int hp;
+        int hunger;
         int in_dialogue;
         int lore_open;
+        int lore_sound_played;
         char *lore_text;
         inventory_t *inventory;
         sfRectangleShape *hitbox;
         sfVector2f pos;
-        sfView *view;
+        view_t *view;
         sfClock *clock;
         sfTexture *texture;
         sfSprite *sprite;

@@ -397,6 +397,17 @@
                  "width":18.3064838237252,
                  "x":317.867128211956,
                  "y":94.195180402077
+                }, 
+                {
+                 "class":"",
+                 "height":226.001863932898,
+                 "id":15,
+                 "name":"s_grocery",
+                 "rotation":0,
+                 "visible":true,
+                 "width":293.236586340035,
+                 "x":64.2391159632539,
+                 "y":-7.32259352949008
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -428,7 +439,7 @@
          "y":0
         }],
  "nextlayerid":83,
- "nextobjectid":15,
+ "nextobjectid":16,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.9.2",

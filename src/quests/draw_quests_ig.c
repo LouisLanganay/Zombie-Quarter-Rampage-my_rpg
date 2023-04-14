@@ -10,13 +10,13 @@
 static void draw_quest_text(char *quest_id, rpg_t *rpg, int i)
 {
     quest_t *quest = get_quest(rpg, quest_id);
-    sfVector2f view_pos = sfView_getCenter(rpg->player->view);
-    sfVector2f view_size = sfView_getSize(rpg->player->view);
+    sfVector2f view_pos = sfView_getCenter(rpg->player->view->view);
+    sfVector2f view_size = sfView_getSize(rpg->player->view->view);
     sfVector2f pos = (sfVector2f){view_pos.x + view_size.x / 2 - 83,
         view_pos.y - view_size.y / 2 + 25};
     sfText *text = sfText_create();
 
-    sfText_setString(text, quest->name);
+    sfText_setString(text, get_language(rpg, quest->name, RSG));
     sfText_setFont(text, gl_get_font(rpg->glib, MINECRAFT_FONT));
     sfText_setScale(text, (sfVector2f){0.1, 0.1});
     sfText_setCharacterSize(text, 70);
@@ -28,8 +28,8 @@ static void draw_quest_text(char *quest_id, rpg_t *rpg, int i)
 static void draw_quest_icon(char *quest_id, rpg_t *rpg, int i)
 {
     quest_t *quest = get_quest(rpg, quest_id);
-    sfVector2f view_pos = sfView_getCenter(rpg->player->view);
-    sfVector2f view_size = sfView_getSize(rpg->player->view);
+    sfVector2f view_pos = sfView_getCenter(rpg->player->view->view);
+    sfVector2f view_size = sfView_getSize(rpg->player->view->view);
     sfVector2f pos = (sfVector2f){view_pos.x + view_size.x / 2 - 95,
         view_pos.y - view_size.y / 2 + 25};
 

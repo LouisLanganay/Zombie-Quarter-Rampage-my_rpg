@@ -38,10 +38,12 @@ static void start_dialogue_discovery(npc_t *npc, rpg_t *rpg)
         dialog = dialog->next;
     }
     sfText_setString(main_text, get_language(rpg, dialog->text, RSG));
-    sfText_setString(choice_one_text,
-        get_language(rpg, dialog->options[0]->text, RSG));
-    sfText_setString(choice_two_text,
-        get_language(rpg, dialog->options[1]->text, RSG));
+    if (dialog->options != NULL) {
+        sfText_setString(choice_one_text,
+            get_language(rpg, dialog->options[0]->text, RSG));
+        sfText_setString(choice_two_text,
+            get_language(rpg, dialog->options[1]->text, RSG));
+    }
     rpg->player->in_dialogue = 1;
     rpg->actual_dialog = dialog;
     rpg->actual_npc = npc;
@@ -50,6 +52,7 @@ static void start_dialogue_discovery(npc_t *npc, rpg_t *rpg)
 void start_dialogue(rpg_t *rpg, npc_t *npc)
 {
     if (rpg->player->in_dialogue != 0) return;
+    zoom_view(rpg, 0.999, 20);
     if (npc->one_time == 1 && my_arr_contains(RSNI, npc->name) == 1)
         start_dialogue_default(npc, rpg);
     else

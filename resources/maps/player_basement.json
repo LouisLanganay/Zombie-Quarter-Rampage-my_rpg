@@ -543,29 +543,17 @@
                  "width":73.2809855133939,
                  "x":241.502118440289,
                  "y":154.545605089357
-                }],
-         "opacity":1,
-         "type":"objectgroup",
-         "visible":true,
-         "x":0,
-         "y":0
-        }, 
-        {
-         "color":"#fadc8add",
-         "draworder":"topdown",
-         "id":72,
-         "name":"sounds",
-         "objects":[
+                }, 
                 {
                  "class":"",
-                 "height":241.085806303198,
-                 "id":10,
+                 "height":256.787796690029,
+                 "id":11,
                  "name":"s_basement",
                  "rotation":0,
                  "visible":true,
-                 "width":336.783988957902,
-                 "x":58.8911893259719,
-                 "y":59.3512767425811
+                 "width":340.420519465222,
+                 "x":56.540432298722,
+                 "y":45.9391012427116
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -574,7 +562,7 @@
          "y":0
         }],
  "nextlayerid":73,
- "nextobjectid":11,
+ "nextobjectid":12,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.9.2",

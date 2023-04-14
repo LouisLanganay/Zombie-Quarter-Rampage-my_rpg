@@ -154,5 +154,97 @@
     "annia_ignore_ignore": {
         "en": "Ignore her",
         "fr": "L'ignorer"
+    },
+    "jack_interact": {
+        "en": "talk to him.",
+        "fr": "lui parler."
+    },
+    "jack_discovery": {
+        "fr": "Salut, etranger. Bienvenue dans mon humble camp. Tu aimes la musique ?",
+        "en": "Hi, stranger. Welcome to my humble camp. Do you like music?"
+    },
+    "discovery_yes": {
+        "fr": "Oui, je suppose.",
+        "en": "Yes, I guess."
+    },
+    "discovery_no": {
+        "fr": "Pas vraiment.",
+        "en": "Not really."
+    },
+    "jack_discovery_yes": {
+        "fr": "Oh, c'est genial ! La musique est l'une des seules choses qui me reste dans ce monde pour survivre. J'ai vu beaucoup de choses horribles, je n'ai plus le moral ni l'envie de vivre mais jouer m'aide a garder espoir.",
+        "en": "Oh, that's great! Music is one of the only things that remains to me in this world to survive. I've seen a lot of horrible things, I have no more morale or desire to live but playing helps me to keep hope. Are you here to listen to me or for something else?"
+    },
+    "jack_discovery_no": {
+        "fr": "Oh, c'est dommage. La musique est l'une des seules choses qui me reste dans ce monde pour survivre. J'ai vu beaucoup de choses horribles, je n'ai plus le moral ni l'envie de vivre mais jouer m'aide a garder espoir.",
+        "en": "Oh, that's a shame. Music is one of the only things that remains to me in this world to survive. I've seen a lot of horrible things, I have no more morale or desire to live but playing helps me to keep hope. Are you here to listen to me or for something else?"
+    },
+    "discovery_listen": {
+        "fr": "L'ecouter",
+        "en": "Listen to him"
+    },
+    "discovery_notlisten": {
+        "fr": "Proposer de l'aide",
+        "en": "Offer help"
+    },
+    "jack_discovery_listen": {
+        "fr": "Je pourrais peut-etre t'aider a trouver quelque chose, mais je vais avoir besoin d'un petit service en echange.",
+        "en": "I could maybe help you to find something, but I'm going to need a little service in exchange."
+    },
+    "jack_discovery_nolisten": {
+        "fr": "Merci, mais je vais bien pour l'instant. J'ai trouve cet endroit calme et sur, je peux jouer ma musique en paix. Mais si tu cherches de l'aide, peut-etre que je peux te donner des informations utiles. Que cherches-tu ?",
+        "en": "Thank you, but I'm fine for now. I found this quiet and safe place, I can play my music in peace. But if you're looking for help, maybe I can give you some useful information. What are you looking for?"
+    },
+    "discovery_nolisten_no": {
+        "fr": "Refuser l'offre",
+        "en": "Refuse the offer"
+    },
+    "jack_discovery_nolisten_no": {
+        "fr": "Eh bien, desole de t'avoir derange je vois que tu m'as pas l'air tres interesse… J'espre que tu trouveras ce que tu cherches. Si jamais tu as besoin d'aide, je suis la pour toi.",
+        "en": "Well, sorry to bother you I see you're not very interested... I hope you find what you're looking for. If you ever need help, I'm here for you."
+    },
+    "discovery_listen_yes": {
+        "fr": "Ecouter",
+        "en": "Listen"
+    },
+    "discovery_listen_no": {
+        "fr": "Se mefier",
+        "en": "Be suspicious"
+    },
+    "jack_discovery_listen_no": {
+        "fr": "Je comprends que tu sois mefiant avec tout ce qu'il se passe, mais je peux te promettre que je ne te veux pas de mal. Je te propose juste de faire affaire, que tu ailles chercher quelque chose que j'ai perdu en me battant.",
+        "en": "I understand that you are suspicious with everything that happens, but I can promise you that I don't want you any harm. I just propose to do business, that you go find something that I lost while fighting."
+    },
+    "jack_discovery_listen_bis": {
+        "fr": "J'ai perdu il y a quelques temps des effets personnels en explorant une maison abandonnée qui se trouve au sud-ouest, et je suis sûr que tu pourrais y trouver un masque a gaz que j'ai perdu. Donc si tu le retrouve, je pourrais te donner quelque chose en échange.",
+        "en": "I lost some personal effects while exploring an abandoned house to the southwest some time ago, and I'm sure you could find a gas mask there that I lost. So if you find him, I could give you something in return."
+    },
+    "discovery_listen_bis_yes": {
+        "fr": "Accepter",
+        "en": "Accept"
+    },
+    "discovery_listen_bis_no": {
+        "fr": "Refuser",
+        "en": "Refuse"
+    },
+    "jack_discovery_nolisten_yes": {
+        "fr": "Merci beaucoup ! Tu ne sais pas a quel point cela signifie pour moi, je n'ai pas recu d'aide depuis bien longtemps. Une fois le masque en ta possession va voir mon pote près du barage militaire.",
+        "en": "Thank you very much! You don't know how much it means to me, I haven't received any help for a long time. Once the mask is in your possession go see my friend near the military dam."
+    },
+    "go_to_annia_name": {
+        "en": "Explore",
+        "fr": "Explorer"
+    },
+    "go_to_annia_description": {
+        "en": "Go to the grocery store to the left of your house.",
+        "fr": "Allez au magasin d'alimentation a gauche de votre maison."
+    },
+    "jack_quest_name": {
+        "en": "Jack's stuff",
+        "fr": "Les affaires de Jack"
+    },
+    "jack_quest_description": {
+        "fr": "Apporter au pote de Jack le masque a gaz qu'il a perdu dans la maison abandonée au SO. Son pote est au sud de la ville, près du barage militaire.",
+        "en": "Bring the gas mask that Jack lost in the abandoned house to the SW to his friend. His friend is south of the city, near the military dam."
     }
 }

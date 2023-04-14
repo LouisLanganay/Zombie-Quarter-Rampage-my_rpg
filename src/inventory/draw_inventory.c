@@ -11,7 +11,7 @@ void draw_inventory(rpg_t *rpg)
 {
     int width = rpg->glib->window->mode.width;
     int height = rpg->glib->window->mode.height;
-    sfVector2f view_pos = sfView_getCenter(rpg->player->view);
+    sfVector2f view_pos = sfView_getCenter(rpg->player->view->view);
     if (rpg->player->inventory->is_open != 1) return;
 
     sfRectangleShape_setPosition(rpg->player->inventory->background,

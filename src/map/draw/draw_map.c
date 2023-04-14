@@ -15,7 +15,6 @@ void draw_map(map_t *maps, char *to_find, rpg_t *rpg)
             draw_layer_by_class(tmp, rpg, "down");
             draw_layer_by_order(tmp, rpg, 0);
             draw_player(rpg);
-            draw_npcs(tmp, rpg);
             draw_layer_by_order(tmp, rpg, 1);
             draw_layer_by_class(tmp, rpg, "top");
             return;

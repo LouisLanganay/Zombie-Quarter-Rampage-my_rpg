@@ -19,6 +19,19 @@ static int count_layers(layer_t *layers)
     return count;
 }
 
+static void draw_npc_by_order(rpg_t *rpg, int order, map_t *map)
+{
+    npc_t *tmp = map->npcs;
+
+    while (tmp != NULL) {
+        if (order == 0 && (tmp->pos.y + 35) <= rpg->player->pos.y)
+            draw_npc(rpg, tmp);
+        if (order == 1 && (tmp->pos.y + 35) > rpg->player->pos.y)
+            draw_npc(rpg, tmp);
+        tmp = tmp->next;
+    }
+}
+
 static void draw_layer_by_order_0(layer_t *tmp, rpg_t *rpg, map_t *map)
 {
     int y = (rpg->player->pos.y + 1) / map->tile_height - 1;
@@ -54,4 +67,5 @@ void draw_layer_by_order(map_t *map, rpg_t *rpg, int order)
         if (order == 1)
             draw_layer_by_order_1(tmp, rpg, map);
     }
+    draw_npc_by_order(rpg, order, map);
 }
