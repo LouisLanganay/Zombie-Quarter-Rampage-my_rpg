@@ -161,6 +161,12 @@
         bool active;
     } menu_t;
 
+    typedef struct menu_background_s {
+        sfTexture *background_menu_t;
+        sfSprite *background_menu_s;
+        bool active;
+    } menu_background_t;
+
     typedef struct menu_keybinds_s {
         sfTexture *settings_bg_key_texture;
         sfSprite *settings_bg_key_sprite;
@@ -206,6 +212,7 @@
         npc_t *actual_npc;
         map_t *maps;
         GLib_t *glib;
+        menu_background_t *background;
         menu_t *menu;
         menu_keybinds_t *menu_key;
         player_t *player;
@@ -361,6 +368,7 @@
     void init_main_menu_en(rpg_t *rpg);
     void init_button_fr(rpg_t *rpg);
     void init_button_en(rpg_t *rpg);
+    void init_background(rpg_t *rpg);
 
     /* LORE */
     void draw_popup_lore(rpg_t *rpg);
