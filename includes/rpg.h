@@ -348,6 +348,7 @@
         int direction;
         int last_distance;
         int status_anim;
+        sfRectangleShape *hp_bar;
     } zombies_t;
 
     #define windoww rpg->glib->window->window
@@ -384,6 +385,7 @@
     #define condition_window sfRenderWindow_isOpen\
     (rpg->glib->window->window) && number_zombies(combat->zombies) > 0
     int number_zombies(zombies_t *zombies);
+    #define sfp sfSprite_setPosition
     char **wave_zombie1(void);
 
     typedef struct combat_s {

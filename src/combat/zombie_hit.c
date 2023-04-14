@@ -14,6 +14,7 @@ bullets_t *tmp_bullet, int index_bullet)
         tmp_zombie->hp -= 10;
         if (tmp_zombie->hp <= 0) {
             swap_status_anim_dead(tmp_zombie);
+            tmp_zombie->hp = 0;
         }
         tmp_bullet->status = 1;
         return (1);
