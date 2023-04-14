@@ -22,12 +22,7 @@ To compile this project run the following commands at ``.``
 ```
 
 ## Libs used
-
-### GLib
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats)](https://github.com/LouisLanganay/glib)
-
-### JsonParser
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats)](https://github.com/LouisLanganay/json-parser)
+*GLib* & *JsonParser*
 
 
 ## ToDo
@@ -106,6 +101,7 @@ In game menu
 
 - [Notion Todo](https://louislanganay.notion.site/ee61046211914de4aaeded0f3a9d0802?v=ff76086772624e21bb76efda1f61261e)
 - [Commit Norm](https://www.notion.so/louislanganay/Commit-Norm-0ff087d6a3b949769100ef085dd92c09)
+- [Wiki](https://github.com/EpitechPromo2027/B-MUL-200-REN-2-1-myrpg-louis.langanay/wiki)
 
 
 ## Authors
