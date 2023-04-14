@@ -541,6 +541,7 @@
     void s_nature(rpg_t *rpg, sfVector2f pos);
 
     /* CALL ACTIONS */
+    void i_lauch_combat(rpg_t *rpg, sfVector2f pos);
     void bandage(void*);
     void annia_give_heal(void *main);
     void jack(rpg_t *rpg, sfVector2f pos);

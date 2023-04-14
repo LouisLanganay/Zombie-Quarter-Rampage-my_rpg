@@ -268,6 +268,7 @@ SRC += change_window_mode.c
 SRC += jack_start_quest.c
 SRC += start_dialogue_default.c
 SRC += annia_give_heal.c
+SRC += i_lauch_combat.c
 
 
 INC_DIR 	:= includes
