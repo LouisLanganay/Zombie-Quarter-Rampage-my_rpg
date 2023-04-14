@@ -357,7 +357,10 @@
     void init_main_menu(rpg_t *rpg);
     void init_settings_menu(rpg_t *rpg);
     void init_keybinds(rpg_t *rpg);
-
+    void init_main_menu_fr(rpg_t *rpg);
+    void init_main_menu_en(rpg_t *rpg);
+    void init_button_fr(rpg_t *rpg);
+    void init_button_en(rpg_t *rpg);
 
     /* LORE */
     void draw_popup_lore(rpg_t *rpg);
@@ -370,6 +373,8 @@
 
     /* EVENTS */
     void e_quit(int id, void *main);
+    void e_langue_fr(int id, void *main);
+    void e_langue_en(int id, void *main);
     void e_start_game(int id, void *main);
     void e_key_released(window_t *window, void *main);
     void e_key_pressed(window_t *window, void *main);

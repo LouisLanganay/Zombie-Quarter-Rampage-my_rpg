@@ -185,6 +185,7 @@ SRC += i_paper_resources.c
 SRC += i_basement_paper.c
 SRC += i_house1_door.c
 SRC += i_end_map_down.c
+SRC += e_langue.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl
