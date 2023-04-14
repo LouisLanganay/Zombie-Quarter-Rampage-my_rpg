@@ -59,7 +59,6 @@ void check_sounds(rpg_t *rpg)
         seconds = time / 1000000.0;
         status = sfSound_getStatus(gl_get_sound(rpg->glib, sound->id)->sound);
         if (status == sfStopped) {
-            printf("removed sound %i\n", sound->id);
             remove_sound_from_linked_list(rpg, sound);
             sound = rpg->sounds;
             return;
