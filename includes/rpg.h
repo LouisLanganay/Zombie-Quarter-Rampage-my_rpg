@@ -310,6 +310,7 @@
         int alive;
         int direction;
         int last_distance;
+        int status_anim;
     } zombies_t;
     #define windoww rpg->glib->window->window
     #define ZOMBIE_0 "resources/assets/combat/zombie_0.png"
@@ -320,11 +321,22 @@
     #define ZOMBIE_5 "resources/assets/combat/zombie_5.png"
     #define ZOMBIE_6 "resources/assets/combat/zombie_6.png"
     #define ZOMBIE_7 "resources/assets/combat/zombie_7.png"
+    #define ZOMBIE_ATK0 "resources/assets/combat/z_naked_melee_00.png"
+    #define ZOMBIE_ATK1 "resources/assets/combat/z_naked_melee_01.png"
+    #define ZOMBIE_ATK2 "resources/assets/combat/z_naked_melee_02.png"
+    #define ZOMBIE_ATK3 "resources/assets/combat/z_naked_melee_03.png"
+    #define ZOMBIE_ATK4 "resources/assets/combat/z_naked_melee_04.png"
+    #define ZOMBIE_ATK5 "resources/assets/combat/z_naked_melee_05.png"
+    #define ZOMBIE_ATK6 "resources/assets/combat/z_naked_melee_06.png"
     #define map_night "resources/assets/combat/map_night.jpg"
     #define guy "resources/assets/combat/guy.png"
     #define bullet "resources/assets/combat/bullet.png"
     #define atkplayer attack_player(rpg,tmp->attack_clock, \
     tmp->attack_speed,tmp->damage)
+    #define condition_window sfRenderWindow_isOpen\
+    (rpg->glib->window->window) && number_zombies(combat->zombies) > 0
+    int number_zombies(zombies_t *zombies);
+    char **wave_zombie1(void);
 
     typedef struct combat_s {
         zombies_t *zombies;
