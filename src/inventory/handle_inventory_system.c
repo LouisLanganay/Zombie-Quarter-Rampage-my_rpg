@@ -37,12 +37,11 @@ static void display_item_data(rpg_t *rpg, char *name)
     devide->max_len = 35;
     devide->pos = (sfVector2f) {view_pos.x - get_mid_char(devide->text) * 4,
     view_pos.y + 45};
+    devide->line_spaces = 8;
     devide->color = sfBlack;
     divide_a_text(rpg, devide);
     devide->text = get_language(rpg, description, RSG);
-    devide->max_len = 35;
     devide->pos = (sfVector2f) {view_pos.x - 65, view_pos.y + 65};
-    devide->color = sfBlack;
     divide_a_text(rpg, devide);
     handle_drop_use_button(rpg);
 }
