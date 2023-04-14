@@ -35,7 +35,7 @@ To compile this project run the following commands at ``.``
 ### MANDATORY
 - [ ] The player needs to have characteristics
 - [ ] The player can fight enemies AND the characteristics impact the fights results
-- [ ] The player have an inventory which can contain a limited set of items
+- [X] The player have an inventory which can contain a limited set of items
 - [ ] The player can earn experience by winning fights and/or accomplishing specific actions
 - [ ] The player can level up thanks to experience AND upgrading its characteristics
 - [X] The game contains NPC
@@ -45,7 +45,7 @@ To compile this project run the following commands at ``.``
 ### TECHNICAL REQUIEREMENTS
 This project, being the last project of the module, the following requierement are the mathematical and technical parts which has to be present in your final project:
 - [X] A collision system including moving and static elements with different shapes.
-- [ ] Camera movements (zoom, translation, rotation).
+- [X] Camera movements (zoom, translation, rotation).
 - [X] 3D effects (depth scaling, isometric projection. . . ).
 - [X] Buttons must have at least 3 differents state
 - [X] Saving system
