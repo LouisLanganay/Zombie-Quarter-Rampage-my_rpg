@@ -71,6 +71,8 @@ void init_main_menu(rpg_t *rpg)
 {
     rpg->menu = malloc(sizeof(menu_t));
     rpg->menu_key = malloc(sizeof(menu_t));
+    rpg->background = malloc(sizeof(menu_background_t));
+    init_background(rpg);
     init_main_menu_fr(rpg);
     init_main_menu_en(rpg);
     init_button_en(rpg);
