@@ -9,7 +9,8 @@
 
 void init_background(rpg_t *rpg)
 {
-    sfImage *image = sfImage_createFromFile("resources/assets/background/background_1.jpg");
+    sfImage *image = sfImage_createFromFile
+    ("resources/assets/background/background_1.jpg");
     sfTexture *texture = sfTexture_createFromImage(image, NULL);
     rpg->background->active = false;
     rpg->background->background_menu_s = sfSprite_create();
