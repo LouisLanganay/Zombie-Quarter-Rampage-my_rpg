@@ -14,15 +14,13 @@ static void draw_quest_text(char *quest_id, rpg_t *rpg, int i)
     sfVector2f view_size = sfView_getSize(rpg->player->view->view);
     sfVector2f pos = (sfVector2f){view_pos.x + view_size.x / 2 - 83,
         view_pos.y - view_size.y / 2 + 25};
-    sfText *text = sfText_create();
-
-    sfText_setString(text, get_language(rpg, quest->name, RSG));
-    sfText_setFont(text, gl_get_font(rpg->glib, MINECRAFT_FONT));
-    sfText_setScale(text, (sfVector2f){0.1, 0.1});
-    sfText_setCharacterSize(text, 70);
-    sfText_setPosition(text, (sfVector2f){pos.x, pos.y + 15 * i});
-    sfRenderWindow_drawText(rpg->glib->window->window, text, NULL);
-    sfText_destroy(text);
+    devide_text_t *devide = malloc(sizeof(devide_text_t));
+    devide->pos = (sfVector2f){pos.x, pos.y + 15 * i};
+    devide->text = get_language(rpg, quest->name, RSG);
+    devide->color = sfWhite;
+    devide->max_len = 18;
+    devide->line_spaces = 6;
+    divide_a_text(rpg, devide);
 }
 
 static void draw_quest_icon(char *quest_id, rpg_t *rpg, int i)

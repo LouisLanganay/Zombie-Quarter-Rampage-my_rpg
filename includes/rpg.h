@@ -40,14 +40,18 @@
     #define MAIN_THEME_ID 11
     #define BASEMENT_SOUND_PATH "resources/sounds/basement.ogg"
     #define BASEMENT_SOUND_ID 12
+    #define INV_SOUND_PATH "resources/sounds/open-bag-sound.ogg"
+    #define INV_SOUND_ID 13
+    #define DROP_SOUND_PATH "resources/sounds/drop_sound.ogg"
+    #define DROP_SOUND_ID 14
     #define NATURE_SOUND_PATH "resources/sounds/nature.ogg"
-    #define NATURE_SOUND_ID 13
+    #define NATURE_SOUND_ID 15
     #define PAPER_SOUND_PATH "resources/sounds/paper.ogg"
-    #define PAPER_SOUND_ID 14
+    #define PAPER_SOUND_ID 16
     #define RADIATION_SOUND_PATH "resources/sounds/radiations.ogg"
-    #define RADIATION_SOUND_ID 15
+    #define RADIATION_SOUND_ID 17
     #define GROCERY_SOUND_PATH "resources/sounds/grocery.ogg"
-    #define GROCERY_SOUND_ID 16
+    #define GROCERY_SOUND_ID 18
 
     #define RPA rpg->player->assets
     #define RGW rpg->glib->window
@@ -263,10 +267,16 @@
         sfRectangleShape *hunger_bar_back;
     } hud_t;
 
+    typedef enum game_state_e {
+        MENU,
+        GAME,
+        COMBAT
+    } game_state_t;
+
     typedef struct rpg_s {
         int debug;
         char *actual_map;
-        int game_started;
+        int game_state;
         int maps_loaded;
         hud_t *hud;
         dialog_t *actual_dialog;
@@ -459,6 +469,7 @@
     void save_quests_completed(rpg_t *rpg);
 
     /* QUESTS */
+    void start_dialogue_default(npc_t *npc, rpg_t *rpg);
     void start_quest(rpg_t *rpg, char *id);
     quest_t *get_quest(rpg_t *rpg, char *id);
     void draw_quests(rpg_t *rpg);
@@ -513,6 +524,10 @@
     int remove_item_to_inventory(rpg_t *rpg, int pos);
     int add_item_to_inventory_pos(rpg_t *rpg, int pos, int id);
     void handle_inventory_system(rpg_t *rpg);
+    item_func_t *get_items_functions_arr(void);
+    void exec_item_func(rpg_t *rpg, int id);
+    void handle_drop_use_button(rpg_t *rpg);
+    char *get_item_name(int id);
 
     /* NPC */
     npc_t *get_npc(map_t *map, char *name);
@@ -538,6 +553,8 @@
     void s_nature(rpg_t *rpg, sfVector2f pos);
 
     /* CALL ACTIONS */
+    void bandage(void*);
+    void annia_give_heal(void *main);
     void jack(rpg_t *rpg, sfVector2f pos);
     void s_radiation(rpg_t *rpg, sfVector2f pos);
     void s_radiation_exit(rpg_t *rpg, sfVector2f pos);

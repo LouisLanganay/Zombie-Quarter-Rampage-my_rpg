@@ -11,7 +11,7 @@ void i_end_map_down(rpg_t *rpg, sfVector2f pos)
 {
     (void)(pos);
     char *str = get_language(rpg, "to_inspect", RSG);
-    draw_interaction_popup(rpg, (sfVector2f){pos.x + 100, pos.y + 50},
+    draw_interaction_popup(rpg, (sfVector2f){pos.x + 90, pos.y + 50},
         RPK->interact.key, str);
     if (sfKeyboard_isKeyPressed(rpg->player->keys->interact.key) == sfTrue) {
         rpg->narative->str = get_language(rpg, "down_map_interact", RSG);

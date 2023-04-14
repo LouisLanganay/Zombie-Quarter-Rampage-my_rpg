@@ -49,6 +49,12 @@ static void draw_quest_icon(char *quest_id, rpg_t *rpg, int i, int nb_text)
     }
 }
 
+static void draw_quest_header(rpg_t *rpg, int count, int i)
+{
+    draw_quest_text(rpg->quests_in_progress[i], rpg, i - 1, count);
+    draw_quest_icon(rpg->quests_in_progress[i], rpg, i - 1, count);
+}
+
 void draw_quests_inv(rpg_t *rpg)
 {
     quest_t *quest = NULL;
@@ -61,8 +67,7 @@ void draw_quests_inv(rpg_t *rpg)
     for (int i = 0; rpg->quests_in_progress[i] != NULL; i++) {
         if (get_quest(rpg, rpg->quests_in_progress[i]) == NULL) continue;
         quest = get_quest(rpg, rpg->quests_in_progress[i]);
-        draw_quest_text(rpg->quests_in_progress[i], rpg, i - 1, count);
-        draw_quest_icon(rpg->quests_in_progress[i], rpg, i - 1, count);
+        draw_quest_header(rpg, count, i);
         devide->text = get_language(rpg, quest->description, RSG);
         devide->pos = (sfVector2f){pos.x, pos.y + 15 * i + (12 * count)};
         devide->color = sfWhite;

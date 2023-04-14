@@ -15,4 +15,5 @@ void change_window_mode(rpg_t *rpg, wmode_t mode)
     rpg->glib->window->window = sfRenderWindow_create(rpg->glib->window->mode,
         WINDOW_NAME, mode == FSCREEN ? sfFullscreen : sfClose, 0);
     rpg->settings->window_mode = mode;
+    sfRenderWindow_setFramerateLimit(rpg->glib->window->window, 120);
 }

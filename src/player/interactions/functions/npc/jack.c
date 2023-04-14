@@ -19,5 +19,10 @@ void jack(rpg_t *rpg, sfVector2f pos)
         (sfVector2f){pos.x - 40, pos.y + 20},
         RPK->interact.key, get_language(rpg, "jack_interact", RSG));
     if (sfKeyboard_isKeyPressed(RPK->interact.key) == sfTrue)
-        start_dialogue(rpg, npc);
+        if (quest_is_completed(rpg, "go_to_annia") == 1)
+            start_dialogue(rpg, npc);
+        else {
+            zoom_view(rpg, 0.999, 20);
+            start_dialogue_default(npc, rpg);
+        }
 }

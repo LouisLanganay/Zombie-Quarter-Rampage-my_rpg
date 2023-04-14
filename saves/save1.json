@@ -22,21 +22,25 @@
 	},
 	"player": {
 		"pos": {
-			"x": 2161,
-			"y": 263
+			"x": 189,
+			"y": 191
 		},
 		"hp": 20,
 		"hunger": 100,
 		"inventory": {
 			"items": [
-				1,
+				0,
 				5,
-				8
+				112,
+				78,
+				40,
+				87,
+				106
 			]
 		}
 	},
 	"game": {
-		"actual_map": "resources/maps/main_map.json"
+		"actual_map": "resources/maps/player_house.json"
 	},
 	"game_timeline": {
 		"npc_interactions": [
