@@ -18,6 +18,8 @@ void cbt_draw_player(rpg_t *rpg)
 {
     sfSprite_setPosition(rpg->player->sprite, rpg->player->pos);
     cbt_change_player_rect(rpg->player);
-    sfRectangleShape_setPosition(rpg->player->hitbox,(sfVector2f){rpg->player->pos.x, rpg->player->pos.y + 3});
-    sfRenderWindow_drawSprite(rpg->glib->window->window, rpg->player->sprite, NULL);
+    sfRectangleShape_setPosition(rpg->player->hitbox,
+    (sfVector2f){rpg->player->pos.x, rpg->player->pos.y + 3});
+    sfRenderWindow_drawSprite(rpg->glib->window->window,
+    rpg->player->sprite, NULL);
 }
