@@ -263,10 +263,16 @@
         sfRectangleShape *hunger_bar_back;
     } hud_t;
 
+    typedef enum game_state_e {
+        MENU,
+        GAME,
+        COMBAT
+    } game_state_t;
+
     typedef struct rpg_s {
         int debug;
         char *actual_map;
-        int game_started;
+        int game_state;
         int maps_loaded;
         hud_t *hud;
         dialog_t *actual_dialog;
