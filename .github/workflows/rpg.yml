@@ -42,7 +42,7 @@ jobs:
           if [ $size -gt 30000 ]
           then
               echo "The current directory is bigger than 30MB"
-              echo "::error title=Repository size::The repository is too big, please remove unnecessary files"
+              echo "::error title=Repository size::The repository is too big, please remove unnecessary files ($size KB)"
               exit 1
           else
             if [ $size -gt 25000 ]
@@ -136,7 +136,6 @@ jobs:
         run: make -C tests/ fclean
 
   check_program_compilation:
-    needs: run_json_parser_tests
     name: Check program compilation
     runs-on: ubuntu-latest
     container:

@@ -13,6 +13,6 @@ void init_rpg(rpg_t *rpg, int ac, char **av)
     rpg->actual_map = "resources/maps/main_map.json";
     rpg->actual_dialog = malloc(sizeof(dialog_t));
     rpg->actual_npc = malloc(sizeof(npc_t));
-    rpg->game_started = 0;
+    rpg->game_state = MENU;
     rpg->maps_loaded = 0;
 }

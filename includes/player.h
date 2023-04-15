@@ -45,6 +45,8 @@
     #define PLAYER_KEYBOARD_PATH "resources/assets/keys/keyboard.png"
     #define PLAYER_INVENTORY_PATH "resources/assets/items/items_packs.png"
     #define PLAYER_INVENTORY_UI_PATH "resources/assets/gui/UI_inv.png"
+    #define PLAYER_INVENTORY_SELECT_PATH "resources/assets/gui/UI_select.png"
+    #define PLAYER_ITEMS_DATA_PATH "resources/assets/gui/UI_items_data.jpg"
     #define PLAYER_KEYBOARD_PATH2 "resources/assets/keys/extras.png"
     #define PLAYER_GUI_PATH "resources/assets/gui/UI.png"
 
@@ -102,6 +104,7 @@
         p_key_t choice_two;
         p_key_t inventory;
         p_key_t escape;
+        p_key_t enter;
     } keys_t;
 
     typedef struct quest_icons_s {
@@ -116,6 +119,8 @@
         sfSprite **key_sprite;
         sfTexture **items_texture;
         sfTexture *bg_items_texture;
+        sfTexture *items_data_texture;
+        sfTexture *select_texture;
         sfSprite **key_choice1;
         sfSprite **key_choice2;
         sfSprite *dialog_box;
@@ -133,23 +138,42 @@
         sfTexture *side_walk;
     } player_assets_t;
 
+    typedef struct item_func_s {
+        int id;
+        void (*func)(void *);
+    } item_func_t;
+
     typedef struct inventory_s {
         int is_open;
+        int is_data_open;
         int *items;
+        char **items_name;
+        int pos;
         sfSprite **items_sprite;
         sfSprite *bg_items_sprite;
+        sfSprite *select_sprite;
+        sfSprite *items_data_sprite;
         sfRectangleShape *background;
     } inventory_t;
 
+    typedef struct view_s {
+        sfView *view;
+        sfClock *clock;
+        float zoom;
+        float time;
+    } view_t;
+
     typedef struct player_s {
         int hp;
+        int hunger;
         int in_dialogue;
         int lore_open;
+        int lore_sound_played;
         char *lore_text;
         inventory_t *inventory;
         sfRectangleShape *hitbox;
         sfVector2f pos;
-        sfView *view;
+        view_t *view;
         sfClock *clock;
         sfTexture *texture;
         sfSprite *sprite;

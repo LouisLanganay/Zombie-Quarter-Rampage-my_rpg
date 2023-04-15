@@ -1,577 +1,577 @@
 {
     "enclume": {
-        "name": "Enclume",
+        "name": "anvil_name",
         "id": 0,
-        "description": ""
+        "description": "anvil_description"
     },
     "c4": {
-        "name": "c4",
+        "name": "c4_name",
         "id": 1,
-        "description": ""
+        "description": "c4_description"
     },
     "batterie": {
-        "name": "Batterie",
+        "name": "batteries_name",
         "id": 2,
-        "description": ""
+        "description": "batteries_description"
     },
     "tournevis": {
-        "name": "Tournevis",
+        "name": "tournevis_name",
         "id": 3,
-        "description": ""
+        "description": "tournevis_description"
     },
     "coton": {
-        "name": "Coton",
+        "name": "coton_name",
         "id": 4,
-        "description": ""
+        "description": "coton_description"
     },
     "cle_de_porte": {
-        "name": "Clé_de_porte",
+        "name": "cle_de_porte_name",
         "id": 5,
-        "description": ""
+        "description": "cle_de_porte_description"
     },
     "boussole": {
-        "name": "Boussole",
+        "name": "boussole_name",
         "id": 6,
-        "description": ""
+        "description": "boussole_description"
     },
     "pile": {
-        "name": "Pile",
+        "name": "pile_name",
         "id": 7,
-        "description": ""
+        "description": "pile_description"
     },
     "lampe_torche": {
-        "name": "Lampe torche",
+        "name": "lampe_torche_name",
         "id": 8,
-        "description": ""
+        "description": "lampe_torche_description"
     },
     "sac": {
-        "name": "Sac",
+        "name": "sac_name",
         "id": 9,
-        "description": ""
+        "description": "sac_description"
     },
     "fil_a_coudre": {
-        "name": "Fil à coudre",
+        "name": "fil_a_coudre_name",
         "id": 10,
-        "description": ""
+        "description": "fil_a_coudre_description"
     },
     "carte_acces_1": {
-        "name": "Carte d'accès 1",
+        "name": "cle_de_porte_name",
         "id": 11,
-        "description": ""
+        "description": "cle_de_porte_description"
     },
     "boite_a_outils": {
-        "name": "Boîte à outils",
+        "name": "boite_a_outils_name",
         "id": 12,
-        "description": ""
+        "description": "boite_a_outils_description"
     },
     "bombe": {
-        "name": "Bombe",
+        "name": "bombe_name",
         "id": 13,
-        "description": ""
+        "description": "bombe_description"
     },
     "scie": {
-        "name": "Scie",
+        "name": "scie_name",
         "id": 14,
-        "description": ""
+        "description": "scie_description"
     },
     "marteau": {
-        "name": "Marteau",
+        "name": "marteau_name",
         "id": 15,
-        "description": ""
+        "description": "marteau_description"
     },
     "charbon": {
-        "name": "Charbon",
+        "name": "charbon_name",
         "id": 16,
-        "description": ""
+        "description": "charbon_description"
     },
     "cadenas": {
-        "name": "Cadenas",
+        "name": "cadenas_name",
         "id": 17,
-        "description": ""
+        "description": "cadenas_description"
     },
     "cle": {
-        "name": "Clé",
+        "name": "cle_name",
         "id": 18,
-        "description": ""
+        "description": "cle_description"
     },
     "masque_de_plonge": {
-        "name": "Masque de plongé",
+        "name": "masque_de_plongee_name",
         "id": 19,
-        "description": ""
+        "description": "masque_de_plongee_description"
     },
     "talkie_walkie": {
-        "name": "Talkie-walkie",
+        "name": "Talkie-talkie_walkie_name",
         "id": 20,
-        "description": ""
+        "description": "talkie_walkie_description"
     },
     "carte": {
-        "name": "Carte",
+        "name": "carte",
         "id": 21,
-        "description": ""
+        "description": "carte_description"
     },
     "tente": {
-        "name": "Tente",
+        "name": "tente_name",
         "id": 22,
-        "description": ""
+        "description": "tente_description"
     },
     "carte_acces_2": {
-        "name": "Carte d'accès 2",
+        "name": "carte_acces_2_name",
         "id": 23,
-        "description": ""
+        "description": "carte_acces_2_description"
     },
     "pince": {
-        "name": "Pince",
+        "name": "pince_name",
         "id": 24,
-        "description": ""
+        "description": "pince_description"
     },
     "cutter": {
-        "name": "Cutter",
+        "name": "cutter_name",
         "id": 25,
-        "description": ""
+        "description": "cutter_description"
     },
     "pelle": {
-        "name": "pelle",
+        "name": "pelle_name",
         "id": 26,
-        "description": ""
+        "description": "pelle_description"
     },
     "hache": {
-        "name": "Hache",
+        "name": "hache_name",
         "id": 27,
-        "description": ""
+        "description": "hache_description"
     },
     "cailloux": {
-        "name": "Caillou",
+        "name": "cailloux_name",
         "id": 28,
-        "description": ""
+        "description": "cailloux_description"
     },
     "cadenas_rouille": {
-        "name": "Cadenas rouillé",
+        "name": "cadenas_rouille_name",
         "id": 29,
-        "description": ""
+        "description": "cadenas_rouille_description"
     },
     "cle_rouille": {
-        "name": "Clé rouillé",
+        "name": "cle_rouille_name",
         "id": 30,
-        "description": ""
+        "description": "cle_rouille_description"
     },
     "masque_a_gaz": {
-        "name": "Masque à gaz",
+        "name": "masque_a_gaz_name",
         "id": 31,
-        "description": ""
+        "description": "masque_a_gaz_description"
     },
     "compas": {
-        "name": "Compas",
+        "name": "compas_name",
         "id": 32,
-        "description": ""
+        "description": "compas_description"
     },
     "note": {
-        "name": "Note",
+        "name": "note_name",
         "id": 33,
-        "description": ""
+        "description": "note_description"
     },
     "cassette": {
-        "name": "Cassette",
+        "name": "cassette_name",
         "id": 34,
-        "description": ""
+        "description": "cassette_description"
     },
     "plan_de_construction": {
-        "name": "Plan de construction",
+        "name": "plan_de_construction_name",
         "id": 35,
-        "description": ""
+        "description": "plan_de_construction_description"
     },
     "pioche": {
-        "name": "Pioche",
+        "name": "pioche_name",
         "id": 36,
-        "description": ""
+        "description": "pioche_description"
     },
     "marteau_de_fer": {
-        "name": "Marteau de fer",
+        "name": "marteau_de_fer_name",
         "id": 37,
-        "description": ""
+        "description": "marteau_de_fer_description"
     },
     "cle_outil": {
-        "name": "Clé outil",
+        "name": "cle_outil_name",
         "id": 38,
-        "description": ""
+        "description": "cle_outil_description"
     },
     "couteau_pliant": {
-        "name": "Couteau pliant",
+        "name": "couteau_pliant_name",
         "id": 39,
-        "description": ""
+        "description": "couteau_pliant_description"
     },
     "piege": {
-        "name": "Piège",
+        "name": "piege_name",
         "id": 40,
-        "description": ""
+        "description": "piege_description"
     },
     "bouteille_eau_distille": {
-        "name": "Bouteille d'eau distille",
+        "name": "bouteille_eau_distillee_name",
         "id": 41,
-        "description": ""
+        "description": "bouteille_eau_distillee_description"
     },
     "bouteille_eau": {
-        "name": "Bouteille d'eau",
+        "name": "bouteille_eau_name",
         "id": 42,
-        "description": ""
+        "description": "bouteille_eau_description"
     },
     "bouteille_vide": {
-        "name": "Bouteille vide",
+        "name": "bouteille_plastic_vide_name",
         "id": 43,
-        "description": ""
+        "description": "bouteille_plastic_vide_description"
     },
     "comprimes": {
-        "name": "Comprimés",
+        "name": "comprimes_name",
         "id": 44,
-        "description": ""
+        "description": "compresse_description"
     },
     "tome_bleu": {
-        "name": "tome bleu",
+        "name": "tome_bleu_name",
         "id": 45,
-        "description": ""
+        "description": "tome_bleu_description"
     },
     "tome_jaune": {
-        "name": "tome jaune",
+        "name": "tome_jaune_name",
         "id": 46,
-        "description": ""
+        "description": "tome_jaune_description"
     },
     "tome_rouge": {
-        "name": "tome rouge",
+        "name": "tome_rouge_name",
         "id": 47,
-        "description": ""
+        "description": "tome_rouge_description"
     },
     "hachoir": {
-        "name": "Hachoir",
+        "name": "hachoir_name",
         "id": 48,
-        "description": ""
+        "description": "hachoir_description"
     },
     "couteau_de_chasse": {
-        "name": "Couteau de chasse",
+        "name": "couteau_de_chasse_name",
         "id": 49,
-        "description": ""
+        "description": "couteau_de_chasse_description"
     },
     "couteau_suisse": {
-        "name": "Couteau suisse",
+        "name": "couteau_suisse_name",
         "id": 50,
-        "description": ""
+        "description": "couteau_suisse_description"
     },
     "dynamite": {
-        "name": "Dynamite",
+        "name": "dynamite_name",
         "id": 51,
-        "description": ""
+        "description": "dynamite_description"
     },
     "conserve": {
-        "name": "Conserve",
+        "name": "conserve_name",
         "id": 52,
-        "description": ""
+        "description": "conserve_description"
     },
     "gourde_eau_distille": {
-        "name": "Gourde d'eau distillé",
+        "name": "gourde_eau_distille_eau_name",
         "id": 53,
-        "description": ""
+        "description": "gourde_eau_distille_eau_description"
     },
     "gourde_eau": {
-        "name": "Gourde d'eau",
+        "name": "gourde_eau_name",
         "id": 54,
-        "description": ""
+        "description": "gourde_eau_description"
     },
     "gourde_vide": {
-        "name": "Gourde vide",
+        "name": "gourde_name",
         "id": 55,
-        "description": ""
+        "description": "gourde_vide_description"
     },
     "medicaments": {
-        "name": "Médicaments",
+        "name": "medicaments_name",
         "id": 56,
-        "description": ""
+        "description": "medicaments_description"
     },
     "pansement": {
-        "name": "Pansement",
+        "name": "pansement_name",
         "id": 57,
-        "description": ""
+        "description": "pansement_description"
     },
     "sauce_ketchup": {
-        "name": "Sauce ketchup",
+        "name": "sauce_ketchup_name",
         "id": 58,
-        "description": ""
+        "description": "sauce_ketchup_description"
     },
     "acide_sulfurique": {
-        "name": "Acide sulfurique",
+        "name": "acide_sulfurique_name",
         "id": 59,
-        "description": ""
+        "description": "acide_sulfurique_description"
     },
     "couteau": {
-        "name": "Couteau",
+        "name": "couteau_name",
         "id": 60,
-        "description": ""
+        "description": "couteau_description"
     },
     "grenade_verte": {
-        "name": "Grenade verte",
+        "name": "grenade_verte_name",
         "id": 61,
-        "description": ""
+        "description": "grenade_verte_description"
     },
     "grenade_rouge": {
-        "name": "Grenade rouge",
+        "name": "grenade_rouge_name",
         "id": 62,
-        "description": ""
+        "description": "grenade_rouge_description"
     },
     "boite_allumettes": {
-        "name": "boîte d'allumettes",
+        "name": "boite_allumettes_name",
         "id": 63,
-        "description": ""
+        "description": "boite_allumettes_description"
     },
     "thon": {
-        "name": "Thon",
+        "name": "thon_name",
         "id": 64,
-        "description": ""
+        "description": "thon_description"
     },
     "tablette_chocolat": {
-        "name": "Tablette de chocolat",
+        "name": "tablette_chocolat_name",
         "id": 65,
-        "description": ""
+        "description": "tablette_chocolat_description"
     },
     "oeufs": {
-        "name": "Oeufs",
+        "name": "oeufs_name",
         "id": 66,
-        "description": ""
+        "description": "oeufs_description"
     },
     "patate_crue": {
-        "name": "Patate crue",
+        "name": "patate_crue_name",
         "id": 67,
-        "description": ""
+        "description": "patate_crue_description"
     },
     "conserve_pate": {
-        "name": "Conserve de pate",
+        "name": "conserve_pate_name",
         "id": 68,
-        "description": ""
+        "description": "conserve_pate_description"
     },
     "caisse": {
-        "name": "Caisse",
+        "name": "caisse_name",
         "id": 69,
-        "description": ""
+        "description": "caisse_description"
     },
-    "sauce_mayo": {
-        "name": "Sauce mayo",
+    "desinfectant": {
+        "name": "desincfectant_name",
         "id": 70,
-        "description": ""
+        "description": "desincfectant_description"
     },
     "acide_nitrique": {
-        "name": "Acide nitrique",
+        "name": "acide_nitrique_name",
         "id": 71,
-        "description": ""
+        "description": "acide_nitrique_description"
     },
     "pistolet_barillet": {
-        "name": "Pistolet à barillet",
+        "name": "pistolet_barillet_name",
         "id": 72,
-        "description": ""
+        "description": "pistolet_barillet_description"
     },
     "pistolet": {
-        "name": "Pistolet",
+        "name": "pistolet_name",
         "id": 73,
-        "description": ""
+        "description": "pistolet_description"
     },
     "fusil_pompe": {
-        "name": "Fusil à pompe",
+        "name": "fusil_pompe_name",
         "id": 74,
-        "description": ""
+        "description": "fusil_pompe_description"
     },
     "briquet": {
-        "name": "Briquet",
+        "name": "briquet_name",
         "id": 75,
-        "description": ""
+        "description": "briquet_description"
     },
     "sac_main": {
-        "name": "sac a main",
+        "name": "sac_main_name",
         "id": 76,
-        "description": ""
+        "description": "sac_main_description"
     },
     "conserve_rose": {
-        "name": "Conserve rose",
+        "name": "conserve_rose_name",
         "id": 77,
-        "description": ""
+        "description": "conserve_rose_description"
     },
     "citron_vert": {
-        "name": "Citron vert",
+        "name": "citron_vert_name",
         "id": 78,
-        "description": ""
+        "description": "citron_vert_description"
     },
     "gigot_cru": {
-        "name": "gigot_cru",
+        "name": "gigot_cru_name",
         "id": 79,
-        "description": ""
+        "description": "gigot_cru_description"
     },
     "gigot_cuit": {
-        "name": "Gigot cuit",
+        "name": "gigot_name",
         "id": 80,
-        "description": ""
+        "description": "gigot_description"
     },
     "pilule_violette": {
-        "name": "pilule violette",
+        "name": "pilule_violette_name",
         "id": 81,
-        "description": ""
+        "description": "pilule_violette_description"
     },
     "medikit": {
-        "name": "Medikit",
+        "name": "medikit_name",
         "id": 82,
-        "description": ""
+        "description": "medikit_description"
     },
     "seringue": {
-        "name": "Seringue",
+        "name": "seringue_name",
         "id": 83,
-        "description": ""
+        "description": "seringue_description"
     },
     "balle_barillet": {
-        "name": "Balle à barillet",
+        "name": "balle_barillet_name",
         "id": 84,
-        "description": ""
+        "description": "balle_barillet_description"
     },
     "chargeur_pistolet": {
-        "name": "Chargeur de pistolet",
+        "name": "chargeur_pistolet_name",
         "id": 85,
-        "description": ""
+        "description": "chargeur_pistolet_description"
     },
     "cartouche_pompe": {
-        "name": "Cartouche de fusil à pompe",
+        "name": "cartouche_pompe_name",
         "id": 86,
-        "description": ""
+        "description": "cartouche_pompe_description"
     },
     "bidon_essence": {
-        "name": "Bidon d'essence",
+        "name": "bidon_essence_name",
         "id": 87,
-        "description": ""
+        "description": "bidon_essence_description"
     },
     "feu_de_camp": {
-        "name": "Feu de camp",
+        "name": "feu_de_camp_name",
         "id": 88,
-        "description": ""
+        "description": "feu_de_camp_description"
     },
     "chocolat_poudre": {
-        "name": "Chocolat en poudre",
+        "name": "chocolat_poudre_name",
         "id": 89,
-        "description": ""
+        "description": "chocolat_poudre_description"
     },
     "fil_a_tisser": {
-        "name": "Fil a tisser",
+        "name": "fil_a_tisser_name",
         "id": 90,
-        "description": ""
+        "description": "fil_a_tisser_description"
     },
     "poisson_cru": {
-        "name": "poisson cru",
+        "name": "poisson_cru_name",
         "id": 91,
-        "description": ""
+        "description": "poisson_cru_description"
     },
     "poisson_cuit": {
-        "name": "Poisson cuit",
+        "name": "poisson_name",
         "id": 92,
-        "description": ""
+        "description": "poisson_description"
     },
     "pilule_rouge": {
-        "name": "Pilule rouge",
+        "name": "pilule_rouge_name",
         "id": 93,
-        "description": ""
+        "description": "pilule_rouge_description"
     },
     "kit_endurance": {
-        "name": "Kit d'endurance",
+        "name": "kit_endurance_name",
         "id": 94,
-        "description": ""
+        "description": "kit_endurance_description"
     },
     "seringue_endurance": {
-        "name": "Seringue d'endurance",
+        "name": "seringue_endurance_name",
         "id": 95,
-        "description": ""
+        "description": "seringue_endurance_description"
     },
     "tesson_bouteille": {
-        "name": "Tesson de bouteille",
+        "name": "tesson_bouteille_name",
         "id": 96,
-        "description": ""
+        "description": "tesson_bouteille_description"
     },
     "bouteille_verre_vide": {
-        "name": "Bouteille de verre vide",
+        "name": "bouteille_vide_name",
         "id": 97,
-        "description": ""
+        "description": "bouteille_vide_description"
     },
     "cocktail_molotov": {
-        "name": "cocktail molotov",
+        "name": "cocktail_molotov_name",
         "id": 98,
-        "description": ""
+        "description": "cocktail_molotov_description"
     },
     "tissu_soie": {
-        "name": "tissu de soie",
+        "name": "tissu_soie_name",
         "id": 99,
-        "description": ""
+        "description": "tissu_soie_description"
     },
     "coca_cola": {
-        "name": "Coca cola",
+        "name": "coca_cola_name",
         "id": 100,
-        "description": ""
+        "description": "coca_cola_description"
     },
     "chips": {
-        "name": "Chips",
+        "name": "chips_name",
         "id": 101,
-        "description": ""
+        "description": "chips_description"
     },
     "hamecon": {
-        "name": "hameçon",
+        "name": "hamecon_name",
         "id": 102,
-        "description": ""
+        "description": "hamecon_description"
     },
     "steak_cru": {
-        "name": "Steak_cru",
+        "name": "steak_cru_name",
         "id": 103,
-        "description": ""
+        "description": "steak_cru_description"
     },
     "steak_cuit": {
-        "name": "steak_cuit",
+        "name": "steak_cuit_name",
         "id": 104,
-        "description": ""
+        "description": "steak_cuit_description"
     },
     "boite_medocs": {
-        "name": "boite de medocs",
+        "name": "boite_medoc_name",
         "id": 105,
-        "description": ""
+        "description": "boite_medoc_description"
     },
     "bandage": {
-        "name": "Bandage",
+        "name": "bandage_name",
         "id": 106,
-        "description": ""
+        "description": "bandage_description"
     },
     "seringue_vide": {
-        "name": "Seringue vide",
+        "name": "seringue_vide_name",
         "id": 107,
-        "description": ""
+        "description": "seringue_vide_description"
     },
     "scotch": {
-        "name": "Scotch",
+        "name": "scotch_name",
         "id": 108,
-        "description": ""
+        "description": "scotch_description"
     },
     "cle_porte_rouille": {
-        "name": "clé de porte rouillé",
+        "name": "cle_porte_rouille_name",
         "id": 109,
-        "description": ""
+        "description": "cle_porte_rouille_description"
     },
     "cle_porte": {
-        "name": "Clé porte",
+        "name": "cle_porte_name",
         "id": 110,
-        "description": ""
+        "description": "cle_porte_description"
     },
     "corde": {
-        "name": "Corde",
+        "name": "corde_name",
         "id": 111,
-        "description": ""
+        "description": "corde_description"
     },
     "super_lampe_torche": {
-        "name": "Super lampe torche",
+        "name": "super_lampe_torche_name",
         "id": 112,
-        "description": ""
+        "description": "super_lampe_torche_description"
     },
     "cacahouete": {
-        "name": "Cacahouète",
+        "name": "cacahouète_name",
         "id": 113,
-        "description": ""
+        "description": "cacahouète_description"
     },
     "billets": {
-        "name": "Billets",
+        "name": "billets_name",
         "id": 114,
-        "description": ""
+        "description": "billets_description"
     }
 }

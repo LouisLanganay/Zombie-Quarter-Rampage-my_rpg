@@ -17,6 +17,7 @@ void e_seeting_game(int id, void *main)
 {
     (void)(id);
     rpg_t *rpg = (rpg_t *)main;
+    rpg->menu_save->active = false;
     if (rpg->menu->active == false) {
         rpg->menu->active = true;
         next_func();

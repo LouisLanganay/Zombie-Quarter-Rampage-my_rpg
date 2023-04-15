@@ -13,7 +13,6 @@ static void create_object(parsed_data_t *tmp_arr, layer_t *layer)
     if (!tmp)
         return;
     tmp->id = jp_search(tmp_arr, "id")->value.p_int;
-    printf("Load object %i:\n", tmp->id);
     tmp->pos = (sfVector2f){
         jp_search(tmp_arr, "x")->value.p_float,
         jp_search(tmp_arr, "y")->value.p_float
@@ -21,6 +20,8 @@ static void create_object(parsed_data_t *tmp_arr, layer_t *layer)
     tmp->width = jp_search(tmp_arr, "width")->value.p_float;
     tmp->height = jp_search(tmp_arr, "height")->value.p_float;
     tmp->name = jp_search(tmp_arr, "name")->value.p_str;
+    tmp->is_exit = 0;
+    tmp->is_trigger = 0;
     tmp->next = layer->objects;
     layer->objects = tmp;
 }

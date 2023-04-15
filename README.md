@@ -22,12 +22,7 @@ To compile this project run the following commands at ``.``
 ```
 
 ## Libs used
-
-### GLib
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats)](https://github.com/LouisLanganay/glib)
-
-### JsonParser
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats)](https://github.com/LouisLanganay/json-parser)
+*GLib* & *JsonParser*
 
 
 ## ToDo
@@ -35,17 +30,17 @@ To compile this project run the following commands at ``.``
 ### MANDATORY
 - [ ] The player needs to have characteristics
 - [ ] The player can fight enemies AND the characteristics impact the fights results
-- [ ] The player have an inventory which can contain a limited set of items
+- [X] The player have an inventory which can contain a limited set of items
 - [ ] The player can earn experience by winning fights and/or accomplishing specific actions
 - [ ] The player can level up thanks to experience AND upgrading its characteristics
 - [X] The game contains NPC
-- [ ] The game contains at least one quest
+- [X] The game contains at least one quest
 - [ ] The game contains a how to play system at the very beginning
 
 ### TECHNICAL REQUIEREMENTS
 This project, being the last project of the module, the following requierement are the mathematical and technical parts which has to be present in your final project:
 - [X] A collision system including moving and static elements with different shapes.
-- [ ] Camera movements (zoom, translation, rotation).
+- [X] Camera movements (zoom, translation, rotation).
 - [X] 3D effects (depth scaling, isometric projection. . . ).
 - [X] Buttons must have at least 3 differents state
 - [X] Saving system
@@ -60,18 +55,18 @@ General
 - [ ] The windows may have differents resolutions, at least two (1920x1080, and an other)
 - [X] The game manages inputs from the mouse click and keyboard,
 - [X] The game contains animated sprites rendered thanks to sprite sheets,
-- [ ] Animations in your program are frame rate independent,
-- [ ] Animations and movements in your program are timed by clocks.
+- [X] Animations in your program are frame rate independent,
+- [X] Animations and movements in your program are timed by clocks.
 
 Main menu
 
-- [ ] Must contain at least these options
+- [X] Must contain at least these options
     - [ ] Start the game
-    - [ ] Resume game (grayed out if not possible)
-    - [ ] Settings
-    - [ ] Quit the game
+    - [X] Resume game (grayed out if not possible)
+    - [X] Settings
+    - [X] Quit the game
 - [ ] The settings option must contain
-    - [ ] Sound and music volume options
+    - [X] Sound and music volume options
     - [ ] A window size and resolution options
 
 In game menu
@@ -91,7 +86,7 @@ In game menu
 - [X] Splash screen at the beginning
 - [ ] Command edit into the in game menu
 - [X] As much information as possible about the game should be stored in a configuration file.
-- [ ] The game should have an advanced collision system to manage complex fighting.
+- [X] The game should have an advanced collision system to manage complex fighting.
 - [ ] The game should contains simple particle system :
     - [ ] with at least 2 types of particle,
     - [ ] particle effects (changing colors, scaling, bouncing, fading) to simulate realistic environment (wind, fire, rain, snow. . . ).
@@ -106,6 +101,7 @@ In game menu
 
 - [Notion Todo](https://louislanganay.notion.site/ee61046211914de4aaeded0f3a9d0802?v=ff76086772624e21bb76efda1f61261e)
 - [Commit Norm](https://www.notion.so/louislanganay/Commit-Norm-0ff087d6a3b949769100ef085dd92c09)
+- [Wiki](https://github.com/EpitechPromo2027/B-MUL-200-REN-2-1-myrpg-louis.langanay/wiki)
 
 
 ## Authors

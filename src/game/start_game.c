@@ -7,8 +7,9 @@
 
 #include "rpg.h"
 
-void start_game(rpg_t *rpg)
+void start_game(rpg_t *rpg, char *save_path)
 {
-    rpg->game_started = 1;
-    load_save(rpg, "resources/save.json");
+    rpg->game_state = GAME;
+    load_save(rpg, save_path);
+    fade_sound(rpg, MAIN_THEME_ID, 8);
 }

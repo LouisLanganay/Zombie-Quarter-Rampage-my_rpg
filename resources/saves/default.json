@@ -1,16 +1,28 @@
 {
 	"save_file": {
-		"path": "resources/save.json",
+		"path": "resources/saves/default.json",
 		"format": "json",
-		"name": "save"
+		"name": "default",
+		"played": false
 	},
 	"settings": {
-		"game_language": "en"
+		"game_language": "en",
+		"keys": {
+			"up": 25,
+			"down": 18,
+			"left": 16,
+			"right": 3,
+			"interact": 4,
+			"choice1": 24,
+			"choice2": 20,
+			"inventory": 0,
+			"escape": 36
+		}
 	},
 	"player": {
 		"pos": {
-			"x": 1700,
-			"y": 650
+			"x": 305,
+			"y": 152
 		},
 		"hp": 100,
 		"inventory": {
@@ -22,7 +34,7 @@
 		}
 	},
 	"game": {
-		"actual_map": "resources/maps/main_map.json"
+		"actual_map": "resources/maps/player_basement.json"
 	},
 	"game_timeline": {
 		"npc_interactions": [

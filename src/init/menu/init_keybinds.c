@@ -28,7 +28,7 @@ void init_keybinds(rpg_t *rpg)
 {
     buttons_t *my_btn = malloc(sizeof(buttons_t));
     my_btn->id = BTN_KEYBIND;
-    my_btn->pos = (sfVector2f){ rpg->glib->window->mode.width / 2.3,
+    my_btn->pos = (sfVector2f){ rpg->glib->window->mode.width / 2.4,
     rpg->glib->window->mode.height / 1.4};
     my_btn->rect = (sfIntRect){0, 0, 278, 72};
     my_btn->call_action = e_seeting_keybinds_game;
@@ -38,4 +38,5 @@ void init_keybinds(rpg_t *rpg)
     my_btn->sb_click = NULL;
     gl_create_button(rpg->glib, my_btn);
     init_settings_keybind(rpg);
+    init_keybinds_keys(rpg);
 }

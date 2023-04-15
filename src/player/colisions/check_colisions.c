@@ -75,7 +75,6 @@ static int check_all_layers(map_t *map, int index, rpg_t *rpg)
 
 int check_colisions(map_t *map, sfVector2f pos, player_t *player, rpg_t *rpg)
 {
-    (void)(rpg);
     sfRectangleShape_setFillColor(player->hitbox, (sfColor){0, 255, 0, 50});
     int x = pos.x / map->tile_width;
     int y = pos.y / map->tile_height;

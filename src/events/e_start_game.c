@@ -7,10 +7,17 @@
 
 #include "rpg.h"
 
+static void next_func(void)
+{
+    while (sfMouse_isButtonPressed(sfMouseLeft) == sfTrue);
+    return;
+}
+
 void e_start_game(int id, void *main)
 {
-    (void)(id);
+    (void)id;
     rpg_t *rpg = (rpg_t *)main;
+    rpg->menu_save->active = (rpg->menu_save->active == true) ? false : true;
 
-    start_game(rpg);
+    next_func();
 }

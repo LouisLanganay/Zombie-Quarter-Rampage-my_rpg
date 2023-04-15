@@ -14,5 +14,6 @@ void save_player(rpg_t *rpg)
     jp_search(player, "pos.x")->value.p_int = rpg->player->pos.x;
     jp_search(player, "pos.y")->value.p_int = rpg->player->pos.y;
     jp_search(player, "hp")->value.p_int = rpg->player->hp;
+    jp_search(player, "hunger")->value.p_int = rpg->player->hunger;
     jp_write(rpg->save->path, data);
 }

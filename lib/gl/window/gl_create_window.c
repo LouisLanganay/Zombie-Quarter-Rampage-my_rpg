@@ -22,7 +22,7 @@ window_t *gl_create_window(create_window_t *my_window)
 {
     if (handle_error(my_window->width, my_window->height, my_window->title,
         my_window->framerate) != 0)
-        exit(84);
+        return NULL;
 
     window_t *window = malloc(sizeof(window_t));
 
@@ -33,7 +33,7 @@ window_t *gl_create_window(create_window_t *my_window)
     window->event;
 
     if (!window->window)
-        exit(84);
+        return NULL;
 
     sfRenderWindow_setFramerateLimit(window->window, my_window->framerate);
     free(my_window);

@@ -1,20 +1,20 @@
 {
     "go_to_annia": {
-        "name": "Explore",
-        "description": "Go to the grocery store to the left of your house.",
+        "name": "go_to_annia_name",
+        "description": "go_to_annia_description",
         "type": "go_to",
         "function": "go_to_annia"
     },
-    "test_quest": {
-        "name": "Test Quest",
-        "description": "This is a test quest.",
+    "basement_paper": {
+        "name": "basement_paper_name",
+        "description": "basement_paper_description",
         "type": "talk",
-        "function": null
+        "function": "jack_quest"
     },
-    "find_money": {
-        "name": "Find Money",
-        "description": "Find some money.",
+    "jack_quest": {
+        "name": "jack_quest_name",
+        "description": "jack_quest_description",
         "type": "collect",
-        "function": null
+        "function": "jack_quest"
     }
 }
