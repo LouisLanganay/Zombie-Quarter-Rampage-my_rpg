@@ -16,6 +16,7 @@ int main(int ac, char **av)
         print_framerate();
         gl_check_events(rpg->glib->window, rpg->glib->events, rpg);
         sfRenderWindow_clear(rpg->glib->window->window, sfBlack);
+        gl_buttons_hovered(rpg->glib->buttons, rpg->glib->window, rpg);
         if (rpg->game_state == GAME)
             game_loop(rpg);
         if (rpg->game_state == MENU)

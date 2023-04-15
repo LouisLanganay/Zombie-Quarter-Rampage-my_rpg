@@ -189,6 +189,12 @@
         bool active;
     } menu_t;
 
+    typedef struct menu_background_s {
+        sfTexture *background_menu_t;
+        sfSprite *background_menu_s;
+        bool active;
+    } menu_background_t;
+
     typedef enum wmode_e {
         FSCREEN,
         WINDOWED
@@ -283,6 +289,7 @@
         npc_t *actual_npc;
         map_t *maps;
         GLib_t *glib;
+        menu_background_t *background;
         menu_t *menu;
         menu_keybinds_t *menu_key;
         menu_save_t *menu_save;
@@ -585,6 +592,8 @@
     void init_main_menu(rpg_t *rpg);
     void init_settings_menu(rpg_t *rpg);
     void init_keybinds(rpg_t *rpg);
+    void init_buttons_langage(rpg_t *rpg);
+    void init_background(rpg_t *rpg);
     void init_keybinds_keys(rpg_t *rpg);
     void draw_menu_keys(rpg_t *rpg);
     void init_saves_buttons(rpg_t *rpg);
@@ -596,6 +605,8 @@
     void draw_hud(rpg_t *rpg);
 
 
+    void init_background(rpg_t *rpg);
+    void init_all_language(rpg_t *rpg);
 
     /* LORE */
     void draw_popup_lore(rpg_t *rpg);
@@ -611,6 +622,8 @@
     /* EVENTS */
     void e_resume_btn(int id, void *main);
     void e_quit(int id, void *main);
+    void e_langue_fr(int id, void *main);
+    void e_langue_en(int id, void *main);
     void e_start_game(int id, void *main);
     void e_key_released(window_t *window, void *main);
     void e_key_pressed(window_t *window, void *main);
