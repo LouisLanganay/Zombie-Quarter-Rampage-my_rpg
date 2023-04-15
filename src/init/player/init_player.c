@@ -64,6 +64,7 @@ void init_player(rpg_t *rpg)
 {
     player_t *player = malloc(sizeof(player_t));
     player->clock = sfClock_create();
+    player->hp_clock = sfClock_create();
     player->pos = (sfVector2f){SPAWN_X, SPAWN_Y};
     player->in_dialogue = 0;
     player->lore_open = 0;
@@ -76,4 +77,5 @@ void init_player(rpg_t *rpg)
     init_player_inventory(player);
     init_player_items_packs(player);
     rpg->player = player;
+    init_game_lost_screen(player, rpg);
 }

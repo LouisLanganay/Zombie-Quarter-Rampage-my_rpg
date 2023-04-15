@@ -272,6 +272,9 @@ SRC += jack_start_quest.c
 SRC += start_dialogue_default.c
 SRC += annia_give_heal.c
 SRC += i_lauch_combat.c
+SRC += check_game_lost.c
+SRC += init_game_lost_screen.c
+SRC += draw_game_lost_screen.c
 
 
 INC_DIR 	:= includes
