@@ -64,6 +64,7 @@ void init_player(rpg_t *rpg)
 {
     player_t *player = malloc(sizeof(player_t));
     player->clock = sfClock_create();
+    player->hunger_lost = sfClock_create();
     player->pos = (sfVector2f){SPAWN_X, SPAWN_Y};
     player->in_dialogue = 0;
     player->lore_open = 0;

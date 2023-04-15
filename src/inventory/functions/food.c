@@ -21,5 +21,7 @@ void food(void *main)
         RP->hunger += 14;
     if (item == 80)
         RP->hunger += 20;
+    if (RP->hunger > 100)
+        RP->hunger = 100;
     remove_item_to_inventory(rpg, RP->inventory->pos);
 }

@@ -25,8 +25,8 @@
 			"x": 305,
 			"y": 150
 		},
-		"hp": 1,
-		"hunger": 1,
+		"hp": 100,
+		"hunger": 80,
 		"inventory": {
 			"items": [
 				41,

@@ -45,6 +45,8 @@ VPATH += src/text
 VPATH += src/quests
 VPATH += src/quests/functions
 VPATH += src/map
+VPATH += src/chest
+VPATH += src/chest/functions
 VPATH += src/menu
 VPATH += src/lore
 VPATH += src/sounds
@@ -275,6 +277,10 @@ SRC += i_lauch_combat.c
 SRC += food.c
 SRC += init_inventory_popup.c
 SRC += draw_item_popup.c
+SRC += hunger_lost.c
+SRC += c_fridge.c
+SRC += check_chests.c
+SRC += get_chests_array.c
 
 
 INC_DIR 	:= includes

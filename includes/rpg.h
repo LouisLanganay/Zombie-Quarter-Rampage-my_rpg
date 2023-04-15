@@ -322,6 +322,10 @@
         void (*on_exit)(rpg_t *, sfVector2f pos);
     } interactions_t;
 
+    typedef struct chests_s {
+        char *name;
+        void (*func)(rpg_t *, tiled_object_t *obj);
+    } chests_t;
 
     typedef struct bullets_s {
         float speed;
@@ -514,6 +518,7 @@
     void check_interactions(player_t *player, map_t *map, rpg_t *rpg);
     void check_interactions_other_maps(rpg_t *rpg, player_t *player);
     keyboard_images_t *get_keyboard_array(void);
+    void hunger_lost(rpg_t *rpg);
 
     /* INVENTORY*/
     int add_item_to_inventory(int id, rpg_t *rpg);
@@ -525,6 +530,10 @@
     void handle_drop_use_button(rpg_t *rpg);
     char *get_item_name(int id);
     void draw_item_popup(rpg_t *rpg);
+
+    /* CHEST */
+    chests_t *get_chests_array(void);
+    void check_chests(player_t *player, map_t *map, rpg_t *rpg);
 
     /* NPC */
     npc_t *get_npc(map_t *map, char *name);
@@ -562,6 +571,7 @@
     void s_basement_exit(rpg_t *rpg, sfVector2f pos);
     void s_nature(rpg_t *rpg, sfVector2f pos);
     void s_nature_exit(rpg_t *rpg, sfVector2f pos);
+    void c_fridge(rpg_t *rpg, tiled_object_t *obj);
     void i_soda(rpg_t *rpg, sfVector2f pos);
     void i_paper_grocery(rpg_t *rpg, sfVector2f pos);
     void go_to_annia(void *main);

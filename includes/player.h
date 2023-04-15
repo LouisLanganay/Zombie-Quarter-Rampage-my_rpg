@@ -58,7 +58,7 @@
     #define PLAYER_INTERACT_TEXT 613255
     #define PLAYER_SPRITE_WIDTH 16
     #define PLAYER_SPRITE_HEIGHT 35
-    #define PLAYER_SPEED 200
+    #define PLAYER_SPEED 60
 
     #define PLAYER_DIALOGUE_TEXT 613256
     #define PLAYER_DCHOICE_ONE_TEXT 613257
@@ -178,6 +178,7 @@
     } view_t;
 
     typedef struct player_s {
+        sfClock *hunger_lost;
         int hp;
         int hunger;
         int in_dialogue;
