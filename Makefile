@@ -28,6 +28,7 @@ VPATH += src/init/hud
 VPATH += src/init/sounds
 VPATH += src/init/settings
 VPATH += src/init/menu
+VPATH += src/init/menu/ingame
 VPATH += src/init/menu/keybind
 VPATH += src/init/inventory
 VPATH += src/init/quests
@@ -46,6 +47,7 @@ VPATH += src/quests
 VPATH += src/quests/functions
 VPATH += src/map
 VPATH += src/menu
+VPATH += src/menu/ingame
 VPATH += src/lore
 VPATH += src/sounds
 VPATH += src/map/load
@@ -272,6 +274,8 @@ SRC += jack_start_quest.c
 SRC += start_dialogue_default.c
 SRC += annia_give_heal.c
 SRC += i_lauch_combat.c
+SRC += draw_escape_menu.c
+SRC += init_escape_menu.c
 
 
 INC_DIR 	:= includes

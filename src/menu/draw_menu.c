@@ -76,7 +76,6 @@ void draw_menu(rpg_t *rpg)
     rpg->background->background_menu_s, NULL);
     if (rpg->menu->active == false) {
             gl_draw_button(BTN_QUIT, rpg->glib->buttons, rpg->glib->window);
-            gl_draw_button(BTN_START, rpg->glib->buttons,rpg->glib->window);
             gl_draw_button(BTN_RESUME, rpg->glib->buttons,
             rpg->glib->window);
     }

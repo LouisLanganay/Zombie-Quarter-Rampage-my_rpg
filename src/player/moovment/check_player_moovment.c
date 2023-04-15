@@ -72,6 +72,10 @@ void check_player_moovment(player_t *player, map_t *map, rpg_t *rpg)
     check_interactions(player, map, rpg);
     check_interactions_other_maps(rpg, player);
     if (seconds < 0.001) return;
+    if (player->inventory->is_open == 1) {
+        sfClock_restart(player->clock);
+        return;
+    }
     if (check_player_moovment_complex(player, map, rpg, seconds) == 1) {
         sfClock_restart(player->clock);
         return;

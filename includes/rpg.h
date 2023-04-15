@@ -54,6 +54,7 @@
     #define GROCERY_SOUND_ID 18
 
     #define RPA rpg->player->assets
+    #define RGWW rpg->glib->window->window
     #define RGW rpg->glib->window
     #define RPK rpg->player->keys
     #define RPH rpg->player->hitbox
@@ -192,6 +193,7 @@
     typedef struct menu_background_s {
         sfTexture *background_menu_t;
         sfSprite *background_menu_s;
+        sfRectangleShape *bg_escape;
         bool active;
     } menu_background_t;
 
@@ -276,7 +278,8 @@
     typedef enum game_state_e {
         MENU,
         GAME,
-        COMBAT
+        COMBAT,
+        PAUSE
     } game_state_t;
 
     typedef struct rpg_s {
@@ -600,6 +603,7 @@
     void draw_saves_menu(rpg_t *rpg);
     void init_saves_texts(rpg_t *rpg);
     void draw_settings(rpg_t *rpg);
+    void draw_escape_menu(rpg_t *rpg);
 
     /* HUD */
     void draw_hud(rpg_t *rpg);
@@ -655,6 +659,7 @@
     void init_popup_lore(rpg_t *rpg);
     void init_hud(rpg_t *rpg);
     void init_slider(rpg_t *rpg);
+    void init_escape_menu(rpg_t *rpg);
     void init_save(rpg_t *rpg);
     void init_events(rpg_t *rpg);
     void init_player_assets(player_t *player);
