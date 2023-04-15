@@ -247,7 +247,7 @@ SRC += draw_quests_inv.c
 SRC += my_atoi.c
 SRC += exec_item_func.c
 SRC += get_items_functions_arr.c
-SRC += bandage.c
+SRC += heal.c
 SRC += handle_drop_use_button.c
 SRC += get_item_name.c
 SRC += number_zombies.c
@@ -272,6 +272,9 @@ SRC += jack_start_quest.c
 SRC += start_dialogue_default.c
 SRC += annia_give_heal.c
 SRC += i_lauch_combat.c
+SRC += food.c
+SRC += init_inventory_popup.c
+SRC += draw_item_popup.c
 
 
 INC_DIR 	:= includes

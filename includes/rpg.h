@@ -64,6 +64,7 @@
     #define RM rpg->menu_key
     #define RP rpg->player
     #define RSV rpg->settings->volume
+    #define RPI rpg->player->inventory
 
     #define GET_SAVE_GAMELANGUAGE my_strcmp(jp_search(data, \
         "game_language")->value.p_str, "fr") == 0 ? FR : EN;
@@ -523,6 +524,7 @@
     void exec_item_func(rpg_t *rpg, int id);
     void handle_drop_use_button(rpg_t *rpg);
     char *get_item_name(int id);
+    void draw_item_popup(rpg_t *rpg);
 
     /* NPC */
     npc_t *get_npc(map_t *map, char *name);
@@ -549,7 +551,8 @@
 
     /* CALL ACTIONS */
     void i_lauch_combat(rpg_t *rpg, sfVector2f pos);
-    void bandage(void*);
+    void heal(void*);
+    void food(void *);
     void annia_give_heal(void *main);
     void jack(rpg_t *rpg, sfVector2f pos);
     void s_radiation(rpg_t *rpg, sfVector2f pos);
@@ -657,6 +660,7 @@
     void init_slider(rpg_t *rpg);
     void init_save(rpg_t *rpg);
     void init_events(rpg_t *rpg);
+    void init_inventory_popup(rpg_t *rpg);
     void init_player_assets(player_t *player);
     void init_rpg(rpg_t *rpg, int ac, char **av);
     void init_popup_interaction(rpg_t *rpg);

@@ -64,6 +64,7 @@
     #define PLAYER_DCHOICE_ONE_TEXT 613257
     #define PLAYER_DCHOICE_TWO_TEXT 613258
     #define PLAYER_DIALOGUE_TEXT_ESCAPE 613259
+    #define INVENTORY_ITEM_POPUP 51533
 
     #define EVENT_KEY_PRESSED 5465
     #define EVENT_KEY_RELEASED 5466
@@ -143,6 +144,18 @@
         void (*func)(void *);
     } item_func_t;
 
+    typedef enum inv_popup_action_e {
+        ADD,
+        REMOVE
+    } inv_popup_action_t;
+
+    typedef struct inv_popup_s {
+        char *item_name;
+        inv_popup_action_t action;
+        sfClock *clock;
+        sfClock *clock2;
+    } inv_popup_t;
+
     typedef struct inventory_s {
         int is_open;
         int is_data_open;
@@ -154,6 +167,7 @@
         sfSprite *select_sprite;
         sfSprite *items_data_sprite;
         sfRectangleShape *background;
+        inv_popup_t *popup;
     } inventory_t;
 
     typedef struct view_s {
