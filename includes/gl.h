@@ -216,4 +216,6 @@
 
     sound_t *gl_get_sound(GLib_t *glib, int id);
 
+    buttons_t *gl_get_button(buttons_t *buttons, int id);
+
 #endif

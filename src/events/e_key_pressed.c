@@ -39,18 +39,26 @@ static void e_key_pressed_movement(rpg_t *rpg)
         rpg->player->keys->right.state = 1;
 }
 
+static void e_key_pressed_escape(rpg_t *rpg)
+{
+    rpg->menu_save->active = false;
+    rpg->menu_key->active = false;
+    rpg->menu->active = false;
+    if (sfKeyboard_isKeyPressed(RPK->escape.key) == sfTrue)
+        rpg->game_state == PAUSE ?
+            (rpg->game_state = GAME) : (rpg->game_state = PAUSE);
+}
+
 void e_key_pressed(window_t *window, void *main)
 {
     (void)window;
     rpg_t *rpg = (rpg_t *)main;
     e_key_pressed_movement(rpg);
     e_key_pressed_select(rpg);
+    e_key_pressed_escape(rpg);
     if (rpg->glib->window->event.key.code == sfKeyF11)
         change_window_mode(rpg, rpg->settings->window_mode == FSCREEN ?
         WINDOWED : FSCREEN);
     if (rpg->glib->window->event.key.code == sfKeyB)
         save(rpg);
-    if (sfKeyboard_isKeyPressed(RPK->escape.key) == sfTrue)
-        rpg->game_state == PAUSE ?
-            (rpg->game_state = GAME) : (rpg->game_state = PAUSE);
 }

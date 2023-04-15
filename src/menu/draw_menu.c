@@ -72,8 +72,7 @@ static void disable_saves_menu(rpg_t *rpg)
 
 void draw_menu(rpg_t *rpg)
 {
-    sfRenderWindow_drawSprite(rpg->glib->window->window,
-    rpg->background->background_menu_s, NULL);
+    sfRenderWindow_drawSprite(RGWW, rpg->background->bg_menu_s, NULL);
     if (rpg->menu->active == false) {
             gl_draw_button(BTN_QUIT, rpg->glib->buttons, rpg->glib->window);
             gl_draw_button(BTN_RESUME, rpg->glib->buttons,
@@ -87,4 +86,8 @@ void draw_menu(rpg_t *rpg)
     draw_buttons(rpg);
     if (rpg->menu->active == true)
         draw_settings(rpg);
+    if (rpg->game_state == PAUSE)
+        draw_escape_menu(rpg);
+    else
+        gl_button_change_state(BTN_SAVEBTN, rpg->glib->buttons, sfTrue);
 }

@@ -276,6 +276,7 @@ SRC += annia_give_heal.c
 SRC += i_lauch_combat.c
 SRC += draw_escape_menu.c
 SRC += init_escape_menu.c
+SRC += e_save_btn.c
 
 
 INC_DIR 	:= includes

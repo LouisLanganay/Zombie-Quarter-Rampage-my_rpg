@@ -9,6 +9,15 @@
 
 void game_loop(rpg_t *rpg)
 {
+    sfVector2f screen_size = (sfVector2f){
+        rpg->glib->window->mode.width,
+        rpg->glib->window->mode.height
+    };
+    if (rpg->game_state == PAUSE) {
+        sfRenderWindow_setView(RGWW, sfRenderWindow_getDefaultView(RGWW));
+        draw_menu(rpg);
+        return;
+    }
     set_view_on_player(rpg);
     draw_map(rpg->maps, rpg->actual_map, rpg);
     display_dialogue(rpg);
@@ -18,5 +27,4 @@ void game_loop(rpg_t *rpg)
     check_sounds(rpg);
     draw_quests(rpg);
     draw_hud(rpg);
-    draw_escape_menu(rpg);
 }

@@ -12,4 +12,7 @@ void start_game(rpg_t *rpg, char *save_path)
     rpg->game_state = GAME;
     load_save(rpg, save_path);
     fade_sound(rpg, MAIN_THEME_ID, 8);
+    rpg->menu_save->active = false;
+    rpg->menu_key->active = false;
+    rpg->menu->active = false;
 }

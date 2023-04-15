@@ -7,15 +7,13 @@
 
 #include "rpg.h"
 
+static void draw_escape_menu_btn(rpg_t *rpg)
+{
+    gl_draw_button(BTN_SAVEBTN, rpg->glib->buttons, rpg->glib->window);
+}
 
 void draw_escape_menu(rpg_t *rpg)
 {
-    int width = rpg->glib->window->mode.width;
-    int height = rpg->glib->window->mode.height;
-    sfVector2f view_pos = sfView_getCenter(RP->view->view);
-
-    if (rpg->game_state != PAUSE) return;
-    sfRectangleShape_setPosition(rpg->background->bg_escape,
-    (sfVector2f){view_pos.x - width / 2, view_pos.y - height / 2});
-    sfRenderWindow_drawRectangleShape(RGWW, rpg->background->bg_escape, NULL);
+    gl_button_change_state(BTN_SAVEBTN, rpg->glib->buttons, sfFalse);
+    draw_escape_menu_btn(rpg);
 }

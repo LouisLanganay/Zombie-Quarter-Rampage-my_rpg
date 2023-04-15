@@ -192,7 +192,7 @@
 
     typedef struct menu_background_s {
         sfTexture *background_menu_t;
-        sfSprite *background_menu_s;
+        sfSprite *bg_menu_s;
         sfRectangleShape *bg_escape;
         bool active;
     } menu_background_t;
@@ -627,6 +627,7 @@
     void e_resume_btn(int id, void *main);
     void e_quit(int id, void *main);
     void e_langue_fr(int id, void *main);
+    void e_save_btn(int id, void *main);
     void e_langue_en(int id, void *main);
     void e_start_game(int id, void *main);
     void e_key_released(window_t *window, void *main);
