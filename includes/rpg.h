@@ -605,6 +605,8 @@
     void draw_hud(rpg_t *rpg);
 
 
+    void init_background(rpg_t *rpg);
+    void init_all_language(rpg_t *rpg);
 
     /* LORE */
     void draw_popup_lore(rpg_t *rpg);
