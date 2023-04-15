@@ -194,7 +194,7 @@
         sfSprite *background_menu_s;
         bool active;
     } menu_background_t;
-    
+
     typedef enum wmode_e {
         FSCREEN,
         WINDOWED
@@ -592,10 +592,7 @@
     void init_main_menu(rpg_t *rpg);
     void init_settings_menu(rpg_t *rpg);
     void init_keybinds(rpg_t *rpg);
-    void init_main_menu_fr(rpg_t *rpg);
-    void init_main_menu_en(rpg_t *rpg);
-    void init_button_fr(rpg_t *rpg);
-    void init_button_en(rpg_t *rpg);
+    void init_buttons_langage(rpg_t *rpg);
     void init_background(rpg_t *rpg);
     void init_keybinds_keys(rpg_t *rpg);
     void draw_menu_keys(rpg_t *rpg);

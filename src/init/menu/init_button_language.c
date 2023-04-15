@@ -6,7 +6,7 @@
 */
 #include "rpg.h"
 
-void init_main_menu_fr(rpg_t *rpg)
+static void init_main_menu_fr(rpg_t *rpg)
 {
     text_t *my_text = malloc(sizeof(text_t));
     my_text->id = BTN_FRANCE;
@@ -19,7 +19,7 @@ void init_main_menu_fr(rpg_t *rpg)
     gl_create_text(rpg->glib, my_text);
 }
 
-void init_main_menu_en(rpg_t *rpg)
+static void init_main_menu_en(rpg_t *rpg)
 {
     text_t *my_text = malloc(sizeof(text_t));
     my_text->id = BTN_ANGLAIS;
@@ -32,7 +32,7 @@ void init_main_menu_en(rpg_t *rpg)
     gl_create_text(rpg->glib, my_text);
 }
 
-void init_button_fr(rpg_t *rpg)
+static void init_button_fr(rpg_t *rpg)
 {
     buttons_t *my_btn = malloc(sizeof(buttons_t));
     my_btn->id = BTN_CHECK1;
@@ -47,7 +47,7 @@ void init_button_fr(rpg_t *rpg)
     gl_create_button(rpg->glib, my_btn);
 }
 
-void init_button_en(rpg_t *rpg)
+static void init_button_en(rpg_t *rpg)
 {
     buttons_t *my_btn = malloc(sizeof(buttons_t));
     my_btn->id = BTN_CHECK2;
@@ -60,4 +60,12 @@ void init_button_en(rpg_t *rpg)
     my_btn->sb_hover = NULL;
     my_btn->sb_click = NULL;
     gl_create_button(rpg->glib, my_btn);
+}
+
+void init_buttons_langage(rpg_t *rpg)
+{
+    init_main_menu_fr(rpg);
+    init_main_menu_en(rpg);
+    init_button_fr(rpg);
+    init_button_en(rpg);
 }

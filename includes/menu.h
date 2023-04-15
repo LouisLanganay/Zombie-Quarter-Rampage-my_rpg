@@ -22,9 +22,9 @@
     #define BTN_RESUME 12
     #define BTN_SEETING 13
 
-    #define BTN_SAVE1 15
-    #define BTN_SAVE2 16
-    #define BTN_SAVE3 17
+    #define BTN_SAVE1 55
+    #define BTN_SAVE2 56
+    #define BTN_SAVE3 57
 
     #define TXT_SAVE1 18
     #define TXT_SAVE2 19

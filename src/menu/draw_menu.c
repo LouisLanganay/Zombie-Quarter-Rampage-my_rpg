@@ -32,6 +32,8 @@ static void draw_conditions_buttons(rpg_t *rpg)
         gl_button_change_state(BTN_RESUME, rpg->glib->buttons, sfFalse);
         gl_button_change_state(BTN_START, rpg->glib->buttons, sfFalse);
         gl_button_change_state(BTN_KEYBIND, rpg->glib->buttons, sfTrue);
+        gl_button_change_state(BTN_CHECK1, rpg->glib->buttons, sfFalse);
+        gl_button_change_state(BTN_CHECK2, rpg->glib->buttons, sfFalse);
     }
     if (rpg->menu_key->active == true) {
         sfRenderWindow_drawSprite(rpg->glib->window->window,

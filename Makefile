@@ -188,7 +188,6 @@ SRC += init_button_language.c
 SRC += combat.c
 SRC += init_combat.c
 SRC += init_guy.c
-SRC += init_background.c
 SRC += insert_zombies.c
 SRC += draw_zombies.c
 SRC += move_player.c
