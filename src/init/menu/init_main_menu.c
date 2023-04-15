@@ -40,13 +40,13 @@ static void init_main_menu_start(rpg_t *rpg)
 static void init_main_menu_resume(rpg_t *rpg)
 {
     buttons_t *my_btn = malloc(sizeof(buttons_t));
-    my_btn->id = BTN_RESUME;
+    my_btn->id = BTN_LOAD;
     my_btn->pos = (sfVector2f){rpg->glib->window->mode.width / 2.4,
     rpg->glib->window->mode.height / 1.3};
     my_btn->rect = (sfIntRect){0, 0, 278, 72};
     my_btn->call_action = e_resume_btn;
     my_btn->sprite = sfSprite_create();
-    my_btn->texture = sfTexture_createFromFile(BTN_PATH_RESUME, NULL);
+    my_btn->texture = sfTexture_createFromFile(BTN_PATH_LOAD, NULL);
     my_btn->sb_hover = NULL;
     my_btn->sb_click = NULL;
     gl_create_button(rpg->glib, my_btn);

@@ -9,6 +9,7 @@
 
 static void draw_escape_menu_btn(rpg_t *rpg)
 {
+    gl_buttons_hovered(rpg->glib->buttons, rpg->glib->window, rpg);
     gl_draw_button(BTN_SAVEBTN, rpg->glib->buttons, rpg->glib->window);
 }
 
