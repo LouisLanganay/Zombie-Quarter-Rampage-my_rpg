@@ -364,11 +364,8 @@
     void init_main_menu(rpg_t *rpg);
     void init_settings_menu(rpg_t *rpg);
     void init_keybinds(rpg_t *rpg);
-    void init_main_menu_fr(rpg_t *rpg);
-    void init_main_menu_en(rpg_t *rpg);
-    void init_button_fr(rpg_t *rpg);
-    void init_button_en(rpg_t *rpg);
     void init_background(rpg_t *rpg);
+    void init_all_language(rpg_t *rpg);
 
     /* LORE */
     void draw_popup_lore(rpg_t *rpg);
