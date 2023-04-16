@@ -26,6 +26,8 @@ void game_loop(rpg_t *rpg)
     check_sounds(rpg);
     draw_quests(rpg);
     draw_hud(rpg);
+    draw_item_popup(rpg);
+    hunger_lost(rpg);
     check_game_lost(rpg);
     draw_game_lost_screen(rpg);
 }

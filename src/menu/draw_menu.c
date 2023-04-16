@@ -73,6 +73,8 @@ void draw_menu(rpg_t *rpg)
 {
     sfRenderWindow_drawSprite(rpg->glib->window->window,
     rpg->background->background_menu_s, NULL);
+    gl_draw_text(rpg->glib, SPLASH_SCREEN_TEXT1);
+    gl_draw_text(rpg->glib, SPLASH_SCREEN_TEXT2);
     if (rpg->menu->active == false) {
             gl_draw_button(BTN_QUIT, rpg->glib->buttons, rpg->glib->window);
             gl_draw_button(BTN_START, rpg->glib->buttons,rpg->glib->window);

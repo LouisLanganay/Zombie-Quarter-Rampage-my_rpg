@@ -7,28 +7,6 @@
 
 #include "rpg.h"
 
-static int arr_len(char **arr)
-{
-    int i = 0;
-
-    while (arr[i] != NULL) i++;
-    return (i);
-}
-
-static char **add_item_to_arr(char **arr, char *item)
-{
-    char **new_arr = malloc(sizeof(char *) * (arr_len(arr) + 2));
-    int i = 0;
-
-    while (arr[i] != NULL) {
-        new_arr[i] = arr[i];
-        i++;
-    }
-    new_arr[i] = item;
-    new_arr[i + 1] = NULL;
-    return (new_arr);
-}
-
 void start_quest(rpg_t *rpg, char *id)
 {
     quest_t *quest = rpg->quests;
