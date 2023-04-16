@@ -18,4 +18,6 @@ void game_loop(rpg_t *rpg)
     check_sounds(rpg);
     draw_quests(rpg);
     draw_hud(rpg);
+    draw_item_popup(rpg);
+    hunger_lost(rpg);
 }

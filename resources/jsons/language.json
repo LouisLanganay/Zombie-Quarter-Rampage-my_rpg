@@ -12,8 +12,16 @@
         "fr": "Trouver de la nourriture"
     },
     "basement_paper_description": {
-        "en": "You need to find some food to eat. You can find some in the basement of the grocery store.",
-        "fr": "Vous devez trouver de la nourriture a manger. Vous pouvez en trouver dans le sous-sol de l'epicerie."
+        "fr": "Trouver de la nourriture dans votre sous sol. Vous en trouverez surement dans une etagere ou un frigo.",
+        "en": "Find some food in your basement. You will probably find some in a shelf or a fridge."
+    },
+    "fridge_interact": {
+        "en": "open the fridge.",
+        "fr": "ouvrir le frigo."
+    },
+    "empty_fridge": {
+        "fr": "Rien d'interessant dans ce frigo. Je devrais aller voir ailleurs.",
+        "en": "Nothing interesting in this fridge. I should go look somewhere else."
     },
     "close_paper": {
         "en": "close the paper.",
@@ -62,6 +70,10 @@
     "house_cant_leave": {
         "fr": "Pff... je ne peux pas sortir de la maison, c'est trop dangereux.",
         "en": "Pff... I can't leave the house, it's too dangerous."
+    },
+    "basement_cant_leave": {
+        "fr": "Je commence vraiment a avoir faim, il doit bien y avoir quelque chose a manger dans le frigo.",
+        "en": "I'm really hungry, there must be something to eat in the fridge."
     },
     "house_door_interact_leave": {
         "en": "leave the house.",

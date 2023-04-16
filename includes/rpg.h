@@ -64,6 +64,7 @@
     #define RM rpg->menu_key
     #define RP rpg->player
     #define RSV rpg->settings->volume
+    #define RPI rpg->player->inventory
 
     #define GET_SAVE_GAMELANGUAGE my_strcmp(jp_search(data, \
         "game_language")->value.p_str, "fr") == 0 ? FR : EN;
@@ -303,6 +304,7 @@
         narative_t *narative;
         char **quests_in_progress;
         char **quests_completed;
+        char **chests_opened;
     } rpg_t;
 
     typedef struct keyboard_images_s {
@@ -321,6 +323,10 @@
         void (*on_exit)(rpg_t *, sfVector2f pos);
     } interactions_t;
 
+    typedef struct chests_s {
+        char *name;
+        void (*func)(rpg_t *, tiled_object_t *obj);
+    } chests_t;
 
     typedef struct bullets_s {
         float speed;
@@ -429,9 +435,11 @@
     char *my_strcat_malloc(char *dest, char const *src);
     int my_atoi(char const *str);
     char *my_strdup(char *str);
+    int arr_len(char **arr);
     int my_strlen(char const *str);
     char *my_strndup(const char *str, int n);
     int get_mid_char(const char *str);
+    char **add_item_to_arr(char **arr, char *item);
     int my_arr_contains(char **arr, char *str);
     int my_arrlen(char **arr);
 
@@ -462,6 +470,9 @@
     void save(rpg_t *rpg);
     int load_quests_completed(rpg_t *rpg, parsed_data_t *data);
     void save_quests_completed(rpg_t *rpg);
+    int load_chests_opened(rpg_t *rpg, parsed_data_t *data);
+    void save_chests_opened(rpg_t *rpg);
+
 
     /* QUESTS */
     void start_dialogue_default(npc_t *npc, rpg_t *rpg);
@@ -513,6 +524,7 @@
     void check_interactions(player_t *player, map_t *map, rpg_t *rpg);
     void check_interactions_other_maps(rpg_t *rpg, player_t *player);
     keyboard_images_t *get_keyboard_array(void);
+    void hunger_lost(rpg_t *rpg);
 
     /* INVENTORY*/
     int add_item_to_inventory(int id, rpg_t *rpg);
@@ -523,6 +535,11 @@
     void exec_item_func(rpg_t *rpg, int id);
     void handle_drop_use_button(rpg_t *rpg);
     char *get_item_name(int id);
+    void draw_item_popup(rpg_t *rpg);
+
+    /* CHEST */
+    chests_t *get_chests_array(void);
+    void check_chests(player_t *player, map_t *map, rpg_t *rpg);
 
     /* NPC */
     npc_t *get_npc(map_t *map, char *name);
@@ -549,7 +566,8 @@
 
     /* CALL ACTIONS */
     void i_lauch_combat(rpg_t *rpg, sfVector2f pos);
-    void bandage(void*);
+    void heal(void*);
+    void food(void *);
     void annia_give_heal(void *main);
     void jack(rpg_t *rpg, sfVector2f pos);
     void s_radiation(rpg_t *rpg, sfVector2f pos);
@@ -559,6 +577,7 @@
     void s_basement_exit(rpg_t *rpg, sfVector2f pos);
     void s_nature(rpg_t *rpg, sfVector2f pos);
     void s_nature_exit(rpg_t *rpg, sfVector2f pos);
+    void c_fridge(rpg_t *rpg, tiled_object_t *obj);
     void i_soda(rpg_t *rpg, sfVector2f pos);
     void i_paper_grocery(rpg_t *rpg, sfVector2f pos);
     void go_to_annia(void *main);
@@ -614,6 +633,13 @@
     void start_narative_popup(rpg_t *rpg);
     void check_narative_popup(rpg_t *rpg);
 
+    /* POPUP */
+    void remove_first_item_popup(rpg_t *rpg);
+    void add_item_popup(
+        rpg_t *rpg,
+        int id,
+        inv_popup_action_t action
+    );
 
     /* FPS */
     void print_framerate(void);
@@ -657,6 +683,7 @@
     void init_slider(rpg_t *rpg);
     void init_save(rpg_t *rpg);
     void init_events(rpg_t *rpg);
+    void init_inventory_popup(rpg_t *rpg);
     void init_player_assets(player_t *player);
     void init_rpg(rpg_t *rpg, int ac, char **av);
     void init_popup_interaction(rpg_t *rpg);

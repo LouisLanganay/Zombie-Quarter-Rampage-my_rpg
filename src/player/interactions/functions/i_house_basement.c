@@ -13,6 +13,11 @@ static void change_map(rpg_t *rpg)
     char *player_house = "resources/maps/player_house.json";
 
     if (my_strcmp(rpg->actual_map, player_basement) == 0) {
+        if (quest_is_completed(rpg, "basement_paper") != 1) {
+            rpg->narative->str = get_language(rpg, "basement_cant_leave", RSG);
+            start_narative_popup(rpg);
+            return;
+        }
         rpg->actual_map = player_house;
         rpg->player->pos.x = SPAWN_OUT_BASEMENT_X;
         rpg->player->pos.y = SPAWN_OUT_BASEMENT_Y;

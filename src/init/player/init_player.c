@@ -37,9 +37,9 @@ static void init_player_keys(player_t *player)
 static void init_player_inventory(player_t *player)
 {
     player->inventory = malloc(sizeof(inventory_t));
-    player->inventory->items = malloc(sizeof(int) * 16);
+    player->inventory->items = malloc(sizeof(int) * INVENTORY_SIZE);
 
-    for (int i = 0; i < 16; i++)
+    for (int i = 0; i < INVENTORY_SIZE; i++)
         player->inventory->items[i] = -1;
     player->inventory->is_open = 0;
     player->inventory->is_data_open = 1;
@@ -64,6 +64,7 @@ void init_player(rpg_t *rpg)
 {
     player_t *player = malloc(sizeof(player_t));
     player->clock = sfClock_create();
+    player->hunger_lost = sfClock_create();
     player->pos = (sfVector2f){SPAWN_X, SPAWN_Y};
     player->in_dialogue = 0;
     player->lore_open = 0;
