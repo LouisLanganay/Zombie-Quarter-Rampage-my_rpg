@@ -12,6 +12,9 @@ static void disables_buttons(rpg_t *rpg)
     gl_button_change_state(BTN_SAVE1, rpg->glib->buttons, sfTrue);
     gl_button_change_state(BTN_SAVE2, rpg->glib->buttons, sfTrue);
     gl_button_change_state(BTN_SAVE3, rpg->glib->buttons, sfTrue);
+    gl_button_change_state(BTN_SAVEBTN, rpg->glib->buttons, sfTrue);
+    gl_button_change_state(BTN_LOAD, rpg->glib->buttons, sfTrue);
+    gl_button_change_state(BTN_SEETING, rpg->glib->buttons, sfTrue);
 }
 
 void game_loop(rpg_t *rpg)
