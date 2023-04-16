@@ -41,10 +41,8 @@ void save_quests_completed(rpg_t *rpg)
     my_arr->value.p_str = new_arr[0];
     my_arr->next = NULL;
 
-    for (int i = 1; new_arr[i] != NULL; i++) {
-        printf("new_arr[%d] = %s\n", i, new_arr[i]);
+    for (int i = 1; new_arr[i] != NULL; i++)
         add_node_to_my_arr(my_arr, new_arr[i]);
-    }
 
     jp_search(data, "game_timeline.quests_completed")->value.p_arr = my_arr;
     jp_write(rpg->save->path, data);
