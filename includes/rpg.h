@@ -546,6 +546,7 @@
     void handle_drop_use_button(rpg_t *rpg);
     char *get_item_name(int id);
     void draw_item_popup(rpg_t *rpg);
+    int remove_itemid_inventory(rpg_t *rpg, int item_id);
 
     /* CHEST */
     chests_t *get_chests_array(void);
@@ -576,8 +577,11 @@
 
     /* CALL ACTIONS */
     void i_lauch_combat(rpg_t *rpg, sfVector2f pos);
+    void c_bchest(rpg_t *rpg, tiled_object_t *obj);
     void heal(void*);
+    void note(void*);
     void food(void *);
+    void c_gaz(rpg_t *rpg, tiled_object_t *obj);
     void annia_give_heal(void *main);
     void jack(rpg_t *rpg, sfVector2f pos);
     void s_radiation(rpg_t *rpg, sfVector2f pos);

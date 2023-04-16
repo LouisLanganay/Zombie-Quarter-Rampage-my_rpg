@@ -823,9 +823,32 @@
          "visible":true,
          "x":0,
          "y":0
+        }, 
+        {
+         "color":"#b5835a",
+         "draworder":"topdown",
+         "id":95,
+         "name":"chests",
+         "objects":[
+                {
+                 "class":"",
+                 "height":22.6071451315035,
+                 "id":9,
+                 "name":"c_gaz",
+                 "rotation":0,
+                 "visible":true,
+                 "width":34.3883334394702,
+                 "x":54.7666051073043,
+                 "y":128.001018913583
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
         }],
- "nextlayerid":95,
- "nextobjectid":9,
+ "nextlayerid":96,
+ "nextobjectid":10,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.9.2",

@@ -47,8 +47,7 @@ static void e_key_pressed_escape(rpg_t *rpg)
     if (sfKeyboard_isKeyPressed(RPK->escape.key) == sfTrue
         && rpg->game_state == GAME || rpg->game_state == PAUSE) {
         if (rpg->player->inventory->is_open == 1 || rpg->player->lore_open == 1
-        || rpg->player->in_dialogue == 1)
-            return;
+        || rpg->player->in_dialogue == 1) return;
         rpg->game_state == PAUSE ?
             (rpg->game_state = GAME) : (rpg->game_state = PAUSE);
     }

@@ -9,7 +9,7 @@
 
 item_func_t *get_items_functions_arr(void)
 {
-    item_func_t inte_array[] = {
+    item_func_t inte_array[] = { {33, note},
     {41, food}, {42, food}, {52, food}, {53, food}, {54, food}, {58, food},
     {64, food}, {65, food}, {66, food}, {67, food}, {68, food}, {77, food},
     {78, food}, {79, food}, {80, food}, {89, food}, {91, food}, {92, food},

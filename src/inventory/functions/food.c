@@ -11,10 +11,15 @@ void food(void *main)
 {
     rpg_t *rpg = (rpg_t *)main;
     int item = RP->inventory->items[RP->inventory->pos];
+    if (item == 64) {
+        rpg->narative->str = get_language(rpg, "eat_thuna", RSG);
+        start_narative_popup(rpg);
+        return;
+    }
     if (item == 41 || item == 58 || item == 66 || item == 67 || item == 78 ||
         item == 89 || item == 101)
         RP->hunger += 4;
-    if (item == 42 || item == 53 || item == 64 || item == 65 || item == 68 ||
+    if (item == 42 || item == 53 || item == 65 || item == 68 ||
         item == 77 || item == 91 || item == 100 || item == 103)
         RP->hunger += 8;
     if (item == 52 || item == 54 || item == 79 || item == 92 || item == 104)

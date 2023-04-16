@@ -22,19 +22,19 @@
 	},
 	"player": {
 		"pos": {
-			"x": 178,
-			"y": 221
+			"x": 305,
+			"y": 150
 		},
 		"hp": 100,
-		"hunger": 72,
+		"hunger": 75,
 		"inventory": {
 			"items": [
 				8,
 				9,
 				42,
-				64,
-				66,
-				54,
+				-1,
+				-1,
+				-1,
 				-1,
 				-1,
 				-1,
@@ -59,12 +59,10 @@
 			"quest"
 		],
 		"quests_completed": [
-			"quest",
-			"basement_paper"
+			"quest"
 		],
 		"chests_opened": [
-			"chest",
-			"c_fridge"
+			"chest"
 		]
 	}
 }

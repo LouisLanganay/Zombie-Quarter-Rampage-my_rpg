@@ -16,5 +16,11 @@
         "description": "jack_quest_description",
         "type": "collect",
         "function": "jack_quest"
+    },
+    "jack_friend": {
+        "name": "jack_friend_name",
+        "description": "jack_friend_description",
+        "type": "talk",
+        "function": "jack_friend"
     }
 }

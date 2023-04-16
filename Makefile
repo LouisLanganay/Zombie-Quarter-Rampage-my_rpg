@@ -296,6 +296,10 @@ SRC += load_chests_opened.c
 SRC += save_chests_opened.c
 SRC += remove_first_item_popup.c
 SRC += add_item_popup.c
+SRC += c_bchest.c
+SRC += note.c
+SRC += c_gaz.c
+SRC += remove_itemid_inventory.c
 
 
 INC_DIR 	:= includes

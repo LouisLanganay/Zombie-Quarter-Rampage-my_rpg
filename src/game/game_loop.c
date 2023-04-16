@@ -27,8 +27,8 @@ void game_loop(rpg_t *rpg)
     draw_map(rpg->maps, rpg->actual_map, rpg);
     display_dialogue(rpg);
     draw_popup_lore(rpg);
-    check_narative_popup(rpg);
     draw_inventory(rpg);
+    check_narative_popup(rpg);
     check_sounds(rpg);
     draw_quests(rpg);
     draw_hud(rpg);

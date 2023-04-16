@@ -10,7 +10,7 @@
 chests_t *get_chests_array(void)
 {
     chests_t inte_array[] = {
-        {"c_fridge", c_fridge},
+        {"c_fridge", c_fridge}, {"c_bchest", c_bchest}, {"c_gaz", c_gaz},
         {NULL, NULL}
     };
     chests_t *inte = malloc(sizeof(chests_t) *
