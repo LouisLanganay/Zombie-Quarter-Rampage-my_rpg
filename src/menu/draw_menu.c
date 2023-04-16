@@ -67,7 +67,6 @@ static void disable_saves_menu(rpg_t *rpg)
     gl_button_change_state(BTN_SAVE1, rpg->glib->buttons, sfTrue);
     gl_button_change_state(BTN_SAVE2, rpg->glib->buttons, sfTrue);
     gl_button_change_state(BTN_SAVE3, rpg->glib->buttons, sfTrue);
-
 }
 
 void draw_menu(rpg_t *rpg)

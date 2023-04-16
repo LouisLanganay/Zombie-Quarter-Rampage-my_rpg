@@ -26,6 +26,7 @@
 
     #define SPLASH_SCREEN_TEXT1 9999
     #define SPLASH_SCREEN_TEXT2 10001
+    #define LOST_TEXT 10002
 
     #define EVENT_WINDOW_CLOSE 1
     #define EVENT_INVENTORY_OPEN 454545
@@ -52,7 +53,10 @@
     #define RADIATION_SOUND_ID 17
     #define GROCERY_SOUND_PATH "resources/sounds/grocery.ogg"
     #define GROCERY_SOUND_ID 18
+    #define HEART_SOUND_PATH "resources/sounds/heart.ogg"
+    #define HEART_SOUND_ID 19
 
+    #define RGWW rpg->glib->window->window
     #define RPA rpg->player->assets
     #define RGW rpg->glib->window
     #define RPK rpg->player->keys
@@ -277,7 +281,8 @@
     typedef enum game_state_e {
         MENU,
         GAME,
-        COMBAT
+        COMBAT,
+        GAME_LOST
     } game_state_t;
 
     typedef struct rpg_s {
@@ -510,7 +515,9 @@
     void zoom_view(rpg_t *rpg, float value, float time);
 
     /* PLAYER */
+    void check_game_lost(rpg_t *rpg);
     int get_key_id(sfKeyCode key, rpg_t *rpg);
+    void draw_game_lost_screen(rpg_t *rpg);
     void *key_pressed(rpg_t *rpg);
     void draw_player(rpg_t *rpg);
     void change_player_rect(player_t *player);
@@ -681,6 +688,7 @@
     void init_popup_lore(rpg_t *rpg);
     void init_hud(rpg_t *rpg);
     void init_slider(rpg_t *rpg);
+    void init_game_lost_screen(player_t *player, rpg_t *rpg);
     void init_save(rpg_t *rpg);
     void init_events(rpg_t *rpg);
     void init_inventory_popup(rpg_t *rpg);

@@ -179,6 +179,12 @@
         float time;
     } view_t;
 
+    typedef struct game_lost_s {
+        sfRectangleShape *background;
+        sfClock *clock;
+        sfClock *text_clock;
+    } game_lost_t;
+
     typedef struct player_s {
         sfClock *hunger_lost;
         int hp;
@@ -188,10 +194,12 @@
         int lore_sound_played;
         char *lore_text;
         inventory_t *inventory;
+        game_lost_t *game_lost;
         sfRectangleShape *hitbox;
         sfVector2f pos;
         view_t *view;
         sfClock *clock;
+        sfClock *hp_clock;
         sfTexture *texture;
         sfSprite *sprite;
         sfIntRect rect;
