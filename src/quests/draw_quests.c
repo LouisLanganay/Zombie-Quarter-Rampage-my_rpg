@@ -22,12 +22,12 @@ void draw_quests(rpg_t *rpg)
 {
     if (rpg->quests_in_progress[1] == NULL)
         return;
-    if (rpg->player->inventory->is_open == 1)
+    if (RPI->is_open == 1)
         sfSprite_setScale(RPA->quests_box, (sfVector2f){4, 4});
     else
         sfSprite_setScale(RPA->quests_box, (sfVector2f){2, 2});
     draw_quest_box(rpg);
-    if (rpg->player->inventory->is_open == 0)
+    if (RPI->is_open == 0)
         draw_quests_ig(rpg);
     else
         draw_quests_inv(rpg);

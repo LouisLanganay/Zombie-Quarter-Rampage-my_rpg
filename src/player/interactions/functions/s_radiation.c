@@ -10,7 +10,14 @@
 void s_radiation(rpg_t *rpg, sfVector2f pos)
 {
     (void)(pos);
+    time_t time = sfClock_getElapsedTime(rpg->player->hp_clock).microseconds;
+    float seconds = time / 1000000.0;
     if (sfSound_getStatus(
             gl_get_sound(rpg->glib, RADIATION_SOUND_ID)->sound) != sfPlaying)
         start_sound(rpg, RADIATION_SOUND_ID);
+    if (seconds > 0.2) {
+        if (rpg->player->hp > 0)
+            rpg->player->hp -= 1;
+        sfClock_restart(rpg->player->hp_clock);
+    }
 }

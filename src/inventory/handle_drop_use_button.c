@@ -18,6 +18,7 @@ static void draw_text_use(rpg_t *rpg)
     devide->pos = (sfVector2f) {view_pos.x + 27,
     view_pos.y + 106};
     devide->color = sfBlack;
+    devide->line_spaces = 8;
     divide_a_text(rpg, devide);
 }
 
@@ -31,6 +32,7 @@ static void draw_text_destroy(rpg_t *rpg)
     devide->pos = (sfVector2f) {view_pos.x - 53,
     view_pos.y + 106};
     devide->color = sfBlack;
+    devide->line_spaces = 8;
     divide_a_text(rpg, devide);
 }
 

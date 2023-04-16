@@ -560,9 +560,32 @@
          "visible":true,
          "x":0,
          "y":0
+        }, 
+        {
+         "color":"#b5835a",
+         "draworder":"topdown",
+         "id":73,
+         "name":"chests",
+         "objects":[
+                {
+                 "class":"",
+                 "height":25.2103392764936,
+                 "id":13,
+                 "name":"c_fridge",
+                 "rotation":0,
+                 "visible":true,
+                 "width":33.1075539896121,
+                 "x":224.766880296449,
+                 "y":127.570391519606
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
         }],
- "nextlayerid":73,
- "nextobjectid":12,
+ "nextlayerid":74,
+ "nextobjectid":14,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.9.2",

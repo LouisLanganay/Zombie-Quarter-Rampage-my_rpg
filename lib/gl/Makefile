@@ -55,6 +55,7 @@ SRC += gl_ddown_draw_childs.c
 SRC += gl_create_sound.c
 SRC += gl_get_sound.c
 SRC += gl_play_sound.c
+SRC += gl_get_button.c
 
 
 
