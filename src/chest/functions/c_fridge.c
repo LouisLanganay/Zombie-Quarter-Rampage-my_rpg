@@ -14,7 +14,8 @@ void c_fridge(rpg_t *rpg, tiled_object_t *obj)
     draw_interaction_popup(rpg, pos2, RPK->interact.key, str);
 
     if (sfKeyboard_isKeyPressed(RPK->interact.key) == sfTrue) {
-        if (obj->is_trigger == 1 ||my_arr_contains(rpg->chests_opened, obj->name)) {
+        if (obj->is_trigger == 1 ||
+            my_arr_contains(rpg->chests_opened, obj->name)) {
             rpg->narative->str = get_language(rpg, "empty_fridge", RSG);
             start_narative_popup(rpg);
             return;
