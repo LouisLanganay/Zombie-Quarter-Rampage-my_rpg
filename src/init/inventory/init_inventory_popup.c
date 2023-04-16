@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-static void init_inventory_popup_text(rpg_t *rpg)
+void init_inventory_popup(rpg_t *rpg)
 {
     text_t *my_text = malloc(sizeof(text_t));
     my_text->id = INVENTORY_ITEM_POPUP;
@@ -18,14 +18,4 @@ static void init_inventory_popup_text(rpg_t *rpg)
     my_text->string = "aaaaaa";
     my_text->size = 50;
     gl_create_text(rpg->glib, my_text);
-}
-
-void init_inventory_popup(rpg_t *rpg)
-{
-    RPI->popup = malloc(sizeof(inv_popup_t));
-    RPI->popup->item_name = NULL;
-    RPI->popup->action = ADD;
-    RPI->popup->clock = sfClock_create();
-    RPI->popup->clock2 = sfClock_create();
-    init_inventory_popup_text(rpg);
 }

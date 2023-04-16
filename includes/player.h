@@ -150,10 +150,12 @@
     } inv_popup_action_t;
 
     typedef struct inv_popup_s {
+        int start;
         char *item_name;
         inv_popup_action_t action;
         sfClock *clock;
         sfClock *clock2;
+        struct inv_popup_s *next;
     } inv_popup_t;
 
     typedef struct inventory_s {

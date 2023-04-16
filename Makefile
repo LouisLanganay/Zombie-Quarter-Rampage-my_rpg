@@ -38,6 +38,7 @@ VPATH += src/save/save
 VPATH += src/save/load
 VPATH += src/npc
 VPATH += src/hud
+VPATH += src/popup
 VPATH += src/npc/functions
 VPATH += src/game
 VPATH += src/splash_screen
@@ -285,7 +286,8 @@ SRC += add_item_to_arr.c
 SRC += arr_len.c
 SRC += load_chests_opened.c
 SRC += save_chests_opened.c
-
+SRC += remove_first_item_popup.c
+SRC += add_item_popup.c
 
 
 INC_DIR 	:= includes

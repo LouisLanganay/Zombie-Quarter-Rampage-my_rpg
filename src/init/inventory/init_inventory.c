@@ -39,5 +39,6 @@ void init_inventory(rpg_t *rpg)
     {3.15, 2});
     sfRectangleShape_setFillColor(RPI->background, (sfColor)
     {0, 0, 0, 200});
+    RPI->popup = NULL;
     init_inventory_popup(rpg);
 }

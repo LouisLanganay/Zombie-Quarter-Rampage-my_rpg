@@ -633,6 +633,13 @@
     void start_narative_popup(rpg_t *rpg);
     void check_narative_popup(rpg_t *rpg);
 
+    /* POPUP */
+    void remove_first_item_popup(rpg_t *rpg);
+    void add_item_popup(
+        rpg_t *rpg,
+        int id,
+        inv_popup_action_t action
+    );
 
     /* FPS */
     void print_framerate(void);
