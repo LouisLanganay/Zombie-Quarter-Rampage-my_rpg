@@ -77,11 +77,8 @@ void check_player_moovment(player_t *player, map_t *map, rpg_t *rpg)
         sfClock_restart(player->clock);
         return;
     }
-    if (check_player_moovment_complex(player, map, rpg, seconds) == 1) {
-        sfClock_restart(player->clock);
-        return;
-    }
-    if (check_player_moovment_complex_bis(player, map, rpg, seconds) == 1) {
+    if (check_player_moovment_complex(player, map, rpg, seconds) == 1 ||
+        check_player_moovment_complex_bis(player, map, rpg, seconds) == 1) {
         sfClock_restart(player->clock);
         return;
     }
