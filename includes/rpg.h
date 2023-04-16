@@ -58,6 +58,7 @@
 
     #define RGWW rpg->glib->window->window
     #define RPA rpg->player->assets
+    #define RGWW rpg->glib->window->window
     #define RGW rpg->glib->window
     #define RPK rpg->player->keys
     #define RPH rpg->player->hitbox
@@ -196,7 +197,8 @@
 
     typedef struct menu_background_s {
         sfTexture *background_menu_t;
-        sfSprite *background_menu_s;
+        sfSprite *bg_menu_s;
+        sfRectangleShape *bg_escape;
         bool active;
     } menu_background_t;
 
@@ -282,6 +284,7 @@
         MENU,
         GAME,
         COMBAT,
+        PAUSE,
         GAME_LOST
     } game_state_t;
 
@@ -626,6 +629,7 @@
     void draw_saves_menu(rpg_t *rpg);
     void init_saves_texts(rpg_t *rpg);
     void draw_settings(rpg_t *rpg);
+    void draw_escape_menu(rpg_t *rpg);
 
     /* HUD */
     void draw_hud(rpg_t *rpg);
@@ -656,6 +660,7 @@
     void e_resume_btn(int id, void *main);
     void e_quit(int id, void *main);
     void e_langue_fr(int id, void *main);
+    void e_save_btn(int id, void *main);
     void e_langue_en(int id, void *main);
     void e_start_game(int id, void *main);
     void e_key_released(window_t *window, void *main);
@@ -688,6 +693,7 @@
     void init_popup_lore(rpg_t *rpg);
     void init_hud(rpg_t *rpg);
     void init_slider(rpg_t *rpg);
+    void init_escape_menu(rpg_t *rpg);
     void init_game_lost_screen(player_t *player, rpg_t *rpg);
     void init_save(rpg_t *rpg);
     void init_events(rpg_t *rpg);

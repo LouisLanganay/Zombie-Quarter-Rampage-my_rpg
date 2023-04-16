@@ -15,11 +15,12 @@
     #define BTN_PATH_SAVE "resources/assets/buttons/save_btn.png"
     #define BTN_PATH_HOME "resources/assets/buttons/home.png"
 
-    #define BTN_PATH_RESUME "resources/assets/buttons/Resume.png"
+    #define BTN_PATH_LOAD "resources/assets/buttons/loadgame_btn.png"
+    #define BTN_PATH_SAVEBTN "resources/assets/buttons/savegame_btn.png"
     #define BTN_PATH_CHECK "resources/assets/buttons/check_btn.png"
     #define BTN_QUIT 10
     #define BTN_START 11
-    #define BTN_RESUME 12
+    #define BTN_LOAD 12
     #define BTN_SEETING 13
 
     #define BTN_SAVE1 55
@@ -42,4 +43,9 @@
     #define BTN_ANGLAIS 16
     #define BTN_CHECK1 17
     #define BTN_CHECK2 18
+
+    #define BTN_SAVEBTN 87
+    #define BTN_SETTINGS 89
+    #define BTN_LEAVE 90
+
 #endif

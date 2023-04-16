@@ -13,7 +13,7 @@ void init_background(rpg_t *rpg)
     ("resources/assets/background/background_1.jpg");
     sfTexture *texture = sfTexture_createFromImage(image, NULL);
     rpg->background->active = false;
-    rpg->background->background_menu_s = sfSprite_create();
+    rpg->background->bg_menu_s = sfSprite_create();
 
-    sfSprite_setTexture(rpg->background->background_menu_s, texture, sfTrue);
+    sfSprite_setTexture(rpg->background->bg_menu_s, texture, sfTrue);
 }
