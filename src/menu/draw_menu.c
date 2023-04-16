@@ -68,12 +68,13 @@ static void disable_saves_menu(rpg_t *rpg)
     gl_button_change_state(BTN_SAVE1, rpg->glib->buttons, sfTrue);
     gl_button_change_state(BTN_SAVE2, rpg->glib->buttons, sfTrue);
     gl_button_change_state(BTN_SAVE3, rpg->glib->buttons, sfTrue);
-
 }
 
 void draw_menu(rpg_t *rpg)
 {
     sfRenderWindow_drawSprite(RGWW, rpg->background->bg_menu_s, NULL);
+    gl_draw_text(rpg->glib, SPLASH_SCREEN_TEXT1);
+    gl_draw_text(rpg->glib, SPLASH_SCREEN_TEXT2);
     if (rpg->menu->active == false) {
         gl_buttons_hovered(rpg->glib->buttons, rpg->glib->window, rpg);
         gl_draw_button(BTN_QUIT, rpg->glib->buttons, rpg->glib->window);

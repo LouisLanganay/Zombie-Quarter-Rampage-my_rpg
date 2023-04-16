@@ -25,22 +25,31 @@
 			"x": 178,
 			"y": 221
 		},
-		"hp": 20,
-		"hunger": 100,
+		"hp": 100,
+		"hunger": 72,
 		"inventory": {
 			"items": [
-				0,
-				5,
-				112,
-				78,
-				40,
-				87,
-				106
+				8,
+				9,
+				42,
+				64,
+				66,
+				54,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1
 			]
 		}
 	},
 	"game": {
-		"actual_map": "resources/maps/player_house.json"
+		"actual_map": "resources/maps/player_basement.json"
 	},
 	"game_timeline": {
 		"npc_interactions": [
@@ -50,7 +59,12 @@
 			"quest"
 		],
 		"quests_completed": [
-			"quest"
+			"quest",
+			"basement_paper"
+		],
+		"chests_opened": [
+			"chest",
+			"c_fridge"
 		]
 	}
 }

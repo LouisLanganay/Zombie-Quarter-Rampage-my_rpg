@@ -10,20 +10,20 @@
 static void e_key_pressed_select(rpg_t *rpg)
 {
     if (rpg->glib->window->event.key.code == sfKeyUp &&
-    rpg->player->inventory->pos > 3)
-        rpg->player->inventory->pos -= 4;
+    RPI->pos > 3)
+        RPI->pos -= 4;
 
     if (rpg->glib->window->event.key.code == sfKeyLeft &&
-    rpg->player->inventory->pos > 0)
-        rpg->player->inventory->pos -= 1;
+    RPI->pos > 0)
+        RPI->pos -= 1;
 
     if (rpg->glib->window->event.key.code == sfKeyRight &&
-    rpg->player->inventory->pos < 15)
-        rpg->player->inventory->pos += 1;
+    RPI->pos < 15)
+        RPI->pos += 1;
 
     if (rpg->glib->window->event.key.code == sfKeyDown &&
-    rpg->player->inventory->pos < 12)
-        rpg->player->inventory->pos += 4;
+    RPI->pos < 12)
+        RPI->pos += 4;
 
 }
 

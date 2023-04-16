@@ -7,6 +7,7 @@
 	},
 	"settings": {
 		"game_language": "en",
+		"window_mode": 1,
 		"keys": {
 			"up": 25,
 			"down": 18,
@@ -15,21 +16,35 @@
 			"interact": 4,
 			"choice1": 24,
 			"choice2": 20,
-			"inventory": 0,
+			"inventory": 8,
 			"escape": 36
 		}
 	},
 	"player": {
 		"pos": {
 			"x": 305,
-			"y": 152
+			"y": 150
 		},
 		"hp": 100,
+		"hunger": 75,
 		"inventory": {
 			"items": [
-				1,
-				5,
-				8
+				8,
+				9,
+				42,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1
 			]
 		}
 	},
@@ -42,6 +57,12 @@
 		],
 		"quests_in_progress": [
 			"quest"
+		],
+		"quests_completed": [
+			"quest"
+		],
+		"chests_opened": [
+			"chest"
 		]
 	}
 }

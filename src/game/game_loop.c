@@ -7,17 +7,22 @@
 
 #include "rpg.h"
 
+static void disables_buttons(rpg_t *rpg)
+{
+    gl_button_change_state(BTN_SAVE1, rpg->glib->buttons, sfTrue);
+    gl_button_change_state(BTN_SAVE2, rpg->glib->buttons, sfTrue);
+    gl_button_change_state(BTN_SAVE3, rpg->glib->buttons, sfTrue);
+}
+
 void game_loop(rpg_t *rpg)
 {
-    sfVector2f screen_size = (sfVector2f){
-        rpg->glib->window->mode.width,
-        rpg->glib->window->mode.height
-    };
+
     if (rpg->game_state == PAUSE) {
         sfRenderWindow_setView(RGWW, sfRenderWindow_getDefaultView(RGWW));
         draw_menu(rpg);
         return;
     }
+    disables_buttons(rpg);
     set_view_on_player(rpg);
     draw_map(rpg->maps, rpg->actual_map, rpg);
     display_dialogue(rpg);
@@ -27,4 +32,8 @@ void game_loop(rpg_t *rpg)
     check_sounds(rpg);
     draw_quests(rpg);
     draw_hud(rpg);
+    draw_item_popup(rpg);
+    hunger_lost(rpg);
+    check_game_lost(rpg);
+    draw_game_lost_screen(rpg);
 }

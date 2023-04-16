@@ -11,10 +11,11 @@ int add_item_to_inventory(int id, rpg_t *rpg)
 {
     int i = 0;
 
-    while (rpg->player->inventory->items[i] != -1)
+    while (RPI->items[i] != -1)
         i++;
     if (i > INVENTORY_SIZE)
         return -1;
-    rpg->player->inventory->items[i] = id;
+    RPI->items[i] = id;
+    add_item_popup(rpg, id, ADD);
     return id;
 }

@@ -22,21 +22,22 @@
 	},
 	"player": {
 		"pos": {
-			"x": 189,
-			"y": 166
+			"x": 234,
+			"y": 235
 		},
-		"hp": 20,
-		"hunger": 100,
+		"hp": 100,
+		"hunger": 80,
 		"inventory": {
 			"items": [
-				1,
-				5,
-				8
+				41,
+				42,
+				52,
+				80
 			]
 		}
 	},
 	"game": {
-		"actual_map": "resources/maps/player_house.json"
+		"actual_map": "resources/maps/player_basement.json"
 	},
 	"game_timeline": {
 		"npc_interactions": [
@@ -47,6 +48,9 @@
 		],
 		"quests_completed": [
 			"quest"
+		],
+		"chests_opened": [
+			"chest"
 		]
 	}
 }

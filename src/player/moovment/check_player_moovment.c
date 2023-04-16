@@ -69,6 +69,7 @@ void check_player_moovment(player_t *player, map_t *map, rpg_t *rpg)
     time_t time = sfClock_getElapsedTime(player->clock).microseconds;
     float seconds = time / 1000000.0;
 
+    check_chests(player, map, rpg);
     check_interactions(player, map, rpg);
     check_interactions_other_maps(rpg, player);
     if (seconds < 0.001) return;

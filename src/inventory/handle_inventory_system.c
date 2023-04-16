@@ -64,6 +64,6 @@ void handle_inventory_system(rpg_t *rpg)
     sfSprite_setPosition(RP->inventory->select_sprite, pos_s);
     sfRenderWindow_drawSprite(rpg->glib->window->window,
     RP->inventory->select_sprite, NULL);
-    if (rpg->player->inventory->is_data_open != 1 && name != NULL)
+    if (RPI->is_data_open != 1 && name != NULL)
         display_item_data(rpg, name);
 }

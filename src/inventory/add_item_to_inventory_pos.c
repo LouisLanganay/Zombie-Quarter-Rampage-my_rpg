@@ -9,8 +9,8 @@
 
 int add_item_to_inventory_pos(rpg_t *rpg, int pos, int id)
 {
-    if (rpg->player->inventory->items[pos] != -1)
+    if (RPI->items[pos] != -1)
         return -1;
-    rpg->player->inventory->items[pos] = id;
+    RPI->items[pos] = id;
     return id;
 }
