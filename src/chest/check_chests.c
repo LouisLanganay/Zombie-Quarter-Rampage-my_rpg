@@ -19,8 +19,6 @@ static void open_chest(tiled_object_t *tmp, rpg_t *rpg)
 {
     chests_t *interactions = get_chests_array();
 
-    if (tmp->is_trigger == 1) return;
-
     for (int i = 0; interactions[i].name; i++) {
         if (my_strcmp(tmp->name, interactions[i].name) == 0) {
             interactions[i].func(rpg, tmp);

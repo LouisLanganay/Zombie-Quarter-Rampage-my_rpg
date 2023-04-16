@@ -281,6 +281,11 @@ SRC += hunger_lost.c
 SRC += c_fridge.c
 SRC += check_chests.c
 SRC += get_chests_array.c
+SRC += add_item_to_arr.c
+SRC += arr_len.c
+SRC += load_chests_opened.c
+SRC += save_chests_opened.c
+
 
 
 INC_DIR 	:= includes

@@ -304,6 +304,7 @@
         narative_t *narative;
         char **quests_in_progress;
         char **quests_completed;
+        char **chests_opened;
     } rpg_t;
 
     typedef struct keyboard_images_s {
@@ -434,9 +435,11 @@
     char *my_strcat_malloc(char *dest, char const *src);
     int my_atoi(char const *str);
     char *my_strdup(char *str);
+    int arr_len(char **arr);
     int my_strlen(char const *str);
     char *my_strndup(const char *str, int n);
     int get_mid_char(const char *str);
+    char **add_item_to_arr(char **arr, char *item);
     int my_arr_contains(char **arr, char *str);
     int my_arrlen(char **arr);
 
@@ -467,6 +470,9 @@
     void save(rpg_t *rpg);
     int load_quests_completed(rpg_t *rpg, parsed_data_t *data);
     void save_quests_completed(rpg_t *rpg);
+    int load_chests_opened(rpg_t *rpg, parsed_data_t *data);
+    void save_chests_opened(rpg_t *rpg);
+
 
     /* QUESTS */
     void start_dialogue_default(npc_t *npc, rpg_t *rpg);

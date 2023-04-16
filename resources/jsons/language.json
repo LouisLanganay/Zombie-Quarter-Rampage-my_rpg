@@ -19,6 +19,10 @@
         "en": "open the fridge.",
         "fr": "ouvrir le frigo."
     },
+    "empty_fridge": {
+        "fr": "Rien d'interessant dans ce frigo. Je devrais aller voir ailleurs.",
+        "en": "Nothing interesting in this fridge. I should go look somewhere else."
+    },
     "close_paper": {
         "en": "close the paper.",
         "fr": "fermer le papier."
