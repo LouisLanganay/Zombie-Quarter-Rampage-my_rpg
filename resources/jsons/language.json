@@ -196,8 +196,8 @@
         "fr": "passer le grillage."
     },
     "basement_door_interact_leave": {
-        "en": "go to the second floor.",
-        "fr": "Aller au deuxieme etage."
+        "fr": "monter l'escalier.",
+        "en": "go upstairs."
     },
     "basement_door_interact_enter": {
         "en": "go to the basement.",
