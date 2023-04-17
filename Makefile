@@ -267,13 +267,15 @@ SRC += init_hud.c
 SRC += draw_hud.c
 SRC += change_window_mode.c
 SRC += jack_start_quest.c
-SRC += swap_status_anim.c
 SRC += start_dialogue_default.c
 SRC += annia_give_heal.c
 SRC += init_renderstate.c
 SRC += init_shader.c
 SRC += check_shader.c
 SRC += init_renderstate2.c
+SRC += swap_status_anim_cbt.c
+SRC += swap_status_anim_move.c
+SRC += swap_status_anim_dead.c
 
 
 INC_DIR 	:= includes
