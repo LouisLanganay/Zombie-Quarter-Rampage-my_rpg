@@ -248,7 +248,16 @@
             {
                 "name": "discovery_nolisten_no",
                 "text": "jack_discovery_nolisten_no",
-                "options": null,
+                "options": [
+                    {
+                        "text": "discovery_listen",
+                        "next": "discovery_listen"
+                    },
+                    {
+                        "text": "discovery_nolisten_no",
+                        "next": "discovery_nolisten_no"
+                    }
+                ],
                 "function": null
             },
             {
@@ -357,8 +366,29 @@
             {
                 "name": "discovery_next_mask_next",
                 "text": "jackfriend_discovery_next_mask_next",
-                "options": null,
+                "options": [
+                    {
+                        "text": "discovery_next_mask_next_end_weapon",
+                        "next": "discovery_next_mask_next_end_weapon"
+                    },
+                    {
+                        "text": "discovery_next_mask_next_end_heal",
+                        "next": "discovery_next_mask_next_end_heal"
+                    }
+                ],
                 "function": "remove_mask"
+            },
+            {
+                "name": "discovery_next_mask_next_end_weapon",
+                "text": "jackfriend_discovery_next_mask_next_end_weapon",
+                "options": null,
+                "function": "jackfriend_give_weapon"
+            },
+            {
+                "name": "discovery_next_mask_next_end_heal",
+                "text": "jackfriend_discovery_next_mask_next_end_heal",
+                "options": null,
+                "function": "jackfriend_give_heal"
             }
         ]
     }

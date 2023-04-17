@@ -56,8 +56,24 @@
         "en": "talk to the unknown."
     },
     "jackfriend_discovery_next_mask_next": {
-        "fr": "Ah mais c'est le masque de Jack ca ! Donne le moi. Il l'avais perdu dans la vieille maison la.",
-        "en": "Ah but this is Jack's mask ! Give it to me. He lost it in the old house there."
+        "fr": "Ah mais c'est le masque de Jack ca ! Donne le moi. Il l'avais perdu dans la vieille maison la. Tu veux un truc en echange ?",
+        "en": "Ah but this is Jack's mask ! Give it to me. He lost it in the old house there. Do you want something in exchange?"
+    },
+    "discovery_next_mask_next_end_weapon": {
+        "fr": "Une arme",
+        "en": "A weapon"
+    },
+    "discovery_next_mask_next_end_heal": {
+        "fr": "Des bandages",
+        "en": "Bandages"
+    },
+    "jackfriend_discovery_next_mask_next_end_heal": {
+        "fr": "Tiens une trousse de soin, ca devrait t'aider a rester en vie haha.",
+        "en": "Here is a first aid kit, it should help you stay alive haha."
+    },
+    "jackfriend_discovery_next_mask_next_end_weapon": {
+        "fr": "Tien j'ai ca, c'est une arme de fortune. Elle devrait te servir mais ta besoin de trouver des balles.",
+        "en": "Here I have this, it's a makeshift weapon. It should serve you but you need to find some bullets."
     },
     "discovery_end": {
         "fr": "Fuir",

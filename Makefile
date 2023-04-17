@@ -316,6 +316,8 @@ SRC += check_if_gaz_mask.c
 SRC += change_dialogue.c
 SRC += remove_mask.c
 SRC += my_free.c
+SRC += jackfriend_give_heal.c
+SRC += jackfriend_give_weapon.c
 
 
 
