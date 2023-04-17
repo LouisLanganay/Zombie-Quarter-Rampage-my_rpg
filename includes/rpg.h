@@ -64,6 +64,9 @@
     #define RM rpg->menu_key
     #define RP rpg->player
     #define RSV rpg->settings->volume
+    #define RS_RAIN "resources/shader/rain.frag"
+    #define RS_BLOOD "resources/shader/blood.frag"
+    #define RS_FADE "resources/shader/fade.frag"
 
     #define GET_SAVE_GAMELANGUAGE my_strcmp(jp_search(data, \
         "game_language")->value.p_str, "fr") == 0 ? FR : EN;
@@ -168,6 +171,34 @@
         struct map_s *next;
     } map_t;
 
+    /*SHADER*/
+
+    typedef struct shader_s {
+        sfShader *shader_rain;
+        sfShader *shader_blood;
+        sfShader *shader_fade;
+        sfRenderStates states_rain;
+        sfRenderStates states_blood;
+        sfRenderStates states_fade;
+        int rain_bool;
+        int blood_bool;
+        int fade_bool;
+        int fade_val;
+        sfClock *shader_clock;
+        sfClock *fade_clock;
+    } shader_t;
+    sfRenderStates init_renderstate(sfShader *shader);
+    sfRenderStates init_renderstate2(sfShader *shader);
+    shader_t *init_shader(void);
+
+    #define resolution_vec "resolution",(sfVector2f){1920, 1080}
+
+    typedef enum game_state_e {
+        MENU,
+        GAME,
+        COMBAT
+    } game_state_t;
+
     typedef enum language_type_e {
         FR,
         EN
@@ -267,12 +298,6 @@
         sfRectangleShape *hunger_bar_back;
     } hud_t;
 
-    typedef enum game_state_e {
-        MENU,
-        GAME,
-        COMBAT
-    } game_state_t;
-
     typedef struct rpg_s {
         int debug;
         char *actual_map;
@@ -294,6 +319,7 @@
         quest_t *quests;
         sounds_t *sounds;
         narative_t *narative;
+        shader_t *shader;
         char **quests_in_progress;
         char **quests_completed;
     } rpg_t;
@@ -664,5 +690,5 @@
     void init_quest_assets(rpg_t *rpg);
     void init_inventory(rpg_t *rpg);
     void init_player_assets_dialogue(player_t *player);
-
+    void check_shader(rpg_t *rpg);
 #endif

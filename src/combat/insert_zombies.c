@@ -14,7 +14,8 @@ static void hp_bar(zombies_t *new_node)
     sfRectangleShape_setFillColor(new_node->hp_bar,
     sfColor_fromRGBA(255, 50, 50, 255));
     sfRectangleShape_setPosition(new_node->hp_bar, new_node->pos);
-    sfRectangleShape_setOrigin(new_node->hp_bar, (sfVector2f){0, 0});
+    sfRectangleShape_setOutlineColor(new_node->hp_bar, sfBlack);
+    sfRectangleShape_setOutlineThickness(new_node->hp_bar, 2);
 }
 
 static void set_zombies(zombies_t *new_node)

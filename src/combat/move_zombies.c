@@ -19,7 +19,7 @@ float atk_speed, int dmg)
         sfClock_restart(attack_clock);
         rpg->player->hp -= dmg;
         if (rpg->player->hp <= 0)
-            exit(0);
+            rpg->game_state = MENU;
     }
 }
 

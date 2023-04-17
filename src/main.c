@@ -13,6 +13,7 @@ int main(int ac, char **av)
     init_rpg(rpg, ac, av);
     init(rpg);
     rpg->player->hp = 100;
+    rpg->player->hunger = 100;
     combat(rpg);
     while (sfRenderWindow_isOpen(rpg->glib->window->window)) {
         print_framerate();

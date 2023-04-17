@@ -180,6 +180,7 @@
         sfIntRect rect;
         keys_t *keys;
         player_assets_t *assets;
+        sfRectangleShape *hp_bar;
     } player_t;
 
 #endif
