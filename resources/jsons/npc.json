@@ -52,11 +52,26 @@
                 "options": [
                     {
                         "text": "annia_help_next_help",
-                        "next": "help_give_food"
+                        "next": "help_next_next"
                     },
                     {
                         "text": "annia_help_next_ignore",
                         "next": "help_next_nothing"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "help_next_next",
+                "text": "annia_help_next_next",
+                "options": [
+                    {
+                        "text": "annia_help_ignore",
+                        "next": "help_next_nothing"
+                    },
+                    {
+                        "text": "annia_help_help",
+                        "next": "help_give_food"
                     }
                 ],
                 "function": null

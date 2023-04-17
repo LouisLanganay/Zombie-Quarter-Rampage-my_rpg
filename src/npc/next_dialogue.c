@@ -65,6 +65,7 @@ void next_dialogue(rpg_t *rpg, int choice)
         check_dialogue_function(rpg, actual);
         rpg->player->in_dialogue = 0;
         zoom_view(rpg, 1.001, 20);
+        while (sfKeyboard_isKeyPressed(RPK->escape.key) == sfTrue);
         return;
     }
     change_texts(rpg, next);

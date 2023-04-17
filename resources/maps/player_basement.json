@@ -535,14 +535,14 @@
                 }, 
                 {
                  "class":"",
-                 "height":67.3492991207731,
+                 "height":40.0177929169941,
                  "id":9,
                  "name":"i_basement_paper",
                  "rotation":0.631330034635252,
                  "visible":true,
                  "width":73.2809855133939,
-                 "x":241.502118440289,
-                 "y":154.545605089357
+                 "x":241.244580442656,
+                 "y":177.91728444454
                 }, 
                 {
                  "class":"",
@@ -560,9 +560,43 @@
          "visible":true,
          "x":0,
          "y":0
+        }, 
+        {
+         "color":"#b5835a",
+         "draworder":"topdown",
+         "id":73,
+         "name":"chests",
+         "objects":[
+                {
+                 "class":"",
+                 "height":25.2103392764936,
+                 "id":13,
+                 "name":"c_fridge",
+                 "rotation":0,
+                 "visible":true,
+                 "width":33.1075539896121,
+                 "x":224.766880296449,
+                 "y":127.570391519606
+                }, 
+                {
+                 "class":"",
+                 "height":25.5140783039213,
+                 "id":14,
+                 "name":"c_bchest",
+                 "rotation":0,
+                 "visible":true,
+                 "width":54.6730249369742,
+                 "x":179.509765209732,
+                 "y":209.579928925068
+                }],
+         "opacity":1,
+         "type":"objectgroup",
+         "visible":true,
+         "x":0,
+         "y":0
         }],
- "nextlayerid":73,
- "nextobjectid":12,
+ "nextlayerid":74,
+ "nextobjectid":15,
  "orientation":"orthogonal",
  "renderorder":"right-down",
  "tiledversion":"1.9.2",

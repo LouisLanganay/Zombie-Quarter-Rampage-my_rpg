@@ -3,10 +3,11 @@
 		"path": "saves/save3.json",
 		"format": "json",
 		"name": "save3",
-		"player": false
+		"played": false
 	},
 	"settings": {
 		"game_language": "en",
+		"window_mode": 1,
 		"keys": {
 			"up": 25,
 			"down": 18,
@@ -21,20 +22,22 @@
 	},
 	"player": {
 		"pos": {
-			"x": 1096,
-			"y": 177
+			"x": 234,
+			"y": 235
 		},
 		"hp": 100,
+		"hunger": 80,
 		"inventory": {
 			"items": [
-				1,
-				5,
-				8
+				41,
+				42,
+				52,
+				80
 			]
 		}
 	},
 	"game": {
-		"actual_map": "resources/maps/main_map.json"
+		"actual_map": "resources/maps/player_basement.json"
 	},
 	"game_timeline": {
 		"npc_interactions": [
@@ -42,6 +45,12 @@
 		],
 		"quests_in_progress": [
 			"quest"
+		],
+		"quests_completed": [
+			"quest"
+		],
+		"chests_opened": [
+			"chest"
 		]
 	}
 }

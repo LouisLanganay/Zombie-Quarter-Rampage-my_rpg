@@ -7,6 +7,46 @@
         "en": "read the paper.",
         "fr": "lire le papier."
     },
+    "basement_paper_name": {
+        "en": "Find some food",
+        "fr": "Trouver de la nourriture"
+    },
+    "basement_paper_description": {
+        "fr": "Trouver de la nourriture dans votre sous sol. Vous en trouverez surement dans une etagere ou un frigo.",
+        "en": "Find some food in your basement. You will probably find some in a shelf or a fridge."
+    },
+    "bchest_interact": {
+        "fr": "fouiller dans les caisses.",
+        "en": "search the boxes."
+    },
+    "gaz_interact": {
+        "fr": "ouvir l'armoire.",
+        "en": "open the cupboard."
+    },
+    "empty_gaz": {
+        "fr": "Encore une armoire vide...",
+        "en": "Another empty cupboard..."
+    },
+    "note_paper": {
+        "fr": "Cher Jules,                                                      Comment vas-tu mon petit-fils adore ? J'espere que tu vas bien et que tu profites bien de ta vie. Je t'ecris cette lettre pour te donner de mes nouvelles. De mon cote, tout va bien ici a la maison de retraite. Mes amis et moi sommes en bonne sante et nous profitons des activites proposees par le personnel. Nous avons recemment organise une journee de jeux de societe, c'etait tres amusant ! J'ai meme gagne une partie de Scrabble. Il fait tres beau en ce moment et j'aime m'asseoir sur mon balcon pour profiter du soleil. Je vois souvent des enfants jouer dans le parc en face de la maison de retraite, c'est tres agreable. Je suis heureuse de voir que la vie continue malgre les difficultes. Je t'embrasse tres fort mon petit-fils adore et je te souhaite une belle journee. Ta grand-mere qui t'aime, Marie",
+        "en": "Dear Jules,                                                      How are you my beloved grandson? I hope you are well and enjoying your life. I am writing this letter to give you news. On my side, everything is fine here at the retirement home. My friends and I are in good health and we enjoy the activities offered by the staff. We recently organized a board game day, it was very fun! I even won a game of Scrabble. It's very nice right now and I like to sit on my balcony to enjoy the sun. I often see children playing in the park in front of the retirement home, it's very nice. I am happy to see that life continues despite the difficulties. I kiss you very much my beloved grandson and I wish you a beautiful day. Your grandmother who loves you, Marie"
+    },
+    "empty_bchest": {
+        "fr": "Je ne sais meme pas pourquoi j'ai mis des caisses ici. Il n'y a rien d'interessant dedans.",
+        "en": "I don't even know why I put boxes here. There is nothing interesting in them."
+    },
+    "eat_thuna": {
+        "fr": "C'est quoi ca ? Burk, du thon en conserve. Ca pourrait quand meme me servir plus tard.",
+        "en": "What is this? Burk, canned tuna. I could still use it later."
+    },
+    "fridge_interact": {
+        "en": "open the fridge.",
+        "fr": "ouvrir le frigo."
+    },
+    "empty_fridge": {
+        "fr": "Rien d'interessant dans ce frigo. Je devrais aller voir ailleurs.",
+        "en": "Nothing interesting in this fridge. I should go look somewhere else."
+    },
     "close_paper": {
         "en": "close the paper.",
         "fr": "fermer le papier."
@@ -14,6 +54,14 @@
     "basement_paper": {
         "fr": "19 Juin 2020 - Cours de biologie                                 Les champignons sont des organismes eucaryotes qui se nourrissent en decomposant la matiere organique, tels que les feuilles mortes et les arbres. Ils sont divises en deux groupes principaux: les champignons a spores et les champignons a mycelium. Les champignons a spores produisent des spores pour se reproduire, tandis que les champignons a mycelium se reproduisent en developpant des reseaux de filaments appeles hyphes. Dans un environnement apocalyptique, il est possible que les champignons jouent un role important dans la survie du joueur. Les champignons comestibles peuvent etre une source de nourriture, tandis que les champignons toxiques ou infectieux peuvent representer un danger pour la sante. Les champignons peuvent egalement etre utilises pour creer des medicaments ou des produits chimiques, en raison de leurs proprietes biologiques uniques.",
         "en": "June 19, 2020 - Biology class                                 Mushrooms are eukaryotic organisms that feed on decomposing organic matter, such as dead leaves and trees. They are divided into two main groups: spore-bearing mushrooms and mycelium-bearing mushrooms. Spore-bearing mushrooms produce spores to reproduce, while mycelium-bearing mushrooms reproduce by developing networks of filaments called hyphae. In an apocalyptic environment, it is possible that mushrooms play an important role in the player's survival. Edible mushrooms can be a source of food, while toxic or infectious mushrooms can represent a danger to health. Mushrooms can also be used to create medicines or chemicals, due to their unique biological properties."
+    },
+    "jack_friend_name": {
+        "fr": "Le pote de Jack",
+        "en": "Jack's friend"
+    },
+    "jack_friend_description": {
+        "fr": "Finissez la mission que Jack vous a donnee. Apporter au pote de Jack le masque a gaz qu'il a perdu dans la maison abandonee au SO. Son pote est au sud de la ville, pres du barage militaire.",
+        "en": "Finish the mission that Jack gave you. Bring the gas mask to Jack's friend that he lost in the abandoned house to the south. His friend is south of the city, near the military dam."
     },
     "grocery_paper": {
         "en": "Hi sweetie, I hope you don't read this letter, if you do it will already be too late for your dad and me. As I write this I am still in our grocery store with your dad. We have little food left, I would say for 3-4 days maximum. I'm taking care of your father, he was injured while fighting with survivors, he is losing a lot of blood and can't even stand up. I found some bandages to heal him but I don't have any medicine and care in stock in the grocery store, the delivery was supposed to arrive last week but with what's happening, all the streets are infected with zombies we couldn't get it delivered. I don't know how long he has to live and neither do I. I hope you are safe. Never forget that we love you and that you are a strong and resourceful girl. To Annia, your mom who loves you very much.",
@@ -54,6 +102,10 @@
     "house_cant_leave": {
         "fr": "Pff... je ne peux pas sortir de la maison, c'est trop dangereux.",
         "en": "Pff... I can't leave the house, it's too dangerous."
+    },
+    "basement_cant_leave": {
+        "fr": "Je commence vraiment a avoir faim, il doit bien y avoir quelque chose a manger dans le frigo.",
+        "en": "I'm really hungry, there must be something to eat in the fridge."
     },
     "house_door_interact_leave": {
         "en": "leave the house.",
@@ -120,8 +172,12 @@
         "fr": "L'ignorer"
     },
     "annia_help_next": {
-        "fr": "J'ai un sac avec de la nourriture et une arme dedans. Je peux vous donner l'arme si vous m'aidez.",
+        "fr": "J'ai dans mon sac le pistolet de ma mere. Je peux vous donner l'arme si vous m'aidez.",
         "en": "I have a bag with food and a gun in it. I can give you the gun if you help me."
+    },
+    "annia_help_next_next": {
+        "fr": "J'ai vraiment faim, j'aurais besoin de nourriture en echange de l'arme. S'il te plait aide moi..",
+        "en": "I'm really hungry, I would need food in exchange for the gun. Please help me.."
     },
     "annia_help_give_food": {
         "en": "Thank you for this food! I'm so hungry! I have this in my bag. It's a gun. It's for you.",
@@ -252,7 +308,7 @@
         "fr": "Lampe torche"
     },
     "lampe_torche_description": {
-        "fr": "un dispositif portable qui produit de la lumière a partir d'une source d'energie electrique.",
+        "fr": "un dispositif portable qui produit de la lumiere a partir d'une source d'energie electrique.",
         "en": "A portable device that produces light from an electrical power source."
     },
     "sac_name": {
@@ -432,8 +488,8 @@
         "fr": "Masque a gaz"
     },
     "masque_a_gaz_description": {
-        "fr": "un dispositif qui permet de respirer dans un environnement toxique.",
-        "en": "A device that allows you to breathe in a toxic environment."
+        "fr": "Masque a gaz de Jack. Un dispositif qui permet de respirer dans un environnement toxique.",
+        "en": "Jack's gas mask. A device that allows you to breathe in a toxic environment."
     },
     "compas_name": {
         "en": "Compass",
@@ -448,8 +504,8 @@
         "fr": "Note"
     },
     "note_description": {
-        "fr": "Une note qui contient des informations.",
-        "en": "A note that contains information."
+        "fr": "Une lettre qui vous est destinee.",
+        "en": "A letter that is addressed to you."
     },
     "cassette_name": {
         "en": "Cassette",
@@ -760,8 +816,8 @@
         "fr": "Pistolet a barillet"
     },
     "pistolet_barillet_description": {
-        "fr": "un pistolet qui peut etre utilise pour tirer.",
-        "en": "A pistol that can be used to shoot."
+        "fr": "Le pistolet que vous a donner Annia.",
+        "en": "The pistol that Annia gave you."
     },
     "pistolet_name": {
         "en": "Pistol",
@@ -1083,12 +1139,12 @@
         "fr": "Une lampe torche qui peut etre utilisee pour eclairer les zones sombres.",
         "en": "A flashlight that can be used to light up dark areas."
     },
-    "cacahouète_name": {
+    "cacahouete_name": {
         "en": "Peanut",
-        "fr": "Cacahouète"
+        "fr": "Cacahouete"
     },
-    "cacahouète_description": {
-        "fr": "Une cacahouète qui peut etre utilisee pour manger.",
+    "cacahouete_description": {
+        "fr": "Une cacahouete qui peut etre utilisee pour manger.",
         "en": "A peanut that can be used to eat."
     },
     "billets_name": {

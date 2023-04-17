@@ -64,6 +64,7 @@
     #define PLAYER_DCHOICE_ONE_TEXT 613257
     #define PLAYER_DCHOICE_TWO_TEXT 613258
     #define PLAYER_DIALOGUE_TEXT_ESCAPE 613259
+    #define INVENTORY_ITEM_POPUP 51533
 
     #define EVENT_KEY_PRESSED 5465
     #define EVENT_KEY_RELEASED 5466
@@ -143,6 +144,20 @@
         void (*func)(void *);
     } item_func_t;
 
+    typedef enum inv_popup_action_e {
+        ADD,
+        REMOVE
+    } inv_popup_action_t;
+
+    typedef struct inv_popup_s {
+        int start;
+        char *item_name;
+        inv_popup_action_t action;
+        sfClock *clock;
+        sfClock *clock2;
+        struct inv_popup_s *next;
+    } inv_popup_t;
+
     typedef struct inventory_s {
         int is_open;
         int is_data_open;
@@ -154,6 +169,7 @@
         sfSprite *select_sprite;
         sfSprite *items_data_sprite;
         sfRectangleShape *background;
+        inv_popup_t *popup;
     } inventory_t;
 
     typedef struct view_s {
@@ -163,7 +179,14 @@
         float time;
     } view_t;
 
+    typedef struct game_lost_s {
+        sfRectangleShape *background;
+        sfClock *clock;
+        sfClock *text_clock;
+    } game_lost_t;
+
     typedef struct player_s {
+        sfClock *hunger_lost;
         int hp;
         int hunger;
         int in_dialogue;
@@ -171,10 +194,12 @@
         int lore_sound_played;
         char *lore_text;
         inventory_t *inventory;
+        game_lost_t *game_lost;
         sfRectangleShape *hitbox;
         sfVector2f pos;
         view_t *view;
         sfClock *clock;
+        sfClock *hp_clock;
         sfTexture *texture;
         sfSprite *sprite;
         sfIntRect rect;

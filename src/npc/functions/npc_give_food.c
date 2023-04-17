@@ -12,4 +12,6 @@ void npc_give_food(void *main)
     (void)(main);
     rpg_t *rpg = (rpg_t *)main;
     stop_quest(rpg, "go_to_annia");
+    remove_itemid_inventory(rpg, 64);
+    add_item_to_inventory(72, rpg);
 }

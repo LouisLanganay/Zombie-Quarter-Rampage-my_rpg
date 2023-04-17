@@ -19,13 +19,16 @@ int main(int ac, char **av)
         print_framerate();
         gl_check_events(rpg->glib->window, rpg->glib->events, rpg);
         sfRenderWindow_clear(rpg->glib->window->window, sfBlack);
-        if (rpg->game_state == GAME)
+        gl_buttons_hovered(rpg->glib->buttons, rpg->glib->window, rpg);
+        if (rpg->game_state == GAME || rpg->game_state == GAME_LOST
+            || rpg->game_state == PAUSE)
             game_loop(rpg);
         if (rpg->game_state == MENU)
             game_start(rpg);
         sfRenderWindow_display(rpg->glib->window->window);
         if (rpg->maps_loaded == 0)
             load_maps(rpg);
+        gl_buttons_hovered(rpg->glib->buttons, rpg->glib->window, rpg);
     }
     sfRenderWindow_destroy(rpg->glib->window->window);
 }

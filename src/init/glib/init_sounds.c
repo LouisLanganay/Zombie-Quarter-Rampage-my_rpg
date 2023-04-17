@@ -17,6 +17,7 @@ static void init_sound_inventory(GLib_t *glib, sound_t *my_sound)
     my_sound->id = DROP_SOUND_ID;
     my_sound->sound = sfSound_create();
     my_sound->buffer = sfSoundBuffer_createFromFile(DROP_SOUND_PATH);
+    gl_create_sound(glib, my_sound);
 }
 
 static void init_sounds_bis(GLib_t *glib, sound_t *my_sound)
@@ -25,20 +26,21 @@ static void init_sounds_bis(GLib_t *glib, sound_t *my_sound)
     my_sound->sound = sfSound_create();
     my_sound->buffer = sfSoundBuffer_createFromFile(NATURE_SOUND_PATH);
     gl_create_sound(glib, my_sound);
-
     my_sound->id = PAPER_SOUND_ID;
     my_sound->sound = sfSound_create();
     my_sound->buffer = sfSoundBuffer_createFromFile(PAPER_SOUND_PATH);
     gl_create_sound(glib, my_sound);
-
     my_sound->id = RADIATION_SOUND_ID;
     my_sound->sound = sfSound_create();
     my_sound->buffer = sfSoundBuffer_createFromFile(RADIATION_SOUND_PATH);
     gl_create_sound(glib, my_sound);
-
     my_sound->id = GROCERY_SOUND_ID;
     my_sound->sound = sfSound_create();
     my_sound->buffer = sfSoundBuffer_createFromFile(GROCERY_SOUND_PATH);
+    gl_create_sound(glib, my_sound);
+    my_sound->id = HEART_SOUND_ID;
+    my_sound->sound = sfSound_create();
+    my_sound->buffer = sfSoundBuffer_createFromFile(HEART_SOUND_PATH);
     gl_create_sound(glib, my_sound);
 }
 

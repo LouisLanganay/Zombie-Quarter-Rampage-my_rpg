@@ -49,7 +49,8 @@ static void check_interactions_map(player_t *player, map_t *map, rpg_t *rpg)
     while (tmp) {
         if (my_strcmp(tmp->type, "objectgroup") == 0
             && my_strcmp(tmp->name, "sounds") != 0
-            && my_strcmp(tmp->name, "NPC") != 0)
+            && my_strcmp(tmp->name, "NPC") != 0 &&
+            my_strcmp(tmp->name, "chests") != 0)
             check_interactions_objects(tmp, rpg, player);
         tmp = tmp->next;
     }
