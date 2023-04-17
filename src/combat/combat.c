@@ -47,14 +47,15 @@ static void combat_manager(rpg_t *rpg, combat_t *combat)
 int combat(rpg_t *rpg)
 {
     rpg->game_state = COMBAT;
+    fade_all_sounds(rpg, 5);
     sfRenderWindow_setView(RGWW, sfRenderWindow_getDefaultView(RGWW));
     srand(time(NULL));
     sfVector2f old_pos = rpg->player->pos;
     fill_combat_rpg(rpg);
     combat_t *combat = init_combat();
     wave(wave_zombie1(), rpg, &combat->zombies);
-
     while (condition_window && rpg->player->hp > 0) {
+        check_sounds(rpg);
         window_manager(rpg);
         combat_manager(rpg, combat);
         check_shader(rpg);

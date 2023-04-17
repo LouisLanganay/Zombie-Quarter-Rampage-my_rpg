@@ -20,6 +20,7 @@ void check_game_lost(rpg_t *rpg)
         rpg->shader->blood_bool = 0;
     if (rpg->player->hp <= 0 && rpg->game_state != GAME_LOST) {
         rpg->game_state = GAME_LOST;
+        fade_all_sounds(rpg, 5);
         sfClock_restart(rpg->player->game_lost->clock);
     }
 }

@@ -305,7 +305,7 @@
             "x": 896,
             "y": 1620
         },
-        "texture_path": "resources/assets/npc/jack_friend.png",
+        "texture_path": "resources/assets/npc/jackfriend.png",
         "default_dialog": "default",
         "one_time": false,
         "dialogues": [

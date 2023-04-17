@@ -631,6 +631,7 @@
     void check_sounds(rpg_t *rpg);
     void s_house(rpg_t *rpg, sfVector2f pos);
     void s_nature(rpg_t *rpg, sfVector2f pos);
+    void fade_all_sounds(rpg_t *rpg, float time);
 
     /* FREE */
     void my_free(rpg_t *rpg);
@@ -642,6 +643,8 @@
     void remove_mask(void *main);
     void jack_friend(rpg_t *rpg, sfVector2f pos);
     void npc_give_nothing(void *main);
+    void c_resource(rpg_t *rpg, tiled_object_t *obj);
+    void c_trashg(rpg_t *rpg, tiled_object_t *obj);
     void i_lauch_combat(rpg_t *rpg, sfVector2f pos);
     void c_bchest(rpg_t *rpg, tiled_object_t *obj);
     void heal(void*);

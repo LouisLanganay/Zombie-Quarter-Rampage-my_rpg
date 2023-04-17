@@ -29,13 +29,20 @@ static void init_npc_interaction(npc_t *npc, map_t *map)
     }
 }
 
+static int npc_texture(char *name)
+{
+    if (my_strcmp(name, "Guillaume") == 0)
+        return 5;
+    return 4;
+}
+
 static void init_npc_sprite(npc_t *npc)
 {
     npc->texture = sfTexture_createFromFile(npc->texture_path, NULL);
     npc->sprite = sfSprite_create();
     sfSprite_setTexture(npc->sprite, npc->texture, sfTrue);
     npc->rect = (sfIntRect){0, 0, PLAYER_SPRITE_WIDTH, PLAYER_SPRITE_HEIGHT};
-    npc->rect.left = npc->rect.width * 4;
+    npc->rect.left = npc->rect.width * npc_texture(npc->name);
     sfSprite_setTextureRect(npc->sprite, npc->rect);
     sfSprite_setPosition(npc->sprite, npc->pos);
 }

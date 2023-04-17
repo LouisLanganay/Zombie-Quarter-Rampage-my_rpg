@@ -47,6 +47,14 @@
         "fr": "...",
         "en": "..."
     },
+    "door_key_interact": {
+        "fr": "ouvir la porte.",
+        "en": "open the door."
+    },
+    "door_key_narative": {
+        "fr": "Mince la porte est verouille, peut-etre qu'avec une clef je pourrais l'ouvir.",
+        "en": "Damn the door is locked, maybe with a key I could open it."
+    },
     "discovery_next_mask_next2": {
         "fr": "Montrer le masque",
         "en": "Show the mask"
@@ -148,8 +156,8 @@
         "fr": "Bonjour ma puce, j'espere que tu ne liras pas cette lettre, si oui c'est qu'il sera deja trop tard pour ton pere et moi. A l'heure ou j'ecris ceci je me trouve encore dans notre epicerie avec ton pere. Il nous reste peu de nourriture, je dirais pour 3-4 jours maximum. Je m'occupe de ton pere il s'est blesse en se battant avec des survivants il perds beaucoup de sang et n'arrive meme plus e se mettre debout. J'ai trouve des compresses pour le soigner mais je n'ai pas de medicaments et de soins en stock dans l'epicerie, la livraison devait arriver la semaine derniere mais avec ce qu'il se passe, toutes les rues sont infectees de zombies nous n'avons pas pu nous faire livrer. Je ne sais pas combien de temps il lui reste a vivre et a moi non plus. J'espere que tu es saine et sauve. N'oublies jamais qu'on t'aimes et que tu es une fille forte et debrouillarde on est fiere de toi. A Annia, ta maman qui t'aime fort."
     },
     "resources_paper": {
-        "en": "To the person who will find this letter, know that if you find it I will no longer be part of the living but I would still like to try to help or even save a person who can still do it. Take the food and my equipment if they have not already been taken. Because you will have no other way to survive otherwise. Good luck, signed Josh.",
-        "fr": "A la personne qui trouvera cette lettre, sache que si tu la trouves je ne ferais desormais plus parti des vivants mais je voudrais quand meme essayer d'aider ou meme de sauver une personne qui le peut encore. Accapare toi de la nourriture ainsi que de mes equipements si ils n'ont pas deja ete pris. Car tu n'auras aucun autre moyen de survivre autrement. Bon courage, signe Josh."
+        "en": "To the person who will find this letter, know that if you find it I will no longer be part of the living but I would still like to try to help or even save a person who can still do it. Take the food and my equipment if they have not already been taken. Because you will have no other way to survive otherwise. Good luck, signed Josh.          The key opens the door to the technical room next to the grocery store.",
+        "fr": "A la personne qui trouvera cette lettre, sache que si tu la trouves je ne ferais desormais plus parti des vivants mais je voudrais quand meme essayer d'aider ou meme de sauver une personne qui le peut encore. Accapare toi de la nourriture ainsi que de mes equipements si ils n'ont pas deja ete pris. Car tu n'auras aucun autre moyen de survivre autrement. Bon courage, signe Josh.          La clef ouvre la porte du local technique a cote de l'epicerie."
     },
     "top_map_interact": {
         "en": "Oh no this passage is no longer accessible, the military sent missiles to eradicate the infected on this road ...",
@@ -198,6 +206,22 @@
     "basement_door_interact_leave": {
         "fr": "monter l'escalier.",
         "en": "go upstairs."
+    },
+    "trashg_interact": {
+        "fr": "fouiller la poubelle.",
+        "en": "search the trash."
+    },
+    "empty_trashg": {
+        "fr": "Oh sa pue ! Il n'y a rien dans cette poubelle.",
+        "en": "Oh it stinks ! There's nothing in this trash can."
+    },
+    "resource_interact": {
+        "fr": "ouvir le coffre",
+        "en": "open the chest"
+    },
+    "empty_resource": {
+        "fr": "J'ai deja ouvert ce coffre, il est vide.",
+        "en": "I've already opened this chest, it's empty."
     },
     "basement_door_interact_enter": {
         "en": "go to the basement.",
