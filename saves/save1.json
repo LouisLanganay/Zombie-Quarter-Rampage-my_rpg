@@ -26,7 +26,7 @@
 			"y": 150
 		},
 		"hp": 100,
-		"hunger": 75,
+		"hunger": 74,
 		"inventory": {
 			"items": [
 				8,
@@ -56,7 +56,8 @@
 			"npc"
 		],
 		"quests_in_progress": [
-			"quest"
+			"quest",
+			"basement_paper"
 		],
 		"quests_completed": [
 			"quest"
