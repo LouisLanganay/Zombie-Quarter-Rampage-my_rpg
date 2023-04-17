@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-void init_background(rpg_t *rpg)
+void init_backgroound(rpg_t *rpg)
 {
     sfImage *image = sfImage_createFromFile
     ("resources/assets/background/background_1.jpg");
