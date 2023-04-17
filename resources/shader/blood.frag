@@ -24,8 +24,8 @@ void main()
     float red = sin(time) * 0.5 + 0.5;
     vec3 color = vec3(0.77f, 0.07f, 0.07f);
     float dist = distance(center_screen, gl_FragCoord.xy);
-    alpha = dist / 2500.0;
+    alpha = dist / 1500.0;
 
-    dist = heart_beat(time, 2.0, 5.0);
+    dist = heart_beat(time, 1.0, 7.0);
     gl_FragColor = vec4(dist, color.y, color.z, alpha);
 }

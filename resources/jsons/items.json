@@ -564,10 +564,10 @@
         "id": 112,
         "description": "super_lampe_torche_description"
     },
-    "cacahouete": {
-        "name": "cacahouète_name",
+    "piece": {
+        "name": "piece_name",
         "id": 113,
-        "description": "cacahouète_description"
+        "description": "piece_description"
     },
     "billets": {
         "name": "billets_name",

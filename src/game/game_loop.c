@@ -19,7 +19,6 @@ static void disables_buttons(rpg_t *rpg)
 
 void game_loop(rpg_t *rpg)
 {
-
     if (rpg->game_state == PAUSE) {
         sfRenderWindow_setView(RGWW, sfRenderWindow_getDefaultView(RGWW));
         draw_menu(rpg);
@@ -28,6 +27,7 @@ void game_loop(rpg_t *rpg)
     disables_buttons(rpg);
     set_view_on_player(rpg);
     draw_map(rpg->maps, rpg->actual_map, rpg);
+    check_shader(rpg);
     display_dialogue(rpg);
     draw_popup_lore(rpg);
     draw_inventory(rpg);

@@ -306,6 +306,7 @@ SRC += add_item_popup.c
 SRC += c_bchest.c
 SRC += note.c
 SRC += c_gaz.c
+SRC += check_if_items_is_here.c
 SRC += remove_itemid_inventory.c
 SRC += npc_give_nothing.c
 SRC += jack_friend.c

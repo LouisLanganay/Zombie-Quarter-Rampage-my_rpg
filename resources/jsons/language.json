@@ -67,6 +67,18 @@
         "fr": "C'est quoi ca ? Burk, du thon en conserve. Ca pourrait quand meme me servir plus tard.",
         "en": "What is this? Burk, canned tuna. I could still use it later."
     },
+    "destroy_thuna": {
+        "fr": "Hmmm, a bien y repenser je devrais peut-etre y reflechir avant de la jeter.",
+        "en": "Hmmm, come to think of it, maybe I should think about it before throwing it away."
+    },
+    "destroy_bag": {
+        "fr": "A bien y reflechir la valeur sentimentale de ce sac est tres importante pour moi, apres tout c'est ma mamie qui me la offerte.",
+        "en": "Come to think of it, the sentimental value of this bag is very important to me, after all it was my grandmother who gave it to me."
+    },
+    "destroy_gaz_mask": {
+        "fr": "Hmmm, ce masque a gaz me sera peut-etre utile plus tard.",
+        "en": "Hmmm, this gas mask may be useful to me later."
+    },
     "fridge_interact": {
         "en": "open the fridge.",
         "fr": "ouvrir le frigo."
@@ -1182,6 +1194,14 @@
     "billets_description": {
         "fr": "des billets qui peuvent etre utilises pour acheter des choses.",
         "en": "bills that can be used to buy things."
+    },
+    "piece_name": {
+        "en": "coins",
+        "fr": "piece"
+    },
+    "piece_description": {
+        "fr": "des pieces qui peuvent etre utilises pour acheter des choses.",
+        "en": "coins that can be used to buy things."
     },
     "destroy_name": {
         "en": "Destroy",

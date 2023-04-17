@@ -55,6 +55,8 @@
     #define GROCERY_SOUND_ID 18
     #define HEART_SOUND_PATH "resources/sounds/heart.ogg"
     #define HEART_SOUND_ID 19
+    #define PIECE_SOUND_PATH "resources/sounds/piece.ogg"
+    #define PIECE_SOUND_ID 20
 
     #define RGWW rpg->glib->window->window
     #define RPA rpg->player->assets
@@ -588,6 +590,7 @@
     char *get_item_name(int id);
     void draw_item_popup(rpg_t *rpg);
     int remove_itemid_inventory(rpg_t *rpg, int item_id);
+    int check_if_items_is_here(rpg_t *rpg, int id);
 
     /* CHEST */
     chests_t *get_chests_array(void);

@@ -14,7 +14,7 @@ shader_t *init_shader(void)
     shader->shader_blood = sfShader_createFromFile(NULL, NULL, RS_BLOOD);
     shader->shader_fade = sfShader_createFromFile(NULL, NULL, RS_FADE);
     shader->states_rain = init_renderstate(shader->shader_rain);
-    shader->states_blood = init_renderstate(shader->shader_blood);
+    shader->states_blood = init_renderstate2(shader->shader_blood);
     shader->states_fade = init_renderstate2(shader->shader_fade);
     shader->rain_bool = 0;
     shader->blood_bool = 0;
