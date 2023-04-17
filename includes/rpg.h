@@ -71,6 +71,10 @@
     #define RSV rpg->settings->volume
     #define RPI rpg->player->inventory
 
+    #define RS_RAIN "resources/shader/rain.frag"
+    #define RS_BLOOD "resources/shader/blood.frag"
+    #define RS_FADE "resources/shader/fade.frag"
+
     #define GET_SAVE_GAMELANGUAGE my_strcmp(jp_search(data, \
         "game_language")->value.p_str, "fr") == 0 ? FR : EN;
     #define SAVE_GAMELANGUAGE rpg->settings->game_language == FR ? "fr" : "en";
@@ -173,6 +177,28 @@
         struct tile_s *tiles;
         struct map_s *next;
     } map_t;
+
+    /*SHADER*/
+
+    typedef struct shader_s {
+        sfShader *shader_rain;
+        sfShader *shader_blood;
+        sfShader *shader_fade;
+        sfRenderStates states_rain;
+        sfRenderStates states_blood;
+        sfRenderStates states_fade;
+        int rain_bool;
+        int blood_bool;
+        int fade_bool;
+        int fade_val;
+        sfClock *shader_clock;
+        sfClock *fade_clock;
+    } shader_t;
+    sfRenderStates init_renderstate(sfShader *shader);
+    sfRenderStates init_renderstate2(sfShader *shader);
+    shader_t *init_shader(void);
+
+    #define resolution_vec "resolution",(sfVector2f){1920, 1080}
 
     typedef enum language_type_e {
         FR,
@@ -310,6 +336,7 @@
         quest_t *quests;
         sounds_t *sounds;
         narative_t *narative;
+        shader_t *shader;
         char **quests_in_progress;
         char **quests_completed;
         char **chests_opened;
@@ -369,6 +396,7 @@
         int direction;
         int last_distance;
         int status_anim;
+        sfRectangleShape *hp_bar;
     } zombies_t;
 
     #define windoww rpg->glib->window->window
@@ -387,6 +415,16 @@
     #define ZOMBIE_ATK4 "resources/assets/combat/z_naked_melee_04.png"
     #define ZOMBIE_ATK5 "resources/assets/combat/z_naked_melee_05.png"
     #define ZOMBIE_ATK6 "resources/assets/combat/z_naked_melee_06.png"
+    #define ZOMBIE_DEATH0 "resources/assets/combat/z_naked_death_00.png"
+    #define ZOMBIE_DEATH1 "resources/assets/combat/z_naked_death_01.png"
+    #define ZOMBIE_DEATH2 "resources/assets/combat/z_naked_death_02.png"
+    #define ZOMBIE_DEATH3 "resources/assets/combat/z_naked_death_03.png"
+    #define ZOMBIE_DEATH4 "resources/assets/combat/z_naked_death_04.png"
+    #define ZOMBIE_DEATH5 "resources/assets/combat/z_naked_death_05.png"
+    #define ZOMBIE_DEATH6 "resources/assets/combat/z_naked_death_06.png"
+    #define ZOMBIE_DEATH7 "resources/assets/combat/z_naked_death_07.png"
+    #define ZOMBIE_DEATH8 "resources/assets/combat/z_naked_death_08.png"
+
     #define map_night "resources/assets/combat/map_night.jpg"
     #define guy "resources/assets/combat/guy.png"
     #define bullet "resources/assets/combat/bullet.png"
@@ -395,6 +433,7 @@
     #define condition_window sfRenderWindow_isOpen\
     (rpg->glib->window->window) && number_zombies(combat->zombies) > 0
     int number_zombies(zombies_t *zombies);
+    #define sfp sfSprite_setPosition
     char **wave_zombie1(void);
 
     typedef struct combat_s {
@@ -430,7 +469,9 @@
     void cbt_change_player_rect(player_t *player);
     void wave(char **wave, rpg_t *rpg, zombies_t **zombies);
     void insert_zombies_coord(rpg_t *rpg, zombies_t **list, sfVector2f pos);
-
+    void swap_status_anim_cbt(zombies_t *l);
+    void swap_status_anim_move(zombies_t *l);
+    void swap_status_anim_dead(zombies_t *l);
 
     typedef struct sounds_arr_s {
         char *name;
@@ -709,5 +750,5 @@
     void init_quest_assets(rpg_t *rpg);
     void init_inventory(rpg_t *rpg);
     void init_player_assets_dialogue(player_t *player);
-
+    void check_shader(rpg_t *rpg);
 #endif

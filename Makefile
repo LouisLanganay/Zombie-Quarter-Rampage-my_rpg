@@ -68,6 +68,7 @@ VPATH += src/player/colisions
 VPATH += src/player/interactions/functions
 VPATH += src/player/interactions/functions/npc
 VPATH += src/combat
+VPATH += src/shader
 
 vpath %.c $(VPATH)
 
@@ -276,6 +277,13 @@ SRC += change_window_mode.c
 SRC += jack_start_quest.c
 SRC += start_dialogue_default.c
 SRC += annia_give_heal.c
+SRC += init_renderstate.c
+SRC += init_shader.c
+SRC += check_shader.c
+SRC += init_renderstate2.c
+SRC += swap_status_anim_cbt.c
+SRC += swap_status_anim_move.c
+SRC += swap_status_anim_dead.c
 SRC += i_lauch_combat.c
 SRC += draw_escape_menu.c
 SRC += init_escape_menu.c

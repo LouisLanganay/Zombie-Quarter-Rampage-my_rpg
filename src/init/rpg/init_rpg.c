@@ -15,4 +15,5 @@ void init_rpg(rpg_t *rpg, int ac, char **av)
     rpg->actual_npc = malloc(sizeof(npc_t));
     rpg->game_state = MENU;
     rpg->maps_loaded = 0;
+    rpg->shader = init_shader();
 }

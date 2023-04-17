@@ -13,7 +13,8 @@ bullets_t *tmp_bullet, int index_bullet)
     if (colision_with_rect(tmp_zombie->hitbox, tmp_bullet->pos) == 1) {
         tmp_zombie->hp -= 10;
         if (tmp_zombie->hp <= 0) {
-            tmp_zombie->alive = 1;
+            swap_status_anim_dead(tmp_zombie);
+            tmp_zombie->hp = 0;
         }
         tmp_bullet->status = 1;
         return (1);

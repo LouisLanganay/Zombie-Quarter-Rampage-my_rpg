@@ -19,7 +19,7 @@ float atk_speed, int dmg)
         sfClock_restart(attack_clock);
         rpg->player->hp -= dmg;
         if (rpg->player->hp <= 0)
-            exit(0);
+            rpg->game_state = MENU;
     }
 }
 
@@ -60,15 +60,17 @@ void move_zombies(zombies_t *list, rpg_t *rpg)
     int distance_player = 0;
     sfVector2f pos = sfSprite_getPosition(rpg->glib->sprites->next->sprite);
     while (tmp != NULL) {
+        (tmp->status_anim == 2) ? (tmp = tmp->next) : (0);
+        (tmp == NULL) ? ({return;}) : 0;
         distance_player = distance(pos, tmp->pos);
         if (distance_player <= 30 || (distance_player == 31 &&
         tmp->last_distance == 30)) {
-            tmp->status_anim = 1;
+            swap_status_anim_cbt(tmp);
             attack_player(rpg,tmp->attack_clock,tmp->attack_speed,tmp->damage);
             tmp = tmp->next;
             continue;
         }
-        tmp->status_anim = 0;
+        swap_status_anim_move(tmp);
         move_x_zombie(distance_player, tmp, pos);
         move_y_zombie(distance_player, tmp, pos);
         tmp->last_distance = distance_player;

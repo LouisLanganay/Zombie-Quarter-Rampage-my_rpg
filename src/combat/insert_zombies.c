@@ -7,6 +7,17 @@
 
 #include "rpg.h"
 
+static void hp_bar(zombies_t *new_node)
+{
+    new_node->hp_bar = sfRectangleShape_create();
+    sfRectangleShape_setSize(new_node->hp_bar, (sfVector2f){60, 100});
+    sfRectangleShape_setFillColor(new_node->hp_bar,
+    sfColor_fromRGBA(255, 50, 50, 255));
+    sfRectangleShape_setPosition(new_node->hp_bar, new_node->pos);
+    sfRectangleShape_setOutlineColor(new_node->hp_bar, sfBlack);
+    sfRectangleShape_setOutlineThickness(new_node->hp_bar, 2);
+}
+
 static void set_zombies(zombies_t *new_node)
 {
     new_node->clock_animation = sfClock_create();
@@ -23,6 +34,7 @@ static void set_zombies(zombies_t *new_node)
     sfSprite_setTextureRect(new_node->sprite, new_node->rect);
     sfSprite_setScale(new_node->sprite, new_node->scale);
     sfSprite_setPosition(new_node->sprite, new_node->pos);
+    hp_bar(new_node);
 }
 
 void insert_zombies_coord(rpg_t *rpg, zombies_t **list, sfVector2f pos)
