@@ -23,6 +23,10 @@
         "fr": "Tu veux quoi ? Bouge de la !",
         "en": "What do you want? Get out of here!"
     },
+    "jackfriend_discovery_next_nomask": {
+        "fr": "Ta rien qui me plait dans ton sac de m**de. Bouge maintenant tu me fais perdre mon temps !",
+        "en": "You got nothing I like in your bag of tricks. Move now you're wasting my time!"
+    },
     "jackfriend_discovery_leave": {
         "fr": "Ne reviens plus jamais ici !",
         "en": "Don't come back here again!"
@@ -31,9 +35,25 @@
         "fr": "Je m'en fous bouge de la gros c** ! Si tu reste la je vais t'fumer !",
         "en": "I don't care get out of here you big id**t! If you stay here I'm going to kill you!"
     },
+    "jackfriend_discovery_next_mask": {
+        "fr": "Attend ta peut etre un truc pour moi toi, reste la.",
+        "en": "Wait maybe you have something for me, stay here."
+    },
+    "discovery_next_mask_next1": {
+        "fr": "...",
+        "en": "..."
+    },
+    "discovery_next_mask_next2": {
+        "fr": "Montrer le masque",
+        "en": "Show the mask"
+    },
     "jackfriend_interact": {
         "fr": "parler a l'inconue.",
         "en": "talk to the unknown."
+    },
+    "jackfriend_discovery_next_mask_next": {
+        "fr": "Ah mais c'est le masque de Jack ca ! Donne le moi. Il l'avais perdu dans la vieille maison la.",
+        "en": "Ah but this is Jack's mask ! Give it to me. He lost it in the old house there."
     },
     "discovery_end": {
         "fr": "Fuir",

@@ -332,6 +332,33 @@
                 "text": "jackfriend_discovery_next",
                 "options": null,
                 "function": "check_if_gaz_mask"
+            },
+            {
+                "name": "discovery_next_nomask",
+                "text": "jackfriend_discovery_next_nomask",
+                "options": null,
+                "function": null
+            },
+            {
+                "name": "discovery_next_mask",
+                "text": "jackfriend_discovery_next_mask",
+                "options": [
+                    {
+                        "text": "discovery_next_mask_next1",
+                        "next": "discovery_next_mask_next"
+                    },
+                    {
+                        "text": "discovery_next_mask_next2",
+                        "next": "discovery_next_mask_next"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "discovery_next_mask_next",
+                "text": "jackfriend_discovery_next_mask_next",
+                "options": null,
+                "function": "remove_mask"
             }
         ]
     }

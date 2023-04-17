@@ -311,6 +311,8 @@ SRC += remove_itemid_inventory.c
 SRC += npc_give_nothing.c
 SRC += jack_friend.c
 SRC += check_if_gaz_mask.c
+SRC += change_dialogue.c
+SRC += remove_mask.c
 
 
 

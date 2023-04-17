@@ -62,10 +62,10 @@ void next_dialogue(rpg_t *rpg, int choice)
     if (next == NULL) {
         if (my_strcmp(actual->name, "default") != 0)
             rpg->save->npc_interactions = get_new_arr(rpg, npc);
-        check_dialogue_function(rpg, actual);
         rpg->player->in_dialogue = 0;
         zoom_view(rpg, 1.001, 20);
         while (sfKeyboard_isKeyPressed(RPK->escape.key) == sfTrue);
+        check_dialogue_function(rpg, actual);
         return;
     }
     change_texts(rpg, next);

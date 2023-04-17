@@ -604,6 +604,7 @@
     void display_dialogue(rpg_t *rpg);
     dialog_func_t *get_npc_func_arr(void);
     void check_dialogue_function(rpg_t *rpg, dialog_t *dialogue);
+    void change_dialogue(rpg_t *rpg, char *id);
 
     /* TEXT */
     void divide_a_sftext(sfText *text, sfVector2f pos, rpg_t *rpg);
@@ -621,6 +622,7 @@
 
     /* CALL ACTIONS */
     void check_if_gaz_mask(void *);
+    void remove_mask(void *main);
     void jack_friend(rpg_t *rpg, sfVector2f pos);
     void npc_give_nothing(void *main);
     void i_lauch_combat(rpg_t *rpg, sfVector2f pos);

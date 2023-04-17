@@ -91,8 +91,8 @@ void display_dialogue(rpg_t *rpg)
 {
     sfVector2f view_pos = sfView_getCenter(rpg->player->view->view);
 
-    if (rpg->player->in_dialogue == 0)
-        return;
+    if (rpg->player->view->time > 0) return;
+    if (rpg->player->in_dialogue == 0) return;
     display_dialogue_box(rpg, view_pos);
 
     if (rpg->actual_dialog->options != NULL) {

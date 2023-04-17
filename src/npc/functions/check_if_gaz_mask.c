@@ -7,7 +7,21 @@
 
 #include "rpg.h"
 
+static void check_if_gaz_mask_yes(rpg_t *rpg)
+{
+    change_dialogue(rpg, "discovery_next_mask");
+}
+
+static void check_if_gaz_mask_no(rpg_t *rpg)
+{
+    change_dialogue(rpg, "discovery_next_nomask");
+}
+
 void check_if_gaz_mask(void *main)
 {
     rpg_t *rpg = (rpg_t *)main;
+    if (check_if_items_is_here(rpg, 31) == 1)
+        check_if_gaz_mask_yes(rpg);
+    else
+        check_if_gaz_mask_no(rpg);
 }
