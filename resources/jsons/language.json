@@ -11,9 +11,37 @@
         "en": "Find some food",
         "fr": "Trouver de la nourriture"
     },
+    "house1_cant_enter": {
+        "fr": "Je ne devrais pas entrer dans cette maison, cela me semble trop dangereuse.",
+        "en": "I should not enter this house, it seems too dangerous."
+    },
     "basement_paper_description": {
         "fr": "Trouver de la nourriture dans votre sous sol. Vous en trouverez surement dans une etagere ou un frigo.",
         "en": "Find some food in your basement. You will probably find some in a shelf or a fridge."
+    },
+    "jackfriend_discovery": {
+        "fr": "Tu veux quoi ? Bouge de la !",
+        "en": "What do you want? Get out of here!"
+    },
+    "jackfriend_discovery_leave": {
+        "fr": "Ne reviens plus jamais ici !",
+        "en": "Don't come back here again!"
+    },
+    "jackfriend_discovery_next": {
+        "fr": "Je m'en fous bouge de la gros c** ! Si tu reste la je vais t'fumer !",
+        "en": "I don't care get out of here you big id**t! If you stay here I'm going to kill you!"
+    },
+    "jackfriend_interact": {
+        "fr": "parler a l'inconue.",
+        "en": "talk to the unknown."
+    },
+    "discovery_end": {
+        "fr": "Fuir",
+        "en": "Leave"
+    },
+    "discovery_next": {
+        "fr": "Parler",
+        "en": "Talk"
     },
     "bchest_interact": {
         "fr": "fouiller dans les caisses.",
@@ -38,6 +66,18 @@
     "eat_thuna": {
         "fr": "C'est quoi ca ? Burk, du thon en conserve. Ca pourrait quand meme me servir plus tard.",
         "en": "What is this? Burk, canned tuna. I could still use it later."
+    },
+    "destroy_thuna": {
+        "fr": "Hmmm, a bien y repenser je devrais peut-etre y reflechir avant de la jeter.",
+        "en": "Hmmm, come to think of it, maybe I should think about it before throwing it away."
+    },
+    "destroy_bag": {
+        "fr": "A bien y reflechir la valeur sentimentale de ce sac est tres importante pour moi, apres tout c'est ma mamie qui me la offerte.",
+        "en": "Come to think of it, the sentimental value of this bag is very important to me, after all it was my grandmother who gave it to me."
+    },
+    "destroy_gaz_mask": {
+        "fr": "Hmmm, ce masque a gaz me sera peut-etre utile plus tard.",
+        "en": "Hmmm, this gas mask may be useful to me later."
     },
     "fridge_interact": {
         "en": "open the fridge.",
@@ -1154,6 +1194,14 @@
     "billets_description": {
         "fr": "des billets qui peuvent etre utilises pour acheter des choses.",
         "en": "bills that can be used to buy things."
+    },
+    "piece_name": {
+        "en": "coins",
+        "fr": "piece"
+    },
+    "piece_description": {
+        "fr": "des pieces qui peuvent etre utilises pour acheter des choses.",
+        "en": "coins that can be used to buy things."
     },
     "destroy_name": {
         "en": "Destroy",

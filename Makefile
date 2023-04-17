@@ -183,7 +183,6 @@ SRC += init_quest_assets.c
 SRC += draw_popup_lore.c
 SRC += start_quest.c
 SRC += stop_quest.c
-SRC += check_popup_lore.c
 SRC += divide_a_text.c
 SRC += get_quests_func_arr.c
 SRC += get_quest_by_id.c
@@ -308,8 +307,13 @@ SRC += add_item_popup.c
 SRC += c_bchest.c
 SRC += note.c
 SRC += c_gaz.c
+SRC += check_if_items_is_here.c
 SRC += remove_itemid_inventory.c
 SRC += init_combat_history.c
+SRC += npc_give_nothing.c
+SRC += jack_friend.c
+SRC += check_if_gaz_mask.c
+
 
 
 INC_DIR 	:= includes

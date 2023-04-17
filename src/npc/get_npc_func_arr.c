@@ -13,6 +13,7 @@ dialog_func_t *get_npc_func_arr(void)
         { "npc_give_food", npc_give_food },
         { "jack_start_quest", jack_start_quest },
         { "annia_give_heal", annia_give_heal },
+        { "check_if_gaz_mask", check_if_gaz_mask },
         { NULL, NULL }
     };
     dialog_func_t *arr = malloc(sizeof(dialog_func_t) *

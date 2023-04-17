@@ -19,7 +19,8 @@ i_paper_resources, NULL}, {"i_basement_paper", i_basement_paper, NULL},
 {"i_end_map_down", i_end_map_down, NULL}, {"i_paper_grocery", i_paper_grocery,
 NULL}, { "s_nature", s_nature, s_nature_exit}, {"s_basement", s_basement,
 s_basement_exit}, {"s_grocery", s_grocery, s_grocery_exit}, {"s_radiation",
-s_radiation, s_radiation_exit}, { "Jack", jack, NULL }, {"i_lauch_combat",
+s_radiation, s_radiation_exit}, { "Jack", jack, NULL },
+{"Guillaume", jack_friend}, {"i_lauch_combat",
 i_lauch_combat, NULL}, {NULL, NULL, NULL}};
     interactions_t *inte = malloc(sizeof(interactions_t) *
         (sizeof(inte_array) / sizeof(interactions_t)));

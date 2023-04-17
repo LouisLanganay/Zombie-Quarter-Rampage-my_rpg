@@ -18,6 +18,11 @@ static void init_sound_inventory(GLib_t *glib, sound_t *my_sound)
     my_sound->sound = sfSound_create();
     my_sound->buffer = sfSoundBuffer_createFromFile(DROP_SOUND_PATH);
     gl_create_sound(glib, my_sound);
+
+    my_sound->id = PIECE_SOUND_ID;
+    my_sound->sound = sfSound_create();
+    my_sound->buffer = sfSoundBuffer_createFromFile(PIECE_SOUND_PATH);
+    gl_create_sound(glib, my_sound);
 }
 
 static void init_sounds_bis(GLib_t *glib, sound_t *my_sound)

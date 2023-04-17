@@ -17,6 +17,12 @@ static void change_map(rpg_t *rpg)
         rpg->player->pos.x = SPAWN_OUT_HOUSE1_X;
         rpg->player->pos.y = SPAWN_OUT_HOUSE1_Y;
     } else if (my_strcmp(rpg->actual_map, main_map) == 0) {
+        if (quest_is_in_progress(rpg, "jack_quest") != 1 &&
+            quest_is_completed(rpg, "jack_quest") != 1) {
+            rpg->narative->str = get_language(rpg, "house1_cant_enter", RSG);
+            start_narative_popup(rpg);
+            return;
+        }
         rpg->actual_map = house1;
         rpg->player->pos.x = SPAWN_INTO_HOUSE1_X;
         rpg->player->pos.y = SPAWN_INTO_HOUSE1_Y;
