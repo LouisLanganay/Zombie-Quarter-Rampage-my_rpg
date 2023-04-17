@@ -29,4 +29,5 @@ int main(int ac, char **av)
         gl_buttons_hovered(rpg->glib->buttons, rpg->glib->window, rpg);
     }
     sfRenderWindow_destroy(rpg->glib->window->window);
+    sfSprite_destroy(rpg->player->assets->lore_box);
 }
