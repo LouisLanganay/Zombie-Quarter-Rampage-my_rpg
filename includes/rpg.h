@@ -745,6 +745,7 @@
     void init_game_sounds(rpg_t *rpg);
     void init_npcs(map_t *map, char *path, rpg_t *rpg);
     void init_fonts(rpg_t *rpg);
+    void init_backgroound(rpg_t *rpg);
     void init_player_textures(player_t *player);
     void init_window(rpg_t *rpg);
     void init_npc_dialogs(npc_t *npc, parsed_data_t *dialogs_arr, rpg_t *rpg);
