@@ -19,6 +19,10 @@
         "fr": "Trouver de la nourriture dans votre sous sol. Vous en trouverez surement dans une etagere ou un frigo.",
         "en": "Find some food in your basement. You will probably find some in a shelf or a fridge."
     },
+    "no_mask_narative": {
+        "fr": "Mais c'est qui ce mec ? Je devrais peut-être le laisser tranquille.",
+        "en": "But who is this guy? I should probably leave him alone."
+    },
     "jackfriend_discovery": {
         "fr": "Tu veux quoi ? Bouge de la !",
         "en": "What do you want? Get out of here!"

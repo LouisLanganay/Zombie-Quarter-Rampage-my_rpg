@@ -45,6 +45,9 @@ static void draw_conditions_buttons(rpg_t *rpg)
 
 static void draw_buttons(rpg_t *rpg)
 {
+    gl_button_change_state(BTN_LOAD, rpg->glib->buttons, sfFalse);
+    gl_button_change_state(BTN_SEETING, rpg->glib->buttons, sfFalse);
+    gl_button_change_state(BTN_QUIT, rpg->glib->buttons, sfFalse);
     if (rpg->menu->active == true) {
             gl_button_change_state(BTN_QUIT, rpg->glib->buttons, sfTrue);
             gl_button_change_state(BTN_LOAD, rpg->glib->buttons, sfTrue);
@@ -86,8 +89,7 @@ void draw_menu(rpg_t *rpg)
     else
         disable_saves_menu(rpg);
     draw_buttons(rpg);
-    if (rpg->menu->active == true)
-        draw_settings(rpg);
+    if (rpg->menu->active == true) draw_settings(rpg);
     if (rpg->game_state == PAUSE)
         draw_escape_menu(rpg);
     else

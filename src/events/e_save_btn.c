@@ -11,6 +11,5 @@ void e_save_btn(int id, void *main)
 {
     (void)id;
     rpg_t *rpg = (rpg_t *)main;
-    printf("Save button pressed\n");
     save(rpg);
 }

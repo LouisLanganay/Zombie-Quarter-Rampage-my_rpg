@@ -22,17 +22,17 @@
 	},
 	"player": {
 		"pos": {
-			"x": 234,
-			"y": 235
+			"x": 305,
+			"y": 150
 		},
 		"hp": 100,
-		"hunger": 80,
+		"hunger": 75,
 		"inventory": {
 			"items": [
-				41,
+				8,
+				9,
 				42,
-				52,
-				80,
+				-1,
 				-1,
 				-1,
 				-1,
@@ -56,8 +56,7 @@
 			"npc"
 		],
 		"quests_in_progress": [
-			"quest",
-			"basement_paper"
+			"quest"
 		],
 		"quests_completed": [
 			"quest"

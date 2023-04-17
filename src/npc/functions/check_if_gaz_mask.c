@@ -14,7 +14,8 @@ static void check_if_gaz_mask_yes(rpg_t *rpg)
 
 static void check_if_gaz_mask_no(rpg_t *rpg)
 {
-    change_dialogue(rpg, "discovery_next_nomask");
+    rpg->narative->str = get_language(rpg, "no_mask_narative", RSG);
+    start_narative_popup(rpg);
 }
 
 void check_if_gaz_mask(void *main)
