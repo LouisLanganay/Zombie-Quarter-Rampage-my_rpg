@@ -16,7 +16,6 @@ static void handle_selection_inv(rpg_t *rpg)
         RPI->is_data_open = 1;
     if (sfKeyboard_isKeyPressed(rpg->player->keys->choice_one.key) == sfTrue
     && RPI->is_data_open == 0) {
-        gl_play_sound(rpg->glib, DROP_SOUND_ID);
         RPI->is_data_open = 1;
         remove_item_to_inventory(rpg, RP->inventory->pos);
     }
