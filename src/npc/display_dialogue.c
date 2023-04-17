@@ -90,15 +90,19 @@ static void display_dialogue_escape(
 void display_dialogue(rpg_t *rpg)
 {
     sfVector2f view_pos = sfView_getCenter(rpg->player->view->view);
+    time_t time = sfClock_getElapsedTime(rpg->actual_clock).microseconds;
+    float seconds = time / 1000000.0;
 
     if (rpg->player->view->time > 0) return;
     if (rpg->player->in_dialogue == 0) return;
     display_dialogue_box(rpg, view_pos);
 
     if (rpg->actual_dialog->options != NULL) {
+        if (DIALOGUE_CHOICE_TIMEOUT) return;
         display_dialogue_choice_one(rpg, view_pos);
         display_dialogue_choice_two(rpg, view_pos);
     } else {
+        if (DIALOGUE_CHOICE_TIMEOUT) return;
         display_dialogue_escape(rpg, view_pos);
     }
 }

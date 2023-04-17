@@ -58,6 +58,8 @@
     #define PIECE_SOUND_PATH "resources/sounds/piece.ogg"
     #define PIECE_SOUND_ID 20
 
+    #define DIALOGUE_CHOICE_TIMEOUT (seconds < 1)
+
     #define RGWW rpg->glib->window->window
     #define RPA rpg->player->assets
     #define RGWW rpg->glib->window->window
@@ -330,6 +332,7 @@
         int maps_loaded;
         hud_t *hud;
         dialog_t *actual_dialog;
+        sfClock *actual_clock;
         npc_t *actual_npc;
         map_t *maps;
         GLib_t *glib;
@@ -628,15 +631,20 @@
     void check_sounds(rpg_t *rpg);
     void s_house(rpg_t *rpg, sfVector2f pos);
     void s_nature(rpg_t *rpg, sfVector2f pos);
+    void fade_all_sounds(rpg_t *rpg, float time);
 
     /* FREE */
     void my_free(rpg_t *rpg);
 
     /* CALL ACTIONS */
+    void jackfriend_give_weapon(void *main);
+    void jackfriend_give_heal(void *main);
     void check_if_gaz_mask(void *);
     void remove_mask(void *main);
     void jack_friend(rpg_t *rpg, sfVector2f pos);
     void npc_give_nothing(void *main);
+    void c_resource(rpg_t *rpg, tiled_object_t *obj);
+    void c_trashg(rpg_t *rpg, tiled_object_t *obj);
     void i_lauch_combat(rpg_t *rpg, sfVector2f pos);
     void c_bchest(rpg_t *rpg, tiled_object_t *obj);
     void heal(void*);

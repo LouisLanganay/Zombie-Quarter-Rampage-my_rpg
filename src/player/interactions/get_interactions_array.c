@@ -27,6 +27,7 @@ static const interactions_t inte_array[] =
     {"s_basement", s_basement, s_basement_exit},
     {"s_grocery", s_grocery, s_grocery_exit},
     {"s_radiation", s_radiation, s_radiation_exit},
+    {"i_lauch_combat", i_lauch_combat, NULL},
     {"Jack", jack, NULL },
     {"Guillaume", jack_friend},
     {"i_lauch_combat", i_lauch_combat, NULL},

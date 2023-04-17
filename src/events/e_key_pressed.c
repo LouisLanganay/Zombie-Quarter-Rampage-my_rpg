@@ -72,6 +72,4 @@ void e_key_pressed(window_t *window, void *main)
     if (rpg->glib->window->event.key.code == sfKeyF11)
         change_window_mode(rpg, rpg->settings->window_mode == FSCREEN ?
         WINDOWED : FSCREEN);
-    if (rpg->glib->window->event.key.code == sfKeyB)
-        save(rpg);
 }
