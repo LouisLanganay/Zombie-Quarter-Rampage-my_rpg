@@ -12,6 +12,7 @@ int main(int ac, char **av)
     rpg_t *rpg = malloc(sizeof(rpg_t));
     init_rpg(rpg, ac, av);
     init(rpg);
+
     while (sfRenderWindow_isOpen(rpg->glib->window->window)) {
         print_framerate();
         gl_check_events(rpg->glib->window, rpg->glib->events, rpg);

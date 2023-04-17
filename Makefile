@@ -217,6 +217,7 @@ SRC += i_end_map_down.c
 SRC += e_langue.c
 SRC += e_lang_en.c
 SRC += init_background.c
+SRC += init_backgroound.c
 SRC += init_keybinds_keys.c
 SRC += draw_menu_keys.c
 SRC += init_saves_buttons.c
@@ -308,6 +309,7 @@ SRC += c_bchest.c
 SRC += note.c
 SRC += c_gaz.c
 SRC += remove_itemid_inventory.c
+SRC += init_combat_history.c
 
 
 INC_DIR 	:= includes

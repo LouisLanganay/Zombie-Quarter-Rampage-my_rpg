@@ -32,7 +32,19 @@
 				41,
 				42,
 				52,
-				80
+				80,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1,
+				-1
 			]
 		}
 	},
@@ -44,7 +56,8 @@
 			"npc"
 		],
 		"quests_in_progress": [
-			"quest"
+			"quest",
+			"basement_paper"
 		],
 		"quests_completed": [
 			"quest"

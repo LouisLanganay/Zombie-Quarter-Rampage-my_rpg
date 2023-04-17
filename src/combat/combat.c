@@ -46,21 +46,23 @@ static void combat_manager(rpg_t *rpg, combat_t *combat)
 
 int combat(rpg_t *rpg)
 {
+    rpg->game_state = COMBAT;
+    sfRenderWindow_setView(RGWW, sfRenderWindow_getDefaultView(RGWW));
     srand(time(NULL));
     sfVector2f old_pos = rpg->player->pos;
     fill_combat_rpg(rpg);
     combat_t *combat = init_combat();
     wave(wave_zombie1(), rpg, &combat->zombies);
-    rpg->game_state = COMBAT;
 
-    while (condition_window) {
+    while (condition_window && rpg->player->hp > 0) {
         window_manager(rpg);
         combat_manager(rpg, combat);
         check_shader(rpg);
+        if (rpg->player->hp <= 20)
+            rpg->shader->blood_bool = 1;
         sfRenderWindow_display(rpg->glib->window->window);
-        if (rpg->game_state == MENU)
-            return (0);
     }
+    rpg->game_state = GAME;
     sfSprite_setScale(rpg->player->sprite, (sfVector2f) {1, 1});
     rpg->player->pos = old_pos;
 }

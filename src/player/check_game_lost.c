@@ -13,8 +13,11 @@ void check_game_lost(rpg_t *rpg)
         if (sfSound_getStatus(
                 gl_get_sound(rpg->glib, HEART_SOUND_ID)->sound) == sfPlaying)
             fade_sound(rpg, HEART_SOUND_ID, 10);
-    if (rpg->player->hp <= 20)
+    if (rpg->player->hp <= 20) {
         start_sound(rpg, HEART_SOUND_ID);
+        rpg->shader->blood_bool = 1;
+    } else
+        rpg->shader->blood_bool = 0;
     if (rpg->player->hp <= 0 && rpg->game_state != GAME_LOST) {
         rpg->game_state = GAME_LOST;
         sfClock_restart(rpg->player->game_lost->clock);

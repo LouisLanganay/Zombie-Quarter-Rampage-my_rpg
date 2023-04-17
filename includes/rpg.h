@@ -314,6 +314,13 @@
         GAME_LOST
     } game_state_t;
 
+    typedef struct combat_history_s {
+        int i_lauch_combat1_status;
+        int i_lauch_combat2_status;
+        int i_lauch_combat3_status;
+    } combat_history_t;
+
+
     typedef struct rpg_s {
         int debug;
         char *actual_map;
@@ -337,6 +344,7 @@
         sounds_t *sounds;
         narative_t *narative;
         shader_t *shader;
+        combat_history_t *combat_history;
         char **quests_in_progress;
         char **quests_completed;
         char **chests_opened;
@@ -444,6 +452,7 @@
     } combat_t;
 
     /* COMBAT */
+    void init_combat_history(rpg_t *rpg);
     void init_guy(rpg_t *rpg);
     void init_background(rpg_t *rpg);
     int combat(rpg_t *rpg);
