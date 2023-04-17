@@ -44,6 +44,13 @@ static void e_key_pressed_escape(rpg_t *rpg)
     rpg->menu_save->active = false;
     rpg->menu_key->active = false;
     rpg->menu->active = false;
+    if (rpg->player->lore_open == 1) {
+        if (sfKeyboard_isKeyPressed(rpg->player->keys->escape.key) == sfTrue) {
+            rpg->player->lore_open = 0;
+            rpg->player->lore_sound_played = 0;
+            return;
+        }
+    }
     if (sfKeyboard_isKeyPressed(RPK->escape.key) == sfTrue
         && rpg->game_state == GAME || rpg->game_state == PAUSE) {
         if (rpg->player->inventory->is_open == 1 || rpg->player->lore_open == 1

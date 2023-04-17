@@ -34,5 +34,4 @@ void draw_popup_lore(rpg_t *rpg)
     devide->line_spaces = 10;
     divide_a_text(rpg, devide);
     free(devide);
-    check_popup_lore(rpg);
 }

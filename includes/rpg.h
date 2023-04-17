@@ -617,6 +617,9 @@
     void s_nature(rpg_t *rpg, sfVector2f pos);
 
     /* CALL ACTIONS */
+    void check_if_gaz_mask(void *);
+    void jack_friend(rpg_t *rpg, sfVector2f pos);
+    void npc_give_nothing(void *main);
     void i_lauch_combat(rpg_t *rpg, sfVector2f pos);
     void c_bchest(rpg_t *rpg, tiled_object_t *obj);
     void heal(void*);
@@ -685,7 +688,6 @@
 
     /* LORE */
     void draw_popup_lore(rpg_t *rpg);
-    void check_popup_lore(rpg_t *rpg);
     void start_narative_popup(rpg_t *rpg);
     void check_narative_popup(rpg_t *rpg);
 

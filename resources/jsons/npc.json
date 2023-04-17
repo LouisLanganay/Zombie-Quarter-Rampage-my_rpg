@@ -107,7 +107,7 @@
                 "name": "annia_help_next_ignore",
                 "text": "annia_give_nothing",
                 "options": null,
-                "function": null
+                "function": "npc_give_nothing"
             },
             {
                 "name": "help_give_nothing",
@@ -143,13 +143,13 @@
                 "name": "ignore_end",
                 "text": "annia_ignore_end",
                 "options": null,
-                "function": null
+                "function": "npc_give_nothing"
             },
             {
                 "name": "ignore_give_nothing",
                 "text": "annia_give_nothing",
                 "options": null,
-                "function": null
+                "function": "npc_give_nothing"
             }
         ]
     },
@@ -286,6 +286,52 @@
                 "text": "jack_discovery_nolisten_yes",
                 "options": null,
                 "function": "jack_start_quest"
+            }
+        ]
+    },
+    "jack_friend": {
+        "name": "Guillaume",
+        "map": "resources/maps/main_map.json",
+        "pos": {
+            "x": 896,
+            "y": 1620
+        },
+        "texture_path": "resources/assets/npc/jack_friend.png",
+        "default_dialog": "default",
+        "one_time": false,
+        "dialogues": [
+            {
+                "name": "default",
+                "text": "jack_default",
+                "options": null,
+                "function": null
+            },
+            {
+                "name": "discovery",
+                "text": "jackfriend_discovery",
+                "options": [
+                    {
+                        "text": "discovery_end",
+                        "next": "end_leave"
+                    },
+                    {
+                        "text": "discovery_next",
+                        "next": "discovery_next"
+                    }
+                ],
+                "function": null
+            },
+            {
+                "name": "end_leave",
+                "text": "jackfriend_discovery_leave",
+                "options": null,
+                "function": null
+            },
+            {
+                "name": "discovery_next",
+                "text": "jackfriend_discovery_next",
+                "options": null,
+                "function": "check_if_gaz_mask"
             }
         ]
     }

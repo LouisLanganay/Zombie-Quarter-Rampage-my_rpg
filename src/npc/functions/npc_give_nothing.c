@@ -2,14 +2,14 @@
 ** EPITECH PROJECT, 2023
 ** B-MUL-200-REN-2-1-myrpg-louis.langanay
 ** File description:
-** annia_give_heal
+** npc_give_nothing
 */
 
 #include "rpg.h"
 
-void annia_give_heal(void *main)
+void npc_give_nothing(void *main)
 {
+    (void)(main);
     rpg_t *rpg = (rpg_t *)main;
     stop_quest(rpg, "go_to_annia");
-    add_item_to_inventory(82, rpg);
 }
