@@ -14,7 +14,8 @@
     #define BTN_PATH_CONTROLS "resources/assets/buttons/controls_btn.png"
     #define BTN_PATH_SAVE "resources/assets/buttons/save_btn.png"
     #define BTN_PATH_HOME "resources/assets/buttons/home.png"
-
+    #define BTN_CLICK_SOUND "resources/sounds/sounds_gui_button2.ogg"
+    #define BTN_HOVER_SOUND "resources/sounds/sounds_gui_button1.ogg"
     #define BTN_PATH_LOAD "resources/assets/buttons/loadgame_btn.png"
     #define BTN_PATH_SAVEBTN "resources/assets/buttons/savegame_btn.png"
     #define BTN_PATH_CHECK "resources/assets/buttons/check_btn.png"

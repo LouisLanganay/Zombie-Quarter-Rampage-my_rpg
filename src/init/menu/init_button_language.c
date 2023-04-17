@@ -42,8 +42,8 @@ static void init_button_fr(rpg_t *rpg)
     my_btn->call_action = e_langue_fr;
     my_btn->sprite = sfSprite_create();
     my_btn->texture = sfTexture_createFromFile(BTN_PATH_CHECK, NULL);
-    my_btn->sb_hover = NULL;
-    my_btn->sb_click = NULL;
+    my_btn->sb_hover = sfSoundBuffer_createFromFile(BTN_HOVER_SOUND);
+    my_btn->sb_click = sfSoundBuffer_createFromFile(BTN_CLICK_SOUND);
     gl_create_button(rpg->glib, my_btn);
 }
 
@@ -57,8 +57,8 @@ static void init_button_en(rpg_t *rpg)
     my_btn->call_action = e_langue_en;
     my_btn->sprite = sfSprite_create();
     my_btn->texture = sfTexture_createFromFile(BTN_PATH_CHECK, NULL);
-    my_btn->sb_hover = NULL;
-    my_btn->sb_click = NULL;
+    my_btn->sb_hover = sfSoundBuffer_createFromFile(BTN_HOVER_SOUND);
+    my_btn->sb_click = sfSoundBuffer_createFromFile(BTN_CLICK_SOUND);
     gl_create_button(rpg->glib, my_btn);
 }
 
