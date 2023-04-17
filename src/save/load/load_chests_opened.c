@@ -28,6 +28,7 @@ int load_chests_opened(rpg_t *rpg, parsed_data_t *data)
 
     if (arr->value.p_str == NULL) return (0);
     for (int i = 0; i < size; i++) {
+        printf("Chest %s\n", arr->value.p_str);
         rpg->chests_opened[i] = my_strdup(arr->value.p_str);
         arr = arr->next;
     }

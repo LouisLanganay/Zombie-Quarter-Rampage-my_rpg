@@ -629,6 +629,9 @@
     void s_house(rpg_t *rpg, sfVector2f pos);
     void s_nature(rpg_t *rpg, sfVector2f pos);
 
+    /* FREE */
+    void my_free(rpg_t *rpg);
+
     /* CALL ACTIONS */
     void check_if_gaz_mask(void *);
     void remove_mask(void *main);
