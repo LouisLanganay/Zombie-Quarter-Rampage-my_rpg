@@ -25,8 +25,6 @@ static void draw_game_win_screen_bg_bg(rpg_t *rpg)
 static void draw_game_win_screen_bg(rpg_t *rpg)
 {
     sfVector2f vpos = sfView_getCenter(sfRenderWindow_getView(RGWW));
-    sfVector2f vsize = sfView_getSize(sfRenderWindow_getView(RGWW));
-    sfVector2f pos = (sfVector2f){vpos.x - vsize.x / 2, vpos.y - vsize.y / 2};
     time_t time = sfClock_getElapsedTime(rpg->player->game_win->text_clock)
         .microseconds;
     float seconds = time / 1000000.0;

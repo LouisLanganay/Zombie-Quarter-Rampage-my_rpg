@@ -10,6 +10,7 @@
 
 void s_nature(rpg_t *rpg, sfVector2f pos)
 {
+    (void)pos;
     if (sfSound_getStatus(
             gl_get_sound(rpg->glib, NATURE_SOUND_ID)->sound) != sfPlaying)
         start_sound(rpg, NATURE_SOUND_ID);

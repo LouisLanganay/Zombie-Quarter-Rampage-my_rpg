@@ -9,5 +9,6 @@
 
 void s_radiation_exit(rpg_t *rpg, sfVector2f pos)
 {
+    (void)pos;
     fade_sound(rpg, RADIATION_SOUND_ID, 3);
 }

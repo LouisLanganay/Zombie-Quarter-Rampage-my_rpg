@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-static void change_npc_rect_annimate(rpg_t *rpg, npc_t *npc)
+static void change_npc_rect_annimate(npc_t *npc)
 {
     time_t time = sfClock_getElapsedTime(npc->clock).microseconds;
     float seconds = time / 1000000.0;
@@ -20,7 +20,7 @@ static void change_npc_rect_annimate(rpg_t *rpg, npc_t *npc)
 
 void draw_npc(rpg_t *rpg, npc_t *npc)
 {
-    change_npc_rect_annimate(rpg, npc);
+    change_npc_rect_annimate(npc);
     sfSprite_setTextureRect(npc->sprite, npc->rect);
     sfRenderWindow_drawSprite(RGW->window, npc->sprite, NULL);
 }

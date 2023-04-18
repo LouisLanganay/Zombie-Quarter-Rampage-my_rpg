@@ -332,6 +332,9 @@ SRC += init_game_win_screen.c
 SRC += reset_a_save.c
 SRC += init_keybinds_otherkeys.c
 SRC += draw_other_keys.c
+SRC += reset_view.c
+SRC += s_musician_exit.c
+SRC += s_musician.c
 
 
 INC_DIR 	:= includes
@@ -340,7 +343,7 @@ LIB_NAME1 	:= gl
 LIB_DIR2 	:= ./lib/jp
 LIB_NAME2 	:= jp
 
-CFLAGS = -iquote $(INC_DIR) -g#-Wall -Wextra -Werror -g
+CFLAGS = -iquote $(INC_DIR) -Wall -Wextra -Werror -g
 CFLAGS += -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm
 
 LIBFLAGS = -L$(LIB_DIR1) -l$(LIB_NAME1) -L$(LIB_DIR2) -l$(LIB_NAME2)

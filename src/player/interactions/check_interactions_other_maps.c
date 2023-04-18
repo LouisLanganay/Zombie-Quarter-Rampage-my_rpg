@@ -27,8 +27,7 @@ static void exe_interaction_functions_exit(
 
 static void check_interactions_objects(
     layer_t *layer,
-    rpg_t *rpg,
-    player_t *player
+    rpg_t *rpg
 )
 {
     tiled_object_t *tmp = layer->objects;
@@ -42,7 +41,7 @@ static void check_interactions_objects(
     }
 }
 
-static void check_interactions_map(player_t *player, map_t *map, rpg_t *rpg)
+static void check_interactions_map(map_t *map, rpg_t *rpg)
 {
     layer_t *tmp = map->layers;
 
@@ -51,12 +50,12 @@ static void check_interactions_map(player_t *player, map_t *map, rpg_t *rpg)
             && my_strcmp(tmp->name, "sounds") != 0
             && my_strcmp(tmp->name, "NPC") != 0 &&
             my_strcmp(tmp->name, "chests") != 0)
-            check_interactions_objects(tmp, rpg, player);
+            check_interactions_objects(tmp, rpg);
         tmp = tmp->next;
     }
 }
 
-void check_interactions_other_maps(rpg_t *rpg, player_t *player)
+void check_interactions_other_maps(rpg_t *rpg)
 {
     map_t *map = rpg->maps;
 
@@ -65,7 +64,7 @@ void check_interactions_other_maps(rpg_t *rpg, player_t *player)
             map = map->next;
             continue;
         }
-        check_interactions_map(player, map, rpg);
+        check_interactions_map(map, rpg);
         map = map->next;
     }
 }

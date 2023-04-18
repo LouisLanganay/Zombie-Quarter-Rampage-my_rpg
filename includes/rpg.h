@@ -58,23 +58,14 @@
     #define HEART_SOUND_ID 19
     #define PIECE_SOUND_PATH "resources/sounds/piece.ogg"
     #define PIECE_SOUND_ID 20
+    #define MUSICIAN_SOUND_PATH "resources/sounds/tloumusician.ogg"
+    #define MUSICIAN_SOUND_ID 21
+    #define TALKIEFR_SOUND_PATH "resources/sounds/talkie_fr.ogg"
+    #define TALKIEFR_SOUND_ID 22
+    #define TALKIEEN_SOUND_PATH "resources/sounds/talkie_en.ogg"
+    #define TALKIEEN_SOUND_ID 23
 
     #define DIALOGUE_CHOICE_TIMEOUT (seconds < 1)
-
-    #define RGWW rpg->glib->window->window
-    #define RPA rpg->player->assets
-    #define RGWW rpg->glib->window->window
-    #define RGW rpg->glib->window
-    #define RPK rpg->player->keys
-    #define RPH rpg->player->hitbox
-    #define RSG rpg->settings->game_language
-    #define PA player->assets
-    #define RSNI rpg->save->npc_interactions
-    #define RPAQ rpg->player->assets->quest_icons
-    #define RM rpg->menu_key
-    #define RP rpg->player
-    #define RSV rpg->settings->volume
-    #define RPI rpg->player->inventory
 
     #define RS_RAIN "resources/shader/rain.frag"
     #define RS_BLOOD "resources/shader/blood.frag"
@@ -414,6 +405,21 @@
         sfRectangleShape *hp_bar;
     } zombies_t;
 
+    #define RGWW rpg->glib->window->window
+    #define RPA rpg->player->assets
+    #define RGWW rpg->glib->window->window
+    #define RGW rpg->glib->window
+    #define RPK rpg->player->keys
+    #define RPH rpg->player->hitbox
+    #define RSG rpg->settings->game_language
+    #define PA player->assets
+    #define RSNI rpg->save->npc_interactions
+    #define RPAQ rpg->player->assets->quest_icons
+    #define RM rpg->menu_key
+    #define RP rpg->player
+    #define RSV rpg->settings->volume
+    #define RPI rpg->player->inventory
+
     #define windoww rpg->glib->window->window
     #define ZOMBIE_0 "resources/assets/combat/zombie_0.png"
     #define ZOMBIE_1 "resources/assets/combat/zombie_1.png"
@@ -483,8 +489,8 @@
     #define sfs sfTime_asSeconds
     void cbt_draw_player(rpg_t *rpg);
     void cbt_change_player_rect(player_t *player);
-    void wave(char **wave, rpg_t *rpg, zombies_t **zombies);
-    void insert_zombies_coord(rpg_t *rpg, zombies_t **list, sfVector2f pos);
+    void wave(char **wave, zombies_t **zombies);
+    void insert_zombies_coord(zombies_t **list, sfVector2f pos);
     void swap_status_anim_cbt(zombies_t *l);
     void swap_status_anim_move(zombies_t *l);
     void swap_status_anim_dead(zombies_t *l);
@@ -576,6 +582,7 @@
     /* VIEW */
     void set_view_on_player(rpg_t *rpg);
     void zoom_view(rpg_t *rpg, float value, float time);
+    void reset_view(rpg_t *rpg);
 
     /* PLAYER */
     void check_game_lost(rpg_t *rpg);
@@ -593,7 +600,7 @@
         rpg_t *rpg
     );
     void check_interactions(player_t *player, map_t *map, rpg_t *rpg);
-    void check_interactions_other_maps(rpg_t *rpg, player_t *player);
+    void check_interactions_other_maps(rpg_t *rpg);
     keyboard_images_t *get_keyboard_array(void);
     void hunger_lost(rpg_t *rpg);
 
@@ -662,6 +669,8 @@
     void food(void *);
     void c_gaz(rpg_t *rpg, tiled_object_t *obj);
     void annia_give_heal(void *main);
+    void s_musician_exit(rpg_t *rpg, sfVector2f pos);
+    void s_musician(rpg_t *rpg, sfVector2f pos);
     void jack(rpg_t *rpg, sfVector2f pos);
     void s_radiation(rpg_t *rpg, sfVector2f pos);
     void s_radiation_exit(rpg_t *rpg, sfVector2f pos);

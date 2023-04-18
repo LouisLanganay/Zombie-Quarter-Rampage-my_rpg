@@ -10,6 +10,10 @@
 void talkie(void *main)
 {
     rpg_t *rpg = (rpg_t *)main;
+    if (RSG == FR)
+        gl_play_sound(rpg->glib, TALKIEFR_SOUND_ID);
+    else
+        gl_play_sound(rpg->glib, TALKIEEN_SOUND_ID);
     rpg->narative->str = get_language(rpg, "talkie_str", RSG);
     start_narative_popup(rpg);
     if (quest_is_completed(rpg, "run_away") == 0 &&

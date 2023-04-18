@@ -47,8 +47,6 @@ static void reset_clocks(rpg_t *rpg, inv_popup_t *popup)
 void draw_item_popup(rpg_t *rpg)
 {
     if (RPI->popup == NULL) return;
-    sfVector2f pos = sfView_getCenter(RP->view->view);
-    int mid_char = get_mid_char(RPI->popup->item_name);
     sfText *text = gl_get_text(rpg->glib, INVENTORY_ITEM_POPUP);
 
     reset_clocks(rpg, RPI->popup);

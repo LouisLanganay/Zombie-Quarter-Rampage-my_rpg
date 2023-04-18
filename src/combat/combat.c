@@ -52,7 +52,7 @@ int combat(rpg_t *rpg)
     sfVector2f old_pos = rpg->player->pos;
     fill_combat_rpg(rpg);
     combat_t *combat = init_combat();
-    wave(wave_zombie1(), rpg, &combat->zombies);
+    wave(wave_zombie1(), &combat->zombies);
     while (condition_window && rpg->player->hp > 0) {
         check_sounds(rpg);
         window_manager(rpg);
@@ -65,4 +65,5 @@ int combat(rpg_t *rpg)
     rpg->game_state = GAME;
     sfSprite_setScale(rpg->player->sprite, (sfVector2f) {1, 1});
     rpg->player->pos = old_pos;
+    return (0);
 }
