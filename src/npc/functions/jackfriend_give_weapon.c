@@ -10,7 +10,7 @@
 void jackfriend_give_weapon(void *main)
 {
     rpg_t *rpg = (rpg_t *)main;
-    remove_itemid_inventory(rpg, 31);
+    remove_itemid_inventory(rpg, 31, 1);
     stop_quest(rpg, "jack_friend");
     add_item_to_inventory(74, rpg);
 }

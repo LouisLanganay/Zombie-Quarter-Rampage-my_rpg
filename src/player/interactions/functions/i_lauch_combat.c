@@ -19,7 +19,7 @@ void i_lauch_combat(rpg_t *rpg, sfVector2f pos)
             start_narative_popup(rpg);
         } else {
             rpg->combat_history->i_lauch_combat1_status = 1;
-            remove_itemid_inventory(rpg, 110);
+            remove_itemid_inventory(rpg, 110, 1);
             combat(rpg);
         }
     }
