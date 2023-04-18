@@ -155,6 +155,7 @@
         inv_popup_action_t action;
         sfClock *clock;
         sfClock *clock2;
+        int posy;
         struct inv_popup_s *next;
     } inv_popup_t;
 

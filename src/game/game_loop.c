@@ -16,6 +16,8 @@ static void disables_buttons(rpg_t *rpg)
     gl_button_change_state(BTN_LOAD, rpg->glib->buttons, sfTrue);
     gl_button_change_state(BTN_SEETING, rpg->glib->buttons, sfTrue);
     gl_button_change_state(BTN_QUIT, rpg->glib->buttons, sfTrue);
+    gl_button_change_state(BTN_CHECK1, rpg->glib->buttons, sfTrue);
+    gl_button_change_state(BTN_CHECK2, rpg->glib->buttons, sfTrue);
 }
 
 static void game_loop_functions(rpg_t *rpg)

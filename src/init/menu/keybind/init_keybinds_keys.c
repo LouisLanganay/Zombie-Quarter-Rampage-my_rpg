@@ -65,4 +65,5 @@ void init_keybinds_keys(rpg_t *rpg)
     init_keybinds_keys_down(rpg);
     init_keybinds_keys_left(rpg);
     init_keybinds_keys_right(rpg);
+    init_keybinds_otherkeys(rpg);
 }

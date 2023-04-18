@@ -14,19 +14,17 @@ static void draw_item_popup_annimate(rpg_t *rpg)
     sfText *text = gl_get_text(rpg->glib, INVENTORY_ITEM_POPUP);
     time_t time = sfClock_getElapsedTime(RPI->popup->clock).microseconds;
     float seconds = time / 1000000.0;
-    int posy = sfText_getPosition(text).y;
+    int posy = (sfView_getCenter(RP->view->view).y + 160) - RPI->popup->posy;
 
     if (seconds > 0.001) {
-        if (posy > pos.y + 140) {
-            sfText_setPosition(text, (sfVector2f){pos.x - mc * 2.65, posy - 1});
-            sfClock_restart(RPI->popup->clock);
-        }
+        if (RPI->popup->posy < 20)
+            RPI->popup->posy += 1;
+        sfClock_restart(RPI->popup->clock);
     }
-    posy = sfText_getPosition(text).y;
     sfText_setPosition(text, (sfVector2f){pos.x - mc * 2.65, posy});
     time = sfClock_getElapsedTime(RPI->popup->clock2).microseconds;
     seconds = time / 1000000.0;
-    if ((seconds > 3 && RPI->popup->next == NULL) ||
+    if ((seconds > 4 && RPI->popup->next == NULL) ||
         (seconds > 1.5 && RPI->popup->next != NULL))
         remove_first_item_popup(rpg);
 }

@@ -58,4 +58,5 @@ void draw_menu_keys(rpg_t *rpg)
     draw_menu_keys_down(rpg);
     draw_menu_keys_left(rpg);
     draw_menu_keys_right(rpg);
+    draw_other_keys(rpg);
 }

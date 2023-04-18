@@ -708,6 +708,7 @@
     void init_background(rpg_t *rpg);
     void init_keybinds_keys(rpg_t *rpg);
     void draw_menu_keys(rpg_t *rpg);
+    void draw_other_keys(rpg_t *rpg);
     void init_saves_buttons(rpg_t *rpg);
     void draw_saves_menu(rpg_t *rpg);
     void init_saves_texts(rpg_t *rpg);
@@ -759,6 +760,7 @@
     void init_quests(rpg_t *rpg);
     void init_player(rpg_t *rpg);
     void init_popup_dialogue(rpg_t *rpg);
+    void init_keybinds_otherkeys(rpg_t *rpg);
     void init_glib(rpg_t *rpg);
     void init_game_sounds(rpg_t *rpg);
     void init_npcs(map_t *map, char *path, rpg_t *rpg);
