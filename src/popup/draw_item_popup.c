@@ -10,7 +10,7 @@
 static void draw_item_popup_annimate(rpg_t *rpg)
 {
     sfVector2f pos = sfView_getCenter(RP->view->view);
-    int mid_char = get_mid_char(RPI->popup->item_name);
+    int mc = get_mid_char(RPI->popup->item_name);
     sfText *text = gl_get_text(rpg->glib, INVENTORY_ITEM_POPUP);
     time_t time = sfClock_getElapsedTime(RPI->popup->clock).microseconds;
     float seconds = time / 1000000.0;
@@ -18,11 +18,12 @@ static void draw_item_popup_annimate(rpg_t *rpg)
 
     if (seconds > 0.001) {
         if (posy > pos.y + 140) {
-            sfText_setPosition(text,
-            (sfVector2f){pos.x - mid_char * 2.65, posy - 1});
+            sfText_setPosition(text, (sfVector2f){pos.x - mc * 2.65, posy - 1});
             sfClock_restart(RPI->popup->clock);
         }
     }
+    posy = sfText_getPosition(text).y;
+    sfText_setPosition(text, (sfVector2f){pos.x - mc * 2.65, posy});
     time = sfClock_getElapsedTime(RPI->popup->clock2).microseconds;
     seconds = time / 1000000.0;
     if ((seconds > 3.5 && RPI->popup->next == NULL) ||
