@@ -376,7 +376,7 @@
                         "next": "discovery_next_mask_next_end_heal"
                     }
                 ],
-                "function": "remove_mask"
+                "function": null
             },
             {
                 "name": "discovery_next_mask_next_end_weapon",
