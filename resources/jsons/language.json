@@ -4,8 +4,8 @@
         "en": "       |________________________________________________|               |  Survivors of the apocalypse, you are looking  |               |   for food to help you survive? Look no more!  |               | The grocery store located to the left of your  |               |   house has everything you need to survive.    |               |                                                |               | We have a variety of canned, dried or fresh    |               |   foods that will give you the energy you need |               |  to face the challenges of the post-apocalyptic|               |   world. Whether you are looking for fruits,   |               |   vegetables, meat, fish or dairy products,    |               |   we have everything you need.                 |               |________________________________________________|"
     },
     "paper_interact": {
-        "en": "read the paper.",
-        "fr": "lire le papier."
+        "en": "Read the paper.",
+        "fr": "Lire le papier."
     },
     "basement_paper_name": {
         "en": "Find some food",
@@ -52,8 +52,8 @@
         "en": "..."
     },
     "door_key_interact": {
-        "fr": "ouvir la porte.",
-        "en": "open the door."
+        "fr": "Ouvir la porte.",
+        "en": "Open the door."
     },
     "door_key_narative": {
         "fr": "Mince la porte est verouille, peut-etre qu'avec une clef je pourrais l'ouvir.",
@@ -96,12 +96,12 @@
         "en": "Talk"
     },
     "bchest_interact": {
-        "fr": "fouiller dans les caisses.",
+        "fr": "Fouiller dans les caisses.",
         "en": "search the boxes."
     },
     "gaz_interact": {
-        "fr": "ouvir l'armoire.",
-        "en": "open the cupboard."
+        "fr": "Ouvir l'armoire.",
+        "en": "Open the cupboard."
     },
     "empty_gaz": {
         "fr": "Encore une armoire vide...",
@@ -144,16 +144,16 @@
         "en": "Hmmm, this gas mask may be useful to me later."
     },
     "fridge_interact": {
-        "en": "open the fridge.",
-        "fr": "ouvrir le frigo."
+        "en": "Open the fridge.",
+        "fr": "Ouvrir le frigo."
     },
     "empty_fridge": {
         "fr": "Rien d'interessant dans ce frigo. Je devrais aller voir ailleurs.",
         "en": "Nothing interesting in this fridge. I should go look somewhere else."
     },
     "close_paper": {
-        "en": "close the paper.",
-        "fr": "fermer le papier."
+        "en": "Close the paper.",
+        "fr": "Fermer le papier."
     },
     "basement_paper": {
         "fr": "19 Juin 2020 - Cours de biologie                                 Les champignons sont des organismes eucaryotes qui se nourrissent en decomposant la matiere organique, tels que les feuilles mortes et les arbres. Ils sont divises en deux groupes principaux: les champignons a spores et les champignons a mycelium. Les champignons a spores produisent des spores pour se reproduire, tandis que les champignons a mycelium se reproduisent en developpant des reseaux de filaments appeles hyphes. Dans un environnement apocalyptique, il est possible que les champignons jouent un role important dans la survie du joueur. Les champignons comestibles peuvent etre une source de nourriture, tandis que les champignons toxiques ou infectieux peuvent representer un danger pour la sante. Les champignons peuvent egalement etre utilises pour creer des medicaments ou des produits chimiques, en raison de leurs proprietes biologiques uniques.",
@@ -192,15 +192,15 @@
         "fr": "inspecter"
     },
     "house_door_interact_enter": {
-        "en": "enter in the house.",
-        "fr": "entrer dans la maison."
+        "en": "Enter in the house.",
+        "fr": "Entrer dans la maison."
     },
     "house1_door_interact_enter": {
-        "en": "climb the boxes.",
-        "fr": "escalader les caisses."
+        "en": "Climb the boxes.",
+        "fr": "Escalader les caisses."
     },
     "house1_door_interact_leave": {
-        "en": "leave the house.",
+        "en": "Leave the house.",
         "fr": "sortir de la maison."
     },
     "house_cant_leave": {
@@ -212,7 +212,7 @@
         "en": "I'm really hungry, there must be something to eat in the fridge."
     },
     "house_door_interact_leave": {
-        "en": "leave the house.",
+        "en": "Leave the house.",
         "fr": "sortir de la maison."
     },
     "pass_fence_interaction": {
@@ -232,8 +232,8 @@
         "en": "Oh it stinks ! There's nothing in this trash can."
     },
     "resource_interact": {
-        "fr": "ouvir le coffre",
-        "en": "open the chest"
+        "fr": "Ouvir le coffre",
+        "en": "Open the chest"
     },
     "empty_resource": {
         "fr": "J'ai deja ouvert ce coffre, il est vide.",
@@ -241,23 +241,23 @@
     },
     "basement_door_interact_enter": {
         "en": "go to the basement.",
-        "fr": "aller au sous-sol."
+        "fr": "Aller au sous-sol."
     },
     "grocery_door_interact_leave": {
-        "en": "leave the grocery store.",
+        "en": "Leave the grocery store.",
         "fr": "sortir de l'epicerie."
     },
     "grocery_door_interact_enter": {
-        "en": "enter in the grocery store.",
-        "fr": "entrer dans l'epicerie."
+        "en": "Enter in the grocery store.",
+        "fr": "Entrer dans l'epicerie."
     },
     "interact_press__to": {
         "en": "Press          to ",
         "fr": "Appuyez sur        pour "
     },
     "little_girl_interact": {
-        "en": "talk to her.",
-        "fr": "lui parler."
+        "en": "Talk to her.",
+        "fr": "Lui parler."
     },
     "press__to_quit_dialog": {
         "en": "Press             to quit the dialog.",
@@ -364,7 +364,7 @@
         "fr": "Enclume"
     },
     "anvil_description": {
-        "fr": "un outil en metal lourd utilise pour faconner ou marteler des objets metalliques.",
+        "fr": "Un outil en metal lourd utilise pour faconner ou marteler des objets metalliques.",
         "en": "A heavy metal tool used to shape or hammer metal objects."
     },
     "c4_name": {
@@ -380,7 +380,7 @@
         "fr": "Batteries"
     },
     "batteries_description": {
-        "fr": "un dispositif de stockage d'energie electrique qui alimente differents types d'appareils electriques.",
+        "fr": "Un dispositif de stockage d'energie electrique qui alimente differents types d'appareils electriques.",
         "en": "A device for storing electrical energy that powers different types of electrical devices."
     },
     "tournevis_name": {
@@ -388,7 +388,7 @@
         "fr": "Tournevis"
     },
     "tournevis_description": {
-        "fr": "un outil utilise pour serrer ou desserrer les vis et les boulons",
+        "fr": "Un outil utilise pour serrer ou desserrer les vis et les boulons",
         "en": "A tool used to tighten or loosen screws and bolts"
     },
     "coton_name": {
@@ -396,7 +396,7 @@
         "fr": "Coton"
     },
     "coton_description": {
-        "fr": "un tissu leger et doux, utilise pour faire des vetements et des draps.",
+        "fr": "Un tissu leger et doux, utilise pour faire des vetements et des draps.",
         "en": "A light and soft fabric, used to make clothes and sheets."
     },
     "cle_de_porte_name": {
@@ -404,7 +404,7 @@
         "fr": "Cle de porte"
     },
     "cle_de_porte_description": {
-        "fr": "un outil qui permet d'ouvrir ou de fermer une serrure de porte.",
+        "fr": "Un outil qui permet d'ouvrir ou de fermer une serrure de porte.",
         "en": "A tool that allows you to open or close a door lock."
     },
     "boussole_name": {
@@ -412,7 +412,7 @@
         "fr": "Boussole"
     },
     "boussole_description": {
-        "fr": "un instrument qui indique la direction du nord.",
+        "fr": "Un instrument qui indique la direction du nord.",
         "en": "an instrument that indicates the direction of the north."
     },
     "pile_name": {
@@ -420,15 +420,15 @@
         "fr": "Pile"
     },
     "pile_description": {
-        "fr": "un dispositif electrique qui convertit l'energie chimique en energie electrique pour alimenter differents types d'appareils.",
-        "en": "an electrical device that converts chemical energy into electrical energy to power various types of devices."
+        "fr": "Un dispositif electrique qui convertit l'energie chimique en energie electrique pour alimenter differents types d'appareils.",
+        "en": "An electrical device that converts chemical energy into electrical energy to power various types of devices."
     },
     "lampe_torche_name": {
         "en": "Flashlight",
         "fr": "Lampe torche"
     },
     "lampe_torche_description": {
-        "fr": "un dispositif portable qui produit de la lumiere a partir d'une source d'energie electrique.",
+        "fr": "Un dispositif portable qui produit de la lumiere a partir d'une source d'energie electrique.",
         "en": "A portable device that produces light from an electrical power source."
     },
     "sac_name": {
@@ -436,7 +436,7 @@
         "fr": "Sac"
     },
     "sac_description": {
-        "fr": "un conteneur souple pour transporter des objets.",
+        "fr": "Un conteneur souple pour transporter des objets.",
         "en": "A flexible container for carrying objects."
     },
     "fil_a_coudre_name": {
@@ -456,7 +456,7 @@
         "fr": "Boite a outils"
     },
     "boite_a_outils_description": {
-        "fr": "un conteneur pour ranger et transporter des outils.",
+        "fr": "Un conteneur pour ranger et transporter des outils.",
         "en": "A container for storing and carrying tools."
     },
     "bombe_name": {
@@ -465,14 +465,14 @@
     },
     "bombe_description": {
         "fr": "Une bombe explosive.",
-        "en": "an explosive bomb."
+        "en": "An explosive bomb."
     },
     "scie_name": {
         "en": "Saw",
         "fr": "Scie"
     },
     "scie_description": {
-        "fr": "un outil utilise pour couper des materiaux durs.",
+        "fr": "Un outil utilise pour couper des materiaux durs.",
         "en": "A tool used to cut hard materials."
     },
     "marteau_name": {
@@ -480,7 +480,7 @@
         "fr": "Marteau"
     },
     "marteau_description": {
-        "fr": "un outil utilise pour frapper des clous et des clous.",
+        "fr": "Un outil utilise pour frapper des clous et des clous.",
         "en": "A tool used to hit nails and nails."
     },
     "charbon_name": {
@@ -488,7 +488,7 @@
         "fr": "Charbon"
     },
     "charbon_description": {
-        "fr": "un combustible fossile utilise pour produire de l'energie.",
+        "fr": "Un combustible fossile utilise pour produire de l'energie.",
         "en": "A fossil fuel used to produce energy."
     },
     "cadenas_name": {
@@ -496,7 +496,7 @@
         "fr": "Cadenas"
     },
     "cadenas_description": {
-        "fr": "un dispositif qui permet d'ouvrir ou de fermer une serrure.",
+        "fr": "Un dispositif qui permet d'ouvrir ou de fermer une serrure.",
         "en": "A device that allows you to open or close a lock."
     },
     "cle_name": {
@@ -504,7 +504,7 @@
         "fr": "Cle"
     },
     "cle_description": {
-        "fr": "un outil qui permet d'ouvrir ou de fermer une serrure.",
+        "fr": "Un outil qui permet d'ouvrir ou de fermer une serrure.",
         "en": "A tool that allows you to open or close a lock."
     },
     "masque_de_plongee_name": {
@@ -512,7 +512,7 @@
         "fr": "Masque de plongee"
     },
     "masque_de_plongee_description": {
-        "fr": "un dispositif qui permet de respirer sous l'eau.",
+        "fr": "Un dispositif qui permet de respirer sous l'eau.",
         "en": "A device that allows you to breathe underwater."
     },
     "talkie_walkie_name": {
@@ -520,7 +520,7 @@
         "fr": "Talkie walkie"
     },
     "talkie_walkie_description": {
-        "fr": "un dispositif qui permet de communiquer a distance.",
+        "fr": "Un dispositif qui permet de communiquer a distance.",
         "en": "A device that allows you to communicate at a distance."
     },
     "carte": {
@@ -536,7 +536,7 @@
         "fr": "Tente"
     },
     "tente_description": {
-        "fr": "un abri temporaire pour les voyageurs.",
+        "fr": "Un abri temporaire pour les voyageurs.",
         "en": "A temporary shelter for travelers."
     },
     "carte_acces_2_name": {
@@ -552,7 +552,7 @@
         "fr": "Pince"
     },
     "pince_description": {
-        "fr": "un outil utilise pour serrer et couper des objets.",
+        "fr": "Un outil utilise pour serrer et couper des objets.",
         "en": "A tool used to squeeze and cut objects."
     },
     "cutter_name": {
@@ -560,7 +560,7 @@
         "fr": "Cutter"
     },
     "cutter_description": {
-        "fr": "un outil utilise pour couper des objets.",
+        "fr": "Un outil utilise pour couper des objets.",
         "en": "A tool used to cut objects."
     },
     "pelle_name": {
@@ -568,7 +568,7 @@
         "fr": "Pelle"
     },
     "pelle_description": {
-        "fr": "un outil utilise pour creuser.",
+        "fr": "Un outil utilise pour creuser.",
         "en": "A tool used to dig."
     },
     "hache_name": {
@@ -576,7 +576,7 @@
         "fr": "Hache"
     },
     "hache_description": {
-        "fr": "un outil utilise pour couper des arbres.",
+        "fr": "Un outil utilise pour couper des arbres.",
         "en": "A tool used to cut trees."
     },
     "cailloux_name": {
@@ -584,7 +584,7 @@
         "fr": "Cailloux"
     },
     "cailloux_description": {
-        "fr": "un objet naturel utilise pour casser des choses.",
+        "fr": "Un objet naturel utilise pour casser des choses.",
         "en": "A natural object used to break things."
     },
     "cadenas_rouille_name": {
@@ -592,7 +592,7 @@
         "fr": "Cadenas rouille"
     },
     "cadenas_rouille_description": {
-        "fr": "un cadenas qui est devenu rouge et rugueux",
+        "fr": "Un cadenas qui est devenu rouge et rugueux",
         "en": "A lock that has become red and rough"
     },
     "cle_rouille_name": {
@@ -616,7 +616,7 @@
         "fr": "Compas"
     },
     "compas_description": {
-        "fr": "un outil qui permet de se reperer dans un lieu.",
+        "fr": "Un outil qui permet de se reperer dans un lieu.",
         "en": "A tool that allows you to find your way around a place."
     },
     "note_name": {
@@ -640,7 +640,7 @@
         "fr": "Plan de construction"
     },
     "plan_de_construction_description": {
-        "fr": "un plan qui contient des informations.",
+        "fr": "Un plan qui contient des informations.",
         "en": "A plan that contains information."
     },
     "marteau_de_fer_name": {
@@ -648,7 +648,7 @@
         "fr": "Marteau de fer"
     },
     "marteau_de_fer_description": {
-        "fr": "un outil utilise pour casser des choses.",
+        "fr": "Un outil utilise pour casser des choses.",
         "en": "A tool used to break things."
     },
     "cle_outil_name": {
@@ -664,7 +664,7 @@
         "fr": "Pioche"
     },
     "pioche_description": {
-        "fr": "un outil utilise pour creuser la pierre.",
+        "fr": "Un outil utilise pour creuser la pierre.",
         "en": "A tool used to dig down."
     },
     "couteau_pliant_name": {
@@ -672,7 +672,7 @@
         "fr": "Couteau pliant"
     },
     "couteau_pliant_description": {
-        "fr": "un outil utilise pour couper des objets.",
+        "fr": "Un outil utilise pour couper des objets.",
         "en": "A tool used to cut objects."
     },
     "piege_name": {
@@ -680,7 +680,7 @@
         "fr": "Piege"
     },
     "piege_description": {
-        "fr": "un dispositif qui permet de capturer des animaux.",
+        "fr": "Un dispositif qui permet de capturer des animaux.",
         "en": "A device that allows you to capture animals."
     },
     "bouteille_eau_distillee_name": {
@@ -705,7 +705,7 @@
     },
     "bouteille_plastic_vide_description": {
         "fr": "Une bouteille vide.",
-        "en": "an empty bottle."
+        "en": "An empty bottle."
     },
     "comprimes_name": {
         "en": "Pills",
@@ -720,7 +720,7 @@
         "fr": "Tome bleu"
     },
     "tome_bleu_description": {
-        "fr": "un livre qui contient des informations.",
+        "fr": "Un livre qui contient des informations.",
         "en": "A book that contains information."
     },
     "tome_jaune_name": {
@@ -728,7 +728,7 @@
         "fr": "Tome jaune"
     },
     "tome_jaune_description": {
-        "fr": "un livre qui contient des informations.",
+        "fr": "Un livre qui contient des informations.",
         "en": "A book that contains information."
     },
     "tome_rouge_name": {
@@ -736,7 +736,7 @@
         "fr": "Tome rouge"
     },
     "tome_rouge_description": {
-        "fr": "un livre qui contient des informations.",
+        "fr": "Un livre qui contient des informations.",
         "en": "A book that contains information."
     },
     "hachoir_name": {
@@ -744,7 +744,7 @@
         "fr": "Hachoir"
     },
     "hachoir_description": {
-        "fr": "un outil utilise pour couper des objets.",
+        "fr": "Un outil utilise pour couper des objets.",
         "en": "A tool used to cut objects."
     },
     "couteau_de_chasse_name": {
@@ -752,7 +752,7 @@
         "fr": "Couteau de chasse"
     },
     "couteau_de_chasse_description": {
-        "fr": "un outil utilise pour couper.",
+        "fr": "Un outil utilise pour couper.",
         "en": "A tool used to cut."
     },
     "couteau_suisse_name": {
@@ -760,7 +760,7 @@
         "fr": "Couteau suisse"
     },
     "couteau_suisse_description": {
-        "fr": "un outil utilise pour couper.",
+        "fr": "Un outil utilise pour couper.",
         "en": "A tool used to cut."
     },
     "dynamite_name": {
@@ -768,8 +768,8 @@
         "fr": "Dynamite"
     },
     "dynamite_description": {
-        "fr": "un explosif qui peut etre utilise pour creuser.",
-        "en": "an explosive that can be used to dig down."
+        "fr": "Un explosif qui peut etre utilise pour creuser.",
+        "en": "An explosive that can be used to dig down."
     },
     "conserve_name": {
         "en": "Can",
@@ -801,7 +801,7 @@
     },
     "gourde_vide_description": {
         "fr": "Une gourde vide.",
-        "en": "an empty bottle."
+        "en": "An empty bottle."
     },
     "medicaments_name": {
         "en": "Medicines",
@@ -816,7 +816,7 @@
         "fr": "Pansement"
     },
     "pansement_description": {
-        "fr": "un pansement qui peut etre utilise pour soigner des blessures.",
+        "fr": "Un pansement qui peut etre utilise pour soigner des blessures.",
         "en": "A bandage that can be used to treat wounds."
     },
     "sauce_ketchup_name": {
@@ -832,15 +832,15 @@
         "fr": "Acide sulfurique"
     },
     "acide_sulfurique_description": {
-        "fr": "un acide qui peut etre utilise pour creuser.",
-        "en": "an acid that can be used to dig down."
+        "fr": "Un acide qui peut etre utilise pour creuser.",
+        "en": "An acid that can be used to dig down."
     },
     "couteau_name": {
         "en": "Knife",
         "fr": "Couteau"
     },
     "couteau_description": {
-        "fr": "un outil utilise pour couper.",
+        "fr": "Un outil utilise pour couper.",
         "en": "A tool used to cut."
     },
     "grenade_verte_name": {
@@ -872,7 +872,7 @@
         "fr": "Thon"
     },
     "thon_description": {
-        "fr": "un poisson qui peut etre utilise pour manger.",
+        "fr": "Un poisson qui peut etre utilise pour manger.",
         "en": "A fish that can be used to eat."
     },
     "tablette_chocolat_name": {
@@ -889,7 +889,7 @@
     },
     "oeufs_description": {
         "fr": "des oeufs qui peuvent etre utilises pour manger.",
-        "en": "eggs that can be used to eat."
+        "en": "Eggs that can be used to eat."
     },
     "patate_crue_name": {
         "en": "Raw potato",
@@ -920,7 +920,7 @@
         "fr": "Desinfectant"
     },
     "desincfectant_description": {
-        "fr": "un desinfectant qui peut etre utilise pour nettoyer des blessures.",
+        "fr": "Un desinfectant qui peut etre utilise pour nettoyer des blessures.",
         "en": "A disinfectant that can be used to clean wounds."
     },
     "acide_nitrique_name": {
@@ -928,8 +928,8 @@
         "fr": "Acide nitrique"
     },
     "acide_nitrique_description": {
-        "fr": "un acide qui peut etre utilise sur les gens.",
-        "en": "an acid that can be used on people."
+        "fr": "Un acide qui peut etre utilise sur les gens.",
+        "en": "An acid that can be used on people."
     },
     "pistolet_barillet_name": {
         "en": "Pistol with a magazine",
@@ -944,7 +944,7 @@
         "fr": "Pistolet"
     },
     "pistolet_description": {
-        "fr": "un pistolet qui peut etre utilise pour tirer.",
+        "fr": "Un pistolet qui peut etre utilise pour tirer.",
         "en": "A pistol that can be used to shoot."
     },
     "fusil_pompe_name": {
@@ -952,7 +952,7 @@
         "fr": "Fusil a pompe"
     },
     "fusil_pompe_description": {
-        "fr": "un fusil a pompe qui peut etre utilise pour tirer.",
+        "fr": "Un fusil a pompe qui peut etre utilise pour tirer.",
         "en": "A shotgun that can be used to shoot."
     },
     "briquet_name": {
@@ -960,7 +960,7 @@
         "fr": "Briquet"
     },
     "briquet_description": {
-        "fr": "un briquet qui peut etre utilise pour allumer des feux.",
+        "fr": "Un briquet qui peut etre utilise pour allumer des feux.",
         "en": "A lighter that can be used to light fires."
     },
     "sac_main_name": {
@@ -968,7 +968,7 @@
         "fr": "Sac a main"
     },
     "sac_main_description": {
-        "fr": "un sac a main qui peut etre utilise pour stocker des objets.",
+        "fr": "Un sac a main qui peut etre utilise pour stocker des objets.",
         "en": "A backpack that can be used to store items."
     },
     "conserve_rose_name": {
@@ -984,7 +984,7 @@
         "fr": "Citron vert"
     },
     "citron_vert_description": {
-        "fr": "un citron qui peut etre utilise pour manger.",
+        "fr": "Un citron qui peut etre utilise pour manger.",
         "en": "A lemon that can be used to eat."
     },
     "gigot_cru_name": {
@@ -992,7 +992,7 @@
         "fr": "Gigot de mouton cru"
     },
     "gigot_cru_description": {
-        "fr": "un gigot de mouton qui peut etre utilise pour manger, mais peu faire mal au ventre.",
+        "fr": "Un gigot de mouton qui peut etre utilise pour manger, mais peu faire mal au ventre.",
         "en": "A leg of lamb that can be used to eat, but be careful that can make you sick."
     },
     "gigot_name": {
@@ -1000,7 +1000,7 @@
         "fr": "Gigot de mouton"
     },
     "gigot_description": {
-        "fr": "un gigot de mouton qui peut etre utilise pour manger.",
+        "fr": "Un gigot de mouton qui peut etre utilise pour manger.",
         "en": "A leg of lamb that can be used to eat."
     },
     "pilule_violette_name": {
@@ -1016,7 +1016,7 @@
         "fr": "Medikit"
     },
     "medikit_description": {
-        "fr": "un medikit qui peut etre utilise pour se soigner.",
+        "fr": "Un medikit qui peut etre utilise pour se soigner.",
         "en": "A medikit that can be used to heal."
     },
     "seringue_name": {
@@ -1040,7 +1040,7 @@
         "fr": "Chargeur de pistolet"
     },
     "chargeur_pistolet_description": {
-        "fr": "un chargeur de pistolet qui peut etre utilise pour recharger un pistolet.",
+        "fr": "Un chargeur de pistolet qui peut etre utilise pour recharger un pistolet.",
         "en": "A pistol magazine that can be used to reload a pistol."
     },
     "cartouche_pompe_name": {
@@ -1056,7 +1056,7 @@
         "fr": "Bidon d'essence"
     },
     "bidon_essence_description": {
-        "fr": "un bidon d'essence qui peut etre utilise pour faire des feux.",
+        "fr": "Un bidon d'essence qui peut etre utilise pour faire des feux.",
         "en": "A gas can that can be used to make fires."
     },
     "feu_de_camp_name": {
@@ -1064,7 +1064,7 @@
         "fr": "Feu de camp"
     },
     "feu_de_camp_description": {
-        "fr": "un feu de camp qui peut etre utilise pour se rechauffer.",
+        "fr": "Un feu de camp qui peut etre utilise pour se rechauffer.",
         "en": "A campfire that can be used to warm up."
     },
     "chocolat_poudre_name": {
@@ -1072,15 +1072,15 @@
         "fr": "Chocolat en poudre"
     },
     "chocolat_poudre_description": {
-        "fr": "du chocolat en poudre qui peut etre utilise pour manger.",
-        "en": "chocolate powder that can be used to eat."
+        "fr": "Du chocolat en poudre qui peut etre utilise pour manger.",
+        "en": "Chocolate powder that can be used to eat."
     },
     "fil_a_tisser_name": {
         "en": "Spool of thread",
         "fr": "Fil a tisser"
     },
     "fil_a_tisser_description": {
-        "fr": "un fil a tisser qui peut etre utilise pour coudre.",
+        "fr": "Un fil a tisser qui peut etre utilise pour coudre.",
         "en": "A spool of thread that can be used to sew."
     },
     "poisson_cru_name": {
@@ -1088,7 +1088,7 @@
         "fr": "Poisson cru"
     },
     "poisson_cru_description": {
-        "fr": "un poisson qui peut etre utilise pour manger, mais peu faire mal au ventre.",
+        "fr": "Un poisson qui peut etre utilise pour manger, mais peu faire mal au ventre.",
         "en": "A fish that can be used to eat, but be careful that can make you sick."
     },
     "poisson_name": {
@@ -1096,7 +1096,7 @@
         "fr": "Poisson"
     },
     "poisson_description": {
-        "fr": "un poisson qui peut etre utilise pour manger.",
+        "fr": "Un poisson qui peut etre utilise pour manger.",
         "en": "A fish that can be used to eat."
     },
     "pilule_rouge_name": {
@@ -1112,8 +1112,8 @@
         "fr": "Kit d'endurance"
     },
     "kit_endurance_description": {
-        "fr": "un kit d'endurance qui peut etre utilise pour regenerer l'endurance.",
-        "en": "an endurance kit that can be used to heal your endurance."
+        "fr": "Un kit d'endurance qui peut etre utilise pour regenerer l'endurance.",
+        "en": "An endurance kit that can be used to heal your endurance."
     },
     "seringue_endurance_name": {
         "en": "Endurance syringe",
@@ -1121,14 +1121,14 @@
     },
     "seringue_endurance_description": {
         "fr": "Une seringue d'endurance qui peut etre utilisee pour regenerer l'endurance.",
-        "en": "an endurance syringe that can be used to heal your endurance."
+        "en": "An endurance syringe that can be used to heal your endurance."
     },
     "tesson_bouteille_name": {
         "en": "Bottle shard",
         "fr": "Tesson de bouteille"
     },
     "tesson_bouteille_description": {
-        "fr": "un tesson de bouteille qui peut etre utilise pour casser des choses.",
+        "fr": "Un tesson de bouteille qui peut etre utilise pour casser des choses.",
         "en": "A bottle shard that can be used to break things."
     },
     "bouteille_vide_name": {
@@ -1137,14 +1137,14 @@
     },
     "bouteille_vide_description": {
         "fr": "Une bouteille vide qui peut etre utilisee pour faire des feux.",
-        "en": "an empty bottle that can be used to make fires."
+        "en": "An empty bottle that can be used to make fires."
     },
     "cocktail_molotov_name": {
         "en": "Molotov cocktail",
         "fr": "Cocktail Molotov"
     },
     "cocktail_molotov_description": {
-        "fr": "un cocktail Molotov qui peut etre utilise pour faire des feux.",
+        "fr": "Un cocktail Molotov qui peut etre utilise pour faire des feux.",
         "en": "A Molotov cocktail that can be used to make fires."
     },
     "tissu_soie_name": {
@@ -1152,7 +1152,7 @@
         "fr": "Tissu de soie"
     },
     "tissu_soie_description": {
-        "fr": "un tissu fabrique a partir de la fibre naturelle de la soie, il est souvent utilise dans l'industrie textile pour fabriquer des vetements de haute qualite.",
+        "fr": "Un tissu fabrique a partir de la fibre naturelle de la soie, il est souvent utilise dans l'industrie textile pour fabriquer des vetements de haute qualite.",
         "en": "A cloth made from the natural fiber of silk, it is often used in the textile industry to make high-quality clothing."
     },
     "coca_cola_name": {
@@ -1168,15 +1168,15 @@
         "fr": "Chips"
     },
     "chips_description": {
-        "fr": "des chips qui peuvent etre utilisees pour manger.",
-        "en": "chips that can be used to eat."
+        "fr": "Des chips qui peuvent etre utilisees pour manger.",
+        "en": "Chips that can be used to eat."
     },
     "hamecon_name": {
         "en": "Hook",
         "fr": "Hamecon"
     },
     "hamecon_description": {
-        "fr": "un hamecon qui peut etre utilise pour pecher.",
+        "fr": "Un hamecon qui peut etre utilise pour pecher.",
         "en": "A hook that can be used to fish."
     },
     "steak_cru_name": {
@@ -1184,7 +1184,7 @@
         "fr": "Steak cru"
     },
     "steak_cru_description": {
-        "fr": "un morceau de viande de boeuf cru, generalement utilise pour faire cuire un steak a la poele, au barbecue ou au grill.",
+        "fr": "Un morceau de viande de boeuf cru, generalement utilise pour faire cuire un steak a la poele, au barbecue ou au grill.",
         "en": "A piece of raw beef, usually used to cook a steak in a pan, on a barbecue or on a grill."
     },
     "steak_cuit_name": {
@@ -1192,7 +1192,7 @@
         "fr": "Steak cuit"
     },
     "steak_cuit_description": {
-        "fr": "un morceau de viande de boeuf cuit, generalement utilise pour manger.",
+        "fr": "Un morceau de viande de boeuf cuit, generalement utilise pour manger.",
         "en": "A piece of cooked beef, usually used to eat."
     },
     "boite_medoc_name": {
@@ -1208,7 +1208,7 @@
         "fr": "Bandage"
     },
     "bandage_description": {
-        "fr": "un bandage qui peut etre utilise pour se soigner.",
+        "fr": "Un bandage qui peut etre utilise pour se soigner.",
         "en": "A bandage that can be used to heal."
     },
     "seringue_vide_name": {
@@ -1217,14 +1217,14 @@
     },
     "seringue_vide_description": {
         "fr": "Une seringue vide qui peut etre utilisee pour se soigner.",
-        "en": "an empty syringe that can be used to heal."
+        "en": "An empty syringe that can be used to heal."
     },
     "scotch_name": {
         "en": "Scotch",
         "fr": "Scotch"
     },
     "scotch_description": {
-        "fr": "un scotch qui peut etre utilise pour se soigner.",
+        "fr": "Un scotch qui peut etre utilise pour se soigner.",
         "en": "A scotch that can be used to heal."
     },
     "cle_porte_rouille_name": {
@@ -1272,38 +1272,38 @@
         "fr": "Billets"
     },
     "billets_description": {
-        "fr": "des billets qui peuvent etre utilises pour acheter des choses.",
+        "fr": "Des billets qui peuvent etre utilises pour acheter des choses.",
         "en": "bills that can be used to buy things."
     },
     "piece_name": {
-        "en": "coins",
+        "en": "Coins",
         "fr": "piece"
     },
     "piece_description": {
-        "fr": "des pieces qui peuvent etre utilises pour acheter des choses.",
-        "en": "coins that can be used to buy things."
+        "fr": "Des pieces qui peuvent etre utilises pour acheter des choses.",
+        "en": "Coins that can be used to buy things."
     },
-    "destroy_name": {
+    "Destroy_name": {
         "en": "Destroy",
         "fr": "Detruire"
     },
-    "use_name": {
+    "Use_name": {
         "en": "Use",
         "fr": "Utiliser"
     },
     "jack_interact": {
-        "en": "talk to him.",
-        "fr": "lui parler."
+        "en": "Talk to him.",
+        "fr": "Lui parler."
     },
     "jack_discovery": {
         "fr": "Salut, etranger. Bienvenue dans mon humble camp. Tu aimes la musique ?",
         "en": "Hi, stranger. Welcome to my humble camp. Do you like music?"
     },
-    "discovery_yes": {
+    "Discovery_yes": {
         "fr": "Oui, je suppose.",
         "en": "Yes, I guess."
     },
-    "discovery_no": {
+    "Discovery_no": {
         "fr": "Pas vraiment.",
         "en": "Not really."
     },
@@ -1315,11 +1315,11 @@
         "fr": "Oh, c'est dommage. La musique est l'une des seules choses qui me reste dans ce monde pour survivre. J'ai vu beaucoup de choses horribles, je n'ai plus le moral ni l'envie de vivre mais jouer m'aide a garder espoir.",
         "en": "Oh, that's a shame. Music is one of the only things that remains to me in this world to survive. I've seen a lot of horrible things, I have no more morale or desire to live but playing helps me to keep hope. Are you here to listen to me or for something else?"
     },
-    "discovery_listen": {
+    "Discovery_listen": {
         "fr": "L'ecouter",
         "en": "Listen to him"
     },
-    "discovery_notlisten": {
+    "Discovery_notlisten": {
         "fr": "Proposer de l'aide",
         "en": "Offer help"
     },
@@ -1331,7 +1331,7 @@
         "fr": "Merci, mais je vais bien pour l'instant. J'ai trouve cet endroit calme et sur, je peux jouer ma musique en paix. Mais si tu cherches de l'aide, peut-etre que je peux te donner des informations utiles. Que cherches-tu ?",
         "en": "Thank you, but I'm fine for now. I found this quiet and safe place, I can play my music in peace. But if you're looking for help, maybe I can give you some useful information. What are you looking for?"
     },
-    "discovery_nolisten_no": {
+    "Discovery_nolisten_no": {
         "fr": "Refuser l'offre",
         "en": "Refuse the offer"
     },
@@ -1339,11 +1339,11 @@
         "fr": "Eh bien, desole de t'avoir derange je vois que tu m'as pas l'air tres interesse… J'espre que tu trouveras ce que tu cherches. Si jamais tu as besoin d'aide, je suis la pour toi.",
         "en": "Well, sorry to bother you I see you're not very interested... I hope you find what you're looking for. If you ever need help, I'm here for you."
     },
-    "discovery_listen_yes": {
+    "Discovery_listen_yes": {
         "fr": "Ecouter",
         "en": "Listen"
     },
-    "discovery_listen_no": {
+    "Discovery_listen_no": {
         "fr": "Se mefier",
         "en": "Be suspicious"
     },
@@ -1355,7 +1355,7 @@
         "fr": "J'ai perdu il y a quelques temps des effets personnels en explorant une maison abandonnee au sud-ouest, et je suis sur que tu pourrais y trouver un masque a gaz que j'ai perdu. Si tu le retrouve, je pourrais te donner quelque chose en echange.",
         "en": "I lost some personal effects while exploring an abandoned house to the southwest some time ago, and I'm sure you could find a gas mask there that I lost. If you find him, I could give you something in exchange."
     },
-    "discovery_listen_bis_yes": {
+    "Discovery_listen_bis_yes": {
         "fr": "Accepter",
         "en": "Accept"
     },
