@@ -521,6 +521,7 @@
     char *get_language(rpg_t *rpg, char *name, language_type_t language);
 
     /* SAVE */
+    void reset_a_save(rpg_t *rpg);
     int load_settings(rpg_t *rpg, parsed_data_t *data);
     int load_game(rpg_t *rpg, parsed_data_t *data);
     int load_save(rpg_t *rpg, char *path);

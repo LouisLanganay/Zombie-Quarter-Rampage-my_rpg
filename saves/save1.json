@@ -22,20 +22,20 @@
 	},
 	"player": {
 		"pos": {
-			"x": 1100,
-			"y": 1375
+			"x": 305,
+			"y": 150
 		},
 		"hp": 100,
-		"hunger": 55,
+		"hunger": 75,
 		"inventory": {
 			"items": [
 				8,
 				9,
 				42,
-				64,
-				66,
-				54,
-				20,
+				-1,
+				-1,
+				-1,
+				-1,
 				-1,
 				-1,
 				-1,
@@ -49,27 +49,21 @@
 		}
 	},
 	"game": {
-		"actual_map": "resources/maps/main_map.json"
+		"actual_map": "resources/maps/player_basement.json"
 	},
 	"game_timeline": {
 		"soda": -1,
 		"npc_interactions": [
-			"npc",
-			"Jack"
+			"npc"
 		],
 		"quests_in_progress": [
-			"quest",
-			"jack_quest"
+			"quest"
 		],
 		"quests_completed": [
-			"quest",
-			"go_to_annia",
-			"basement_paper"
+			"quest"
 		],
 		"chests_opened": [
-			"chest",
-			"c_fridge",
-			"c_talki"
+			"chest"
 		]
 	}
 }

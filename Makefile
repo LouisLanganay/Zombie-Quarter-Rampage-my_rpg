@@ -329,6 +329,7 @@ SRC += chest_is_opened.c
 SRC += i_end.c
 SRC += draw_game_win_screen.c
 SRC += init_game_win_screen.c
+SRC += reset_a_save.c
 
 
 

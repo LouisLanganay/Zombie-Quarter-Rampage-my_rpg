@@ -57,5 +57,6 @@ void draw_game_win_screen(rpg_t *rpg)
         rpg->game_state = MENU;
         sfRenderWindow_setView(RGWW, sfRenderWindow_getDefaultView(RGWW));
         sfClock_restart(rpg->player->game_win->clock);
+        reset_a_save(rpg);
     }
 }
