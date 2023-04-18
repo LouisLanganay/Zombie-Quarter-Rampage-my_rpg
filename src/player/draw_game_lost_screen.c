@@ -58,5 +58,6 @@ void draw_game_lost_screen(rpg_t *rpg)
         rpg->game_state = MENU;
         sfRenderWindow_setView(RGWW, sfRenderWindow_getDefaultView(RGWW));
         sfClock_restart(rpg->player->game_lost->clock);
+        reset_a_save(rpg);
     }
 }

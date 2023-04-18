@@ -21,5 +21,5 @@ void heal(void *main)
         RP->hp += 20;
     if (RP->hp > 100)
         RP->hp = 100;
-    remove_item_to_inventory(rpg, RP->inventory->pos);
+    remove_item_to_inventory(rpg, RP->inventory->pos, 0);
 }

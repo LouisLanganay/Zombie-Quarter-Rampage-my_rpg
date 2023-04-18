@@ -27,6 +27,7 @@
     #define SPLASH_SCREEN_TEXT1 9999
     #define SPLASH_SCREEN_TEXT2 10001
     #define LOST_TEXT 10002
+    #define WIN_TEXT 10402
 
     #define EVENT_WINDOW_CLOSE 1
     #define EVENT_INVENTORY_OPEN 454545
@@ -315,7 +316,8 @@
         GAME,
         COMBAT,
         PAUSE,
-        GAME_LOST
+        GAME_LOST,
+        GAME_WIN
     } game_state_t;
 
     typedef struct combat_history_s {
@@ -519,6 +521,7 @@
     char *get_language(rpg_t *rpg, char *name, language_type_t language);
 
     /* SAVE */
+    void reset_a_save(rpg_t *rpg);
     int load_settings(rpg_t *rpg, parsed_data_t *data);
     int load_game(rpg_t *rpg, parsed_data_t *data);
     int load_save(rpg_t *rpg, char *path);
@@ -580,6 +583,7 @@
     void draw_game_lost_screen(rpg_t *rpg);
     void *key_pressed(rpg_t *rpg);
     void draw_player(rpg_t *rpg);
+    void draw_game_win_screen(rpg_t *rpg);
     void change_player_rect(player_t *player);
     void check_player_moovment(player_t *player, map_t *map, rpg_t *rpg);
     int check_colisions(
@@ -595,7 +599,7 @@
 
     /* INVENTORY*/
     int add_item_to_inventory(int id, rpg_t *rpg);
-    int remove_item_to_inventory(rpg_t *rpg, int pos);
+    int remove_item_to_inventory(rpg_t *rpg, int pos, int force);
     int add_item_to_inventory_pos(rpg_t *rpg, int pos, int id);
     void handle_inventory_system(rpg_t *rpg);
     item_func_t *get_items_functions_arr(void);
@@ -603,12 +607,13 @@
     void handle_drop_use_button(rpg_t *rpg);
     char *get_item_name(int id);
     void draw_item_popup(rpg_t *rpg);
-    int remove_itemid_inventory(rpg_t *rpg, int item_id);
+    int remove_itemid_inventory(rpg_t *rpg, int item_id, int force);
     int check_if_items_is_here(rpg_t *rpg, int id);
 
     /* CHEST */
     chests_t *get_chests_array(void);
     void check_chests(player_t *player, map_t *map, rpg_t *rpg);
+    int chest_is_opened(rpg_t *rpg, char *chest_name);
 
     /* NPC */
     npc_t *get_npc(map_t *map, char *name);
@@ -643,6 +648,7 @@
     void jackfriend_give_heal(void *main);
     void check_if_gaz_mask(void *);
     void talkie(void *main);
+    void i_end(rpg_t *rpg, sfVector2f pos);
     void c_talki(rpg_t *rpg, tiled_object_t *obj);
     void remove_mask(void *main);
     void jack_friend(rpg_t *rpg, sfVector2f pos);
@@ -702,6 +708,7 @@
     void init_background(rpg_t *rpg);
     void init_keybinds_keys(rpg_t *rpg);
     void draw_menu_keys(rpg_t *rpg);
+    void draw_other_keys(rpg_t *rpg);
     void init_saves_buttons(rpg_t *rpg);
     void draw_saves_menu(rpg_t *rpg);
     void init_saves_texts(rpg_t *rpg);
@@ -728,9 +735,6 @@
         inv_popup_action_t action
     );
 
-    /* FPS */
-    void print_framerate(void);
-
 
     /* EVENTS */
     void e_resume_btn(int id, void *main);
@@ -756,6 +760,7 @@
     void init_quests(rpg_t *rpg);
     void init_player(rpg_t *rpg);
     void init_popup_dialogue(rpg_t *rpg);
+    void init_keybinds_otherkeys(rpg_t *rpg);
     void init_glib(rpg_t *rpg);
     void init_game_sounds(rpg_t *rpg);
     void init_npcs(map_t *map, char *path, rpg_t *rpg);
@@ -777,6 +782,7 @@
     void init_inventory_popup(rpg_t *rpg);
     void init_player_assets(player_t *player);
     void init_rpg(rpg_t *rpg, int ac, char **av);
+    void init_game_win_screen(player_t *player, rpg_t *rpg);
     void init_popup_interaction(rpg_t *rpg);
     void init_player_items_packs(player_t *player);
     void init_quest_assets(rpg_t *rpg);

@@ -7,7 +7,7 @@
 	},
 	"settings": {
 		"game_language": "en",
-		"window_mode": 1,
+		"window_mode": 0,
 		"keys": {
 			"up": 25,
 			"down": 18,
@@ -52,6 +52,7 @@
 		"actual_map": "resources/maps/player_basement.json"
 	},
 	"game_timeline": {
+		"soda": -1,
 		"npc_interactions": [
 			"npc"
 		],

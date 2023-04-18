@@ -25,7 +25,6 @@ static void fill_combat_rpg(rpg_t *rpg)
 
 static void window_manager(rpg_t *rpg)
 {
-    print_framerate();
     sfRenderWindow_clear(rpg->glib->window->window, sfBlack);
     gl_draw_sprite(rpg->glib, 1);
     gl_check_events(rpg->glib->window, rpg->glib->events, rpg);

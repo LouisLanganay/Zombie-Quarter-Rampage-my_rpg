@@ -22,21 +22,6 @@ static void init_main_menu_quit(rpg_t *rpg)
     gl_create_button(rpg->glib, my_btn);
 }
 
-static void init_main_menu_start(rpg_t *rpg)
-{
-    buttons_t *my_btn = malloc(sizeof(buttons_t));
-    my_btn->id = BTN_START;
-    my_btn->pos = (sfVector2f){ rpg->glib->window->mode.width / 7,
-    rpg->glib->window->mode.height / 1.65};
-    my_btn->rect = (sfIntRect){0, 0, 69.2, 72};
-    my_btn->call_action = e_start_game;
-    my_btn->sprite = sfSprite_create();
-    my_btn->texture = sfTexture_createFromFile(BTN_PATH_PLAY, NULL);
-    my_btn->sb_hover = sfSoundBuffer_createFromFile(BTN_HOVER_SOUND);
-    my_btn->sb_click = sfSoundBuffer_createFromFile(BTN_CLICK_SOUND);
-    gl_create_button(rpg->glib, my_btn);
-}
-
 static void init_main_menu_resume(rpg_t *rpg)
 {
     buttons_t *my_btn = malloc(sizeof(buttons_t));
@@ -75,7 +60,6 @@ void init_main_menu(rpg_t *rpg)
     init_backgroound(rpg);
     init_buttons_langage(rpg);
     init_main_menu_quit(rpg);
-    init_main_menu_start(rpg);
     init_main_menu_resume(rpg);
     init_main_menu_seeting(rpg);
     init_settings_menu(rpg);

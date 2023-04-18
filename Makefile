@@ -54,6 +54,7 @@ VPATH += src/menu/ingame
 VPATH += src/lore
 VPATH += src/sounds
 VPATH += src/map/load
+VPATH += src/map/edit
 VPATH += src/map/draw
 VPATH += src/utils
 VPATH += src/view
@@ -97,7 +98,6 @@ SRC += get_interactions_array.c
 SRC += inte_test.c
 SRC += i_chest.c
 SRC += load_tilesets.c
-SRC += print_framerate.c
 SRC += draw_layer_by_class.c
 SRC += draw_layer_by_order.c
 SRC += e_key_pressed.c
@@ -325,7 +325,13 @@ SRC += load_game_timeline.c
 SRC += save_game_timeline.c
 SRC += c_talki.c
 SRC += talkie.c
-
+SRC += chest_is_opened.c
+SRC += i_end.c
+SRC += draw_game_win_screen.c
+SRC += init_game_win_screen.c
+SRC += reset_a_save.c
+SRC += init_keybinds_otherkeys.c
+SRC += draw_other_keys.c
 
 
 INC_DIR 	:= includes
