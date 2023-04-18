@@ -16,4 +16,5 @@ void save(rpg_t *rpg)
     save_quests_completed(rpg);
     save_npc_interactions(rpg);
     save_chests_opened(rpg);
+    save_game_timeline(rpg);
 }

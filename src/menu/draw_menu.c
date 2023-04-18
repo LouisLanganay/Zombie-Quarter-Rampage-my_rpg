@@ -84,14 +84,14 @@ void draw_menu(rpg_t *rpg)
         gl_draw_button(BTN_LOAD, rpg->glib->buttons, rpg->glib->window);
     }
     gl_draw_button(BTN_SEETING, rpg->glib->buttons, rpg->glib->window);
+    if (rpg->game_state == PAUSE)
+        draw_escape_menu(rpg);
+    else
+        gl_button_change_state(BTN_SAVEBTN, rpg->glib->buttons, sfTrue);
     if (rpg->menu_save->active == true)
         draw_saves_menu(rpg);
     else
         disable_saves_menu(rpg);
     draw_buttons(rpg);
     if (rpg->menu->active == true) draw_settings(rpg);
-    if (rpg->game_state == PAUSE)
-        draw_escape_menu(rpg);
-    else
-        gl_button_change_state(BTN_SAVEBTN, rpg->glib->buttons, sfTrue);
 }

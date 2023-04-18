@@ -45,6 +45,7 @@ static void init_player_inventory(player_t *player)
     player->inventory->is_data_open = 1;
     player->keys->escape = (p_key_t){0, sfKeyEscape};
     player->keys->last_direction = DOWN;
+    player->soda = -1;
 }
 
 static void init_player_view(player_t *player, rpg_t *rpg)

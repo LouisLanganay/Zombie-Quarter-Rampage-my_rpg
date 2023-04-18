@@ -9,6 +9,7 @@
 
 static void check_if_gaz_mask_yes(rpg_t *rpg)
 {
+    zoom_view(rpg, 0.999, 20);
     change_dialogue(rpg, "discovery_next_mask");
 }
 

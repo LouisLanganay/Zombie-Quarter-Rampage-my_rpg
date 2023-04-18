@@ -100,7 +100,7 @@
         "description": "masque_de_plongee_description"
     },
     "talkie_walkie": {
-        "name": "Talkie-talkie_walkie_name",
+        "name": "talkie_walkie_name",
         "id": 20,
         "description": "talkie_walkie_description"
     },

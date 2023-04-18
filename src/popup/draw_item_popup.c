@@ -26,7 +26,7 @@ static void draw_item_popup_annimate(rpg_t *rpg)
     sfText_setPosition(text, (sfVector2f){pos.x - mc * 2.65, posy});
     time = sfClock_getElapsedTime(RPI->popup->clock2).microseconds;
     seconds = time / 1000000.0;
-    if ((seconds > 3.5 && RPI->popup->next == NULL) ||
+    if ((seconds > 3 && RPI->popup->next == NULL) ||
         (seconds > 1.5 && RPI->popup->next != NULL))
         remove_first_item_popup(rpg);
 }

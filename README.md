@@ -1,3 +1,8 @@
+<p align="center">
+    <img src="https://img.shields.io/badge/Total%20Files-501-blue">
+    <img src="https://img.shields.io/badge/Hours%20Coded-200-blue">
+    <img src="https://img.shields.io/badge/Project%20Duration-4%20weeks-blue">
+</p>
 
 # my_rpg
 

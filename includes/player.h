@@ -193,6 +193,7 @@
         int lore_open;
         int lore_sound_played;
         char *lore_text;
+        int soda;
         inventory_t *inventory;
         game_lost_t *game_lost;
         sfRectangleShape *hitbox;

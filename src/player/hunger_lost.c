@@ -12,7 +12,7 @@ void hunger_lost(rpg_t *rpg)
     time_t time = sfClock_getElapsedTime(RP->hunger_lost).microseconds;
     float seconds = time / 1000000.0;
 
-    if (seconds > 10) {
+    if (seconds > 5) {
         if (RP->hunger > 0)
             RP->hunger -= 1;
         else

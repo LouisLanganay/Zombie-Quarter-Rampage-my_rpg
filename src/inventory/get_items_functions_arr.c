@@ -16,6 +16,7 @@ item_func_t *get_items_functions_arr(void)
     {100, food}, {101, food}, {103, food}, {104, food},
     {44, heal}, {56, heal}, {57, heal}, {81, heal}, {82, heal}, {83, heal},
     {93, heal}, {94, heal}, {95, heal}, {105, heal}, {106, heal},
+    {20, talkie},
     { -1, NULL }
     };
     item_func_t *inte = malloc(sizeof(item_func_t) *

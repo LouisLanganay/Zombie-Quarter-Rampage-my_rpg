@@ -321,6 +321,10 @@ SRC += jackfriend_give_weapon.c
 SRC += c_resource.c
 SRC += c_trashg.c
 SRC += fade_all_sounds.c
+SRC += load_game_timeline.c
+SRC += save_game_timeline.c
+SRC += c_talki.c
+SRC += talkie.c
 
 
 

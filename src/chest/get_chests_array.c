@@ -13,6 +13,7 @@ static const chests_t inte_array[] = {
     {"c_gaz", c_gaz},
     {"c_resources", c_resource},
     {"c_trashg", c_trashg},
+    {"c_talki", c_talki},
     {NULL, NULL}
 };
 

@@ -15,6 +15,10 @@
         "fr": "Je ne devrais pas entrer dans cette maison, cela me semble trop dangereuse.",
         "en": "I should not enter this house, it seems too dangerous."
     },
+    "talkie_str": {
+        "fr": "*Krshhh* A tout les survivants de l'apocalypse, une escoude de militaire est en route pour vous aider. Allez au plus vite au barage du SUD *Krshhh*",
+        "en": "*Krshhh* To all survivors of the apocalypse, a squad of soldiers is on its way to help you. Go as soon as possible to the SUD barrier *Krshhh*"
+    },
     "basement_paper_description": {
         "fr": "Trouver de la nourriture dans votre sous sol. Vous en trouverez surement dans une etagere ou un frigo.",
         "en": "Find some food in your basement. You will probably find some in a shelf or a fridge."
@@ -102,6 +106,18 @@
     "empty_gaz": {
         "fr": "Encore une armoire vide...",
         "en": "Another empty cupboard..."
+    },
+    "empty_talki": {
+        "fr": "J'ai deja fouiller cette caisse et j'avais trouver un talkie walkie.",
+        "en": "I have already searched this box and I had found a walkie talkie."
+    },
+    "run_away_name": {
+        "fr": "La fuite",
+        "en": "The escape"
+    },
+    "run_away_description": {
+        "fr": "Les militaires vous ont donner un lieu de rendez-vous pour vous aider a vous echapper. Vous devez y aller le plus vite possible.",
+        "en": "The military has given you a meeting point point to help you escape. You must go there as soon as possible."
     },
     "note_paper": {
         "fr": "Cher Jules,                                                      Comment vas-tu mon petit-fils adore ? J'espere que tu vas bien et que tu profites bien de ta vie. Je t'ecris cette lettre pour te donner de mes nouvelles. De mon cote, tout va bien ici a la maison de retraite. Mes amis et moi sommes en bonne sante et nous profitons des activites proposees par le personnel. Nous avons recemment organise une journee de jeux de societe, c'etait tres amusant ! J'ai meme gagne une partie de Scrabble. Il fait tres beau en ce moment et j'aime m'asseoir sur mon balcon pour profiter du soleil. Je vois souvent des enfants jouer dans le parc en face de la maison de retraite, c'est tres agreable. Je suis heureuse de voir que la vie continue malgre les difficultes. Je t'embrasse tres fort mon petit-fils adore et je te souhaite une belle journee. Ta grand-mere qui t'aime, Marie",

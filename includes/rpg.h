@@ -531,6 +531,8 @@
     void save_quests_in_progress(rpg_t *rpg);
     void save_player(rpg_t *rpg);
     void save(rpg_t *rpg);
+    void save_game_timeline(rpg_t *rpg);
+    int load_game_timeline(rpg_t *rpg, parsed_data_t *data);
     int load_quests_completed(rpg_t *rpg, parsed_data_t *data);
     void save_quests_completed(rpg_t *rpg);
     int load_chests_opened(rpg_t *rpg, parsed_data_t *data);
@@ -640,6 +642,8 @@
     void jackfriend_give_weapon(void *main);
     void jackfriend_give_heal(void *main);
     void check_if_gaz_mask(void *);
+    void talkie(void *main);
+    void c_talki(rpg_t *rpg, tiled_object_t *obj);
     void remove_mask(void *main);
     void jack_friend(rpg_t *rpg, sfVector2f pos);
     void npc_give_nothing(void *main);

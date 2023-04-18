@@ -31,6 +31,7 @@ void e_open_inventory(window_t *window, void *main)
     (void)window;
     rpg_t *rpg = (rpg_t *)main;
 
+    if (rpg->game_state != GAME) return;
     if (sfKeyboard_isKeyPressed(rpg->player->keys->inventory.key) == sfTrue) {
         gl_play_sound(rpg->glib, INV_SOUND_ID);
         if (RPI->is_open == 0)
