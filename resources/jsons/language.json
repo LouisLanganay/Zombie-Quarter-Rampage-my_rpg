@@ -56,8 +56,8 @@
         "en": "..."
     },
     "door_key_interact": {
-        "fr": "Ouvir la porte.",
-        "en": "Open the door."
+        "fr": "ouvir la porte.",
+        "en": "open the door."
     },
     "door_key_narative": {
         "fr": "Mince la porte est verouille, peut-etre qu'avec une clef je pourrais l'ouvir.",
@@ -1291,11 +1291,11 @@
         "fr": "Des pieces qui peuvent etre utilises pour acheter des choses.",
         "en": "Coins that can be used to buy things."
     },
-    "Destroy_name": {
+    "destroy_name": {
         "en": "Destroy",
         "fr": "Detruire"
     },
-    "Use_name": {
+    "use_name": {
         "en": "Use",
         "fr": "Utiliser"
     },
@@ -1307,11 +1307,11 @@
         "fr": "Salut, etranger. Bienvenue dans mon humble camp. Tu aimes la musique ?",
         "en": "Hi, stranger. Welcome to my humble camp. Do you like music?"
     },
-    "Discovery_yes": {
+    "discovery_yes": {
         "fr": "Oui, je suppose.",
         "en": "Yes, I guess."
     },
-    "Discovery_no": {
+    "discovery_no": {
         "fr": "Pas vraiment.",
         "en": "Not really."
     },
@@ -1323,11 +1323,11 @@
         "fr": "Oh, c'est dommage. La musique est l'une des seules choses qui me reste dans ce monde pour survivre. J'ai vu beaucoup de choses horribles, je n'ai plus le moral ni l'envie de vivre mais jouer m'aide a garder espoir.",
         "en": "Oh, that's a shame. Music is one of the only things that remains to me in this world to survive. I've seen a lot of horrible things, I have no more morale or desire to live but playing helps me to keep hope. Are you here to listen to me or for something else?"
     },
-    "Discovery_listen": {
+    "discovery_listen": {
         "fr": "L'ecouter",
         "en": "Listen to him"
     },
-    "Discovery_notlisten": {
+    "discovery_notlisten": {
         "fr": "Proposer de l'aide",
         "en": "Offer help"
     },
@@ -1339,7 +1339,7 @@
         "fr": "Merci, mais je vais bien pour l'instant. J'ai trouve cet endroit calme et sur, je peux jouer ma musique en paix. Mais si tu cherches de l'aide, peut-etre que je peux te donner des informations utiles. Que cherches-tu ?",
         "en": "Thank you, but I'm fine for now. I found this quiet and safe place, I can play my music in peace. But if you're looking for help, maybe I can give you some useful information. What are you looking for?"
     },
-    "Discovery_nolisten_no": {
+    "discovery_nolisten_no": {
         "fr": "Refuser l'offre",
         "en": "Refuse the offer"
     },
@@ -1347,11 +1347,11 @@
         "fr": "Eh bien, desole de t'avoir derange je vois que tu m'as pas l'air tres interesse… J'espre que tu trouveras ce que tu cherches. Si jamais tu as besoin d'aide, je suis la pour toi.",
         "en": "Well, sorry to bother you I see you're not very interested... I hope you find what you're looking for. If you ever need help, I'm here for you."
     },
-    "Discovery_listen_yes": {
+    "discovery_listen_yes": {
         "fr": "Ecouter",
         "en": "Listen"
     },
-    "Discovery_listen_no": {
+    "discovery_listen_no": {
         "fr": "Se mefier",
         "en": "Be suspicious"
     },
@@ -1363,7 +1363,7 @@
         "fr": "J'ai perdu il y a quelques temps des effets personnels en explorant une maison abandonnee au sud-ouest, et je suis sur que tu pourrais y trouver un masque a gaz que j'ai perdu. Si tu le retrouve, je pourrais te donner quelque chose en echange.",
         "en": "I lost some personal effects while exploring an abandoned house to the southwest some time ago, and I'm sure you could find a gas mask there that I lost. If you find him, I could give you something in exchange."
     },
-    "Discovery_listen_bis_yes": {
+    "discovery_listen_bis_yes": {
         "fr": "Accepter",
         "en": "Accept"
     },
