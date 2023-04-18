@@ -17,7 +17,7 @@ static void handle_selection_inv(rpg_t *rpg)
     if (sfKeyboard_isKeyPressed(rpg->player->keys->choice_one.key) == sfTrue
     && RPI->is_data_open == 0) {
         RPI->is_data_open = 1;
-        remove_item_to_inventory(rpg, RP->inventory->pos);
+        remove_item_to_inventory(rpg, RP->inventory->pos, 0);
     }
     if (sfKeyboard_isKeyPressed(rpg->player->keys->choice_two.key) == sfTrue
     && RPI->is_data_open == 0) {

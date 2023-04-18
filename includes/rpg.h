@@ -581,7 +581,7 @@
 
     /* INVENTORY*/
     int add_item_to_inventory(int id, rpg_t *rpg);
-    int remove_item_to_inventory(rpg_t *rpg, int pos);
+    int remove_item_to_inventory(rpg_t *rpg, int pos, int force);
     int add_item_to_inventory_pos(rpg_t *rpg, int pos, int id);
     void handle_inventory_system(rpg_t *rpg);
     item_func_t *get_items_functions_arr(void);
@@ -589,7 +589,7 @@
     void handle_drop_use_button(rpg_t *rpg);
     char *get_item_name(int id);
     void draw_item_popup(rpg_t *rpg);
-    int remove_itemid_inventory(rpg_t *rpg, int item_id);
+    int remove_itemid_inventory(rpg_t *rpg, int item_id, int force);
     int check_if_items_is_here(rpg_t *rpg, int id);
 
     /* CHEST */
