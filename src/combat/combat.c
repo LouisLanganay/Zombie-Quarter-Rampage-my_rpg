@@ -58,8 +58,7 @@ int combat(rpg_t *rpg)
         window_manager(rpg);
         combat_manager(rpg, combat);
         check_shader(rpg);
-        if (rpg->player->hp <= 20)
-            rpg->shader->blood_bool = 1;
+        if (rpg->player->hp <= 20) rpg->shader->blood_bool = 1;
         sfRenderWindow_display(rpg->glib->window->window);
     }
     rpg->game_state = GAME;

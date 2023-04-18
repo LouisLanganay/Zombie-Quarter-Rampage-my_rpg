@@ -335,6 +335,7 @@ SRC += draw_other_keys.c
 SRC += reset_view.c
 SRC += s_musician_exit.c
 SRC += s_musician.c
+SRC += save_save.c
 
 
 INC_DIR 	:= includes

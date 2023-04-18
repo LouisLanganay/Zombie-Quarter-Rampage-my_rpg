@@ -7,7 +7,7 @@
 	},
 	"settings": {
 		"game_language": "en",
-		"window_mode": 0,
+		"window_mode": 1,
 		"keys": {
 			"up": 25,
 			"down": 18,

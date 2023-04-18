@@ -26,7 +26,6 @@ static void reload_saves_texts(rpg_t *rpg)
 
 void save(rpg_t *rpg)
 {
-    parsed_data_t *save = jp_parse(rpg->save->path);
     save_settings(rpg);
     save_game(rpg);
     save_player(rpg);
@@ -35,7 +34,6 @@ void save(rpg_t *rpg)
     save_npc_interactions(rpg);
     save_chests_opened(rpg);
     save_game_timeline(rpg);
-    jp_search(save, "save_file.played")->value.p_bool = b_true;
-    jp_write(rpg->save->path, save);
+    save_save(rpg);
     reload_saves_texts(rpg);
 }
