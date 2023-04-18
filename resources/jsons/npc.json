@@ -270,7 +270,7 @@
                     },
                     {
                         "text": "discovery_listen_bis_no",
-                        "next": "jack_discovery_nolisten_no"
+                        "next": "jack_discovery_nolisten_yes"
                     }
                 ],
                 "function": null
