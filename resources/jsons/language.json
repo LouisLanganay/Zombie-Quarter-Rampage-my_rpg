@@ -1255,6 +1255,10 @@
         "fr": "Une corde qui peut etre utilisee pour faire des noeuds.",
         "en": "A rope that can be used to make knots."
     },
+    "music_paper": {
+        "fr": "Chers survivants. Nous avons recu des informations selon lesquelles une extraction militaire aura lieu dans les prochains jours pour sauver les survivants de cette catastrophe apocalyptique. Cependant, pour des raisons de securite, nous ne pouvons pas divulguer le point de rendez-vous publiquement. Seules les personnes qui disposent d'un talkie-walkie seront informees de l'emplacement exact de l'extraction. Si vous avez un talkie-walkie, gardez-le avec vous en tout temps et ecoutez attentivement les communications pour recevoir les instructions. Nous vous demandons de rester calme et de suivre les instructions de l'extraction militaire pour assurer une sortie sure et reussie. Merci de votre comprehension et de votre cooperation. Sincerement, L'equipe de sauvetage",
+        "en": "Dear survivors. We have received information that a military extraction will take place in the coming days to save the survivors of this apocalyptic disaster. However, for security reasons, we cannot publicly disclose the meeting point. Only people who have a walkie-talkie will be informed of the exact location of the extraction. If you have a walkie-talkie, keep it with you at all times and listen carefully to the communications to receive the instructions. We ask you to stay calm and follow the military extraction instructions to ensure a safe and successful exit. Thank you for your understanding and cooperation. Sincerely, The rescue team"
+    },
     "super_lampe_torche_name": {
         "en": "Super flashlight",
         "fr": "Super lampe torche"
