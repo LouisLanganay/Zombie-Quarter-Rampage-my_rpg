@@ -196,6 +196,7 @@
         int soda;
         inventory_t *inventory;
         game_lost_t *game_lost;
+        game_lost_t *game_win;
         sfRectangleShape *hitbox;
         sfVector2f pos;
         view_t *view;

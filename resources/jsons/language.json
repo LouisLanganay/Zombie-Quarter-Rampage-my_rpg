@@ -15,9 +15,13 @@
         "fr": "Je ne devrais pas entrer dans cette maison, cela me semble trop dangereuse.",
         "en": "I should not enter this house, it seems too dangerous."
     },
+    "house1_cant_leave": {
+        "fr": "Je pense que je devrais fouiller cette maison d'avantage.",
+        "en": "I think I should search this house more."
+    },
     "talkie_str": {
         "fr": "*Krshhh* A tout les survivants de l'apocalypse, une escoude de militaire est en route pour vous aider. Allez au plus vite au barage du SUD *Krshhh*",
-        "en": "*Krshhh* To all survivors of the apocalypse, a squad of soldiers is on its way to help you. Go as soon as possible to the SUD barrier *Krshhh*"
+        "en": "*Krshhh* To all survivors of the apocalypse, a squad of soldiers is on its way to help you. Go as soon as possible to the SOUTH barrier *Krshhh*"
     },
     "basement_paper_description": {
         "fr": "Trouver de la nourriture dans votre sous sol. Vous en trouverez surement dans une etagere ou un frigo.",

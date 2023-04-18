@@ -22,11 +22,11 @@
 	},
 	"player": {
 		"pos": {
-			"x": 100,
-			"y": 200
+			"x": 1100,
+			"y": 1375
 		},
 		"hp": 100,
-		"hunger": 57,
+		"hunger": 55,
 		"inventory": {
 			"items": [
 				8,
@@ -35,7 +35,7 @@
 				64,
 				66,
 				54,
-				-1,
+				20,
 				-1,
 				-1,
 				-1,
@@ -49,7 +49,7 @@
 		}
 	},
 	"game": {
-		"actual_map": "resources/maps/house1.json"
+		"actual_map": "resources/maps/main_map.json"
 	},
 	"game_timeline": {
 		"soda": -1,
@@ -68,7 +68,8 @@
 		],
 		"chests_opened": [
 			"chest",
-			"c_fridge"
+			"c_fridge",
+			"c_talki"
 		]
 	}
 }

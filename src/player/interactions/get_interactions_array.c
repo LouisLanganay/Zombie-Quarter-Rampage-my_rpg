@@ -31,6 +31,7 @@ static const interactions_t inte_array[] =
     {"Jack", jack, NULL },
     {"Guillaume", jack_friend},
     {"i_lauch_combat", i_lauch_combat, NULL},
+    {"i_end", i_end, NULL},
     {NULL, NULL, NULL}
 };
 

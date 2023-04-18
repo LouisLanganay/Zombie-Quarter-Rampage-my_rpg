@@ -27,6 +27,7 @@
     #define SPLASH_SCREEN_TEXT1 9999
     #define SPLASH_SCREEN_TEXT2 10001
     #define LOST_TEXT 10002
+    #define WIN_TEXT 10402
 
     #define EVENT_WINDOW_CLOSE 1
     #define EVENT_INVENTORY_OPEN 454545
@@ -315,7 +316,8 @@
         GAME,
         COMBAT,
         PAUSE,
-        GAME_LOST
+        GAME_LOST,
+        GAME_WIN
     } game_state_t;
 
     typedef struct combat_history_s {
@@ -580,6 +582,7 @@
     void draw_game_lost_screen(rpg_t *rpg);
     void *key_pressed(rpg_t *rpg);
     void draw_player(rpg_t *rpg);
+    void draw_game_win_screen(rpg_t *rpg);
     void change_player_rect(player_t *player);
     void check_player_moovment(player_t *player, map_t *map, rpg_t *rpg);
     int check_colisions(
@@ -609,6 +612,7 @@
     /* CHEST */
     chests_t *get_chests_array(void);
     void check_chests(player_t *player, map_t *map, rpg_t *rpg);
+    int chest_is_opened(rpg_t *rpg, char *chest_name);
 
     /* NPC */
     npc_t *get_npc(map_t *map, char *name);
@@ -643,6 +647,7 @@
     void jackfriend_give_heal(void *main);
     void check_if_gaz_mask(void *);
     void talkie(void *main);
+    void i_end(rpg_t *rpg, sfVector2f pos);
     void c_talki(rpg_t *rpg, tiled_object_t *obj);
     void remove_mask(void *main);
     void jack_friend(rpg_t *rpg, sfVector2f pos);
@@ -728,9 +733,6 @@
         inv_popup_action_t action
     );
 
-    /* FPS */
-    void print_framerate(void);
-
 
     /* EVENTS */
     void e_resume_btn(int id, void *main);
@@ -777,6 +779,7 @@
     void init_inventory_popup(rpg_t *rpg);
     void init_player_assets(player_t *player);
     void init_rpg(rpg_t *rpg, int ac, char **av);
+    void init_game_win_screen(player_t *player, rpg_t *rpg);
     void init_popup_interaction(rpg_t *rpg);
     void init_player_items_packs(player_t *player);
     void init_quest_assets(rpg_t *rpg);

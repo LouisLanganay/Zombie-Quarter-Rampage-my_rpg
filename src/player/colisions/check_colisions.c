@@ -66,6 +66,11 @@ static int check_all_layers(map_t *map, int index, rpg_t *rpg)
             tmp = tmp->next;
             continue;
         }
+        if (quest_is_in_progress(rpg, "run_away") == 1)
+            if (my_strcmp(tmp->name, "military") == 0) {
+                tmp = tmp->next;
+                continue;
+            }
         if (tmp->data[index] != 0)
             r += get_tile_infos(tmp->data[index] - 1, map, rpg, index);
         tmp = tmp->next;

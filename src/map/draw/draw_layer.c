@@ -18,6 +18,9 @@ void draw_layer(rpg_t *rpg, layer_t *layer)
     int x;
     int y;
 
+    if (quest_is_in_progress(rpg, "run_away") == 1)
+        if (my_strcmp(layer->name, "military") == 0)
+            return;
     for (int i = 0; i < layer->height * layer->width; i++) {
         x = i % layer->width * 16;
         y = i / layer->width * 16;

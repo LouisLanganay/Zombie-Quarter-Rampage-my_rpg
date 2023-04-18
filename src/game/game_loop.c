@@ -40,4 +40,5 @@ void game_loop(rpg_t *rpg)
     hunger_lost(rpg);
     check_game_lost(rpg);
     draw_game_lost_screen(rpg);
+    draw_game_win_screen(rpg);
 }

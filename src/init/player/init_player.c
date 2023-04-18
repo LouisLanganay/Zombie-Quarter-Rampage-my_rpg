@@ -80,4 +80,5 @@ void init_player(rpg_t *rpg)
     init_player_items_packs(player);
     rpg->player = player;
     init_game_lost_screen(player, rpg);
+    init_game_win_screen(player, rpg);
 }
