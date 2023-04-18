@@ -15,9 +15,13 @@ void reset_a_save(rpg_t *rpg)
     parsed_data_t *header = jp_search(def, "save_file")->value.p_obj;
     parsed_data_t *header2 = jp_search(save, "save_file")->value.p_obj;
 
-    jp_search(header, "path")->value.p_str = jp_search(header2, "path")->value.p_str;
-    jp_search(header, "format")->value.p_str = jp_search(header2, "format")->value.p_str;
-    jp_search(header, "name")->value.p_str = jp_search(header2, "name")->value.p_str;
-    jp_search(header, "played")->value.p_bool = jp_search(header2, "played")->value.p_bool;
+    jp_search(header,
+        "path")->value.p_str = jp_search(header2, "path")->value.p_str;
+    jp_search(header,
+        "format")->value.p_str = jp_search(header2, "format")->value.p_str;
+    jp_search(header,
+        "name")->value.p_str = jp_search(header2, "name")->value.p_str;
+    jp_search(header,
+        "played")->value.p_bool = jp_search(header2, "played")->value.p_bool;
     jp_write(rpg->save->path, def);
 }
