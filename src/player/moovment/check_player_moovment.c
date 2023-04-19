@@ -7,6 +7,12 @@
 
 #include "rpg.h"
 
+static int speed(rpg_t *rpg)
+{
+    if (rpg->debug == 1) return 200;
+    return PLAYER_SPEED;
+}
+
 static int check_player_moovment_complex(
     player_t *player,
     map_t *map,
@@ -15,13 +21,13 @@ static int check_player_moovment_complex(
 )
 {
     if (player->keys->down.state == 1 && player->keys->right.state == 1) {
-        if (RIGHT_CONDITION) player->pos.x += 1 * PLAYER_SPEED * seconds;
-        if (DOWN_CONDITION) player->pos.y += 1 * PLAYER_SPEED * seconds;
+        if (RIGHT_CONDITION) player->pos.x += 1 * speed(rpg) * seconds;
+        if (DOWN_CONDITION) player->pos.y += 1 * speed(rpg) * seconds;
         return 1;
     }
     if (player->keys->down.state == 1 && player->keys->left.state == 1) {
-        if (LEFT_CONDITION) player->pos.x -= 1 * PLAYER_SPEED * seconds;
-        if (DOWN_CONDITION) player->pos.y += 1 * PLAYER_SPEED * seconds;
+        if (LEFT_CONDITION) player->pos.x -= 1 * speed(rpg) * seconds;
+        if (DOWN_CONDITION) player->pos.y += 1 * speed(rpg) * seconds;
         return 1;
     }
     return 0;
@@ -35,13 +41,13 @@ static int check_player_moovment_complex_bis(
 )
 {
     if (player->keys->up.state == 1 && player->keys->right.state == 1) {
-        if (RIGHT_CONDITION) player->pos.x += 1 * PLAYER_SPEED * seconds;
-        if (UP_CONDITION) player->pos.y -= 1 * PLAYER_SPEED * seconds;
+        if (RIGHT_CONDITION) player->pos.x += 1 * speed(rpg) * seconds;
+        if (UP_CONDITION) player->pos.y -= 1 * speed(rpg) * seconds;
         return 1;
     }
     if (player->keys->up.state == 1 && player->keys->left.state == 1) {
-        if (LEFT_CONDITION) player->pos.x -= 1 * PLAYER_SPEED * seconds;
-        if (UP_CONDITION) player->pos.y -= 1 * PLAYER_SPEED * seconds;
+        if (LEFT_CONDITION) player->pos.x -= 1 * speed(rpg) * seconds;
+        if (UP_CONDITION) player->pos.y -= 1 * speed(rpg) * seconds;
         return 1;
     }
     return 0;
@@ -55,13 +61,13 @@ void check_player_moovment_simple(
 )
 {
     if (player->keys->up.state == 1)
-        if (UP_CONDITION) player->pos.y -= 1 * PLAYER_SPEED * seconds;
+        if (UP_CONDITION) player->pos.y -= 1 * speed(rpg) * seconds;
     if (player->keys->down.state == 1)
-        if (DOWN_CONDITION) player->pos.y += 1 * PLAYER_SPEED * seconds;
+        if (DOWN_CONDITION) player->pos.y += 1 * speed(rpg) * seconds;
     if (player->keys->left.state == 1)
-        if (LEFT_CONDITION) player->pos.x -= 1 * PLAYER_SPEED * seconds;
+        if (LEFT_CONDITION) player->pos.x -= 1 * speed(rpg) * seconds;
     if (player->keys->right.state == 1)
-        if (RIGHT_CONDITION) player->pos.x += 1 * PLAYER_SPEED * seconds;
+        if (RIGHT_CONDITION) player->pos.x += 1 * speed(rpg) * seconds;
 }
 
 void check_player_moovment(player_t *player, map_t *map, rpg_t *rpg)
