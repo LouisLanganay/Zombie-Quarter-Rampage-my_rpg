@@ -1,6 +1,6 @@
 <p align="center">
     <img src="https://img.shields.io/badge/Total%20Files-501-blue">
-    <img src="https://img.shields.io/badge/Hours%20Coded-200-blue">
+    <img src="https://img.shields.io/badge/Hours%20Coded-290-blue">
     <img src="https://img.shields.io/badge/Project%20Duration-4%20weeks-blue">
 </p>
 
@@ -112,7 +112,7 @@ In game menu
 ## Authors
 
 - [@L.Langanay](https://github.com/LouisLanganay) [![wakatime](https://wakatime.com/badge/user/3372edb3-08ff-4829-807b-29bbe42cf52b/project/548bc92f-b85d-4dde-9e80-3bc440b14d54.svg)](https://wakatime.com/badge/user/3372edb3-08ff-4829-807b-29bbe42cf52b/project/548bc92f-b85d-4dde-9e80-3bc440b14d54)
-- [@V.Peron](https://github.com/ValentinPeron) [![wakatime](https://wakatime.com/badge/user/de2b3b95-0b32-40c8-845a-167e78ff6da7/project/a724ae01-2c07-4959-898c-9df6556e950f.svg)](https://wakatime.com/badge/user/de2b3b95-0b32-40c8-845a-167e78ff6da7/project/a724ae01-2c07-4959-898c-9df6556e950f)
+- [@V.Peron](https://github.com/ValentinPeron) [![wakatime](https://wakatime.com/badge/user/de2b3b95-0b32-40c8-845a-167e78ff6da7/project/a724ae01-2c07-4959-898c-9df6556e950f.svg)](https://wakatime.com/badge/user/de2b3b95-0b32-40c8-845a-167e78ff6da7/project/a724ae01-2c07-4959-898c-9df6556e950f)[![wakatime](https://wakatime.com/badge/user/de2b3b95-0b32-40c8-845a-167e78ff6da7/project/793b766f-8027-4782-b079-339d93892e26.svg)](https://wakatime.com/badge/user/de2b3b95-0b32-40c8-845a-167e78ff6da7/project/793b766f-8027-4782-b079-339d93892e26)
 - [@A.Bost](https://github.com/AugustinBst)
 - [@G.Blaizot](https://github.com/Gaulaume)
 

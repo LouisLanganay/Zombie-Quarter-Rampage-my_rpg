@@ -325,6 +325,7 @@ SRC += load_game_timeline.c
 SRC += save_game_timeline.c
 SRC += c_talki.c
 SRC += talkie.c
+SRC += docu_h.c
 SRC += chest_is_opened.c
 SRC += i_end.c
 SRC += draw_game_win_screen.c
