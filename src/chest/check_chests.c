@@ -53,6 +53,9 @@ void check_chests(player_t *player, map_t *map, rpg_t *rpg)
 {
     layer_t *tmp = map->layers;
 
+    if (rpg->player->inventory->is_open == 1)
+        return;
+
     while (tmp) {
         if (my_strcmp(tmp->type, "objectgroup") == 0 &&
             my_strcmp(tmp->name, "chests") == 0)

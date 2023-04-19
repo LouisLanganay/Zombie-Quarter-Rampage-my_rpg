@@ -71,7 +71,8 @@ void check_player_moovment(player_t *player, map_t *map, rpg_t *rpg)
 
     check_interactions(player, map, rpg);
     check_sounds_interactions(rpg, map);
-    if (seconds < 0.001) return;
+    if (seconds < 0.001)
+        return;
     if (check_player_moovment_complex(player, map, rpg, seconds) == 1) {
         sfClock_restart(player->clock);
         return;

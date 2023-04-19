@@ -4,8 +4,8 @@
         "en": "       |________________________________________________|               |  Survivors of the apocalypse, you are looking  |               |   for food to help you survive? Look no more!  |               | The grocery store located to the left of your  |               |   house has everything you need to survive.    |               |                                                |               | We have a variety of canned, dried or fresh    |               |   foods that will give you the energy you need |               |  to face the challenges of the post-apocalyptic|               |   world. Whether you are looking for fruits,   |               |   vegetables, meat, fish or dairy products,    |               |   we have everything you need.                 |               |________________________________________________|"
     },
     "paper_interact": {
-        "en": "Read the paper.",
-        "fr": "Lire le papier."
+        "en": "read the paper.",
+        "fr": "lire le papier."
     },
     "basement_paper_name": {
         "en": "Find some food",
@@ -196,15 +196,15 @@
         "fr": "inspecter"
     },
     "house_door_interact_enter": {
-        "en": "Enter in the house.",
-        "fr": "Entrer dans la maison."
+        "en": "enter in the house.",
+        "fr": "entrer dans la maison."
     },
     "house1_door_interact_enter": {
-        "en": "Climb the boxes.",
-        "fr": "Escalader les caisses."
+        "en": "climb the boxes.",
+        "fr": "escalader les caisses."
     },
     "house1_door_interact_leave": {
-        "en": "Leave the house.",
+        "en": "leave the house.",
         "fr": "sortir de la maison."
     },
     "house_cant_leave": {
@@ -216,7 +216,7 @@
         "en": "I'm really hungry, there must be something to eat in the fridge."
     },
     "house_door_interact_leave": {
-        "en": "Leave the house.",
+        "en": "leave the house.",
         "fr": "sortir de la maison."
     },
     "pass_fence_interaction": {
@@ -236,8 +236,8 @@
         "en": "Oh it stinks ! There's nothing in this trash can."
     },
     "resource_interact": {
-        "fr": "Ouvir le coffre",
-        "en": "Open the chest"
+        "fr": "ouvir le coffre",
+        "en": "open the chest"
     },
     "empty_resource": {
         "fr": "J'ai deja ouvert ce coffre, il est vide.",
@@ -245,23 +245,23 @@
     },
     "basement_door_interact_enter": {
         "en": "go to the basement.",
-        "fr": "Aller au sous-sol."
+        "fr": "aller au sous-sol."
     },
     "grocery_door_interact_leave": {
-        "en": "Leave the grocery store.",
+        "en": "leave the grocery store.",
         "fr": "sortir de l'epicerie."
     },
     "grocery_door_interact_enter": {
-        "en": "Enter in the grocery store.",
-        "fr": "Entrer dans l'epicerie."
+        "en": "enter in the grocery store.",
+        "fr": "entrer dans l'epicerie."
     },
     "interact_press__to": {
         "en": "Press          to ",
         "fr": "Appuyez sur        pour "
     },
     "little_girl_interact": {
-        "en": "Talk to her.",
-        "fr": "Lui parler."
+        "en": "talk to her.",
+        "fr": "lui parler."
     },
     "press__to_quit_dialog": {
         "en": "Press             to quit the dialog.",
@@ -1300,8 +1300,8 @@
         "fr": "Utiliser"
     },
     "jack_interact": {
-        "en": "Talk to him.",
-        "fr": "Lui parler."
+        "en": "talk to him.",
+        "fr": "lui parler."
     },
     "jack_discovery": {
         "fr": "Salut, etranger. Bienvenue dans mon humble camp. Tu aimes la musique ?",
