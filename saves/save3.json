@@ -64,6 +64,9 @@
 		],
 		"chests_opened": [
 			"chest"
-		]
+		],
+		"combat1": false,
+		"combat2": false,
+		"combat3": false
 	}
 }

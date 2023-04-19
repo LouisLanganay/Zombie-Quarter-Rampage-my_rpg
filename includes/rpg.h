@@ -542,13 +542,14 @@
     void save_quests_in_progress(rpg_t *rpg);
     void save_player(rpg_t *rpg);
     void save(rpg_t *rpg);
+    int load_combats(rpg_t *rpg, parsed_data_t *data);
     void save_game_timeline(rpg_t *rpg);
     int load_game_timeline(rpg_t *rpg, parsed_data_t *data);
     int load_quests_completed(rpg_t *rpg, parsed_data_t *data);
     void save_quests_completed(rpg_t *rpg);
     int load_chests_opened(rpg_t *rpg, parsed_data_t *data);
+    void save_combats(rpg_t *rpg);
     void save_chests_opened(rpg_t *rpg);
-
 
     /* QUESTS */
     void start_dialogue_default(npc_t *npc, rpg_t *rpg);

@@ -337,6 +337,8 @@ SRC += reset_view.c
 SRC += s_musician_exit.c
 SRC += s_musician.c
 SRC += save_save.c
+SRC += load_combats.c
+SRC += save_combats.c
 
 
 INC_DIR 	:= includes
