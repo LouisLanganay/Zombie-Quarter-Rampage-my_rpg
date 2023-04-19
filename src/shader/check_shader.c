@@ -45,11 +45,10 @@ static sfRectangleShape *rect_shader(rpg_t *rpg)
     if (rpg->game_state == GAME) {
         sfRectangleShape_setSize(rect, sfView_getSize(rpg->player->view->view));
         sfRectangleShape_setTexture(rect,
-        sfTexture_createFromFile("resources/shader/void.png", NULL), sfTrue);
-        sfRectangleShape_setPosition(rect, (sfVector2f)
-        {sfView_getCenter(rpg->player->view->view).x -
-        sfView_getSize(rpg->player->view->view).x / 2,
-        sfView_getCenter(rpg->player->view->view).y -
+        sfTexture_createFromFile("resources/shader/void.png", NULL), NULL);
+        sfRectangleShape_setPosition(rect, (sfVector2f) {sfView_getCenter
+        (rpg->player->view->view).x - sfView_getSize(rpg->player->view->view).x
+        / 2, sfView_getCenter(rpg->player->view->view).y -
         sfView_getSize(rpg->player->view->view).y / 2});
     } else {
         sfRectangleShape_setSize(rect, (sfVector2f){1920, 1080});
@@ -57,6 +56,7 @@ static sfRectangleShape *rect_shader(rpg_t *rpg)
         sfTexture_createFromFile("resources/shader/void.png", NULL), sfTrue);
         sfRectangleShape_setPosition(rect, (sfVector2f){0, 0});
     }
+    sfRectangleShape_setFillColor(rect, sfTransparent);
     return (rect);
 }
 
@@ -66,6 +66,14 @@ void check_shader(rpg_t *rpg)
     check_rain(rpg, rect);
     check_blood(rpg, rect);
     check_fade(rpg, rect);
+    if (rpg->shader->torch_bool == 1) {
+        check_torch(rpg);
+        sfShader_setVec2Uniform(rpg->shader->shader_torch,
+        "resolution", (sfVector2f){1960, 1150});
+        sfRenderWindow_drawRectangleShape(rpg->glib->window->window,
+        rect, &rpg->shader->states_torch);
+    }
+
     if (rpg->shader->fade_bool == 0)
         sfClock_restart(rpg->shader->fade_clock);
     sfRectangleShape_destroy(rect);

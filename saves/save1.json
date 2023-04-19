@@ -7,7 +7,7 @@
 	},
 	"settings": {
 		"game_language": "fr",
-		"window_mode": 1,
+		"window_mode": ,
 		"keys": {
 			"up": 25,
 			"down": 18,
@@ -22,19 +22,19 @@
 	},
 	"player": {
 		"pos": {
-			"x": 305,
-			"y": 150
+			"x": 529,
+			"y": 418
 		},
 		"hp": 100,
-		"hunger": 74,
+		"hunger": 68,
 		"inventory": {
 			"items": [
 				8,
 				9,
 				42,
-				-1,
-				-1,
-				-1,
+				64,
+				66,
+				54,
 				-1,
 				-1,
 				-1,
@@ -49,7 +49,7 @@
 		}
 	},
 	"game": {
-		"actual_map": "resources/maps/player_basement.json"
+		"actual_map": "resources/maps/main_map.json"
 	},
 	"game_timeline": {
 		"npc_interactions": [
@@ -57,13 +57,15 @@
 		],
 		"quests_in_progress": [
 			"quest",
-			"basement_paper"
+			"go_to_annia"
 		],
 		"quests_completed": [
-			"quest"
+			"quest",
+			"basement_paper"
 		],
 		"chests_opened": [
-			"chest"
+			"chest",
+			"c_fridge"
 		]
 	}
 }
