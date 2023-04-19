@@ -458,7 +458,7 @@
     (sfView_getCenter(rpg->player->view->view).x - rpg->player->pos.x ) /\
     sfView_getCenter(rpg->player->view->view).x, 1150 + 1080 *\
     (sfView_getCenter(rpg->player->view->view).y - rpg->player->pos.y )\
-    / sfView_getCenter(rpg->player->view->view).y});
+    / sfView_getCenter(rpg->player->view->view).y})
 
     typedef struct combat_s {
         zombies_t *zombies;

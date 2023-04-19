@@ -77,8 +77,9 @@ void check_shader(rpg_t *rpg)
         printf("x: %f, y: %f\n", sfView_getCenter(rpg->player->view->view).x - rpg->player->pos.x, sfView_getCenter(rpg->player->view->view).y - rpg->player->pos.y);
         printf("x: %f, y: %f\n", sfView_getCenter(rpg->player->view->view).x, sfView_getCenter(rpg->player->view->view).y);
         printf("%f\n", (sfView_getCenter(rpg->player->view->view).x - rpg->player->pos.x ) / sfView_getCenter(rpg->player->view->view).x);
-        //sfShader_setVec2Uniform(rpg->shader->shader_torch,
-        //"resolution", (sfVector2f) {1960 - 1920 * (sfView_getCenter(rpg->player->view->view).x - rpg->player->pos.x ) / sfView_getCenter(rpg->player->view->view).x, 1150 + 1080 * (sfView_getCenter(rpg->player->view->view).y - rpg->player->pos.y ) / sfView_getCenter(rpg->player->view->view).y});
+        
+        sfVector2f test = (sfVector2f) {1960 - 1920 * (sfView_getCenter(rpg->player->view->view).x - rpg->player->pos.x ) / sfView_getCenter(rpg->player->view->view).x, 1150 + 1080 * (sfView_getCenter(rpg->player->view->view).y - rpg->player->pos.y ) / sfView_getCenter(rpg->player->view->view).y};
+        printf("x0: %f, y0: %f\n", test.x, test.y);
 
         sfRenderWindow_drawRectangleShape(rpg->glib->window->window, rect, &rpg->shader->states_torch);
     }
