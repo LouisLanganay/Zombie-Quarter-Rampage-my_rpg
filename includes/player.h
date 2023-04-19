@@ -18,7 +18,7 @@
     #define SPAWN_OUT_HOUSE_X 111 * 16
     #define SPAWN_OUT_HOUSE_Y 40 * 16
     #define SPAWN_OUT_BASEMENT_X 8 * 16
-    #define SPAWN_OUT_BASEMENT_Y 9 * 16
+    #define SPAWN_OUT_BASEMENT_Y 9 * 16 - 10
     #define SPAWN_IN_BASEMENT_X 8 * 16
     #define SPAWN_IN_BASEMENT_Y 9 * 16
     #define SPAWN_IN_GROCERY_X 16 * 16
@@ -58,7 +58,7 @@
     #define PLAYER_INTERACT_TEXT 613255
     #define PLAYER_SPRITE_WIDTH 16
     #define PLAYER_SPRITE_HEIGHT 35
-    #define PLAYER_SPEED 200
+    #define PLAYER_SPEED 70
 
     #define PLAYER_DIALOGUE_TEXT 613256
     #define PLAYER_DCHOICE_ONE_TEXT 613257
