@@ -9,8 +9,11 @@
 
 void check_torch(rpg_t *rpg)
 {
-    if (TOPK)
+    if (TOPK) {
         torch_mouse(960, 0);
+        sfShader_setVec2Uniform(rpg->shader->shader_torch,
+        "resolution", (sfVector2f) {1960 - 1920 * (sfView_getCenter(rpg->player->view->view).x - rpg->player->pos.x ) / sfView_getCenter(rpg->player->view->view).x, 1150 + 1080 * (sfView_getCenter(rpg->player->view->view).y - rpg->player->pos.y ) / sfView_getCenter(rpg->player->view->view).y});
+    }
     if (BOTK)
         torch_mouse(960, 1080);
     if (LEFTK)

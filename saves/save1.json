@@ -7,7 +7,7 @@
 	},
 	"settings": {
 		"game_language": "fr",
-		"window_mode": ,
+		"window_mode": 1792,
 		"keys": {
 			"up": 25,
 			"down": 18,
@@ -26,7 +26,7 @@
 			"y": 418
 		},
 		"hp": 100,
-		"hunger": 68,
+		"hunger": 67,
 		"inventory": {
 			"items": [
 				8,
