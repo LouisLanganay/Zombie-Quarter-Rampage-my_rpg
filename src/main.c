@@ -12,7 +12,9 @@ int main(int ac, char **av)
     rpg_t *rpg = malloc(sizeof(rpg_t));
     init_rpg(rpg, ac, av);
     init(rpg);
-    rpg->shader->torch_bool = 1;
+    // rpg->shader->rain_bool = 1;
+    rpg->shader->blood_bool = 1;
+    // rpg->shader->torch_bool = 1;
     while (sfRenderWindow_isOpen(rpg->glib->window->window)) {
         print_framerate();
         gl_check_events(rpg->glib->window, rpg->glib->events, rpg);

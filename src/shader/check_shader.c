@@ -10,8 +10,7 @@
 void static check_rain(rpg_t *rpg, sfRectangleShape *rect)
 {
     if (rpg->shader->rain_bool == 1) {
-        sfShader_setFloatUniform(rpg->shader->shader_rain, "time",
-        sfTime_asSeconds(sfClock_getElapsedTime(rpg->shader->shader_clock)));
+        sfShader_setFloatUniform(rpg->shader->shader_rain, "time",sfTime_asSeconds(sfClock_getElapsedTime(rpg->shader->shader_clock)));
         sfRenderWindow_drawRectangleShape(rpg->glib->window->window,
         rect, &rpg->shader->states_rain);
     }
@@ -22,6 +21,7 @@ void static check_blood(rpg_t *rpg, sfRectangleShape *rect)
     if (rpg->shader->blood_bool == 1) {
         sfShader_setFloatUniform(rpg->shader->shader_blood, "time",
         sfTime_asSeconds(sfClock_getElapsedTime(rpg->shader->shader_clock)));
+        sfShader_setVec2Uniform(rpg->shader->shader_fade, "resolution", (sfVector2f) { 1920, 1080 });
         sfRenderWindow_drawRectangleShape(rpg->glib->window->window, rect,
         &rpg->shader->states_blood);
     }
@@ -34,6 +34,7 @@ void static check_fade(rpg_t *rpg, sfRectangleShape *rect)
         sfTime_asSeconds(sfClock_getElapsedTime(rpg->shader->fade_clock)));
         sfShader_setFloatUniform(rpg->shader->shader_fade, "fade",
         rpg->shader->fade_val);
+        sfShader_setVec2Uniform(rpg->shader->shader_fade, "resolution", (sfVector2f) { 1920, 1080 });
         sfRenderWindow_drawRectangleShape(rpg->glib->window->window, rect,
         &rpg->shader->states_fade);
     }
