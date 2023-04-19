@@ -21,6 +21,6 @@ void i_soda(rpg_t *rpg, sfVector2f pos)
         }
         rpg->narative->str = get_language(rpg, "soda_interact", RSG);
         start_narative_popup(rpg);
-        while (sfKeyboard_isKeyPressed(RPK->interact.key)== sfTrue);
+        while (sfKeyboard_isKeyPressed(RPK->interact.key) == sfTrue);
     }
 }

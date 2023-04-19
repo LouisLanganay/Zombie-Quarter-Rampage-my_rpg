@@ -783,4 +783,6 @@
     void init_inventory(rpg_t *rpg);
     void init_player_assets_dialogue(player_t *player);
     void check_shader(rpg_t *rpg);
+    int doc_function(int ac, char **av);
+
 #endif

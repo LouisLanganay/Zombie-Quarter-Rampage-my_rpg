@@ -325,7 +325,7 @@ SRC += load_game_timeline.c
 SRC += save_game_timeline.c
 SRC += c_talki.c
 SRC += talkie.c
-
+SRC += docu_h.c
 
 
 INC_DIR 	:= includes
