@@ -15,12 +15,12 @@ static void handle_selection_inv(rpg_t *rpg)
     rpg->glib->window->event.key.code == sfKeyLeft)
         RPI->is_data_open = 1;
     if (sfKeyboard_isKeyPressed(rpg->player->keys->choice_one.key) == sfTrue
-    && RPI->is_data_open == 0) {
+    && RPI->is_data_open == 0 && RPI->is_open == 1) {
         RPI->is_data_open = 1;
         remove_item_to_inventory(rpg, RP->inventory->pos, 0);
     }
     if (sfKeyboard_isKeyPressed(rpg->player->keys->choice_two.key) == sfTrue
-    && RPI->is_data_open == 0) {
+    && RPI->is_data_open == 0 && RPI->is_open == 1) {
         RPI->is_data_open = 1;
         exec_item_func(rpg, RP->inventory->items[RP->inventory->pos]);
     }
