@@ -155,6 +155,7 @@
         inv_popup_action_t action;
         sfClock *clock;
         sfClock *clock2;
+        int posy;
         struct inv_popup_s *next;
     } inv_popup_t;
 
@@ -196,6 +197,7 @@
         int soda;
         inventory_t *inventory;
         game_lost_t *game_lost;
+        game_lost_t *game_win;
         sfRectangleShape *hitbox;
         sfVector2f pos;
         view_t *view;

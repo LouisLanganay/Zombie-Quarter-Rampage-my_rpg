@@ -52,6 +52,7 @@
 		"actual_map": "resources/maps/player_basement.json"
 	},
 	"game_timeline": {
+		"soda": -1,
 		"npc_interactions": [
 			"npc"
 		],

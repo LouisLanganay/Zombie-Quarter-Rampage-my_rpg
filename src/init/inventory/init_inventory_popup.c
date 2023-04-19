@@ -15,7 +15,7 @@ void init_inventory_popup(rpg_t *rpg)
     my_text->font = gl_get_font(rpg->glib, MINECRAFT_FONT);
     my_text->scale = (sfVector2f){0.1, 0.1};
     my_text->color = sfWhite;
-    my_text->string = "aaaaaa";
-    my_text->size = 50;
+    my_text->string = "null";
+    my_text->size = 65;
     gl_create_text(rpg->glib, my_text);
 }

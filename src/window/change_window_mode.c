@@ -9,8 +9,6 @@
 
 void change_window_mode(rpg_t *rpg, wmode_t mode)
 {
-    create_window_t *window = malloc(sizeof(create_window_t));
-
     sfRenderWindow_destroy(rpg->glib->window->window);
     rpg->glib->window->window = sfRenderWindow_create(rpg->glib->window->mode,
         WINDOW_NAME, mode == FSCREEN ? sfFullscreen : sfClose, 0);

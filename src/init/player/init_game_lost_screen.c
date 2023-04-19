@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-static void init_game_lost_screen_bg(player_t *player, rpg_t *rpg)
+static void init_game_lost_screen_bg(player_t *player)
 {
     player->game_lost->background = sfRectangleShape_create();
     sfRectangleShape_setSize(player->game_lost->background,
@@ -36,5 +36,5 @@ void init_game_lost_screen(player_t *player, rpg_t *rpg)
         LOST_TEXT));
     sfText_setOrigin(gl_get_text(rpg->glib, LOST_TEXT),
         (sfVector2f){rect.width, rect.height / 2});
-    init_game_lost_screen_bg(player, rpg);
+    init_game_lost_screen_bg(player);
 }

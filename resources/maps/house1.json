@@ -832,25 +832,25 @@
          "objects":[
                 {
                  "class":"",
-                 "height":22.6071451315035,
+                 "height":28.9753550277017,
                  "id":9,
                  "name":"c_gaz",
                  "rotation":0,
                  "visible":true,
-                 "width":34.3883334394702,
-                 "x":54.7666051073043,
+                 "width":55.0850156021143,
+                 "x":45.214290263007,
                  "y":128.001018913583
                 }, 
                 {
                  "class":"",
-                 "height":37.5809589807831,
+                 "height":50.9541997627993,
                  "id":10,
                  "name":"c_talki",
                  "rotation":0,
                  "visible":true,
-                 "width":35.9817692369199,
-                 "x":389.269436818679,
-                 "y":220.155121405155
+                 "width":48.0813680396964,
+                 "x":378.443479995142,
+                 "y":220.791942394775
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -16129,7 +16129,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {
@@ -16205,7 +16204,6 @@
                  "objectgroup":
                     {
                      "draworder":"index",
-                     "id":2,
                      "name":"",
                      "objects":[
                             {

@@ -20,7 +20,6 @@
     #define BTN_PATH_SAVEBTN "resources/assets/buttons/savegame_btn.png"
     #define BTN_PATH_CHECK "resources/assets/buttons/check_btn.png"
     #define BTN_QUIT 10
-    #define BTN_START 11
     #define BTN_LOAD 12
     #define BTN_SEETING 13
 
@@ -38,6 +37,7 @@
     #define SETTINGS_KEY_DOWN 564445
     #define SETTINGS_KEY_LEFT 5645
     #define SETTINGS_KEY_RIGHT 564845
+    #define SETTINGS_KEY_INV 56487
 
     #define BTN_KEYBIND 14
     #define BTN_FRANCE 15

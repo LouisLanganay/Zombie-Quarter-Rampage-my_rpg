@@ -28,8 +28,8 @@ static void init_player_keys(player_t *player)
     player->keys->right = (p_key_t){0, sfKeyD};
     player->keys->interact = (p_key_t){0, sfKeyE};
     player->keys->choice_one = (p_key_t){0, sfKeyU};
-    player->keys->choice_two = (p_key_t){0, sfKeyI};
-    player->keys->inventory = (p_key_t){0, sfKeyA};
+    player->keys->choice_two = (p_key_t){0, sfKeyY};
+    player->keys->inventory = (p_key_t){0, sfKeyI};
     player->keys->enter = (p_key_t){0, sfKeyEnter};
     player->keys->last_direction = UP;
 }
@@ -80,4 +80,5 @@ void init_player(rpg_t *rpg)
     init_player_items_packs(player);
     rpg->player = player;
     init_game_lost_screen(player, rpg);
+    init_game_win_screen(player, rpg);
 }

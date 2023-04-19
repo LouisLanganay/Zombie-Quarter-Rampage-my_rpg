@@ -21,11 +21,12 @@ float atk_speed, int dmg)
         if (rpg->player->hp <= 0)
             rpg->game_state = MENU;
     }
+    return (0);
 }
 
 static void move_y_zombie(int distance_player, zombies_t *tmp, sfVector2f pos)
 {
-    if (distance_player < 600)
+    if (distance_player < 600) {
         if (tmp->pos.y > pos.y) {
             tmp->pos.y -= tmp->speed;
             sfRectangleShape_move(tmp->hitbox, (sfVector2f){0, -tmp->speed});
@@ -33,9 +34,10 @@ static void move_y_zombie(int distance_player, zombies_t *tmp, sfVector2f pos)
             tmp->pos.y += tmp->speed;
             sfRectangleShape_move(tmp->hitbox, (sfVector2f){0, tmp->speed});
         }
+    }
 }
 
-static void move_x_zombie(int distance_player, zombies_t *tmp, sfVector2f pos)
+static void move_x_zombie(zombies_t *tmp, sfVector2f pos)
 {
     if (tmp->pos.x > pos.x) {
         tmp->pos.x -= tmp->speed;
@@ -71,7 +73,7 @@ void move_zombies(zombies_t *list, rpg_t *rpg)
             continue;
         }
         swap_status_anim_move(tmp);
-        move_x_zombie(distance_player, tmp, pos);
+        move_x_zombie(tmp, pos);
         move_y_zombie(distance_player, tmp, pos);
         tmp->last_distance = distance_player;
         tmp = tmp->next;

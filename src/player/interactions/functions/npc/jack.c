@@ -18,11 +18,13 @@ void jack(rpg_t *rpg, sfVector2f pos)
     draw_interaction_popup(rpg,
         (sfVector2f){pos.x - 40, pos.y + 20},
         RPK->interact.key, get_language(rpg, "jack_interact", RSG));
-    if (sfKeyboard_isKeyPressed(RPK->interact.key) == sfTrue)
-        if (quest_is_completed(rpg, "go_to_annia") == 1)
+    if (sfKeyboard_isKeyPressed(RPK->interact.key) == sfTrue) {
+        if (quest_is_completed(rpg, "go_to_annia") == 1) {
+            fade_sound(rpg, MUSICIAN_SOUND_ID, 5);
             start_dialogue(rpg, npc);
-        else {
+        } else {
             zoom_view(rpg, 0.999, 20);
             start_dialogue_default(npc, rpg);
         }
+    }
 }

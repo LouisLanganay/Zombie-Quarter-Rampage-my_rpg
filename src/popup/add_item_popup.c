@@ -15,6 +15,7 @@ void add_item_popup(rpg_t *rpg, int id, inv_popup_action_t action)
     new->action = action;
     new->clock = sfClock_create();
     new->clock2 = sfClock_create();
+    new->posy = 0;
     new->start = 0;
     new->next = rpg->player->inventory->popup;
     rpg->player->inventory->popup = new;

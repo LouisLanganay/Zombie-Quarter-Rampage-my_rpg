@@ -270,7 +270,7 @@
                     },
                     {
                         "text": "discovery_listen_bis_no",
-                        "next": "jack_discovery_nolisten_no"
+                        "next": "jack_discovery_nolisten_yes"
                     }
                 ],
                 "function": null
@@ -376,7 +376,7 @@
                         "next": "discovery_next_mask_next_end_heal"
                     }
                 ],
-                "function": "remove_mask"
+                "function": null
             },
             {
                 "name": "discovery_next_mask_next_end_weapon",

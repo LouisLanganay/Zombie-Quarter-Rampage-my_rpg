@@ -71,8 +71,9 @@ void check_player_moovment(player_t *player, map_t *map, rpg_t *rpg)
 
     check_chests(player, map, rpg);
     check_interactions(player, map, rpg);
-    check_interactions_other_maps(rpg, player);
+    check_interactions_other_maps(rpg);
     if (seconds < 0.001) return;
+    if (rpg->game_state == GAME_WIN) return;
     if (player->inventory->is_open == 1) {
         sfClock_restart(player->clock);
         return;

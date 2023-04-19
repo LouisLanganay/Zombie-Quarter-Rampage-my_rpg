@@ -25,8 +25,6 @@ static void draw_game_lost_screen_bg_bg(rpg_t *rpg)
 static void draw_game_lost_screen_bg(rpg_t *rpg)
 {
     sfVector2f vpos = sfView_getCenter(sfRenderWindow_getView(RGWW));
-    sfVector2f vsize = sfView_getSize(sfRenderWindow_getView(RGWW));
-    sfVector2f pos = (sfVector2f){vpos.x - vsize.x / 2, vpos.y - vsize.y / 2};
     time_t time = sfClock_getElapsedTime(rpg->player->game_lost->text_clock)
         .microseconds;
     float seconds = time / 1000000.0;
@@ -58,5 +56,6 @@ void draw_game_lost_screen(rpg_t *rpg)
         rpg->game_state = MENU;
         sfRenderWindow_setView(RGWW, sfRenderWindow_getDefaultView(RGWW));
         sfClock_restart(rpg->player->game_lost->clock);
+        reset_a_save(rpg);
     }
 }

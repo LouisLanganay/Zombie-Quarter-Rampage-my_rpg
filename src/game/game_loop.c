@@ -16,15 +16,12 @@ static void disables_buttons(rpg_t *rpg)
     gl_button_change_state(BTN_LOAD, rpg->glib->buttons, sfTrue);
     gl_button_change_state(BTN_SEETING, rpg->glib->buttons, sfTrue);
     gl_button_change_state(BTN_QUIT, rpg->glib->buttons, sfTrue);
+    gl_button_change_state(BTN_CHECK1, rpg->glib->buttons, sfTrue);
+    gl_button_change_state(BTN_CHECK2, rpg->glib->buttons, sfTrue);
 }
 
-void game_loop(rpg_t *rpg)
+static void game_loop_functions(rpg_t *rpg)
 {
-    if (rpg->game_state == PAUSE) {
-        sfRenderWindow_setView(RGWW, sfRenderWindow_getDefaultView(RGWW));
-        draw_menu(rpg);
-        return;
-    }
     disables_buttons(rpg);
     set_view_on_player(rpg);
     draw_map(rpg->maps, rpg->actual_map, rpg);
@@ -40,4 +37,15 @@ void game_loop(rpg_t *rpg)
     hunger_lost(rpg);
     check_game_lost(rpg);
     draw_game_lost_screen(rpg);
+    draw_game_win_screen(rpg);
+}
+
+void game_loop(rpg_t *rpg)
+{
+    if (rpg->game_state == PAUSE) {
+        sfRenderWindow_setView(RGWW, sfRenderWindow_getDefaultView(RGWW));
+        draw_menu(rpg);
+        return;
+    }
+    game_loop_functions(rpg);
 }
