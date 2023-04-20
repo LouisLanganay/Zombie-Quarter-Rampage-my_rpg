@@ -817,10 +817,10 @@
     #define BOTK rpg->player->keys->down.state == 1
     #define LEFTK rpg->player->keys->left.state == 1
     #define RIGHTK rpg->player->keys->right.state == 1
-    #define TOPLEFTK TOPK && LEFTK
-    #define TOPRIGHTK TOPK && RIGHTK
-    #define BOTLEFTK BOTK && LEFTK
-    #define BOTRIGHTK BOTK && RIGHTK
+    #define TOPLEFTK (TOPK && LEFTK)
+    #define TOPRIGHTK (TOPK && RIGHTK)
+    #define BOTLEFTK (BOTK && LEFTK)
+    #define BOTRIGHTK (BOTK && RIGHTK)
     #define torch_mouse(x, y) sfShader_setVec2Uniform(\
     rpg->shader->shader_torch, "mouse", (sfVector2f){x, y})
     #define tr 1960 - 1920 * (sfView_getCenter(rpg->player->view->view).x\

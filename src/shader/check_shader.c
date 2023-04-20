@@ -50,7 +50,7 @@ static sfRectangleShape *rect_shader(rpg_t *rpg)
     if (rpg->game_state == GAME) {
         sfRectangleShape_setSize(rect, sfView_getSize(rpg->player->view->view));
         sfRectangleShape_setTexture(rect,
-        sfTexture_createFromFile("resources/shader/void.png", NULL), NULL);
+        sfTexture_createFromFile("resources/shader/void.png", NULL), sfTrue);
         sfRectangleShape_setPosition(rect, (sfVector2f) {sfView_getCenter
         (rpg->player->view->view).x - sfView_getSize(rpg->player->view->view).x
         / 2, sfView_getCenter(rpg->player->view->view).y -
