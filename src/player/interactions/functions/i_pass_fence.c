@@ -12,7 +12,7 @@ static void pass_fence(rpg_t *rpg)
     if (rpg->player->pos.y > 275)
         rpg->player->pos.y = 16 * 16;
     if (rpg->player->pos.y < 256)
-        rpg->player->pos.y = 18 * 16;
+        rpg->player->pos.y = 19 * 16;
 }
 
 void i_pass_fence(rpg_t *rpg, sfVector2f pos)
