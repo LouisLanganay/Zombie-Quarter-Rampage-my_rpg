@@ -22,5 +22,11 @@
         "description": "jack_friend_description",
         "type": "talk",
         "function": "jack_friend"
+    },
+    "run_away": {
+        "name": "run_away_name",
+        "description": "run_away_description",
+        "type": "go_to",
+        "function": "run_away"
     }
 }

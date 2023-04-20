@@ -49,10 +49,23 @@ static void draw_quest_icon(char *quest_id, rpg_t *rpg, int i)
 
 void draw_quests_ig(rpg_t *rpg)
 {
+    int id = get_key_id(RPK->inventory.key, rpg);
+    sfVector2f view_pos = sfView_getCenter(rpg->player->view->view);
+    sfVector2f view_size = sfView_getSize(rpg->player->view->view);
+    sfVector2f pos = (sfVector2f){view_pos.x + view_size.x / 2 - 100,
+        view_pos.y - view_size.y / 2 + 100};
+
     for (int i = 0; rpg->quests_in_progress[i] != NULL; i++) {
         if (get_quest(rpg, rpg->quests_in_progress[i]) == NULL)
             continue;
         draw_quest_text(rpg->quests_in_progress[i], rpg, i - 1);
         draw_quest_icon(rpg->quests_in_progress[i], rpg, i - 1);
+    }
+
+    if (id != -1) {
+        sfSprite_setScale(RPA->key_sprite[id], (sfVector2f){1.3, 1.3});
+        sfSprite_setPosition(RPA->key_sprite[id], pos);
+        sfRenderWindow_drawSprite(RGW->window, RPA->key_sprite[id], NULL);
+        sfSprite_setScale(RPA->key_sprite[id], (sfVector2f){1, 1});
     }
 }

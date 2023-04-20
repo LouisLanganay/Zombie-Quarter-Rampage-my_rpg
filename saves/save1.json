@@ -6,8 +6,8 @@
 		"played": false
 	},
 	"settings": {
-		"game_language": "fr",
-		"window_mode": 1792,
+		"game_language": "en",
+		"window_mode": 1,
 		"keys": {
 			"up": 25,
 			"down": 18,
@@ -26,7 +26,7 @@
 			"y": 1175
 		},
 		"hp": 100,
-		"hunger": 59,
+		"hunger": 75,
 		"inventory": {
 			"items": [
 				8,
@@ -52,20 +52,22 @@
 		"actual_map": "resources/maps/main_map.json"
 	},
 	"game_timeline": {
+		"soda": -1,
 		"npc_interactions": [
 			"npc"
 		],
 		"quests_in_progress": [
-			"quest",
-			"go_to_annia"
+			"quest"
 		],
 		"quests_completed": [
 			"quest",
 			"basement_paper"
 		],
 		"chests_opened": [
-			"chest",
-			"c_fridge"
-		]
+			"chest"
+		],
+		"combat1": false,
+		"combat2": false,
+		"combat3": false
 	}
 }

@@ -12,7 +12,7 @@ static void init_escape_menu_save(rpg_t *rpg)
     buttons_t *my_btn = malloc(sizeof(buttons_t));
     my_btn->id = BTN_SAVEBTN;
     my_btn->pos = (sfVector2f){rpg->glib->window->mode.width / 2.4,
-    rpg->glib->window->mode.height / 1.9};
+    rpg->glib->window->mode.height / 1.65};
     my_btn->rect = (sfIntRect){0, 0, 278, 72};
     my_btn->call_action = e_save_btn;
     my_btn->sprite = sfSprite_create();

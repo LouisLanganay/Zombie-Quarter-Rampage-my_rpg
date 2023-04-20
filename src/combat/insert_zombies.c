@@ -37,7 +37,7 @@ static void set_zombies(zombies_t *new_node)
     hp_bar(new_node);
 }
 
-void insert_zombies_coord(rpg_t *rpg, zombies_t **list, sfVector2f pos)
+void insert_zombies_coord(zombies_t **list, sfVector2f pos)
 {
     zombies_t *new_node = malloc(sizeof(zombies_t));
     new_node->pos = pos;

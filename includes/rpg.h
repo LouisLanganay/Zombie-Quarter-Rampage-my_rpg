@@ -27,6 +27,7 @@
     #define SPLASH_SCREEN_TEXT1 9999
     #define SPLASH_SCREEN_TEXT2 10001
     #define LOST_TEXT 10002
+    #define WIN_TEXT 10402
 
     #define EVENT_WINDOW_CLOSE 1
     #define EVENT_INVENTORY_OPEN 454545
@@ -57,23 +58,14 @@
     #define HEART_SOUND_ID 19
     #define PIECE_SOUND_PATH "resources/sounds/piece.ogg"
     #define PIECE_SOUND_ID 20
+    #define MUSICIAN_SOUND_PATH "resources/sounds/tloumusician.ogg"
+    #define MUSICIAN_SOUND_ID 21
+    #define TALKIEFR_SOUND_PATH "resources/sounds/talkie_fr.ogg"
+    #define TALKIEFR_SOUND_ID 22
+    #define TALKIEEN_SOUND_PATH "resources/sounds/talkie_en.ogg"
+    #define TALKIEEN_SOUND_ID 23
 
     #define DIALOGUE_CHOICE_TIMEOUT (seconds < 1)
-
-    #define RGWW rpg->glib->window->window
-    #define RPA rpg->player->assets
-    #define RGWW rpg->glib->window->window
-    #define RGW rpg->glib->window
-    #define RPK rpg->player->keys
-    #define RPH rpg->player->hitbox
-    #define RSG rpg->settings->game_language
-    #define PA player->assets
-    #define RSNI rpg->save->npc_interactions
-    #define RPAQ rpg->player->assets->quest_icons
-    #define RM rpg->menu_key
-    #define RP rpg->player
-    #define RSV rpg->settings->volume
-    #define RPI rpg->player->inventory
 
     #define RS_RAIN "resources/shader/rain.frag"
     #define RS_BLOOD "resources/shader/blood.frag"
@@ -237,6 +229,7 @@
     } menu_background_t;
 
     typedef enum wmode_e {
+        NUL,
         FSCREEN,
         WINDOWED
     } wmode_t;
@@ -319,7 +312,8 @@
         GAME,
         COMBAT,
         PAUSE,
-        GAME_LOST
+        GAME_LOST,
+        GAME_WIN
     } game_state_t;
 
     typedef struct combat_history_s {
@@ -416,6 +410,21 @@
         sfRectangleShape *hp_bar;
     } zombies_t;
 
+    #define RGWW rpg->glib->window->window
+    #define RPA rpg->player->assets
+    #define RGWW rpg->glib->window->window
+    #define RGW rpg->glib->window
+    #define RPK rpg->player->keys
+    #define RPH rpg->player->hitbox
+    #define RSG rpg->settings->game_language
+    #define PA player->assets
+    #define RSNI rpg->save->npc_interactions
+    #define RPAQ rpg->player->assets->quest_icons
+    #define RM rpg->menu_key
+    #define RP rpg->player
+    #define RSV rpg->settings->volume
+    #define RPI rpg->player->inventory
+
     #define windoww rpg->glib->window->window
     #define ZOMBIE_0 "resources/assets/combat/zombie_0.png"
     #define ZOMBIE_1 "resources/assets/combat/zombie_1.png"
@@ -492,8 +501,8 @@
     #define sfs sfTime_asSeconds
     void cbt_draw_player(rpg_t *rpg);
     void cbt_change_player_rect(player_t *player);
-    void wave(char **wave, rpg_t *rpg, zombies_t **zombies);
-    void insert_zombies_coord(rpg_t *rpg, zombies_t **list, sfVector2f pos);
+    void wave(char **wave, zombies_t **zombies);
+    void insert_zombies_coord(zombies_t **list, sfVector2f pos);
     void swap_status_anim_cbt(zombies_t *l);
     void swap_status_anim_move(zombies_t *l);
     void swap_status_anim_dead(zombies_t *l);
@@ -530,6 +539,8 @@
     char *get_language(rpg_t *rpg, char *name, language_type_t language);
 
     /* SAVE */
+    void save_save(rpg_t *rpg);
+    void reset_a_save(rpg_t *rpg);
     int load_settings(rpg_t *rpg, parsed_data_t *data);
     int load_game(rpg_t *rpg, parsed_data_t *data);
     int load_save(rpg_t *rpg, char *path);
@@ -542,11 +553,14 @@
     void save_quests_in_progress(rpg_t *rpg);
     void save_player(rpg_t *rpg);
     void save(rpg_t *rpg);
+    int load_combats(rpg_t *rpg, parsed_data_t *data);
+    void save_game_timeline(rpg_t *rpg);
+    int load_game_timeline(rpg_t *rpg, parsed_data_t *data);
     int load_quests_completed(rpg_t *rpg, parsed_data_t *data);
     void save_quests_completed(rpg_t *rpg);
     int load_chests_opened(rpg_t *rpg, parsed_data_t *data);
+    void save_combats(rpg_t *rpg);
     void save_chests_opened(rpg_t *rpg);
-
 
     /* QUESTS */
     void start_dialogue_default(npc_t *npc, rpg_t *rpg);
@@ -582,6 +596,7 @@
     /* VIEW */
     void set_view_on_player(rpg_t *rpg);
     void zoom_view(rpg_t *rpg, float value, float time);
+    void reset_view(rpg_t *rpg);
 
     /* PLAYER */
     void check_game_lost(rpg_t *rpg);
@@ -589,6 +604,7 @@
     void draw_game_lost_screen(rpg_t *rpg);
     void *key_pressed(rpg_t *rpg);
     void draw_player(rpg_t *rpg);
+    void draw_game_win_screen(rpg_t *rpg);
     void change_player_rect(player_t *player);
     void check_player_moovment(player_t *player, map_t *map, rpg_t *rpg);
     int check_colisions(
@@ -598,13 +614,13 @@
         rpg_t *rpg
     );
     void check_interactions(player_t *player, map_t *map, rpg_t *rpg);
-    void check_interactions_other_maps(rpg_t *rpg, player_t *player);
+    void check_interactions_other_maps(rpg_t *rpg);
     keyboard_images_t *get_keyboard_array(void);
     void hunger_lost(rpg_t *rpg);
 
     /* INVENTORY*/
     int add_item_to_inventory(int id, rpg_t *rpg);
-    int remove_item_to_inventory(rpg_t *rpg, int pos);
+    int remove_item_to_inventory(rpg_t *rpg, int pos, int force);
     int add_item_to_inventory_pos(rpg_t *rpg, int pos, int id);
     void handle_inventory_system(rpg_t *rpg);
     item_func_t *get_items_functions_arr(void);
@@ -612,12 +628,13 @@
     void handle_drop_use_button(rpg_t *rpg);
     char *get_item_name(int id);
     void draw_item_popup(rpg_t *rpg);
-    int remove_itemid_inventory(rpg_t *rpg, int item_id);
+    int remove_itemid_inventory(rpg_t *rpg, int item_id, int force);
     int check_if_items_is_here(rpg_t *rpg, int id);
 
     /* CHEST */
     chests_t *get_chests_array(void);
     void check_chests(player_t *player, map_t *map, rpg_t *rpg);
+    int chest_is_opened(rpg_t *rpg, char *chest_name);
 
     /* NPC */
     npc_t *get_npc(map_t *map, char *name);
@@ -651,6 +668,9 @@
     void jackfriend_give_weapon(void *main);
     void jackfriend_give_heal(void *main);
     void check_if_gaz_mask(void *);
+    void talkie(void *main);
+    void i_end(rpg_t *rpg, sfVector2f pos);
+    void c_talki(rpg_t *rpg, tiled_object_t *obj);
     void remove_mask(void *main);
     void jack_friend(rpg_t *rpg, sfVector2f pos);
     void npc_give_nothing(void *main);
@@ -663,6 +683,8 @@
     void food(void *);
     void c_gaz(rpg_t *rpg, tiled_object_t *obj);
     void annia_give_heal(void *main);
+    void s_musician_exit(rpg_t *rpg, sfVector2f pos);
+    void s_musician(rpg_t *rpg, sfVector2f pos);
     void jack(rpg_t *rpg, sfVector2f pos);
     void s_radiation(rpg_t *rpg, sfVector2f pos);
     void s_radiation_exit(rpg_t *rpg, sfVector2f pos);
@@ -709,6 +731,7 @@
     void init_background(rpg_t *rpg);
     void init_keybinds_keys(rpg_t *rpg);
     void draw_menu_keys(rpg_t *rpg);
+    void draw_other_keys(rpg_t *rpg);
     void init_saves_buttons(rpg_t *rpg);
     void draw_saves_menu(rpg_t *rpg);
     void init_saves_texts(rpg_t *rpg);
@@ -735,9 +758,6 @@
         inv_popup_action_t action
     );
 
-    /* FPS */
-    void print_framerate(void);
-
 
     /* EVENTS */
     void e_resume_btn(int id, void *main);
@@ -763,6 +783,7 @@
     void init_quests(rpg_t *rpg);
     void init_player(rpg_t *rpg);
     void init_popup_dialogue(rpg_t *rpg);
+    void init_keybinds_otherkeys(rpg_t *rpg);
     void init_glib(rpg_t *rpg);
     void init_game_sounds(rpg_t *rpg);
     void init_npcs(map_t *map, char *path, rpg_t *rpg);
@@ -784,6 +805,7 @@
     void init_inventory_popup(rpg_t *rpg);
     void init_player_assets(player_t *player);
     void init_rpg(rpg_t *rpg, int ac, char **av);
+    void init_game_win_screen(player_t *player, rpg_t *rpg);
     void init_popup_interaction(rpg_t *rpg);
     void init_player_items_packs(player_t *player);
     void init_quest_assets(rpg_t *rpg);
@@ -812,5 +834,6 @@
     #define draw_shader_torch (sfRenderWindow_drawRectangleShape(rpg->glib->\
     window->window, rect, &rpg->shader->states_torch))
     #define v2f(x, y) ((sfVector2f) {x, y})
+    int doc_function(int ac, char **av);
 
 #endif

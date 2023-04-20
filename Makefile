@@ -54,6 +54,7 @@ VPATH += src/menu/ingame
 VPATH += src/lore
 VPATH += src/sounds
 VPATH += src/map/load
+VPATH += src/map/edit
 VPATH += src/map/draw
 VPATH += src/utils
 VPATH += src/view
@@ -97,7 +98,6 @@ SRC += get_interactions_array.c
 SRC += inte_test.c
 SRC += i_chest.c
 SRC += load_tilesets.c
-SRC += print_framerate.c
 SRC += draw_layer_by_class.c
 SRC += draw_layer_by_order.c
 SRC += e_key_pressed.c
@@ -322,7 +322,24 @@ SRC += jackfriend_give_weapon.c
 SRC += c_resource.c
 SRC += c_trashg.c
 SRC += fade_all_sounds.c
-
+SRC += load_game_timeline.c
+SRC += save_game_timeline.c
+SRC += c_talki.c
+SRC += talkie.c
+SRC += docu_h.c
+SRC += chest_is_opened.c
+SRC += i_end.c
+SRC += draw_game_win_screen.c
+SRC += init_game_win_screen.c
+SRC += reset_a_save.c
+SRC += init_keybinds_otherkeys.c
+SRC += draw_other_keys.c
+SRC += reset_view.c
+SRC += s_musician_exit.c
+SRC += s_musician.c
+SRC += save_save.c
+SRC += load_combats.c
+SRC += save_combats.c
 
 
 INC_DIR 	:= includes
@@ -331,7 +348,7 @@ LIB_NAME1 	:= gl
 LIB_DIR2 	:= ./lib/jp
 LIB_NAME2 	:= jp
 
-CFLAGS = -iquote $(INC_DIR) -g#-Wall -Wextra -Werror -g
+CFLAGS = -iquote $(INC_DIR) -Wall -Wextra -Werror -g
 CFLAGS += -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm
 
 LIBFLAGS = -L$(LIB_DIR1) -l$(LIB_NAME1) -L$(LIB_DIR2) -l$(LIB_NAME2)

@@ -31,7 +31,6 @@ static void draw_conditions_buttons(rpg_t *rpg)
     if (rpg->menu->active == false) {
         gl_button_change_state(BTN_QUIT, rpg->glib->buttons, sfFalse);
         gl_button_change_state(BTN_LOAD, rpg->glib->buttons, sfFalse);
-        gl_button_change_state(BTN_START, rpg->glib->buttons, sfFalse);
         gl_button_change_state(BTN_KEYBIND, rpg->glib->buttons, sfTrue);
         gl_button_change_state(BTN_CHECK1, rpg->glib->buttons, sfFalse);
         gl_button_change_state(BTN_CHECK2, rpg->glib->buttons, sfFalse);
@@ -51,7 +50,6 @@ static void draw_buttons(rpg_t *rpg)
     if (rpg->menu->active == true) {
             gl_button_change_state(BTN_QUIT, rpg->glib->buttons, sfTrue);
             gl_button_change_state(BTN_LOAD, rpg->glib->buttons, sfTrue);
-            gl_button_change_state(BTN_START, rpg->glib->buttons, sfTrue);
             gl_buttons_hovered(rpg->glib->buttons, rpg->glib->window, rpg);
             sfRenderWindow_drawSprite(rpg->glib->window->window,
             rpg->menu->settings_bg_sprite, NULL);
@@ -84,14 +82,14 @@ void draw_menu(rpg_t *rpg)
         gl_draw_button(BTN_LOAD, rpg->glib->buttons, rpg->glib->window);
     }
     gl_draw_button(BTN_SEETING, rpg->glib->buttons, rpg->glib->window);
+    if (rpg->game_state == PAUSE)
+        draw_escape_menu(rpg);
+    else
+        gl_button_change_state(BTN_SAVEBTN, rpg->glib->buttons, sfTrue);
     if (rpg->menu_save->active == true)
         draw_saves_menu(rpg);
     else
         disable_saves_menu(rpg);
     draw_buttons(rpg);
     if (rpg->menu->active == true) draw_settings(rpg);
-    if (rpg->game_state == PAUSE)
-        draw_escape_menu(rpg);
-    else
-        gl_button_change_state(BTN_SAVEBTN, rpg->glib->buttons, sfTrue);
 }

@@ -9,6 +9,7 @@
 
 void move_bullets(bullets_t *bullets, rpg_t *rpg)
 {
+    (void)rpg;
     bullets_t *tmp = bullets;
     if (tmp == NULL)
         return;
