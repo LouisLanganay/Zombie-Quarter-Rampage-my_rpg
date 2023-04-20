@@ -13,6 +13,7 @@ NAME = libjp.a
 VPATH := reader
 VPATH += utils
 VPATH += writer
+VPATH += free
 VPATH += writer/type
 VPATH += reader/loaders
 VPATH += reader/search
@@ -50,6 +51,7 @@ SRC += jp_writebool.c
 SRC += jp_writetab.c
 SRC += jp_writearray.c
 SRC += my_is_a_float.c
+SRC += jp_free.c
 
 
 INC_DIR := ../../includes

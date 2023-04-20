@@ -32,7 +32,7 @@ static void load_layer_data_objectgroup(
     layer->type = jp_search(data, "type")->value.p_str;
     layer->visible = jp_search(data, "visible")->value.p_bool;
     layer->color = jp_search(data, "color")->value.p_str;
-    layer->objects = NULL;
+    layer->class = NULL;
     load_layer_objects(data, layer);
 }
 
@@ -55,6 +55,7 @@ static void load_layer_data_tilelayer(
     layer->pos->y = jp_search(data, "y")->value.p_int;
     layer->data = load_layer_data_arr(data);
     layer->class = jp_search(data, "class")->value.p_str;
+    layer->color = NULL;
     load_layer_data_tilelayer_properties(layer, data);
     if (layer->visible == b_true)
         layer->sprites = load_layer_sprites(layer, map);
@@ -67,6 +68,9 @@ static int create_layer(parsed_data_t *tmp_arr, map_t *map)
         return write(2, "Error: malloc failed\n", 21);
     char *layer_type = jp_search(tmp_arr, "type")->value.p_str;
 
+    tmp->sprites = NULL;
+    tmp->objects = NULL;
+    tmp->sounds = NULL;
     if (my_strcmp(layer_type, "objectgroup") == 0)
         load_layer_data_objectgroup(tmp, tmp_arr);
     else if (my_strcmp(layer_type, "tilelayer") == 0)

@@ -10,9 +10,10 @@
 int main(int ac, char **av)
 {
     rpg_t *rpg = malloc(sizeof(rpg_t));
+    if (!rpg)
+        return (84);
     init_rpg(rpg, ac, av);
     init(rpg);
-
     while (sfRenderWindow_isOpen(rpg->glib->window->window)) {
         gl_check_events(rpg->glib->window, rpg->glib->events, rpg);
         sfRenderWindow_clear(rpg->glib->window->window, sfBlack);
@@ -27,5 +28,5 @@ int main(int ac, char **av)
             load_maps(rpg);
         gl_buttons_hovered(rpg->glib->buttons, rpg->glib->window, rpg);
     }
-    my_free(rpg);
+    mega_free(rpg);
 }

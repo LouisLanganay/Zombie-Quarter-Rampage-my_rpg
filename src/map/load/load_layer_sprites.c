@@ -11,7 +11,7 @@ sfSprite **load_layer_sprites(layer_t *layer, map_t *map)
 {
     unsigned int data_texture = 0;
     sfSprite **sprites = malloc(sizeof(sfSprite *) *
-        (layer->height * layer->width));
+        (layer->height * layer->width + 1));
 
     for (int i = 0; i < layer->height * layer->width; i++) {
         sprites[i] = sfSprite_create();
@@ -24,6 +24,7 @@ sfSprite **load_layer_sprites(layer_t *layer, map_t *map)
             (i / layer->width) * map->tile_height
         });
     }
+    sprites[layer->height * layer->width] = NULL;
 
     return sprites;
 }

@@ -74,6 +74,7 @@
     parsed_data_t *load_object(char **str);
     parsed_data_t *jp_parse(char *filepath);
     parsed_data_t *jp_search(parsed_data_t *data, char *name);
+    void jp_free(parsed_data_t *data);
     void jp_write(char *filepath, parsed_data_t *object);
 
     char *get_name_without_arr(char *str);

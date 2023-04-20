@@ -25,7 +25,7 @@ static int check_tile_colisions(
     sfVector2f pos2;
     sfRectangleShape *col = sfRectangleShape_create();
     sfFloatRect rect1 = sfRectangleShape_getGlobalBounds(RPH);
-    sfFloatRect rect2;
+    sfFloatRect rect2 = sfRectangleShape_getGlobalBounds(col);
     while (tmp) {
         pos2.x = (index % map->map_width) * map->tile_width + tmp->pos.x;
         pos2.y = (index / map->map_width) * map->tile_height + tmp->pos.y;

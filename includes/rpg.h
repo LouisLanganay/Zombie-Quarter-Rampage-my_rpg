@@ -465,6 +465,16 @@
         sfClock *clock_shoot;
     } combat_t;
 
+    /* FREE */
+    void mega_free(rpg_t *rpg);
+    void free_maps(rpg_t *rpg);
+    void free_map(map_t *tmp);
+    void free_layer_objects(tiled_object_t *tmp);
+    void free_map_layers(map_t *map);
+    void free_map_npcs(map_t *tmp);
+    void free_map_tilesets(map_t *map);
+    void free_map_tiles(map_t *map);
+
     /* COMBAT */
     void init_combat_history(rpg_t *rpg);
     void init_guy(rpg_t *rpg);

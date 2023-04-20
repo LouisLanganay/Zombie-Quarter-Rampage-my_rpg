@@ -53,6 +53,8 @@ VPATH += src/menu
 VPATH += src/menu/ingame
 VPATH += src/lore
 VPATH += src/sounds
+VPATH += src/free
+VPATH += src/free/map
 VPATH += src/map/load
 VPATH += src/map/edit
 VPATH += src/map/draw
@@ -339,6 +341,15 @@ SRC += s_musician.c
 SRC += save_save.c
 SRC += load_combats.c
 SRC += save_combats.c
+SRC += mega_free.c
+SRC += free_maps.c
+SRC += free_map.c
+SRC += free_map_layers.c
+SRC += free_layer_objects.c
+SRC += free_map_npcs.c
+SRC += free_map_tiles.c
+SRC += free_map_tilesets.c
+
 
 
 INC_DIR 	:= includes

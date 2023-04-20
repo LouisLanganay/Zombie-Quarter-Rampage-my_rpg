@@ -13,8 +13,9 @@ char *get_item_name(int id)
     parsed_data_t *data = jp_parse("resources/jsons/items.json");
     int tmp;
 
-    if (id == -1)
+    if (id == -1) {
         return NULL;
+    }
     while (data) {
         tmp = jp_search(data->value.p_obj, "id")->value.p_int;
         if (tmp == id)
