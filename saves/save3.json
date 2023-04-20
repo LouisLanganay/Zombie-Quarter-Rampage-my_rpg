@@ -22,19 +22,19 @@
 	},
 	"player": {
 		"pos": {
-			"x": 305,
-			"y": 150
+			"x": 971,
+			"y": 1672
 		},
-		"hp": 100,
-		"hunger": 75,
+		"hp": 86,
+		"hunger": 45,
 		"inventory": {
 			"items": [
 				8,
 				9,
 				42,
-				-1,
-				-1,
-				-1,
+				64,
+				66,
+				54,
 				-1,
 				-1,
 				-1,
@@ -49,20 +49,23 @@
 		}
 	},
 	"game": {
-		"actual_map": "resources/maps/player_basement.json"
+		"actual_map": "resources/maps/main_map.json"
 	},
 	"game_timeline": {
 		"npc_interactions": [
 			"npc"
 		],
 		"quests_in_progress": [
-			"quest"
+			"quest",
+			"go_to_annia"
 		],
 		"quests_completed": [
-			"quest"
+			"quest",
+			"basement_paper"
 		],
 		"chests_opened": [
-			"chest"
+			"chest",
+			"c_fridge"
 		]
 	}
 }

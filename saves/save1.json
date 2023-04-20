@@ -22,11 +22,11 @@
 	},
 	"player": {
 		"pos": {
-			"x": 529,
-			"y": 418
+			"x": 1865,
+			"y": 1175
 		},
 		"hp": 100,
-		"hunger": 67,
+		"hunger": 59,
 		"inventory": {
 			"items": [
 				8,

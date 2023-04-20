@@ -453,12 +453,12 @@
     #define sfp sfSprite_setPosition
     char **wave_zombie1(void);
 
-    #define torch_resolution1 sfShader_setVec2Uniform(\
-    rpg->shader->shader_torch, "resolution", (sfVector2f) {1960 - 1920 *\
-    (sfView_getCenter(rpg->player->view->view).x - rpg->player->pos.x ) /\
-    sfView_getCenter(rpg->player->view->view).x, 1150 + 1080 *\
-    (sfView_getCenter(rpg->player->view->view).y - rpg->player->pos.y )\
-    / sfView_getCenter(rpg->player->view->view).y})
+    #define torch_resolution1 (sfShader_setVec2Uniform(rpg->shader->\
+    shader_torch, "resolution", (sfVector2f) {1960 - 1920 * (\
+    sfView_getCenter(rpg->player->view->view).x - rpg->player->\
+    pos.x) / sfView_getCenter(rpg->player->view->view).x, 1150 +\
+    1080 * (sfView_getCenter(rpg->player->view->view).y - rpg->player->\
+    pos.y) / sfView_getCenter(rpg->player->view->view).y}))
 
     typedef struct combat_s {
         zombies_t *zombies;
@@ -801,4 +801,16 @@
     #define BOTRIGHTK BOTK && RIGHTK
     #define torch_mouse(x, y) sfShader_setVec2Uniform(\
     rpg->shader->shader_torch, "mouse", (sfVector2f){x, y})
+    #define tr 1960 - 1920 * (sfView_getCenter(rpg->player->view->view).x\
+    - rpg->player->pos.x ) / sfView_getCenter(rpg->player->view->view).x
+    #define lr 1150 + 1080 * (sfView_getCenter(rpg->player->view->view).y\
+    - rpg->player->pos.y ) / sfView_getCenter(rpg->player->view->view).y
+    #define br 1960 - 7.4 * 1920 * (sfView_getCenter(rpg->player->view->view)\
+    .x - rpg->player->pos.x ) / sfView_getCenter(rpg->player->view->view).x
+    #define rr 1150 + 9.2 * 1080 * (sfView_getCenter(rpg->player->view->view).y\
+    - rpg->player->pos.y ) / sfView_getCenter(rpg->player->view->view).y;
+    #define draw_shader_torch (sfRenderWindow_drawRectangleShape(rpg->glib->\
+    window->window, rect, &rpg->shader->states_torch))
+    #define v2f(x, y) ((sfVector2f) {x, y})
+
 #endif
