@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-sfVector2f torch_view(rpg_t *rpg, sfVector2i r, sfVector2f m)
+static sfVector2f torch_view(rpg_t *rpg, sfVector2i r, sfVector2f m)
 {
     float xr = r.x / 1960.0;
     float yr = r.y / 1150.0;
@@ -22,7 +22,7 @@ sfVector2f torch_view(rpg_t *rpg, sfVector2i r, sfVector2f m)
     return m;
 }
 
-void torch_res(rpg_t *rpg)
+static void torch_res(rpg_t *rpg)
 {
     sfVector2f res;
     sfVector2f m;
