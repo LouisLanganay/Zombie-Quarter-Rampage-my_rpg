@@ -11,16 +11,16 @@ void i_soda(rpg_t *rpg, sfVector2f pos)
 {
     (void)(pos);
     char *str = get_language(rpg, "to_inspect", RSG);
-    draw_interaction_popup(rpg, (sfVector2f){pos.x, pos.y},
+    draw_interaction_popup(rpg, (sfVector2f){pos.x + 5, pos.y},
         RPK->interact.key, str);
     if (sfKeyboard_isKeyPressed(rpg->player->keys->interact.key) == sfTrue) {
-        if (rand() % 10 == 0) {
+        if (rand() % 10 == 0 && RP->soda != 1) {
+            RP->soda = 1;
             gl_play_sound(rpg->glib, PIECE_SOUND_ID);
             add_item_to_inventory(113, rpg);
         }
         rpg->narative->str = get_language(rpg, "soda_interact", RSG);
         start_narative_popup(rpg);
-        while (sfKeyboard_isKeyPressed(rpg->player->keys->interact.key)
-        == sfTrue) {}
+        while (sfKeyboard_isKeyPressed(RPK->interact.key) == sfTrue);
     }
 }

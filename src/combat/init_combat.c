@@ -14,4 +14,5 @@ combat_t *init_combat(void)
     combat->clock_shoot = sfClock_create();
     combat->zombies = NULL;
     combat->bullets = NULL;
+    return (combat);
 }

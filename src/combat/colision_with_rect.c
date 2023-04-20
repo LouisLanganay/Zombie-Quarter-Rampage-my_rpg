@@ -63,4 +63,5 @@ int colision_with_rect(sfRectangleShape *rect, sfVector2f pos)
         return (check_colision_3(rect_pos, rect_scale, pos));
     if (rect_scale.x < 0 && rect_scale.y < 0)
         return (check_colision_4(rect_pos, rect_scale, pos));
+    return (0);
 }

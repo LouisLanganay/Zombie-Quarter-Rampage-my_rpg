@@ -52,6 +52,7 @@
 		"actual_map": "resources/maps/main_map.json"
 	},
 	"game_timeline": {
+		"soda": -1,
 		"npc_interactions": [
 			"npc"
 		],
@@ -64,8 +65,10 @@
 			"basement_paper"
 		],
 		"chests_opened": [
-			"chest",
-			"c_fridge"
-		]
+			"chest"
+		],
+		"combat1": false,
+		"combat2": false,
+		"combat3": false
 	}
 }

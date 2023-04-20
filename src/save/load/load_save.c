@@ -19,23 +19,20 @@ static int load_save_save(save_t *save, parsed_data_t *data)
 int load_save(rpg_t *rpg, char *path)
 {
     parsed_data_t *data = jp_parse(path);
-    if (data == NULL)
-        return (84);
-    if (load_settings(rpg, jp_search(data, "settings")) != 0)
-        return (84);
-    if (load_save_save(rpg->save, jp_search(data, "save_file")) != 0)
-        return (84);
-    if (load_player(rpg->player, jp_search(data, "player")) != 0)
-        return (84);
+    if (data == NULL) return 84;
+    if (load_settings(rpg, jp_search(data, "settings")) != 0) return 84;
+    if (load_save_save(rpg->save, jp_search(data, "save_file")) != 0) return 84;
+    if (load_player(rpg->player, jp_search(data, "player")) != 0) return 84;
     if (load_npc_interactions(rpg->save, jp_search(data, "game_timeline")) != 0)
-        return (84);
-    if (load_game(rpg, jp_search(data, "game")) != 0)
-        return (84);
+        return 84;
+    if (load_game(rpg, jp_search(data, "game")) != 0) return 84;
     if (load_quests_in_progress(rpg, jp_search(data, "game_timeline")) != 0)
-        return (84);
+        return 84;
     if (load_quests_completed(rpg, jp_search(data, "game_timeline")) != 0)
-        return (84);
+        return 84;
     if (load_chests_opened(rpg, jp_search(data, "game_timeline")) != 0)
+        return 84;
+    if (load_game_timeline(rpg, jp_search(data, "game_timeline")) != 0)
         return (84);
     return (0);
 }

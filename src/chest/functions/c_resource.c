@@ -22,7 +22,7 @@ void c_resource(rpg_t *rpg, tiled_object_t *obj)
         add_item_to_inventory(57, rpg);
         add_item_to_inventory(42, rpg);
         add_item_to_inventory(110, rpg);
-        rpg->chests_opened = add_item_to_arr(rpg->chests_opened, "c_resource");
+        rpg->chests_opened = add_item_to_arr(rpg->chests_opened, "c_resources");
         obj->is_trigger = 1;
     }
     while (sfKeyboard_isKeyPressed(RPK->interact.key) == sfTrue);

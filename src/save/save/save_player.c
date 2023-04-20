@@ -22,8 +22,7 @@ static void add_node_to_my_arr(parsed_data_t *my_arr, int nb)
 
 static void save_player_inventory(
     player_t *player,
-    parsed_data_t *data,
-    rpg_t *rpg
+    parsed_data_t *data
 )
 {
     parsed_data_t *my_arr = malloc(sizeof(parsed_data_t));
@@ -45,6 +44,6 @@ void save_player(rpg_t *rpg)
     jp_search(player, "pos.y")->value.p_int = rpg->player->pos.y;
     jp_search(player, "hp")->value.p_int = rpg->player->hp;
     jp_search(player, "hunger")->value.p_int = rpg->player->hunger;
-    save_player_inventory(rpg->player, player, rpg);
+    save_player_inventory(rpg->player, player);
     jp_write(rpg->save->path, data);
 }

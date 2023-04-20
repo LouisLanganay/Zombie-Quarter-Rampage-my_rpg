@@ -7,24 +7,22 @@
 
 #include "rpg.h"
 
-static void if_zombie(char **wave, rpg_t *rpg,
+static void if_zombie(char **wave,
 zombies_t **zombies, sfVector2f pos)
 {
     int i = pos.x;
     int j = pos.y;
     if (wave[i][j] == 'z') {
-        insert_zombies_coord(rpg, zombies, (sfVector2f) {(i + 1)
+        insert_zombies_coord(zombies, (sfVector2f) {(i + 1)
         * 1920 + rand() % 500, 620 - j * 52});
     }
 }
 
-void wave(char **wave, rpg_t *rpg, zombies_t **zombies)
+void wave(char **wave, zombies_t **zombies)
 {
-    int i = 0;
-    int j = 0;
     for (int i = 0; wave[i] != NULL; i++) {
         for (int j = 0; wave[i][j] != '\0'; j++) {
-            if_zombie(wave, rpg, zombies, (sfVector2f) {i, j});
+            if_zombie(wave, zombies, (sfVector2f) {i, j});
         }
     }
 }

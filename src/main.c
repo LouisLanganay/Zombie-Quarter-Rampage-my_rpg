@@ -14,12 +14,11 @@ int main(int ac, char **av)
     init(rpg);
     rpg->shader->torch_bool = 1;
     while (sfRenderWindow_isOpen(rpg->glib->window->window)) {
-        print_framerate();
         gl_check_events(rpg->glib->window, rpg->glib->events, rpg);
         sfRenderWindow_clear(rpg->glib->window->window, sfBlack);
         gl_buttons_hovered(rpg->glib->buttons, rpg->glib->window, rpg);
         if (rpg->game_state == GAME || rpg->game_state == GAME_LOST
-            || rpg->game_state == PAUSE)
+            || rpg->game_state == PAUSE || rpg->game_state == GAME_WIN)
             game_loop(rpg);
         if (rpg->game_state == MENU)
             game_start(rpg);

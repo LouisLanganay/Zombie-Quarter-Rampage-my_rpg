@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-void static check_rain(rpg_t *rpg, sfRectangleShape *rect)
+static void check_rain(rpg_t *rpg, sfRectangleShape *rect)
 {
     if (rpg->shader->rain_bool == 1) {
         sfShader_setFloatUniform(rpg->shader->shader_rain,
@@ -18,7 +18,7 @@ void static check_rain(rpg_t *rpg, sfRectangleShape *rect)
     }
 }
 
-void static check_blood(rpg_t *rpg, sfRectangleShape *rect)
+static void check_blood(rpg_t *rpg, sfRectangleShape *rect)
 {
     if (rpg->shader->blood_bool == 1) {
         sfShader_setFloatUniform(rpg->shader->shader_blood, "time",
@@ -30,7 +30,7 @@ void static check_blood(rpg_t *rpg, sfRectangleShape *rect)
     }
 }
 
-void static check_fade(rpg_t *rpg, sfRectangleShape *rect)
+static void check_fade(rpg_t *rpg, sfRectangleShape *rect)
 {
     if (rpg->shader->fade_bool == 1) {
         sfShader_setFloatUniform(rpg->shader->shader_fade, "time",

@@ -7,13 +7,6 @@
 
 #include "rpg.h"
 
-static void draw_player_hitbox(rpg_t *rpg)
-{
-    sfRenderWindow_drawRectangleShape(
-        rpg->glib->window->window,
-        rpg->player->hitbox, NULL);
-}
-
 void cbt_draw_player(rpg_t *rpg)
 {
     sfSprite_setPosition(rpg->player->sprite, rpg->player->pos);

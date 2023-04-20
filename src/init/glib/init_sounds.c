@@ -7,21 +7,35 @@
 
 #include "rpg.h"
 
+static void init_sounds_talkie(GLib_t *glib, sound_t *my_sound)
+{
+    my_sound->id = TALKIEFR_SOUND_ID;
+    my_sound->sound = sfSound_create();
+    my_sound->buffer = sfSoundBuffer_createFromFile(TALKIEFR_SOUND_PATH);
+    gl_create_sound(glib, my_sound);
+    my_sound->id = TALKIEEN_SOUND_ID;
+    my_sound->sound = sfSound_create();
+    my_sound->buffer = sfSoundBuffer_createFromFile(TALKIEEN_SOUND_PATH);
+    gl_create_sound(glib, my_sound);
+}
+
 static void init_sound_inventory(GLib_t *glib, sound_t *my_sound)
 {
     my_sound->id = INV_SOUND_ID;
     my_sound->sound = sfSound_create();
     my_sound->buffer = sfSoundBuffer_createFromFile(INV_SOUND_PATH);
     gl_create_sound(glib, my_sound);
-
     my_sound->id = DROP_SOUND_ID;
     my_sound->sound = sfSound_create();
     my_sound->buffer = sfSoundBuffer_createFromFile(DROP_SOUND_PATH);
     gl_create_sound(glib, my_sound);
-
     my_sound->id = PIECE_SOUND_ID;
     my_sound->sound = sfSound_create();
     my_sound->buffer = sfSoundBuffer_createFromFile(PIECE_SOUND_PATH);
+    gl_create_sound(glib, my_sound);
+    my_sound->id = MUSICIAN_SOUND_ID;
+    my_sound->sound = sfSound_create();
+    my_sound->buffer = sfSoundBuffer_createFromFile(MUSICIAN_SOUND_PATH);
     gl_create_sound(glib, my_sound);
 }
 
@@ -67,4 +81,5 @@ void init_sounds(GLib_t *glib)
     gl_create_sound(glib, my_sound);
     init_sound_inventory(glib, my_sound);
     init_sounds_bis(glib, my_sound);
+    init_sounds_talkie(glib, my_sound);
 }
