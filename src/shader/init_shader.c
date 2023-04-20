@@ -7,9 +7,8 @@
 
 #include "rpg.h"
 
-shader_t *init_shader(void)
+static void init_shader_step(shader_t *shader)
 {
-    shader_t *shader = malloc(sizeof(shader_t));
     shader->shader_rain = sfShader_createFromFile(NULL, NULL, RS_RAIN);
     shader->shader_blood = sfShader_createFromFile(NULL, NULL, RS_BLOOD);
     shader->shader_fade = sfShader_createFromFile(NULL, NULL, RS_FADE);
@@ -25,5 +24,15 @@ shader_t *init_shader(void)
     sfShader_setVec2Uniform(shader->shader_rain, resolution_vec);
     sfShader_setVec2Uniform(shader->shader_blood, resolution_vec);
     sfShader_setVec2Uniform(shader->shader_fade, resolution_vec);
+}
+
+shader_t *init_shader(void)
+{
+    shader_t *shader = malloc(sizeof(shader_t));
+    init_shader_step(shader);
+    shader->shader_torch = sfShader_createFromFile(NULL, NULL, RS_TORCH);
+    shader->states_torch = init_renderstate2(shader->shader_torch);
+
+    shader->torch_bool = 0;
     return (shader);
 }

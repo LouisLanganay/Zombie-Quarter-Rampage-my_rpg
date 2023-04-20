@@ -70,6 +70,7 @@
     #define RS_RAIN "resources/shader/rain.frag"
     #define RS_BLOOD "resources/shader/blood.frag"
     #define RS_FADE "resources/shader/fade.frag"
+    #define RS_TORCH "resources/shader/torch.frag"
 
     #define GET_SAVE_GAMELANGUAGE my_strcmp(jp_search(data, \
         "game_language")->value.p_str, "fr") == 0 ? FR : EN;
@@ -180,13 +181,16 @@
         sfShader *shader_rain;
         sfShader *shader_blood;
         sfShader *shader_fade;
+        sfShader *shader_torch;
         sfRenderStates states_rain;
         sfRenderStates states_blood;
         sfRenderStates states_fade;
+        sfRenderStates states_torch;
         int rain_bool;
         int blood_bool;
         int fade_bool;
         int fade_val;
+        int torch_bool;
         sfClock *shader_clock;
         sfClock *fade_clock;
     } shader_t;
@@ -457,6 +461,13 @@
     int number_zombies(zombies_t *zombies);
     #define sfp sfSprite_setPosition
     char **wave_zombie1(void);
+
+    #define torch_resolution1 (sfShader_setVec2Uniform(rpg->shader->\
+    shader_torch, "resolution", (sfVector2f) {1960 - 1920 * (\
+    sfView_getCenter(rpg->player->view->view).x - rpg->player->\
+    pos.x) / sfView_getCenter(rpg->player->view->view).x, 1150 +\
+    1080 * (sfView_getCenter(rpg->player->view->view).y - rpg->player->\
+    pos.y) / sfView_getCenter(rpg->player->view->view).y}))
 
     typedef struct combat_s {
         zombies_t *zombies;
@@ -801,6 +812,28 @@
     void init_inventory(rpg_t *rpg);
     void init_player_assets_dialogue(player_t *player);
     void check_shader(rpg_t *rpg);
+    void check_torch(rpg_t *rpg);
+    #define TOPK rpg->player->keys->up.state == 1
+    #define BOTK rpg->player->keys->down.state == 1
+    #define LEFTK rpg->player->keys->left.state == 1
+    #define RIGHTK rpg->player->keys->right.state == 1
+    #define TOPLEFTK (TOPK && LEFTK)
+    #define TOPRIGHTK (TOPK && RIGHTK)
+    #define BOTLEFTK (BOTK && LEFTK)
+    #define BOTRIGHTK (BOTK && RIGHTK)
+    #define torch_mouse(x, y) sfShader_setVec2Uniform(\
+    rpg->shader->shader_torch, "mouse", (sfVector2f){x, y})
+    #define tr 1960 - 1920 * (sfView_getCenter(rpg->player->view->view).x\
+    - rpg->player->pos.x ) / sfView_getCenter(rpg->player->view->view).x
+    #define lr 1150 + 1080 * (sfView_getCenter(rpg->player->view->view).y\
+    - rpg->player->pos.y ) / sfView_getCenter(rpg->player->view->view).y
+    #define br 1960 - 7.4 * 1920 * (sfView_getCenter(rpg->player->view->view)\
+    .x - rpg->player->pos.x ) / sfView_getCenter(rpg->player->view->view).x
+    #define rr 1150 + 9.2 * 1080 * (sfView_getCenter(rpg->player->view->view).y\
+    - rpg->player->pos.y ) / sfView_getCenter(rpg->player->view->view).y;
+    #define draw_shader_torch (sfRenderWindow_drawRectangleShape(rpg->glib->\
+    window->window, rect, &rpg->shader->states_torch))
+    #define v2f(x, y) ((sfVector2f) {x, y})
     int doc_function(int ac, char **av);
 
 #endif
