@@ -35,5 +35,6 @@ void save(rpg_t *rpg)
     save_chests_opened(rpg);
     save_game_timeline(rpg);
     save_save(rpg);
+    save_combats(rpg);
     reload_saves_texts(rpg);
 }

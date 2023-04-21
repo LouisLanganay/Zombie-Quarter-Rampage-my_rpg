@@ -13,7 +13,7 @@ int main(int ac, char **av)
     if (doc_function(ac, av) == 1) return 0;
     init_rpg(rpg, ac, av);
     init(rpg);
-
+    rpg->shader->torch_bool = 1;
     while (sfRenderWindow_isOpen(rpg->glib->window->window)) {
         gl_check_events(rpg->glib->window, rpg->glib->events, rpg);
         sfRenderWindow_clear(rpg->glib->window->window, sfBlack);

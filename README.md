@@ -54,9 +54,9 @@ This project, being the last project of the module, the following requierement a
 General
 
 - [X] The window may be closed using events.
-- [ ] The windows may have differents mode :
-    - [ ] Window mode
-    - [ ] Full-screen mode
+- [X] The windows may have differents mode :
+    - [X] Window mode
+    - [X] Full-screen mode
 - [ ] The windows may have differents resolutions, at least two (1920x1080, and an other)
 - [X] The game manages inputs from the mouse click and keyboard,
 - [X] The game contains animated sprites rendered thanks to sprite sheets,
@@ -66,7 +66,7 @@ General
 Main menu
 
 - [X] Must contain at least these options
-    - [ ] Start the game
+    - [X] Start the game
     - [X] Resume game (grayed out if not possible)
     - [X] Settings
     - [X] Quit the game
@@ -76,29 +76,29 @@ Main menu
 
 In game menu
 
-- [ ] Must be accessible by pressing the Escape key
+- [X] Must be accessible by pressing the Escape key
 - [ ] Must contain at least these options
     - [ ] Character options
         - [ ] equipment and inventory management
         - [ ] characteristics management
-    - [ ] Saving
-    - [ ] Loading
-    - [ ] Settings
-        - [ ] the same that main menu
-        - [ ] commands list
+    - [X] Saving
+    - [X] Loading
+    - [X] Settings
+        - [X] the same that main menu
+        - [X] commands list
 
 ### SHOULD
 - [X] Splash screen at the beginning
 - [ ] Command edit into the in game menu
 - [X] As much information as possible about the game should be stored in a configuration file.
 - [X] The game should have an advanced collision system to manage complex fighting.
-- [ ] The game should contains simple particle system :
-    - [ ] with at least 2 types of particle,
-    - [ ] particle effects (changing colors, scaling, bouncing, fading) to simulate realistic environment (wind, fire, rain, snow. . . ).
+- [X] The game should contains simple particle system :
+    - [X] with at least 2 types of particle,
+    - [X] particle effects (changing colors, scaling, bouncing, fading) to simulate realistic environment (wind, fire, rain, snow. . . ).
 
 ### COULD
 - [ ] Have a skill tree, unlocking different abilities (active and passive).
-- [ ] Have a complete particle engine.
+- [X] Have a complete particle engine.
 - [X] Use scripting to describe entities.
 - [X] Have a map edit
 

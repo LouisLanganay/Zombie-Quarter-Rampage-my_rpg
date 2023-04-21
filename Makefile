@@ -280,6 +280,7 @@ SRC += annia_give_heal.c
 SRC += init_renderstate.c
 SRC += init_shader.c
 SRC += check_shader.c
+SRC += check_torch.c
 SRC += init_renderstate2.c
 SRC += swap_status_anim_cbt.c
 SRC += swap_status_anim_move.c
@@ -337,6 +338,8 @@ SRC += reset_view.c
 SRC += s_musician_exit.c
 SRC += s_musician.c
 SRC += save_save.c
+SRC += load_combats.c
+SRC += save_combats.c
 
 
 INC_DIR 	:= includes
