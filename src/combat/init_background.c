@@ -14,7 +14,7 @@ void init_background(rpg_t *rpg)
     my_sprite->pos = (sfVector2f){0, 0};
     my_sprite->sprite = sfSprite_create();
     my_sprite->texture = sfTexture_createFromFile(map_night, NULL);
-    my_sprite->scale = (sfVector2f){1.25, 1.35};
+    my_sprite->scale = (sfVector2f){1.25, 1.45};
     my_sprite->call_action = NULL;
     gl_create_sprite(rpg->glib, my_sprite);
 }

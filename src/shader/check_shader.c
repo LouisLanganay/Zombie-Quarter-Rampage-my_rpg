@@ -47,7 +47,7 @@ static void check_fade(rpg_t *rpg, sfRectangleShape *rect)
 static sfRectangleShape *rect_shader(rpg_t *rpg)
 {
     sfRectangleShape *rect = sfRectangleShape_create();
-    if (rpg->game_state == GAME) {
+    if (rpg->game_state == GAME || rpg->game_state == GAME_LOST) {
         sfRectangleShape_setSize(rect, sfView_getSize(rpg->player->view->view));
         sfRectangleShape_setTexture(rect,
         sfTexture_createFromFile("resources/shader/void.png", NULL), sfTrue);

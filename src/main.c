@@ -9,19 +9,19 @@
 
 static void enviornemental_shader(rpg_t *rpg)
 {
-    if (global_sec > 20 && global_sec < 180 && my_strcmp(rpg->actual_map,
+    if (global_sec > 120 && global_sec < 180 && my_strcmp(rpg->actual_map,
     "resources/maps/main_map.json") == 0
     && rpg->game_state == GAME) {
         rpg->shader->rain_bool = 1;
     } else
         rpg->shader->rain_bool = 0;
-    if (global_sec > 180 && global_sec < 240 &&
+    if (global_sec > 140 && global_sec < 260 &&
     my_strcmp(rpg->actual_map, "resources/maps/main_map.json") == 0
     && rpg->game_state == GAME)
         rpg->shader->torch_bool = 1;
     else
         rpg->shader->torch_bool = 0;
-    if (global_sec > 240)
+    if (global_sec > 260)
         sfClock_restart(rpg->global_clock);
     if (my_strcmp(rpg->actual_map, "resources/maps/main_map.json") != 0) {
         rpg->shader->rain_bool = 0;
