@@ -23,6 +23,8 @@ static void set_zombies(zombies_t *new_node)
     new_node->clock_animation = sfClock_create();
     new_node->status_anim = 0;
     new_node->alive = 0;
+    new_node->last_distance = 0;
+    new_node->animation = 0;
     sfRectangleShape_setPosition(new_node->hitbox, new_node->pos);
     sfRectangleShape_setSize(new_node->hitbox, (sfVector2f){60, 110});
     sfRectangleShape_setFillColor(new_node->hitbox, sfTransparent);
@@ -37,7 +39,7 @@ static void set_zombies(zombies_t *new_node)
     hp_bar(new_node);
 }
 
-void insert_zombies_coord(zombies_t **list, sfVector2f pos)
+static void insert_zombies_coord(zombies_t **list, sfVector2f pos)
 {
     zombies_t *new_node = malloc(sizeof(zombies_t));
     new_node->pos = pos;
@@ -59,4 +61,34 @@ void insert_zombies_coord(zombies_t **list, sfVector2f pos)
     set_zombies(new_node);
     new_node->next = *list;
     *list = new_node;
+}
+
+static void insert_witch_coord(zombies_t **list, sfVector2f pos)
+{
+    zombies_t *new_node = malloc(sizeof(zombies_t));
+    new_node->pos = pos;
+    new_node->type = 2;
+    new_node->hp = 50;
+    new_node->damage = 20;
+    new_node->speed = 2.0;
+    new_node->direction = 1;
+    new_node->hitbox = sfRectangleShape_create();
+    new_node->sprite = sfSprite_create();
+    new_node->texture = sfTexture_createFromFile(WITCH_0, NULL);
+    new_node->rect = (sfIntRect){0, 0, 72, 72};
+    new_node->scale = (sfVector2f){-2.0, 2.0};
+    new_node->attack_clock = sfClock_create();
+    new_node->clock = sfClock_create();
+    new_node->attack_speed = 1.5;
+    set_zombies(new_node);
+    new_node->next = *list;
+    *list = new_node;
+}
+
+void insert_zombies_coord_id(zombies_t **list, sfVector2f pos, int id)
+{
+    if (id == 1)
+        insert_zombies_coord(list, pos);
+    if (id == 2)
+        insert_witch_coord(list, pos);
 }

@@ -340,6 +340,8 @@ SRC += s_musician.c
 SRC += save_save.c
 SRC += load_combats.c
 SRC += save_combats.c
+SRC += animation_zombies1.c
+SRC += animation_zombies2.c
 
 
 INC_DIR 	:= includes
