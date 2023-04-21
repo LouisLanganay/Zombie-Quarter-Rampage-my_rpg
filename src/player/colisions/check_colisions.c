@@ -33,8 +33,7 @@ static int check_tile_colisions(
         sfRectangleShape_setSize(col, (sfVector2f){tmp->width, tmp->height});
         rect2 = sfRectangleShape_getGlobalBounds(col);
         check_tile_colisions_draw(rpg, col);
-        if (sfFloatRect_intersects(&rect1,
-            &rect2, NULL)) {
+        if (sfFloatRect_intersects(&rect1, &rect2, NULL)) {
             sfRectangleShape_setFillColor(RPH, (sfColor){255, 0, 0, 50});
             return 1;
         }
