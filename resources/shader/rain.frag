@@ -12,7 +12,7 @@ float rain(vec2 uv, float scale)
 {
     float w = smoothstep(1.0, 0.0, -uv.y * (scale / 10.0));
     if (w < .1) return 0.0;
-    uv.y += time * 10.0 / scale;
+    uv.y += time * 8.5 / scale;
     uv.x += sin(uv.y + time * .8) / scale * 5.0;
     uv *= scale;
     vec2 s = floor(uv), f = fract(uv), p;
@@ -36,7 +36,15 @@ void main(void)
     vec3 color = vec3(0.13f, 0.58f, 0.94f);
     float c = 0;
 
-    c += rain(uv, 5.5) * 2.;
+    // // c += rain(uv, 14.0 + 0.01 * fract(time * 0.5)) * 3.0;
+    c += rain(uv, 10.0 + 0.01 * fract(time * 0.5)) * 2.0;
+    c += rain(uv, 8.0 + 0.02 * fract(time * 0.5)) * 1.0;
+    //rain in background
+    c += rain(uv, 14.0 + 0.02 * fract(time * 0.5)) * 2.0;
+    // c += rain(uv, 5.0) * 0.4;
+    // c += rain(uv, 9.0) * (2.0 + fract(time * 0.5) * 0.2);
+    // c += rain(uv, 5.5) * 2.;
+    // c += rain(uv, 5.0) * 2.;
 
     pixel_color.rgb = mix(pixel_color.rgb, color, c);
     finalColor = pixel_color.rgb;
