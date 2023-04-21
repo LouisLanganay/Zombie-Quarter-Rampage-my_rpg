@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-static void enviornemental_shader(rpg_t *rpg)
+static void environemental_shader(rpg_t *rpg)
 {
     if (global_sec > 120 && global_sec < 180 && my_strcmp(rpg->actual_map,
     "resources/maps/main_map.json") == 0
@@ -35,7 +35,7 @@ int main(int ac, char **av)
     init_rpg(rpg, ac, av);
     init(rpg);
     while (sfRenderWindow_isOpen(rpg->glib->window->window)) {
-        enviornemental_shader(rpg);
+        environemental_shader(rpg);
         gl_check_events(rpg->glib->window, rpg->glib->events, rpg);
         sfRenderWindow_clear(rpg->glib->window->window, sfBlack);
         gl_buttons_hovered(rpg->glib->buttons, rpg->glib->window, rpg);

@@ -47,7 +47,6 @@ void draw_game_lost_screen(rpg_t *rpg)
     rpg->shader->torch_bool = 0;
     rpg->shader->rain_bool = 0;
     rpg->shader->fade_bool = 0;
-    // rpg->shader->blood_bool = 0;
     time_t time = sfClock_getElapsedTime(rpg->player->game_lost->clock)
         .microseconds;
     float seconds = time / 1000000.0;
