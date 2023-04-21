@@ -7,13 +7,35 @@
 
 #include "rpg.h"
 
+static void enviornemental_shader(rpg_t *rpg)
+{
+    if (global_sec > 20 && global_sec < 180 && my_strcmp(rpg->actual_map,
+    "resources/maps/main_map.json") == 0
+    && rpg->game_state == GAME) {
+        rpg->shader->rain_bool = 1;
+    } else
+        rpg->shader->rain_bool = 0;
+    if (global_sec > 180 && global_sec < 240 &&
+    my_strcmp(rpg->actual_map, "resources/maps/main_map.json") == 0
+    && rpg->game_state == GAME)
+        rpg->shader->torch_bool = 1;
+    else
+        rpg->shader->torch_bool = 0;
+    if (global_sec > 240)
+        sfClock_restart(rpg->global_clock);
+    if (my_strcmp(rpg->actual_map, "resources/maps/main_map.json") != 0) {
+        rpg->shader->rain_bool = 0;
+        rpg->shader->torch_bool = 0;
+    }
+}
+
 int main(int ac, char **av)
 {
     rpg_t *rpg = malloc(sizeof(rpg_t));
     init_rpg(rpg, ac, av);
     init(rpg);
-    rpg->shader->torch_bool = 1;
     while (sfRenderWindow_isOpen(rpg->glib->window->window)) {
+        enviornemental_shader(rpg);
         gl_check_events(rpg->glib->window, rpg->glib->events, rpg);
         sfRenderWindow_clear(rpg->glib->window->window, sfBlack);
         gl_buttons_hovered(rpg->glib->buttons, rpg->glib->window, rpg);

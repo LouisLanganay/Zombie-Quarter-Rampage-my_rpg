@@ -351,6 +351,7 @@
         char **quests_in_progress;
         char **quests_completed;
         char **chests_opened;
+        sfClock *global_clock;
     } rpg_t;
 
     typedef struct keyboard_images_s {
@@ -835,5 +836,7 @@
     window->window, rect, &rpg->shader->states_torch))
     #define v2f(x, y) ((sfVector2f) {x, y})
     int doc_function(int ac, char **av);
+    #define global_sec (sfTime_asSeconds\
+    (sfClock_getElapsedTime(rpg->global_clock)))
 
 #endif

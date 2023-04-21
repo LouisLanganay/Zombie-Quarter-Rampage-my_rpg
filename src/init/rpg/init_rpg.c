@@ -17,5 +17,6 @@ void init_rpg(rpg_t *rpg, int ac, char **av)
     rpg->maps_loaded = 0;
     rpg->shader = init_shader();
     rpg->actual_clock = sfClock_create();
+    rpg->global_clock = sfClock_create();
     init_combat_history(rpg);
 }

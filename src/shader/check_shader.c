@@ -35,7 +35,7 @@ static void check_fade(rpg_t *rpg, sfRectangleShape *rect)
     if (rpg->shader->fade_bool == 1) {
         sfShader_setFloatUniform(rpg->shader->shader_fade, "time",
         sfTime_asSeconds(sfClock_getElapsedTime(rpg->shader->fade_clock)));
-        sfShader_setFloatUniform(rpg->shader->shader_fade, "fade",
+        sfShader_setFloatUniform(rpg->shader->shader_fade, "smooth",
         rpg->shader->fade_val);
         sfShader_setVec2Uniform(rpg->shader->shader_fade, "resolution",
         (sfVector2f) { 1920, 1080 });
