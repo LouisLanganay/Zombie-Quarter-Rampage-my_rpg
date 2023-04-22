@@ -10,7 +10,7 @@
 
 void i_paper_music(rpg_t *rpg, sfVector2f pos)
 {
-    sfVector2f pos2 = {pos.x - 160, pos.y - 30};
+    sfVector2f pos2 = {pos.x - 180, pos.y - 5};
     char *str = get_language(rpg, "paper_interact", RSG);
     draw_interaction_popup(rpg, pos2, RPK->interact.key, str);
     if (sfKeyboard_isKeyPressed(RPK->interact.key) == sfTrue) {

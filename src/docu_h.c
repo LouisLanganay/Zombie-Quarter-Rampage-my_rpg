@@ -24,6 +24,7 @@ int doc_function(int ac, char **av)
 {
     if (ac > 1 && my_strcmp(av[1], "-h") == 0) {
         printf("%s", help_message);
+        return 1;
     }
     return 0;
 }

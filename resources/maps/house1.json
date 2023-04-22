@@ -615,13 +615,13 @@
             0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":25,
          "id":92,
-         "name":"objects 16",
+         "name":"objects 14",
          "opacity":1,
          "properties":[
                 {
                  "name":"z_index",
                  "type":"string",
-                 "value":"15"
+                 "value":"14"
                 }],
          "type":"tilelayer",
          "visible":true,

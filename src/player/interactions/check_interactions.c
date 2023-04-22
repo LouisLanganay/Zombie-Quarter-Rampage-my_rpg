@@ -11,7 +11,12 @@ static void draw_objects(tiled_object_t *tmp, rpg_t *rpg, sfRectangleShape *col)
 {
     sfRectangleShape_setPosition(col, (sfVector2f){tmp->pos.x, tmp->pos.y});
     sfRectangleShape_setSize(col, (sfVector2f){tmp->width, tmp->height});
-    sfRectangleShape_setFillColor(col, (sfColor){0, 0, 255, 100});
+    sfRectangleShape_setFillColor(col, (sfColor){0, 0, 255, 30});
+    if (tmp->name[0] == 'c')
+        sfRectangleShape_setFillColor(col, (sfColor){231, 155, 96, 30});
+    if (tmp->name[0] == 's')
+        sfRectangleShape_setFillColor(col, (sfColor){224, 96, 231, 30});
+    if (my_strcmp(tmp->name, "s_nature") == 0) return;
     sfRenderWindow_drawRectangleShape(rpg->glib->window->window, col, NULL);
 }
 
@@ -79,6 +84,8 @@ static void check_interactions_objects(
 void check_interactions(player_t *player, map_t *map, rpg_t *rpg)
 {
     layer_t *tmp = map->layers;
+
+    if (player->inventory->is_open == 1) return;
 
     while (tmp) {
         if (my_strcmp(tmp->type, "objectgroup") == 0 &&

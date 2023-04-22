@@ -9,7 +9,8 @@
 
 static int check_cant_leave(rpg_t *rpg)
 {
-    if (chest_is_opened(rpg, "c_talki") != 1) {
+    if (chest_is_opened(rpg, "c_talki") != 1 ||
+        quest_is_completed(rpg, "jack_quest") != 1) {
         rpg->narative->str = get_language(rpg, "house1_cant_leave", RSG);
         start_narative_popup(rpg);
         return 1;

@@ -9,10 +9,13 @@
 
 static void remove_from_arr(char **arr, int i)
 {
-    arr[i] = NULL;
-    for (int j = i; arr[j] != NULL; j++) {
-        arr[j] = arr[j + 1];
-    }
+    int j = 0;
+
+    while (arr[j] != NULL)
+        j++;
+    for (; i < j; i++)
+        arr[i] = arr[i + 1];
+    arr[j - 1] = NULL;
 }
 
 static void exe_quest_function(rpg_t *rpg, quest_t *quest)
