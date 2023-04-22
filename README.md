@@ -29,6 +29,9 @@ To compile this project run the following commands at ``.``
 ## Libs used
 *GLib* & *JsonParser*
 
+## Wiki
+[Click here](https://github.com/EpitechPromo2027/B-MUL-200-REN-2-1-myrpg-louis.langanay/wiki) to see our wiki
+
 
 ## ToDo
 
