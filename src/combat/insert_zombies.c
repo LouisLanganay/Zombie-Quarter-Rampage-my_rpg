@@ -14,6 +14,8 @@ static void hp_bar(zombies_t *new_node)
     sfRectangleShape_setFillColor(new_node->hp_bar,
     sfColor_fromRGBA(255, 50, 50, 255));
     sfRectangleShape_setPosition(new_node->hp_bar, new_node->pos);
+    if (new_node->type == 2)
+        sfRectangleShape_move(new_node->hp_bar, v2f(0, -150));
     sfRectangleShape_setOutlineColor(new_node->hp_bar, sfBlack);
     sfRectangleShape_setOutlineThickness(new_node->hp_bar, 2);
 }
@@ -69,7 +71,7 @@ static void insert_witch_coord(zombies_t **list, sfVector2f pos)
     new_node->pos = pos;
     new_node->type = 2;
     new_node->hp = 50;
-    new_node->damage = 20;
+    new_node->damage = 8;
     new_node->speed = 2.0;
     new_node->direction = 1;
     new_node->hitbox = sfRectangleShape_create();
@@ -79,8 +81,9 @@ static void insert_witch_coord(zombies_t **list, sfVector2f pos)
     new_node->scale = (sfVector2f){-2.0, 2.0};
     new_node->attack_clock = sfClock_create();
     new_node->clock = sfClock_create();
-    new_node->attack_speed = 1.5;
+    new_node->attack_speed = 0.5;
     set_zombies(new_node);
+    sfRectangleShape_move(new_node->hitbox, v2f(-20, -50));
     new_node->next = *list;
     *list = new_node;
 }

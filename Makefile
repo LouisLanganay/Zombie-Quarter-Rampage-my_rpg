@@ -350,7 +350,7 @@ LIB_NAME1 	:= gl
 LIB_DIR2 	:= ./lib/jp
 LIB_NAME2 	:= jp
 
-CFLAGS = -iquote $(INC_DIR) -Wall -Wextra -Werror -g
+CFLAGS = -iquote $(INC_DIR)#-Wall -Wextra -Werror -g
 CFLAGS += -l csfml-window -l csfml-graphics -l csfml-system -l csfml-audio -lm
 
 LIBFLAGS = -L$(LIB_DIR1) -l$(LIB_NAME1) -L$(LIB_DIR2) -l$(LIB_NAME2)
