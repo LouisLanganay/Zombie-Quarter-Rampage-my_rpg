@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://img.shields.io/badge/Total%20Files-501-blue">
+    <img src="https://img.shields.io/badge/Total%20Files-545-blue">
     <img src="https://img.shields.io/badge/Hours%20Coded-290-blue">
     <img src="https://img.shields.io/badge/Project%20Duration-4%20weeks-blue">
 </p>
@@ -34,7 +34,7 @@ To compile this project run the following commands at ``.``
 
 ### MANDATORY
 - [ ] The player needs to have characteristics
-- [ ] The player can fight enemies AND the characteristics impact the fights results
+- [X] The player can fight enemies AND the characteristics impact the fights results
 - [X] The player have an inventory which can contain a limited set of items
 - [ ] The player can earn experience by winning fights and/or accomplishing specific actions
 - [ ] The player can level up thanks to experience AND upgrading its characteristics
@@ -79,7 +79,7 @@ In game menu
 - [X] Must be accessible by pressing the Escape key
 - [ ] Must contain at least these options
     - [ ] Character options
-        - [ ] equipment and inventory management
+        - [X] equipment and inventory management
         - [ ] characteristics management
     - [X] Saving
     - [X] Loading
