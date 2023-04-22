@@ -351,6 +351,7 @@
         char **quests_in_progress;
         char **quests_completed;
         char **chests_opened;
+        sfClock *global_clock;
     } rpg_t;
 
     typedef struct keyboard_images_s {
@@ -450,6 +451,32 @@
     #define ZOMBIE_DEATH6 "resources/assets/combat/z_naked_death_06.png"
     #define ZOMBIE_DEATH7 "resources/assets/combat/z_naked_death_07.png"
     #define ZOMBIE_DEATH8 "resources/assets/combat/z_naked_death_08.png"
+    void animation_zombie1(zombies_t *l);
+    #define WITCH_0 "resources/assets/combat/z_witch_move2_01.png"
+    #define WITCH_1 "resources/assets/combat/z_witch_move2_02.png"
+    #define WITCH_2 "resources/assets/combat/z_witch_move2_03.png"
+    #define WITCH_3 "resources/assets/combat/z_witch_move2_04.png"
+    #define WITCH_4 "resources/assets/combat/z_witch_move2_05.png"
+    #define WITCH_5 "resources/assets/combat/z_witch_move2_06.png"
+    #define WITCH_6 "resources/assets/combat/z_witch_move2_07.png"
+    #define WITCH_7 "resources/assets/combat/z_witch_move2_08.png"
+    #define WITCH_ATK0 "resources/assets/combat/z_witch_melee_00.png"
+    #define WITCH_ATK1 "resources/assets/combat/z_witch_melee_01.png"
+    #define WITCH_ATK2 "resources/assets/combat/z_witch_melee_02.png"
+    #define WITCH_ATK3 "resources/assets/combat/z_witch_melee_03.png"
+    #define WITCH_ATK4 "resources/assets/combat/z_witch_melee_04.png"
+    #define WITCH_ATK5 "resources/assets/combat/z_witch_melee_05.png"
+    #define WITCH_ATK6 "resources/assets/combat/z_witch_melee_06.png"
+    #define WITCH_DEATH0 "resources/assets/combat/z_witch_death_01.png"
+    #define WITCH_DEATH1 "resources/assets/combat/z_witch_death_02.png"
+    #define WITCH_DEATH2 "resources/assets/combat/z_witch_death_03.png"
+    #define WITCH_DEATH3 "resources/assets/combat/z_witch_death_04.png"
+    #define WITCH_DEATH4 "resources/assets/combat/z_witch_death_05.png"
+    #define WITCH_DEATH5 "resources/assets/combat/z_witch_death_06.png"
+    #define WITCH_DEATH6 "resources/assets/combat/z_witch_death_07.png"
+
+
+
 
     #define map_night "resources/assets/combat/map_night.jpg"
     #define guy "resources/assets/combat/guy.png"
@@ -502,7 +529,8 @@
     void cbt_draw_player(rpg_t *rpg);
     void cbt_change_player_rect(player_t *player);
     void wave(char **wave, zombies_t **zombies);
-    void insert_zombies_coord(zombies_t **list, sfVector2f pos);
+    void insert_zombies_coord_id(zombies_t **list, sfVector2f pos, int id);
+    void animation_witch1(zombies_t *l);
     void swap_status_anim_cbt(zombies_t *l);
     void swap_status_anim_move(zombies_t *l);
     void swap_status_anim_dead(zombies_t *l);
@@ -835,5 +863,7 @@
     window->window, rect, &rpg->shader->states_torch))
     #define v2f(x, y) ((sfVector2f) {x, y})
     int doc_function(int ac, char **av);
+    #define global_sec (sfTime_asSeconds\
+    (sfClock_getElapsedTime(rpg->global_clock)))
 
 #endif

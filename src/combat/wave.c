@@ -13,8 +13,12 @@ zombies_t **zombies, sfVector2f pos)
     int i = pos.x;
     int j = pos.y;
     if (wave[i][j] == 'z') {
-        insert_zombies_coord(zombies, (sfVector2f) {(i + 1)
-        * 1920 + rand() % 500, 620 - j * 52});
+        insert_zombies_coord_id(zombies, (sfVector2f) {(i + 1)
+        * 1920 + rand() % 500, 620 - j * 52}, 1);
+    }
+    if (wave[i][j] == 'w') {
+        insert_zombies_coord_id(zombies, (sfVector2f) {(i + 1)
+        * 1920 + rand() % 500, 620 - j * 52}, 2);
     }
 }
 

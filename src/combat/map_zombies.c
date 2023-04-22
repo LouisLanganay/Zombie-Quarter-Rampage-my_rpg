@@ -10,15 +10,15 @@
 char **wave_zombie1(void)
 {
     char **wave_zombie = malloc(sizeof(char *) * 10);
-    wave_zombie[0] = "z.....zzz";
+    wave_zombie[0] = "z...w.zzz";
     wave_zombie[1] = ".z...z...";
     wave_zombie[2] = "zz.z.zz..";
-    wave_zombie[3] = "......z..";
+    wave_zombie[3] = "..w...zw.";
     wave_zombie[4] = "zzzzzzzzz";
-    wave_zombie[5] = ".........";
-    wave_zombie[6] = ".........";
-    wave_zombie[7] = ".........";
-    wave_zombie[8] = ".........";
+    wave_zombie[5] = ".z...w...";
+    wave_zombie[6] = "...w..ww.";
+    wave_zombie[7] = ".w.......";
+    wave_zombie[8] = "....w....";
     wave_zombie[9] = NULL;
     return (wave_zombie);
 }
