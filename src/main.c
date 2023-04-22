@@ -13,19 +13,20 @@ static void environemental_shader(rpg_t *rpg)
     && my_strcmp(rpg->actual_map,"resources/maps/main_map.json") == 0
     && rpg->game_state == GAME) {
         rpg->shader->rain_bool = 1;
-    } else
+        start_sound(rpg, RAIN_SOUND_ID);
+    } else {
         rpg->shader->rain_bool = 0;
-    if (global_sec > 200 && global_sec < 240 &&
-    my_strcmp(rpg->actual_map, "resources/maps/main_map.json") == 0
-    && rpg->game_state == GAME)
-        rpg->shader->torch_bool = 1;
-    else
+        fade_sound(rpg, RAIN_SOUND_ID, 2);
+    }
+    if (my_strcmp(rpg->actual_map, "resources/maps/main_map.json") != 0
+    || rpg->game_state != GAME)
         rpg->shader->torch_bool = 0;
     if (global_sec > 260)
         sfClock_restart(rpg->global_clock);
     if (my_strcmp(rpg->actual_map, "resources/maps/main_map.json") != 0) {
         rpg->shader->rain_bool = 0;
         rpg->shader->torch_bool = 0;
+        fade_sound(rpg, RAIN_SOUND_ID, 5);
     }
 }
 

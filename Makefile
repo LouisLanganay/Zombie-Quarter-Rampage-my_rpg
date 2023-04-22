@@ -342,7 +342,9 @@ SRC += load_combats.c
 SRC += save_combats.c
 SRC += animation_zombies1.c
 SRC += animation_zombies2.c
-
+SRC += lampe.c
+SRC += my_putstr.c
+SRC += my_putchar.c
 
 INC_DIR 	:= includes
 LIB_DIR1 	:= ./lib/gl

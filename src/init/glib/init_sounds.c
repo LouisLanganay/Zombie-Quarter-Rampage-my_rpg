@@ -17,6 +17,10 @@ static void init_sounds_talkie(GLib_t *glib, sound_t *my_sound)
     my_sound->sound = sfSound_create();
     my_sound->buffer = sfSoundBuffer_createFromFile(TALKIEEN_SOUND_PATH);
     gl_create_sound(glib, my_sound);
+    my_sound->id = RAIN_SOUND_ID;
+    my_sound->sound = sfSound_create();
+    my_sound->buffer = sfSoundBuffer_createFromFile(RAIN_SOUND_PATH);
+    gl_create_sound(glib, my_sound);
 }
 
 static void init_sound_inventory(GLib_t *glib, sound_t *my_sound)

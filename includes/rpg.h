@@ -64,6 +64,8 @@
     #define TALKIEFR_SOUND_ID 22
     #define TALKIEEN_SOUND_PATH "resources/sounds/talkie_en.ogg"
     #define TALKIEEN_SOUND_ID 23
+    #define RAIN_SOUND_PATH "resources/sounds/rain.ogg"
+    #define RAIN_SOUND_ID 24
 
     #define DIALOGUE_CHOICE_TIMEOUT (seconds < 1)
 
@@ -546,6 +548,8 @@
     char *my_strcat_malloc(char *dest, char const *src);
     int my_atoi(char const *str);
     char *my_strdup(char *str);
+    int my_putstr(char const *str, int precision);
+    int my_putchar(char c);
     int arr_len(char **arr);
     int my_strlen(char const *str);
     char *my_strndup(const char *str, int n);
@@ -693,6 +697,7 @@
     void my_free(rpg_t *rpg);
 
     /* CALL ACTIONS */
+    void lampe(void *main);
     void jackfriend_give_weapon(void *main);
     void jackfriend_give_heal(void *main);
     void check_if_gaz_mask(void *);
