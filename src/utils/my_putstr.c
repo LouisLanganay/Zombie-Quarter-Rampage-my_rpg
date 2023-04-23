@@ -7,7 +7,7 @@
 
 #include "rpg.h"
 
-int my_putchar_print(char const *str, int i)
+static int my_putchar_print(char const *str, int i)
 {
     return my_putchar(str[i]);
 }
