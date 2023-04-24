@@ -17,7 +17,7 @@ void insert_bullet(bullets_t **list, rpg_t *rpg)
     new_node->sprite = sfSprite_create();
     new_node->texture = sfTexture_createFromFile(bullet, NULL);
     new_node->rect = (sfIntRect){0, 0, 100, 100};
-    new_node->scale = (sfVector2f){1.0, 1.0};
+    new_node->scale = (sfVector2f){2.0, 2.0};
     new_node->angle = shot_angle(new_node->pos,
     sfMouse_getPositionRenderWindow(rpg->glib->window->window));
     new_node->status = 0;

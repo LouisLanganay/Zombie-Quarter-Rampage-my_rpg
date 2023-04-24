@@ -15,13 +15,16 @@ static void reload_saves_texts(rpg_t *rpg)
     sfText *txt1 = gl_get_text(rpg->glib, TXT_SAVE1);
     sfText *txt2 = gl_get_text(rpg->glib, TXT_SAVE2);
     sfText *txt3 = gl_get_text(rpg->glib, TXT_SAVE3);
+    char *str1 = jp_search(d1, "save_file.name")->value.p_str;
+    char *str2 = jp_search(d2, "save_file.name")->value.p_str;
+    char *str3 = jp_search(d3, "save_file.name")->value.p_str;
 
     sfText_setString(txt1, (jp_search(d1, "save_file.played")->value.p_bool
-        == b_true ? "Save 1" : "Empty"));
+        == b_true ? str1 : "Empty"));
     sfText_setString(txt2, (jp_search(d2, "save_file.played")->value.p_bool
-        == b_true ? "Save 2" : "Empty"));
+        == b_true ? str2 : "Empty"));
     sfText_setString(txt3, (jp_search(d3, "save_file.played")->value.p_bool
-        == b_true ? "Save 3" : "Empty"));
+        == b_true ? str3 : "Empty"));
 }
 
 void reset_a_save(rpg_t *rpg)

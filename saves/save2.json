@@ -2,8 +2,8 @@
 	"save_file": {
 		"path": "saves/save2.json",
 		"format": "json",
-		"name": "save1",
-		"played": false
+		"name": "Demo Combat",
+		"played": true
 	},
 	"settings": {
 		"game_language": "en",
@@ -22,22 +22,22 @@
 	},
 	"player": {
 		"pos": {
-			"x": 305,
-			"y": 150
+			"x": 333,
+			"y": 419
 		},
 		"hp": 100,
-		"hunger": 75,
+		"hunger": 70,
 		"inventory": {
 			"items": [
 				8,
 				9,
 				42,
-				-1,
-				-1,
-				-1,
-				-1,
-				-1,
-				-1,
+				64,
+				66,
+				54,
+				57,
+				42,
+				110,
 				-1,
 				-1,
 				-1,
@@ -49,7 +49,7 @@
 		}
 	},
 	"game": {
-		"actual_map": "resources/maps/player_basement.json"
+		"actual_map": "resources/maps/main_map.json"
 	},
 	"game_timeline": {
 		"soda": -1,
@@ -57,13 +57,17 @@
 			"npc"
 		],
 		"quests_in_progress": [
-			"quest"
+			"quest",
+			"go_to_annia"
 		],
 		"quests_completed": [
-			"quest"
+			"quest",
+			"basement_paper"
 		],
 		"chests_opened": [
-			"chest"
+			"chest",
+			"c_fridge",
+			"c_resources"
 		],
 		"combat1": false,
 		"combat2": false,
