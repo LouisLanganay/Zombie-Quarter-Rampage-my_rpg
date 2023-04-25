@@ -16,8 +16,6 @@ Your game must follow the following rules:
 - Create a funny game where the player has at least one goal.
 - Create a game with a beginning and an end.
 
-- [Subject](https://intra.epitech.eu/module/2022/B-MUL-200/REN-2-1/acti-591867/project/file/B-MUL-200_my_rpg.pdf)
-
 ## Exe compilation && Usage
 
 To compile this project run the following commands at ``.``
