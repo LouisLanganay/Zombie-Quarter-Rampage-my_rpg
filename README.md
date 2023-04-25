@@ -119,4 +119,3 @@ In game menu
 - [@G.Blaizot](https://github.com/Gaulaume)
 
 ![Logo](https://newsroom.ionis-group.com/wp-content/uploads/2021/10/EPITECH-TECHNOLOGY-QUADRI-2021.png)
-
