@@ -1,6 +1,6 @@
 <p align="center">
     <img src="https://img.shields.io/badge/Total%20Files-545-blue">
-    <img src="https://img.shields.io/badge/Hours%20Coded-290-blue">
+    <img src="https://img.shields.io/badge/Hours%20Coded-300-blue">
     <img src="https://img.shields.io/badge/Project%20Duration-4%20weeks-blue">
     <img src="https://img.shields.io/github/stars/LouisLanganay/Zombie-Quarter-Rampage.svg?style=social&label=Star&maxAge=2592000">
 </p>
