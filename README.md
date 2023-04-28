@@ -29,7 +29,7 @@ To compile this project run the following commands at ``.``
 *GLib* & *JsonParser*
 
 ## Wiki
-[Click here](https://github.com/EpitechPromo2027/B-MUL-200-REN-2-1-myrpg-louis.langanay/wiki) to see our wiki
+[Click here](https://github.com/LouisLanganay/Zombie-Quarter-Rampage/wiki) to see our wiki
 
 
 ## ToDo
