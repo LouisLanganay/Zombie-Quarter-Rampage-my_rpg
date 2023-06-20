@@ -26,7 +26,8 @@ To compile this project run the following commands at ``.``
 ```
 
 ## Libs used
-*GLib* & *JsonParser*
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=LouisLanganay&repo=json-parser&theme=dark&border_radius=8&hide_border=true)](https://github.com/LouisLanganay/json-parser)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=LouisLanganay&repo=glib&theme=dark&border_radius=8&hide_border=true)](https://github.com/LouisLanganay/glib)
 
 ## Wiki
 [Click here](https://github.com/LouisLanganay/Zombie-Quarter-Rampage/wiki) to see our wiki
