@@ -5,6 +5,8 @@
     <img src="https://img.shields.io/github/stars/LouisLanganay/Zombie-Quarter-Rampage.svg?style=social&label=Star&maxAge=2592000">
 </p>
 
+[![video](https://img.youtube.com/vi/AVhD-_HdyUU/0.jpg)](https://www.youtube.com/watch?v=AVhD-_HdyUU)
+
 # my_rpg
 
 This project is one of the freest project of your first year. Create your own RPG.
